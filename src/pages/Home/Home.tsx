@@ -29,7 +29,7 @@ const Home = () => {
                     </h1>
                   </div>
                 </div>
-                <ul className="list-disc pl-5 self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
+                <ul className="space-y-1 list-disc pl-5 self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
                   <li>
                     Step-by-step training aligned with the latest exam standards
                   </li>

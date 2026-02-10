@@ -155,7 +155,7 @@ export default function CertificationTabs() {
               onClick={() => setActiveTab(tab)}
               className={`pb-3 text-base md:text-lg relative transition px-2 md:px-3 ${
                 activeTab === tab 
-                  ? "text-Black_light after:absolute after:left-0 after:bottom-[-1px] after:h-[1px] after:w-full after:bg-Black_light"
+                  ? "text-Black_light after:absolute after:left-0 after:bottom-[0px] after:h-[1px] after:w-full after:bg-Black_light"
                   : "text-paragraph "
               }`}
             >

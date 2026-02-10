@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import OurStoreSection from "@/components/Home/OurStoreSection";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import ThevCareExam from "@/components/Home/ThevCareExam";
+import CertificationTabs from "@/components/Home/CertificationTabs";
 
 const Home = () => {
   return (
@@ -66,6 +67,7 @@ const Home = () => {
         description="Update Money Back Guarantee copy"
       />
       <ThevCareExam />
+      <CertificationTabs />
     </>
   );
 };

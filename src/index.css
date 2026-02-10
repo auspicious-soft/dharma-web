@@ -158,3 +158,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background: #F0F8FF; /* Add your background color/gradient */
   z-index: 0;
 }
+.swiper-button-disabled,
+.swiper-button-disabled {
+  opacity: 0.6; 
+   cursor: not-allowed;
+}

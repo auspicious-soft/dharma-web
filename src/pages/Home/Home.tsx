@@ -5,6 +5,11 @@ import OurStoreSection from "@/components/Home/OurStoreSection";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import ThevCareExam from "@/components/Home/ThevCareExam";
 import CertificationTabs from "@/components/Home/CertificationTabs";
+import StartFreeTrial from "@/components/Home/StartFreeTrial";
+import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
+import VideoSection from "@/components/Home/VideoSection";
+import DownloadvCare from "@/components/Home/DownloadvCare";
+import Faq from "@/components/ReusableComponents/FAQSection/Faq";
 
 const Home = () => {
   return (
@@ -68,6 +73,11 @@ const Home = () => {
       />
       <ThevCareExam />
       <CertificationTabs />
+      <StartFreeTrial />
+      <Testimonials />
+      <VideoSection />
+      <DownloadvCare />
+      <Faq />
     </>
   );
 };

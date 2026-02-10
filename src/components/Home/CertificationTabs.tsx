@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Button } from "../ui/button";
+import TabImage from "@/assets/tab-image.jpg";
 
 type Tab =
   | "PMP"
@@ -22,72 +24,88 @@ const tabCourses: Record<Tab, Course[]> = {
   PMP: [
     {
       id: 1,
-      title: "PMP Prep Lessons And Interviews",
+      title: "PMP Prep Lessons and Interviews",
       description:
-        "A PMP Exam Prep Video Workshop for your phone, tablet or PC.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
     },
     {
       id: 2,
-      title: "PMP Full Practice Tests",
+      title: "PMP Prep Lessons and Interviews",
       description:
-        "Simulated PMP exams with real-world questions.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
     },
     {
       id: 3,
-      title: "PMP Flash Cards",
+     title: "PMP Prep Lessons and Interviews",
       description:
-        "Quick revision modules for PMP concepts.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
+    },
+        {
+      id: 4,
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
+    },
+        {
+      id: 5,
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
+    },
+        {
+      id: 6,
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+      image:TabImage,
     },
   ],
 
   PgMP: [
     {
       id: 1,
-      title: "PgMP Leadership Mastery",
+     title: "PMP Prep Lessons and Interviews",
       description:
-        "Advanced program leadership strategies.",
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+     image:TabImage,
     },
   ],
 
   PfMP: [
     {
       id: 1,
-      title: "PfMP Portfolio Governance",
-      description: "Manage enterprise portfolios effectively.",
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+       image:TabImage,
     },
     {
       id: 2,
       title: "PfMP Exam Simulator",
       description: "Real exam-style mock tests.",
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+      image:TabImage,
     },
   ],
 
   CAPM: [
     {
       id: 1,
-      title: "CAPM Starter Course",
-      description: "Perfect for beginners in project management.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+       image:TabImage,
     },
     {
       id: 2,
-      title: "CAPM Question Bank",
-      description: "1000+ practice questions.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+     title: "PMP Prep Lessons and Interviews",
+      description:
+        "A PMP Exam Prep Video Workshop for your phone, tablet or PC. Study anytime and anywhere. Just press “Play”",
+       image:TabImage,
     },
   ],
 
@@ -96,8 +114,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 1,
       title: "Agile Practitioner Bootcamp",
       description: "Master agile frameworks quickly.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+       image:TabImage,
     },
   ],
 
@@ -106,8 +123,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 1,
       title: "PMO Setup Workshop",
       description: "Build enterprise PMOs from scratch.",
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+     image:TabImage,
     },
   ],
 };
@@ -129,12 +145,15 @@ export default function CertificationTabs() {
         </p>
       </div>
         {/* Tabs */}
-        <div className="flex justify-center gap-6 mt-6 md:mt-7 border-b border-[#dadada]">
+        <div className="flex justify-start md:justify-center gap-4 lg:gap-6 mt-6 md:mt-7 
+                border-b border-[#dadada] 
+                overflow-x-auto whitespace-nowrap lg:overflow-x-hidden lg:overflow-y-hidden 
+                px-4 md:px-0">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-3 text-lg relative transition px-3 ${
+              className={`pb-3 text-base md:text-lg relative transition px-2 md:px-3 ${
                 activeTab === tab 
                   ? "text-Black_light after:absolute after:left-0 after:bottom-[-1px] after:h-[1px] after:w-full after:bg-Black_light"
                   : "text-paragraph "
@@ -165,16 +184,16 @@ function CourseCard({ course }: { course: Course }) {
         className="w-full aspect-[1/0.82] object-cover rounded-[20px]"
       />
 
-      <div className="p-6">
-        <h3 className="font-semibold text-lg">{course.title}</h3>
+      <div className="flex flex-col mt-2.5 gap-2">
+        <h3 className="text-center justify-start font-semibold text-Black_light text-lg md:text-[22px]">{course.title}</h3>
 
-        <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+        <p className="text-center justify-start text-paragraph text-sm md:text-base leading-[26px] md:leading-[30px]">
           {course.description}
         </p>
 
-        <button className="mt-6 w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full text-sm font-medium transition">
+        <Button>
           Find Out More
-        </button>
+        </Button>
       </div>
     </div>
   );

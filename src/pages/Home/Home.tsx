@@ -5,7 +5,7 @@ import OurStoreSection from "@/components/Home/OurStoreSection";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import ThevCareExam from "@/components/Home/ThevCareExam";
 import CertificationTabs from "@/components/Home/CertificationTabs";
-import StartFreeTrial from "@/components/Home/StartFreeTrial";
+import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import VideoSection from "@/components/Home/VideoSection";
 import DownloadvCare from "@/components/Home/DownloadvCare";
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </section> 
 
-      <OurStoreSection />
+      <OurStoreSection id="one" />
       <PremiumPacks
         showCourseSelect={true}
         heading="Premium Packs"
@@ -74,7 +74,7 @@ const Home = () => {
       <ThevCareExam />
       <CertificationTabs />
       <StartFreeTrial />
-      <Testimonials />
+      <Testimonials id="two" />
       <VideoSection />
       <DownloadvCare />
       <Faq />

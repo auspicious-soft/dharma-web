@@ -16,7 +16,7 @@ const menuItems: MenuItem[] = [
   {
     label: "PMP",
     dropdown: [
-      { label: "PMP Exam Prep Course ", href: "#" },
+      { label: "PMP Exam Prep Course ", href: "/pmp/pmp-exam-prep-course" },
       { label: "PMP On Demand Course", href: "#" },
       { label: "PMP Exam Simulator", href: "#" },
       { label: "PMP Flash Cards", href: "#" },

@@ -61,11 +61,13 @@ const storeData = [
     ],
   },
 ];
-
+interface StoreSliderSectionProps {
+  id: string;
+}
 // --------------------
 // COMPONENT
 // --------------------
-export default function StoreSliderSection() {
+export default function StoreSliderSection({ id }: StoreSliderSectionProps) {
   return (
     <section className="overflow-hidden py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
@@ -76,10 +78,15 @@ export default function StoreSliderSection() {
 
           {/* Custom Arrow Area */}
           <div className="flex gap-2 md:gap-5">
-            <button className="store-prev w-8 h-8 md:w-10 md:h-10 p-2 md:p-3 rounded-full bg-[#4c8dea] text-white flex items-center justify-center ">
+            <button
+              className={`store-prev-${id} w-8 h-8 md:w-10 md:h-10 p-2 md:p-3 rounded-full bg-[#4c8dea] text-white flex items-center justify-center`}
+            >
               <ArrowLeft />
             </button>
-            <button className="store-next w-8 h-8 md:w-10 md:h-10 p-2 md:p-3  rounded-full bg-[#4c8dea] text-white flex items-center justify-center">
+
+            <button
+              className={`store-next-${id} w-8 h-8 md:w-10 md:h-10 p-2 md:p-3 rounded-full bg-[#4c8dea] text-white flex items-center justify-center`}
+            >
               <ArrowRight />
             </button>
           </div>
@@ -94,8 +101,8 @@ export default function StoreSliderSection() {
           modules={[Navigation]}
           spaceBetween={20}
           navigation={{
-            prevEl: ".store-prev",
-            nextEl: ".store-next",
+            prevEl: `.store-prev-${id}`,
+            nextEl: `.store-next-${id}`,
           }}
           pagination={false}
           breakpoints={{

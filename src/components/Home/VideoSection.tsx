@@ -2,14 +2,13 @@ import React from "react";
 
 const VideoSection = () => {
   return (
-    <section className="overflow-hidden py-10 md:py-14 lg:py-20">
+    <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-5 md:gap-7 items-center">
-          <div className="w-full rounded-2xl md:rounded-[28.10px] overflow-hidden">
+          <div className="w-full ">
             <video
-              className="w-full h-full object-cover"
+              className="w-full object-cover rounded-2xl md:rounded-[28.10px]"
               controls
-              poster="https://via.placeholder.com/800x400?text=Video+Preview"
             >
               <source
                 src="https://www.w3schools.com/html/mov_bbb.mp4"

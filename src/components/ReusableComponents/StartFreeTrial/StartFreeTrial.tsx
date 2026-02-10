@@ -1,7 +1,7 @@
 import React from "react";
 import FreeTralBg from "@/assets/free-trail-bg.jpg";
 import FreeTrailImage from "@/assets/free-trail-img.jpg";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const content = {
   headings: "Start Your Free Trial",

@@ -63,7 +63,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
 
       <OurStoreSection />
       <PremiumPacks

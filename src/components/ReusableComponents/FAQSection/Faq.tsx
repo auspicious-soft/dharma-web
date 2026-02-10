@@ -85,7 +85,7 @@ export default function Faq() {
         <Button>View all FAQs</Button>
       </div>
       </div>
-    </section>
+    </section> 
   );
 }
 

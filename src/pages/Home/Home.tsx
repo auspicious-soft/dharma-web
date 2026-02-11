@@ -7,7 +7,7 @@ import ThevCareExam from "@/components/Home/ThevCareExam";
 import CertificationTabs from "@/components/Home/CertificationTabs";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
-import VideoSection from "@/components/Home/VideoSection";
+import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
 import DownloadvCare from "@/components/Home/DownloadvCare";
 import Faq from "@/components/ReusableComponents/FAQSection/Faq";
 
@@ -29,22 +29,24 @@ const Home = () => {
                     </h1>
                   </div>
                 </div>
-                <ul className="space-y-1 list-disc pl-5 self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
-                  <li>
-                    Step-by-step training aligned with the latest exam standards
+                <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
+                  <li className="flex items-start gap-2 self-stretch justify-start">
+                    <span className="text-[8px]">•</span> <span> Step-by-step training aligned with the latest exam standards</span>
                   </li>
-                  <li>Expert instructors with real-world project experience</li>
-                  <li>PMI®-approved PDUs included</li>
+                   <li className="flex items-start gap-2 self-stretch justify-start">
+                    <span className="text-[8px]">•</span> <span> Expert instructors with real-world project experience</span></li>
+                    <li className="flex items-start gap-2 self-stretch justify-start">
+                    <span className="text-[8px]">•</span> <span> PMI®-approved PDUs included</span> </li>
                 </ul>
-                <ul className="px-4 lg:px-8 list-none py-2 bg-white rounded-xl shadow-[0px_4px_14px_0px_rgba(0,0,0,0.05)] inline-flex items-center flex-wrap gap-y-1 gap-x-3 lg:gap-x-5">
-                  <li className="text-paragraph text-xs md:text-sm font-medium leading-[30px] ml-4 md:ml-5 list-disc">
-                    Exam Prep Courses
+                <ul className="px-4 lg:px-6  py-[13px] bg-white rounded-xl shadow-[0px_4px_14px_0px_rgba(0,0,0,0.05)]  inline-flex items-center flex-wrap gap-y-1 gap-x-3 lg:gap-x-5">
+                  <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px]">
+                     <span className="text-[8px]">•</span> <span>Exam Prep Courses</span>
                   </li>
-                  <li className="text-paragraph text-xs md:text-sm font-medium leading-[30px] ml-4 md:ml-5 list-disc">
-                    Exam Simulators
+                  <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px]  ">
+                     <span className="text-[8px]">•</span> <span>Exam Simulators</span>
                   </li>
-                  <li className="text-paragraph text-xs md:text-sm font-medium leading-[30px] ml-4 md:ml-5 list-disc">
-                    PDU Bundles
+                  <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px] ">
+                    <span className="text-[8px]">•</span> <span> PDU Bundles</span>
                   </li>
                 </ul>
               </div>
@@ -73,7 +75,7 @@ const Home = () => {
       />
       <ThevCareExam />
       <CertificationTabs />
-      <StartFreeTrial />
+      <StartFreeTrial /> 
       <Testimonials id="two" />
       <VideoSection />
       <DownloadvCare />

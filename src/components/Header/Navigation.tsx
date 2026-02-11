@@ -17,9 +17,9 @@ const menuItems: MenuItem[] = [
     label: "PMP",
     dropdown: [
       { label: "PMP Exam Prep Course ", href: "/pmp/pmp-exam-prep-course" },
-      { label: "PMP On Demand Course", href: "#" },
-      { label: "PMP Exam Simulator", href: "#" },
-      { label: "PMP Flash Cards", href: "#" },
+      { label: "PMP On Demand Course", href: "/pmp/pmp-on-demand-course" },
+      { label: "PMP Exam Simulator", href: "/pmp/pmp-exam-simulator" },
+      { label: "PMP Flash Cards", href: "/pmp/pmp-flash-cards" },
       { label: "PMP Real Practice Exam", href: "#" },
       { label: "PMP Domains and Tasks", href: "#" },
       { label: "PMP Application Support", href: "#" },

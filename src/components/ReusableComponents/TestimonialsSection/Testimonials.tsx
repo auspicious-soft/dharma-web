@@ -45,13 +45,13 @@ const storeData = [
       "I couldn't be happier with this hair growth spray. It arrived on time, and it has exceeded my expectations. With consistent morning and evening application, I've already witnessed a visible transformation after just 2 weeks!",
   },
 ];
-interface StoreSliderSectionProps {
+interface TestimonialsProps {
   id: string;
 }
 // --------------------
 // COMPONENT
 // --------------------
-export default function StoreSliderSection({ id }: StoreSliderSectionProps) {
+export default function Testimonials({ id }: TestimonialsProps) {
   return (
     <section className="overflow-hidden py-10 md:py-14 lg:py-20 bg-light-blue rounded-[20px] md:rounded-[40px] lg:rounded-[60px]">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
@@ -108,7 +108,7 @@ export default function StoreSliderSection({ id }: StoreSliderSectionProps) {
                 {/* CONTENT */}
                 <div className="pt-4 md:pt-5">
                   {/* STARS */}
-                  <div className="flex gap-1 mb-3">
+                  <div className="flex gap-1 mb-1">
                     {Array.from({ length: item.rating }).map((_, i) => (
                       <span key={i} className="text-[#e09900] text-lg">
                         ★

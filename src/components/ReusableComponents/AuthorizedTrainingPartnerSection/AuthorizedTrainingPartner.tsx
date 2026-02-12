@@ -6,7 +6,7 @@ interface Bullet {
   text: string;
 }
 
-interface PageHeroSectionProps {
+interface AuthorizedTrainingPartnerProps {
   title: string;
   subtitle?: string;
   bullets: Bullet[];
@@ -15,7 +15,7 @@ interface PageHeroSectionProps {
   image: string;
 }
 
-const PageHeroSection: React.FC<PageHeroSectionProps> = ({
+const AuthorizedTrainingPartner: React.FC<AuthorizedTrainingPartnerProps> = ({
   title,
   subtitle,
   bullets,
@@ -24,9 +24,9 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
   image,
 }) => {
   return (
-    <section className="py-10 md:py-14 lg:py-10">
+    <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[1.45fr_1fr] gap-5 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1.45fr_1fr] gap-5 lg:gap-10 items-start">
           {/* LEFT CONTENT */}
           <div>
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
@@ -65,7 +65,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
             {descriptionBottom && (
               <p className="text-paragraph text-sm font-normal mt-4 md:mt-6">
                 {descriptionBottom}
-              </p>
+              </p> 
             )}
           </div>
 
@@ -74,7 +74,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
             <img
               src={image}
               alt=""
-              className="rounded-3xl w-full object-cover shadow-lg"
+              className="rounded-3xl w-full object-cover"
             />
             <div className="flex justify-center items-center mt-4 md:mt-7">
                   <img
@@ -91,8 +91,8 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
           </div>
         </div>
       </div>
-    </section>
+    </section> 
   );
 };
 
-export default PageHeroSection;
+export default AuthorizedTrainingPartner;

@@ -3,7 +3,7 @@ import React from "react";
 
 const TopFooterSection = () => {
   return (
-    <section className="bg-light-blue py-10 lg:py-20">
+    <section className="bg-light-blue py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-center">
           <div>

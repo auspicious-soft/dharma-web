@@ -1,6 +1,5 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
-import PageHeroSection from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 import TrainingImage from "@/assets/training-image.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
@@ -15,6 +14,7 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/Faq";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
 const examFeatures = [
   "Realistic exam prep questions",
@@ -138,7 +138,7 @@ const PMPExamSimulator = () => {
         sideImage={InnerPage}
       />
 
-      <PageHeroSection
+      <AuthorizedTrainingPartner
         title="PMP® Certification Training"
         subtitle="Get Certified for PMP®; world's most trusted Project Management Certification"
         bullets={[
@@ -224,7 +224,7 @@ const PMPExamSimulator = () => {
                 <h4 className="text-primary_heading text-base md:text-xl font-bold mb-2 mt-4">
                   {card.title}
                 </h4>
-                <p className="text-paragraph text-xs font-normal leading-6]">
+                <p className="text-paragraph text-xs font-normal leading-6">
                   {card.description}
                 </p>
               </div>
@@ -296,7 +296,9 @@ const PMPExamSimulator = () => {
 
       <Testimonials id="two" /> 
       <StartFreeTrial />
+        <div className="-mt-10 md:-mt-20 relative">
       <Faq />
+      </div>
       <TopFooterSection />
 
     </>

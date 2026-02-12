@@ -20,9 +20,9 @@ const menuItems: MenuItem[] = [
       { label: "PMP On Demand Course", href: "/pmp/pmp-on-demand-course" },
       { label: "PMP Exam Simulator", href: "/pmp/pmp-exam-simulator" },
       { label: "PMP Flash Cards", href: "/pmp/pmp-flash-cards" },
-      { label: "PMP Real Practice Exam", href: "#" },
-      { label: "PMP Domains and Tasks", href: "#" },
-      { label: "PMP Application Support", href: "#" },
+      { label: "PMP Real Practice Exam", href: "/pmp/pmp-real-practice-exam" },
+      { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
+      { label: "PMP Application Support", href: "/pmp/pmp-application-support" },
     ],
   },
   {
@@ -43,11 +43,11 @@ const menuItems: MenuItem[] = [
   },
   {
     label: "Exam Simulators",
-    href: "#",
+    href: "/exam-simulators",
   },
     {
     label: "PDUs",
-    href: "#",
+    href: "/pdus",
   },
   {
     label: "Other Certification",

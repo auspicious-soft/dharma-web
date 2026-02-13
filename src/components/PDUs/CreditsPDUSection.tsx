@@ -1,3 +1,4 @@
+import { HourGlassIcon } from "@/utils/svgicons";
 import { Check } from "iconoir-react";
 import React from "react";
 
@@ -108,7 +109,7 @@ const CreditsPDUSection: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                 <span className="text-xl">⏳</span>
+                 <span className="text-xl"><HourGlassIcon /></span>
                 <div className="flex flex-col gap-2 md:gap-3">
                   <p className="text-Black_light text-sm font-normal">Total Hours</p>
                   <p className="text-paragraph text-sm">

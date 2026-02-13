@@ -336,7 +336,15 @@ const PMPExamPrepCourse = () => {
       <ScreenshortsSlider id="four" />
 
       <div className="bg-light-blue">
-        <VideoSection />
+        <VideoSection
+          videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+          title={
+            <>
+              Check out the <br /> PMP Exam Simulator in action.
+            </>
+          }
+          description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."
+        />
       </div>
 
       <Faq />

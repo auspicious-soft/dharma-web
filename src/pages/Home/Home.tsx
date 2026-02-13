@@ -31,22 +31,37 @@ const Home = () => {
                 </div>
                 <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
                   <li className="flex items-start gap-2 self-stretch justify-start">
-                    <span className="text-[8px]">•</span> <span> Step-by-step training aligned with the latest exam standards</span>
+                    <span className="text-[8px]">•</span>{" "}
+                    <span>
+                      {" "}
+                      Step-by-step training aligned with the latest exam
+                      standards
+                    </span>
                   </li>
-                   <li className="flex items-start gap-2 self-stretch justify-start">
-                    <span className="text-[8px]">•</span> <span> Expert instructors with real-world project experience</span></li>
-                    <li className="flex items-start gap-2 self-stretch justify-start">
-                    <span className="text-[8px]">•</span> <span> PMI®-approved PDUs included</span> </li>
+                  <li className="flex items-start gap-2 self-stretch justify-start">
+                    <span className="text-[8px]">•</span>{" "}
+                    <span>
+                      {" "}
+                      Expert instructors with real-world project experience
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 self-stretch justify-start">
+                    <span className="text-[8px]">•</span>{" "}
+                    <span> PMI®-approved PDUs included</span>{" "}
+                  </li>
                 </ul>
                 <ul className="px-4 lg:px-6  py-[13px] bg-white rounded-xl shadow-[0px_4px_14px_0px_rgba(0,0,0,0.05)]  inline-flex items-center flex-wrap gap-y-1 gap-x-3 lg:gap-x-5">
                   <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px]">
-                     <span className="text-[8px]">•</span> <span>Exam Prep Courses</span>
+                    <span className="text-[8px]">•</span>{" "}
+                    <span>Exam Prep Courses</span>
                   </li>
                   <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px]  ">
-                     <span className="text-[8px]">•</span> <span>Exam Simulators</span>
+                    <span className="text-[8px]">•</span>{" "}
+                    <span>Exam Simulators</span>
                   </li>
                   <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px] ">
-                    <span className="text-[8px]">•</span> <span> PDU Bundles</span>
+                    <span className="text-[8px]">•</span>{" "}
+                    <span> PDU Bundles</span>
                   </li>
                 </ul>
               </div>
@@ -65,7 +80,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section> 
+      </section>
 
       <OurStoreSection id="one" />
       <PremiumPacks
@@ -75,9 +90,19 @@ const Home = () => {
       />
       <ThevCareExam />
       <CertificationTabs />
-      <StartFreeTrial /> 
+      <StartFreeTrial />
       <Testimonials id="two" />
-      <VideoSection />
+
+      <VideoSection
+        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+        title={
+          <>
+            Check out the <br /> PMP Exam Simulator in action.
+          </>
+        }
+        description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."
+      />
+
       <DownloadvCare />
       <Faq />
     </>

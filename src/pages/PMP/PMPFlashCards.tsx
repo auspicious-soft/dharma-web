@@ -110,7 +110,7 @@ const PMPFlashCards = () => {
             {flashCard.cards.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-[#f0f7ff] rounded-[20px] text-center hover:shadow-sm transition"
+                className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
               >
                 <div className="w-[60px] h-[60px] flex items-center justify-center m-auto relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {" "}

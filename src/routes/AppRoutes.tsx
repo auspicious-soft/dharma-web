@@ -10,6 +10,10 @@ import PMPDomainsandTasks from "@/pages/PMP/PMPDomainsandTasks";
 import PMPApplicationSupport from "@/pages/PMP/PMPApplicationSupport";
 import ExamSimulators from "@/pages/ExamSimulators/ExamSimulators";
 import PDUs from "@/pages/PDUs/PDUs";
+import CorporateTraining from "@/pages/CorporateTraining/CorporateTraining";
+import AboutUs from "@/pages/AboutUs/AboutUs";
+import ContactUs from "@/pages/ContactUs/ContactUs";
+import BookAppointment from "@/pages/BookAppointment/BookAppointment";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +32,14 @@ const AppRoutes = () => {
         <Route path="/exam-simulators" element={<ExamSimulators />} />  
         {/*PDUs Page */}
         <Route path="/pdus" element={<PDUs />} />   
+        {/*Corporate Training Page */}
+        <Route path="/corporate-training" element={<CorporateTraining />} />  
+        {/*About Us */}
+        <Route path="/about-us" element={<AboutUs />} />   
+        {/*Contact Us */}
+        <Route path="/contact-us" element={<ContactUs />} />  
+        {/*Book Appointment */}
+        <Route path="/book-an-appointment" element={<BookAppointment />} /> 
       </Route>
     </Routes>
   );

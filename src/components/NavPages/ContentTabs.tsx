@@ -117,7 +117,7 @@ export default function ContentTabs({
                 {access.cards.map((card) => (
                   <div
                     key={card.id}
-                    className="p-5 bg-[#f0f7ff] rounded-[20px] text-center hover:shadow-sm transition"
+                    className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
                   >
                     <div className="w-[60px] h-[60px] flex items-center justify-center m-auto bg-white rounded-full outline outline-1 outline-[#4c8dea]">
                       <card.icon />
@@ -147,7 +147,7 @@ export default function ContentTabs({
                 {work.cards.map((card) => (
                   <div
                     key={card.id}
-                    className="p-5 bg-[#f0f7ff] rounded-[20px] text-center hover:shadow-sm transition"
+                    className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
                   >
                     <div className="w-[60px] h-[60px] flex items-center justify-center m-auto bg-white rounded-full outline outline-1 outline-[#4c8dea]">
                       <card.icon />

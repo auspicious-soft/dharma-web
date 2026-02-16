@@ -58,7 +58,7 @@ const menuItems: MenuItem[] = [
   }, 
     {
     label: "Corporate Training",
-    href: "#",
+    href: "/corporate-training",
   },
 ];
 

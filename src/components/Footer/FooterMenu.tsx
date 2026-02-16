@@ -1,14 +1,14 @@
 import React from "react";
 import FooterLogo from "@/assets/footer-logo.png";
 import SocialIcons from "./SocialIcons";
+import { NavLink } from "react-router-dom";
 
 export default function FooterMenu() {
   const companyLinks = [
     { title: "About Us", href: "#" },
     { title: "Contact Us", href: "#" },
-    { title: "Corporate Trainings", href: "#" },
-    { title: "Company", href: "#" },
-    { title: "Company", href: "#" },
+    { title: "Corporate Trainings", href: "/corporate-training" },
+    { title: "Company", href: "#" },  
   ];
 
   const links = [
@@ -76,12 +76,12 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <NavLink
+                    to={link.href}
                     className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
                   >
                     {link.title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -93,12 +93,12 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {links.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <NavLink
+                    to={link.href}
                      className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
                   >
                     {link.title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -110,12 +110,12 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {resources.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <NavLink
+                    to={link.href}
                       className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
                   >
                     {link.title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -127,12 +127,12 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {examPrep.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <NavLink
+                    to={link.href}
                      className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
                   >
                     {link.title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>

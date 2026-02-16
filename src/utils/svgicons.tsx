@@ -171,3 +171,30 @@ export const HourGlassIcon = () => (
 </defs>
 </svg>
 );
+export const MapIcon = () => (
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 8.33203H10.0083" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10 11.668H10.0083" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10 5H10.0083" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M13.333 8.33203H13.3413" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M13.333 11.668H13.3413" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M13.333 5H13.3413" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M6.66699 8.33203H6.67533" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M6.66699 11.668H6.67533" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M6.66699 5H6.67533" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M7.5 18.3333V15.8333C7.5 15.6123 7.5878 15.4004 7.74408 15.2441C7.90036 15.0878 8.11232 15 8.33333 15H11.6667C11.8877 15 12.0996 15.0878 12.2559 15.2441C12.4122 15.4004 12.5 15.6123 12.5 15.8333V18.3333" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M14.9997 1.66797H4.99967C4.0792 1.66797 3.33301 2.41416 3.33301 3.33464V16.668C3.33301 17.5884 4.0792 18.3346 4.99967 18.3346H14.9997C15.9201 18.3346 16.6663 17.5884 16.6663 16.668V3.33464C16.6663 2.41416 15.9201 1.66797 14.9997 1.66797Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);
+export const EmailIcon = () => (
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.83398 10L10.0007 12.9167L14.1673 10" stroke="white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M1.66602 16.6683V7.61198C1.66602 7.02653 1.97318 6.48403 2.47519 6.18282L9.14185 2.18282C9.66968 1.86614 10.329 1.86614 10.8568 2.18283L17.5235 6.18283C18.0255 6.48403 18.3327 7.02653 18.3327 7.61198V16.6683C18.3327 17.5888 17.5865 18.335 16.666 18.335H3.33268C2.41221 18.335 1.66602 17.5888 1.66602 16.6683Z" stroke="white" strokeWidth="1.25"/>
+</svg>
+);
+
+export const CallIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.527 13.808C11.6991 13.887 11.893 13.9051 12.0767 13.8592C12.2605 13.8133 12.4231 13.7062 12.5378 13.5555L12.8337 13.168C12.9889 12.961 13.1902 12.793 13.4216 12.6773C13.6531 12.5615 13.9083 12.5013 14.167 12.5013H16.667C17.109 12.5013 17.5329 12.6769 17.8455 12.9895C18.1581 13.302 18.3337 13.7259 18.3337 14.168V16.668C18.3337 17.11 18.1581 17.5339 17.8455 17.8465C17.5329 18.159 17.109 18.3346 16.667 18.3346C12.6887 18.3346 8.87344 16.7543 6.06039 13.9412C3.24734 11.1282 1.66699 7.31288 1.66699 3.33464C1.66699 2.89261 1.84259 2.46868 2.15515 2.15612C2.46771 1.84356 2.89163 1.66797 3.33366 1.66797H5.83366C6.27569 1.66797 6.69961 1.84356 7.01217 2.15612C7.32473 2.46868 7.50033 2.89261 7.50033 3.33464V5.83464C7.50033 6.09338 7.44008 6.34857 7.32437 6.57999C7.20866 6.81142 7.04065 7.01272 6.83366 7.16797L6.44366 7.46047C6.29067 7.57728 6.18284 7.74346 6.13848 7.93076C6.09413 8.11806 6.11598 8.31495 6.20033 8.48797C7.33923 10.8012 9.21235 12.672 11.527 13.808Z" stroke="white" strokeWidth="1.04167" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);

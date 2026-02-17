@@ -88,14 +88,14 @@ const PMPDomainsandTasks = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-center items-center mb-6 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Why Use PMP® Flash Cards?
+            PMP® Exam Domains Overview
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
             {DomainsOverview.cards.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
+                className="p-5 bg-light-blue rounded-[20px] text-center  transition"
               >
                 <div className="w-[60px] h-[60px] flex items-center justify-center m-auto relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {" "}

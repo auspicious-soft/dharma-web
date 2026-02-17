@@ -2,7 +2,7 @@ import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
@@ -110,7 +110,7 @@ const PMPFlashCards = () => {
             {flashCard.cards.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
+                className="p-5 bg-light-blue rounded-[20px] text-center  transition"
               >
                 <div className="w-[60px] h-[60px] flex items-center justify-center m-auto relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {" "}
@@ -157,7 +157,7 @@ const PMPFlashCards = () => {
             {SampleFlashCard.map((item, index) => (
               <div
                 key={index}
-                className="p-5 md:p-7 bg-light-blue text-center hover:shadow-sm transition"
+                className="p-5 md:p-7 bg-light-blue text-center  transition"
               >
                 <h4 className="text-Black_light text-base md:text-xl font-bold mb-2">
                   {item.title}
@@ -219,7 +219,7 @@ const PMPFlashCards = () => {
       <Testimonials id="two" />
       <StartFreeTrial />
       <div className="-mt-10 md:-mt-20 relative">
-        <Faq />
+        <Faq limit={5} />
       </div>
       <TopFooterSection />
     </>

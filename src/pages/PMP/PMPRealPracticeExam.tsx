@@ -21,7 +21,7 @@ import {
   FlashCardIcon,
 } from "@/utils/svgicons";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 // Tab 1 (Overview Content)
 const overview = {
@@ -206,7 +206,7 @@ const PMPRealPracticeExam = () => {
         <ScreenshortsSlider id="exam-screenshorts" />
       </div>
       <div className="-mt-10 md:-mt-20 relative">
-        <Faq />
+        <Faq limit={5} />
       </div>
       <TopFooterSection />
     </>

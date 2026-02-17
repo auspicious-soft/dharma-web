@@ -7,7 +7,7 @@ import SampleVideo from "@/components/ReusableComponents/SampleVideoSection/Samp
 import PricingComparison from "@/components/ReusableComponents/PricingComparisonSection/PricingComparison";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 
 const InsideSimulator = [
@@ -154,7 +154,7 @@ const PMPOnDemandCourse = () => {
             {PMPChallenging.map((item, index) => (
               <div
                 key={index}
-                className="p-5 md:p-7 bg-white text-center hover:shadow-sm transition"
+                className="p-5 md:p-7 bg-white text-center transition"
               >
                 <h4 className="text-Black_light text-base md:text-xl font-bold mb-2">
                   {item.title}
@@ -181,7 +181,7 @@ const PMPOnDemandCourse = () => {
             {LearningResources.map((item, index) => (
               <div
                 key={index}
-                className="p-5 md:p-7 bg-white text-center hover:shadow-sm transition"
+                className="p-5 md:p-7 bg-white text-center transition"
               >
                 <h4 className="text-Black_light text-base md:text-xl font-bold mb-2">
                   {item.title}
@@ -197,7 +197,7 @@ const PMPOnDemandCourse = () => {
 
       <StartFreeTrial />
       <Testimonials id="two" />
-      <Faq />
+      <Faq limit={5} />
       <TopFooterSection />
     </>
   );

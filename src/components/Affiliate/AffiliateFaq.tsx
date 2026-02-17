@@ -3,40 +3,40 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What Project Management Certifications Do You Offer?",
+    question: "What is an affiliate program?",
     answer:
-      "We offer comprehensive training and mentoring programs for globally recognized PMI® certifications, including Project Management Professional (PMP®), Certified Associate in Project Management (CAPM®), Program Management Professional (PgMP®), Portfolio Management Professional (PfMP®), PMI Agile Certified Practitioner (PMI-ACP®), PMI Risk Management Professional (PMI-RMP®), PMI Scheduling Professional (PMI-SP®), PMI Professional in Business Analysis (PMI-PBA®), PMI PMO Certified Professional (PMI-PMOCP™), Disciplined Agile Foundations (DAF), and Disciplined Agile Senior Scrum Master (DASSM). All programs are delivered by PMI Authorized Trainers and include expert mentoring, practical insights, and hands-on learning to help you succeed on exam day and in your professional practice.",
+      "An affiliate program allows you to earn commissions by promoting vCare products using a unique referral link.",
   },
   {
-    question: "Are Classes Conducted Online Or In-Person?",
+    question: "How much commission can I earn?",
     answer:
-      "Classes are available both online and in-person depending on your location and schedule preferences.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
-    question: "What Support Will I Receive During The Course?",
+    question: "Is there any cost to join?",
     answer:
-      "You will receive instructor mentoring, study materials, mock exams, doubt-clearing sessions, and post-training guidance.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
-    question: "How Do I Enroll In A Class, And What Is The Process?",
+    question: "What tools are provided to affiliates?",
     answer:
-      "You can enroll through our website by selecting a course, schedule, and completing the registration form.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
-  {
-    question: "Are There Any Discounts Or Special Offers Available?",
+  { 
+    question: "How do I apply?",
     answer:
-      "Yes, we regularly offer seasonal discounts, corporate pricing, and early-bird offers.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
 ];
 
-export default function Faq() {
+export default function AffiliateFaq() { 
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
      <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
       <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] mb-7">
-        Frequently Asked Questions
+       Frequently Asked Questions
       </h2>
 
       <div className="border-b border-gray-200 divide-y divide-gray-200">
@@ -80,9 +80,6 @@ export default function Faq() {
             </div>
           );
         })}
-      </div>
-      <div className="flex justify-center mt-7">
-        <Button>View all FAQs</Button>
       </div>
       </div>
     </section> 

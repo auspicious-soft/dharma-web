@@ -9,6 +9,7 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const navigate = useNavigate();
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -43,10 +44,12 @@ const Header = () => {
             <Link to="#" className="text-paragraph text-sm hidden lg:block">
               Partner with us
             </Link>
-            <Link to="#" className="text-paragraph text-sm hidden lg:block">
+            <Link to="/contact-us" className="text-paragraph text-sm hidden lg:block">
               Talk To Us
             </Link>
-            <Button className="!py-2 !px-5 hidden lg:block">Login</Button>
+            <Button className="!py-2 !px-5 hidden lg:block"
+            // onClick={() => navigate("/login")}
+            >Login</Button>
             <button
               className="block lg:hidden p-2 z-50 relative text-Black_light"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

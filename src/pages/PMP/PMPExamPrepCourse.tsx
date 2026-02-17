@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
@@ -313,7 +313,7 @@ const PMPExamPrepCourse = () => {
               {courseCard.card.map((card) => (
                 <div
                   key={card.id}
-                  className="p-5 bg-light-blue rounded-[20px] text-left hover:shadow-sm transition"
+                  className="p-5 bg-light-blue rounded-[20px] text-left transition"
                 >
                   <div className="w-[60px] h-[60px] text-xl font-bold text-primary_heading flex items-center justify-center relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                     {String(card.id).padStart(2, "0")}
@@ -347,7 +347,7 @@ const PMPExamPrepCourse = () => {
         />
       </div>
 
-      <Faq />
+      <Faq limit={5} />
 
       <TopFooterSection />
     </>

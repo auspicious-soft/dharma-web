@@ -5,7 +5,7 @@ import TrainingImage from "@/assets/training-image.png";
 import PlanSelector from "@/components/PDUs/PlanSelector";
 import CreditsPDUSection from "@/components/PDUs/CreditsPDUSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import { CircleArrowIcon, GreenTickIcon } from "@/utils/svgicons";
 import { Button } from "@/components/ui/button";
@@ -258,7 +258,7 @@ const PDUs = () => {
               {keyBenefits.card.map((card) => (
                 <div
                   key={card.id}
-                  className="p-5 bg-light-blue rounded-[20px] text-left hover:shadow-sm transition"
+                  className="p-5 bg-light-blue rounded-[20px] text-left  transition"
                 >
                   <div className="w-[60px] h-[60px] text-xl font-bold text-primary_heading flex items-center justify-center relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                     {String(card.id).padStart(2, "0")}
@@ -281,7 +281,7 @@ const PDUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Receive Your 35 Contact Hours Certificate
+              Receive Your PDU Certificate & Claim Code
               </h2>
               <p className="text-paragraph text-sm font-normal">
                 Earn a personalized Contact Hours certificate from a trusted
@@ -357,9 +357,11 @@ const PDUs = () => {
       </section>
 
       <div className="bg-light-blue">
-        <StartFreeTrial />
+        <StartFreeTrial
+        buttonText="Get Started with PDU Learning"
+        />
       </div>
-      <Faq />
+      <Faq limit={5} />
       <TopFooterSection />
     </>
   );

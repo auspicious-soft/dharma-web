@@ -104,7 +104,7 @@ const EnquiryForm = () => {
                   Subject
                 </Label>
                 <Select>
-                  <SelectTrigger  className="mt-1 h-14 w-full border border-input shadow-none border-[#e4e4e4] p-4 bg-white/80 rounded-[10px] text-[#7a7a7a] text-xs">
+                  <SelectTrigger  className="mt-1 h-14 w-full border border-input shadow-none border-[#e4e4e4] p-4 bg-white/80 rounded-full text-[#7a7a7a] text-xs">
                     <SelectValue placeholder="Select a subject" />
                   </SelectTrigger>
                   <SelectContent>

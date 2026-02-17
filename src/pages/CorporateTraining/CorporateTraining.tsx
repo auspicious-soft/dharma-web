@@ -2,7 +2,7 @@ import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHer
 import React from "react";
 import CorporateImage from "@/assets/tab-image.jpg";
 import { Button } from "@/components/ui/button";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import EnquiryForm from "@/components/ReusableComponents/EnquiryForm/EnquiryForm";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 const learningData = [
@@ -111,7 +111,7 @@ const CorporateTraining = () => {
           </ul>
         </div>
       </section>
-      <Faq />
+      <Faq limit={5} />
       <div className="-mt-10 md:-mt-14 lg:-mt-20 relative">
         <EnquiryForm />
       </div>

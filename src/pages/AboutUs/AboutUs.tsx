@@ -1,7 +1,7 @@
+import React from "react";
 import EnquiryForm from "@/components/ReusableComponents/EnquiryForm/EnquiryForm";
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import React from "react";
 const WhatWeDoCard = {
   card: [
     {
@@ -76,7 +76,7 @@ const WhyChooseUsCard = {
     },
   ],
 };
-const AboutUs = () => {
+const AboutUs = () => { 
   return (
     <>
       <FooterPageHeroSection
@@ -128,7 +128,7 @@ const AboutUs = () => {
             {WhatWeDoCard.card.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-light-blue rounded-[20px] text-left hover:shadow-sm transition"
+                className="p-5 bg-light-blue rounded-[20px] text-left transition"
               >
                 <div className="w-[60px] h-[60px] text-xl font-bold text-primary_heading flex items-center justify-center relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {String(card.id).padStart(2, "0")}
@@ -155,7 +155,7 @@ const AboutUs = () => {
             {WhyChooseUsCard.card.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-white rounded-[20px] text-left hover:shadow-sm transition"
+                className="p-5 bg-white rounded-[20px] text-left transition"
               >
                 <div className="w-[60px] h-[60px] text-xl font-bold text-primary_heading flex items-center justify-center relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {String(card.id).padStart(2, "0")}

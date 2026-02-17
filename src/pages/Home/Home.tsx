@@ -9,7 +9,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
 import DownloadvCare from "@/components/Home/DownloadvCare";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 
 const Home = () => {
   return (
@@ -29,7 +29,7 @@ const Home = () => {
                     </h1>
                   </div>
                 </div>
-                <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[30px] ml-1">
+                <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[26px] md:leading-[30px] ml-1">
                   <li className="flex items-start gap-2 self-stretch justify-start">
                     <span className="text-[8px]">•</span>{" "}
                     <span>
@@ -104,7 +104,7 @@ const Home = () => {
       />
 
       <DownloadvCare />
-      <Faq />
+      <Faq limit={5} />
     </>
   );
 };

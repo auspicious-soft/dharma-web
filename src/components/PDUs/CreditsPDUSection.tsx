@@ -63,7 +63,7 @@ const CreditsPDUSection: React.FC = () => {
     <section className="bg-primary_blue py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-9 m-auto">
         <h2 className="text-white text-center text-2xl md:text-3xl font-bold md:leading-[46px] mb-4 md:mb-6">
-          Choose Your PDU Course Package
+         Credits and PDUs Earned
         </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-7"> 
         {credits.map((credit) => (

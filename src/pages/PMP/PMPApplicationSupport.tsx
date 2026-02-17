@@ -3,7 +3,7 @@ import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/N
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/training-image.png";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 
 const PMPApplicationSupport = () => {
@@ -71,7 +71,7 @@ const PMPApplicationSupport = () => {
       <div className="-mt-10 md:-mt-20 relative">
       <ScreenshortsSlider id="application-screenshot" /></div>
       <div className="-mt-10 md:-mt-20 relative">
-      <Faq /></div>
+      <Faq limit={5} /></div>
       <TopFooterSection />
     </>
   );

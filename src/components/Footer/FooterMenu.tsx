@@ -5,15 +5,15 @@ import { NavLink } from "react-router-dom";
 
 export default function FooterMenu() {
   const companyLinks = [
-    { title: "About Us", href: "#" },
-    { title: "Contact Us", href: "#" },
+    { title: "About Us", href: "/about-us" },
+    { title: "Contact Us", href: "/contact-us" },
     { title: "Corporate Trainings", href: "/corporate-training" },
     { title: "Company", href: "#" },  
   ];
 
   const links = [
-    { title: "Book appointment", href: "#" },
-    { title: "FAQs", href: "#" },
+    { title: "Book appointment", href: "/book-an-appointment" },
+    { title: "FAQs", href: "/faq" },
     { title: "Our Current Promotions", href: "#" },
     { title: "Refer & Earn", href: "#" },
     { title: "Terms of Service", href: "#" },
@@ -26,6 +26,7 @@ export default function FooterMenu() {
     { title: "Podcasts", href: "#" },
     { title: "Webinars", href: "#" },
     { title: "Mobile App", href: "#" },
+    { title: "Affiliates", href: "/affiliate" },
   ];
 
   const examPrep = [

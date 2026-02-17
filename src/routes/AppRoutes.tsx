@@ -14,11 +14,29 @@ import CorporateTraining from "@/pages/CorporateTraining/CorporateTraining";
 import AboutUs from "@/pages/AboutUs/AboutUs";
 import ContactUs from "@/pages/ContactUs/ContactUs";
 import BookAppointment from "@/pages/BookAppointment/BookAppointment";
+import Affiliate from "@/pages/Affiliate/Affiliate";
+import Faq from "@/pages/FAQ/Faq";
+import MobileApp from "@/pages/MobileApp/MobileApp";
+import Login from "@/pages/auth/Login";
+import AuthLayout from "@/layouts/AuthLayout";
+import CreateAccount from "@/pages/auth/CreateAccount";
+import ForgotPassword from "@/pages/auth/ForgotPassword";
+import EnterOtp from "@/pages/auth/EnterOtp";
+import CreateNewPassword from "@/pages/auth/CreateNewPassword";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Layouts />}>
+
+       {/* Auth Pages */}
+        <Route element={<AuthLayout />}>
+         <Route path="/login" element={<Login />} />
+          <Route path="/create-account" element={<CreateAccount />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/enter-otp" element={<EnterOtp />} />
+         <Route path="/create-new-password" element={<CreateNewPassword />} /> 
+        </Route>
         <Route index element={<Home />} /> 
          {/* PMP Pages */}
         <Route path="/pmp/pmp-exam-prep-course" element={<PMPExamPrepCourse />} /> 
@@ -32,7 +50,7 @@ const AppRoutes = () => {
         <Route path="/exam-simulators" element={<ExamSimulators />} />  
         {/*PDUs Page */}
         <Route path="/pdus" element={<PDUs />} />   
-        {/*Corporate Training Page */}
+        {/*Corporate Training Page */} 
         <Route path="/corporate-training" element={<CorporateTraining />} />  
         {/*About Us */}
         <Route path="/about-us" element={<AboutUs />} />   
@@ -40,6 +58,12 @@ const AppRoutes = () => {
         <Route path="/contact-us" element={<ContactUs />} />  
         {/*Book Appointment */}
         <Route path="/book-an-appointment" element={<BookAppointment />} /> 
+        {/*Book Affiliate */} 
+        <Route path="/affiliate" element={<Affiliate />} /> 
+        {/*FAQ */}   
+        <Route path="/faq" element={<Faq />} /> 
+         {/*Mobile App */}   
+        <Route path="/mobile-app" element={<MobileApp />} /> 
       </Route>
     </Routes>
   );

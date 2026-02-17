@@ -41,7 +41,7 @@ export default function ScreenshortsSlider({ id }: ScreenshortsSliderProps) {
         {/* HEADER */}
         <div className="flex gap-3 items-center justify-between mb-7">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold">
-           Screenshorts
+           Screenshots
           </h2>
 
           {/* ARROWS */}

@@ -12,7 +12,7 @@ import {
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
-import Faq from "@/components/ReusableComponents/FAQSection/Faq";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
@@ -139,7 +139,7 @@ const PMPExamSimulator = () => {
       />
 
       <AuthorizedTrainingPartner
-        title="PMP® Certification Training"
+        title="PMP® Exam Simulator"
         subtitle="Get Certified for PMP®; world's most trusted Project Management Certification"
         bullets={[
           {
@@ -215,7 +215,7 @@ const PMPExamSimulator = () => {
             {accessCard.cards.map((card) => (
               <div
                 key={card.id}
-                className="p-5 bg-light-blue rounded-[20px] text-center hover:shadow-sm transition"
+                className="p-5 bg-light-blue rounded-[20px] text-center transition"
               >
                 <div className="w-[60px] h-[60px] flex items-center justify-center m-auto relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                   {" "}
@@ -280,7 +280,7 @@ const PMPExamSimulator = () => {
             {AdvancedSimulatorTools.map((item, index) => (
               <div
                 key={index}
-                className="p-5 md:p-7 bg-white text-center hover:shadow-sm transition"
+                className="p-5 md:p-7 bg-white text-center transition"
               >
                 <h4 className="text-Black_light text-base md:text-xl font-bold mb-2">
                   {item.title}
@@ -297,7 +297,7 @@ const PMPExamSimulator = () => {
       <Testimonials id="two" /> 
       <StartFreeTrial />
         <div className="-mt-10 md:-mt-20 relative">
-      <Faq />
+      <Faq limit={5} />
       </div>
       <TopFooterSection />
 

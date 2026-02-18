@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 type MenuItem = {
@@ -22,7 +22,10 @@ const menuItems: MenuItem[] = [
       { label: "PMP Flash Cards", href: "/pmp/pmp-flash-cards" },
       { label: "PMP Real Practice Exam", href: "/pmp/pmp-real-practice-exam" },
       { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
-      { label: "PMP Application Support", href: "/pmp/pmp-application-support" },
+      {
+        label: "PMP Application Support",
+        href: "/pmp/pmp-application-support",
+      },
     ],
   },
   {
@@ -37,7 +40,7 @@ const menuItems: MenuItem[] = [
     label: "PMOCP",
     dropdown: [{ label: "PMOCP Exam Prep Course ", href: "#" }],
   },
-    {
+  {
     label: "PMI-ACP",
     dropdown: [{ label: "PMI-ACP Exam Prep Course ", href: "#" }],
   },
@@ -45,7 +48,7 @@ const menuItems: MenuItem[] = [
     label: "Exam Simulators",
     href: "/exam-simulators",
   },
-    {
+  {
     label: "PDUs",
     href: "/pdus",
   },
@@ -55,8 +58,8 @@ const menuItems: MenuItem[] = [
       { label: "Other Certification", href: "" },
       { label: "Yearly", href: "#" },
     ],
-  }, 
-    {
+  },
+  {
     label: "Corporate Training",
     href: "/corporate-training",
   },
@@ -89,7 +92,7 @@ const Navigation: React.FC<NavigationProps> = ({
                 className="flex items-center justify-between px-6 py-3 text-paragraph text-sm hover:text-primary_heading transition-colors group"
                 onClick={onItemClick}
               >
-                <span>{item.label}</span>
+                <span>{item.label}</span> 
               </Link>
             )}
 
@@ -109,7 +112,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   />
                 </button>
 
-                {/* Dropdown Content */}
+                {/* Dropdown Content */} 
                 <div
                   className={`overflow-hidden transition-all duration-300 bg-light-blue ${
                     openDropdown === item.label
@@ -149,12 +152,18 @@ const Navigation: React.FC<NavigationProps> = ({
       {menuItems.map((item) => (
         <div key={item.label} className="relative group inline-block">
           {!item.dropdown && item.href && (
-            <Link
+            <NavLink
               to={item.href}
-              className="px-1 py-4 text-paragraph text-sm hover:text-primary_heading transition-colors inline-block"
+              className={({ isActive }) =>
+                `px-1 py-4 text-sm transition-colors inline-block ${
+                  isActive
+                    ? "text-primary_heading"
+                    : "text-paragraph hover:text-primary_heading"
+                }`
+              }
             >
               {item.label}
-            </Link>
+            </NavLink>
           )}
 
           {item.dropdown && (
@@ -166,13 +175,19 @@ const Navigation: React.FC<NavigationProps> = ({
 
               <div className="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px] z-50">
                 {item.dropdown.map((sub) => (
-                  <Link
+                  <NavLink
                     key={sub.label}
                     to={sub.href}
-                    className="block px-4 py-2 text-paragraph text-sm hover:text-primary_heading  transition-colors"
+                    className={({ isActive }) =>
+                      `block px-4 py-2 text-sm transition-colors ${
+                        isActive
+                          ? "text-primary_heading"
+                          : "text-paragraph hover:text-primary_heading"
+                      }`
+                    }
                   >
                     {sub.label}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
             </div>

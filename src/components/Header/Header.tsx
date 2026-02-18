@@ -111,7 +111,7 @@ const Header = () => {
               Partner with us
             </Link>
             <Link
-              to="#"
+             to="/contact-us"
               className="block text-center text-paragraph text-sm py-2 px-4 hover:bg-gray-100 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

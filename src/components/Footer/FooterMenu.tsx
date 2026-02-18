@@ -16,16 +16,16 @@ export default function FooterMenu() {
     { title: "FAQs", href: "/faq" },
     { title: "Our Current Promotions", href: "#" },
     { title: "Refer & Earn", href: "#" },
-    { title: "Terms of Service", href: "#" },
-    { title: "Privacy Policy", href: "#" },
-    { title: "Refund Policy", href: "#" },
+    { title: "Terms of Service", href: "/terms-of-service" },
+    { title: "Privacy Policy", href: "/privacy-policy" },
+    { title: "Refund Policy", href: "/refund-policy" },
   ];
 
   const resources = [
     { title: "Blogs", href: "#" },
     { title: "Podcasts", href: "#" },
     { title: "Webinars", href: "#" },
-    { title: "Mobile App", href: "#" },
+    { title: "Mobile App", href: "/mobile-app" },
     { title: "Affiliates", href: "/affiliate" },
   ];
 

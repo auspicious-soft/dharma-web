@@ -23,6 +23,9 @@ import CreateAccount from "@/pages/auth/CreateAccount";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
 import EnterOtp from "@/pages/auth/EnterOtp";
 import CreateNewPassword from "@/pages/auth/CreateNewPassword";
+import TermsofService from "@/pages/TermsofService/TermsofService";
+import PrivacyPolicy from "@/pages/PrivacyPolicy/PrivacyPolicy";
+import RefundPolicy from "@/pages/RefundPolicy/RefundPolicy";
 
 const AppRoutes = () => {
   return (
@@ -64,6 +67,12 @@ const AppRoutes = () => {
         <Route path="/faq" element={<Faq />} /> 
          {/*Mobile App */}   
         <Route path="/mobile-app" element={<MobileApp />} /> 
+         {/*Terms of Service */}   
+        <Route path="/terms-of-service" element={<TermsofService />} /> 
+         {/*Privacy Policy */}   
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> 
+         {/*Privacy Policy */}   
+        <Route path="/refund-policy" element={<RefundPolicy />} /> 
       </Route>
     </Routes>
   );

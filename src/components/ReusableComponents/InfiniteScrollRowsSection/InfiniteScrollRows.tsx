@@ -55,7 +55,7 @@ export default function InfiniteScrollRows() {
               key={i}
               src={img}
               alt="brand"
-              className="w-[156px] object-contain flex-shrink-0"
+              className="w-[100px] md:w-[156px] object-contain flex-shrink-0"
             />
           ))}
         </div>
@@ -69,7 +69,7 @@ export default function InfiniteScrollRows() {
               key={i}
               src={img}
               alt="brand"
-              className="w-[156px] object-contain flex-shrink-0"
+              className="w-[100px] md:w-[156px] object-contain flex-shrink-0"
             />
           ))}
         </div>

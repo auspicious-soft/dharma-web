@@ -157,7 +157,7 @@ const Navigation: React.FC<NavigationProps> = ({
               className={({ isActive }) =>
                 `px-1 py-4 text-sm transition-colors inline-block ${
                   isActive
-                    ? "text-primary_heading"
+                    ? "text-paragraph hover:text-primary_heading"
                     : "text-paragraph hover:text-primary_heading"
                 }`
               }
@@ -181,7 +181,7 @@ const Navigation: React.FC<NavigationProps> = ({
                     className={({ isActive }) =>
                       `block px-4 py-2 text-sm transition-colors ${
                         isActive
-                          ? "text-primary_heading"
+                          ? "text-paragraph hover:text-primary_heading"
                           : "text-paragraph hover:text-primary_heading"
                       }`
                     }

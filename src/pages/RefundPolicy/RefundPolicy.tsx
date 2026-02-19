@@ -256,7 +256,9 @@ export default function RefundPolicy() {
 
       if (item.type === "ul") {
         return (
-          <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+          <ul
+           key={index}
+          className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
             {item.items.map((li, liIndex) => (
               <li
                 key={liIndex}

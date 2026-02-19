@@ -20,7 +20,7 @@ const Login = () => {
         <h2 className="text-3xl font-bold capitalize leading-[46px] text-center text-[#1f1f1f]">
           Welcome Back
         </h2>
-        <p className="text-paragraph text-base font-normal ">
+        <p className="text-paragraph text-sm md:text-base font-normal ">
          Login to Your account to access the exam simulator.
         </p>
       </div>
@@ -31,7 +31,7 @@ const Login = () => {
             className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-input-888"
             strokeWidth={0.9}
           />
-          <Input type="email" placeholder="Email Address" className="pl-12" />
+          <Input type="email" placeholder="Email Address" className="!pl-12" />
         </div>
 
         {/* Password Field */}
@@ -43,7 +43,7 @@ const Login = () => {
           <Input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="pl-12 pr-10"
+            className="!pl-12 !pr-10"
           />
           <button
             type="button"

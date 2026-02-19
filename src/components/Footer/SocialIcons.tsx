@@ -4,34 +4,41 @@ import {
   X,
   Linkedin,
   Youtube,
+  Pinterest,
 } from "iconoir-react";
 
 const socials = [
   {
     id: 1,
     icon: Facebook,
-    link: "https://facebook.com",
+    link: "https://www.facebook.com/vCareProjectManagement/",
   },
   {
     id: 2,
     icon: Instagram,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/vcareprojectmanagement/",
   },
-  {
+    {
     id: 3,
-    icon: X,
-    link: "https://x.com",
+    icon: Youtube,
+    link: "https://www.youtube.com/channel/UCWg9sBRmPCcpVy2KY5AtjQQ",
   },
   {
     id: 4,
-    icon: Linkedin,
-    link: "https://linkedin.com",
+    icon: X,
+    link: "https://x.com/vCare_official",
+  },
+    {
+    id: 5,
+    icon: Pinterest,
+    link: "https://au.pinterest.com/vCareProjectManagement/",
   },
   {
-    id: 5,
-    icon: Youtube,
-    link: "https://youtube.com",
+    id: 6,
+    icon: Linkedin,
+    link: "https://www.linkedin.com/company/vcare-project-management-pty-ltd/",
   },
+
 ];
 
 const SocialIcons = () => {

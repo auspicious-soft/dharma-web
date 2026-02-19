@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import AnnouncementBar from "./AnnouncementBar";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "@/assets/logo.png";
 import Search from "./Search";
 import { Button } from "../ui/button";
@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center gap-2 lg:gap-6">
           <NavLink to="/" className="flex gap-[10px] items-center">
             <img src={Logo} alt="Logo" className="max-w-[58px]" />
-            <div className="text-[#0a4ba8] text-sm font-bold leading-5 max-w-24 md:max-w-max"> 
+            <div className="text-[#0a4ba8] text-sm font-bold leading-5 max-w-24 md:max-w-max">
               vCareProject Management
             </div>
           </NavLink>
@@ -44,12 +44,18 @@ const Header = () => {
             <Link to="#" className="text-paragraph text-sm hidden lg:block">
               Partner with us
             </Link>
-            <Link to="/contact-us" className="text-paragraph text-sm hidden lg:block">
+            <Link
+              to="/contact-us"
+              className="text-paragraph text-sm hidden lg:block"
+            >
               Talk To Us
             </Link>
-            <Button className="!py-2 !px-5 hidden lg:block"
-            // onClick={() => navigate("/login")}
-            >Login</Button>
+            <Button
+              className="!py-2 !px-5 hidden lg:block"
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </Button>
             <button
               className="block lg:hidden p-2 z-50 relative text-Black_light"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -111,13 +117,21 @@ const Header = () => {
               Partner with us
             </Link>
             <Link
-             to="/contact-us"
+              to="/contact-us"
               className="block text-center text-paragraph text-sm py-2 px-4 hover:bg-gray-100 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Talk To Us
             </Link>
-            <Button className="!py-3 !px-5 w-full mt-3">Login</Button>
+            <Button
+              className="!py-3 !px-5 w-full mt-3"
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate("/login");
+              }}
+            >
+              Login
+            </Button>
           </div>
         </div>
       </div>

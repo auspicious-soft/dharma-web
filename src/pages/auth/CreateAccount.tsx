@@ -65,7 +65,7 @@ navigate("/enter-otp", {
         <h2 className="text-3xl font-bold capitalize leading-[46px] text-center text-[#1f1f1f]">
         Create Account
         </h2>
-        <p className="text-paragraph text-base font-normal max-w-80 w-full m-auto">
+        <p className="text-paragraph text-sm md:text-base font-normal max-w-80 w-full m-auto">
           By continuing, you agree to our{" "}
           <Link to="#" className="text-primary_heading ">
             Terms
@@ -87,7 +87,7 @@ navigate("/enter-otp", {
           <Input
             type="text"
             placeholder="First Name"
-            className="pl-12"
+            className="!pl-12"
             value={firstName}
             onChange={(e) => {
               setFirstName(e.target.value);
@@ -104,7 +104,7 @@ navigate("/enter-otp", {
           <Input
             type="text"
             placeholder="Last Name"
-            className="pl-12"
+            className="!pl-12"
             value={lastName}
             onChange={(e) => {
               setLastName(e.target.value);
@@ -127,7 +127,7 @@ navigate("/enter-otp", {
           <Input
             type="email"
             placeholder="Email Address"
-            className="pl-12"
+            className="!pl-12"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -167,7 +167,7 @@ navigate("/enter-otp", {
           <Input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="pl-12 pr-10"
+            className="!pl-12 !pr-10"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
@@ -196,7 +196,7 @@ navigate("/enter-otp", {
           <Input
             type={confirmShowPassword ? "text" : "password"}
             placeholder="Confirm Password"
-            className="pl-12 pr-10"
+            className="!pl-12 !pr-10"
             value={confirmPassword}
             onChange={(e) => {
               setConfirmPassword(e.target.value);

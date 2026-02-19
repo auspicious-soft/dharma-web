@@ -26,7 +26,7 @@ const ForgotPassword = () => {
         <h2 className="text-3xl font-bold capitalize leading-[46px] text-center text-[#1f1f1f]">
           Forgot Password?
         </h2>
-        <p className="text-paragraph text-base font-normal max-w-[350px] w-full m-auto">
+        <p className="text-paragraph text-sm md:text-base font-normal max-w-[350px] w-full m-auto">
           Reset your password by email link and set a new one securely.
         </p>
       </div>
@@ -40,7 +40,7 @@ const ForgotPassword = () => {
           <Input
             type="email"
             placeholder="Email Address"
-            className="pl-12"
+            className="!pl-12"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

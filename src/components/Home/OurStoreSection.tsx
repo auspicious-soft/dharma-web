@@ -69,7 +69,7 @@ interface StoreSliderSectionProps {
 // --------------------
 export default function StoreSliderSection({ id }: StoreSliderSectionProps) {
   return (
-    <section className="overflow-hidden py-10 md:py-14 lg:py-20">
+    <section className="overflow-hidden pt-10 md:pt-14 lg:pt-20 pb-5 md:pb-7 lg:pb-10">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
         <div className="flex gap-3 items-center justify-between">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold ">

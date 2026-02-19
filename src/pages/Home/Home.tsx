@@ -10,8 +10,10 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
 import DownloadvCare from "@/components/Home/DownloadvCare";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+   const navigate = useNavigate();
   return (
     <>
       <section className="bg-light-blue lg:pt-[94px]">
@@ -66,8 +68,16 @@ const Home = () => {
                 </ul>
               </div>
               <div className="inline-flex justify-start items-start gap-2.5 w-full">
-                <Button>Get Started</Button>
                 <Button
+                onClick={() => {
+                  const section = document.getElementById(
+                    "premium-packs-scroll",
+                  );
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
+                >Get Started</Button>
+                <Button
+                 onClick={() => navigate("/contact-us")}
                   variant="outline"
                   className="bg-transparent min-w-[150px] lg:min-w-[218px]"
                 >
@@ -83,11 +93,13 @@ const Home = () => {
       </section>
 
       <OurStoreSection id="one" />
+      <div id="premium-packs-scroll" className="pt-5 md:pt-7 lg:pt-10">
       <PremiumPacks
         showCourseSelect={true}
         heading="Premium Packs"
         description="Update Money Back Guarantee copy"
       />
+      </div>
       <ThevCareExam />
       <CertificationTabs />
       <StartFreeTrial />

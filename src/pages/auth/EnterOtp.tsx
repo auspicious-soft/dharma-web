@@ -55,7 +55,7 @@ const EnterOtp = () => {
           Enter OTP
         </h2>
 
-        <p className="text-paragraph text-base font-normal max-w-[400px] w-full m-auto">
+        <p className="text-paragraph text-sm md:text-base font-normal max-w-[400px] w-full m-auto">
           Enter the one-time code sent to your registered email address.
         </p>
       </div>

@@ -47,7 +47,7 @@ const handleConfirm = () => {
         <h2 className="text-3xl font-bold capitalize leading-[46px] text-center text-[#1f1f1f]">
            Create New Password
         </h2>
-        <p className="text-paragraph text-base font-normal">
+        <p className="text-paragraph text-sm md:text-base font-normal">
         Create a strong password to protect your account.
         </p>
       </div>
@@ -60,7 +60,7 @@ const handleConfirm = () => {
           <Input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="pl-12 pr-10"
+            className="!pl-12 !pr-10"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
@@ -83,7 +83,7 @@ const handleConfirm = () => {
           <Input
             type={confirmShowPassword ? "text" : "password"}
             placeholder="Confirm Password"
-            className="pl-12 pr-10"
+            className="!pl-12 !pr-10"
             value={confirmPassword}
             onChange={(e) => {
               setConfirmPassword(e.target.value);

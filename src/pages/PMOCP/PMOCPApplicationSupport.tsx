@@ -6,7 +6,7 @@ import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlid
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 
-const PMPApplicationSupport = () => {
+const PMOCPApplicationSupport = () => {
   return (
     <>
       <NavHeroSection
@@ -78,4 +78,4 @@ const PMPApplicationSupport = () => {
   );
 };
 
-export default PMPApplicationSupport;
+export default PMOCPApplicationSupport;

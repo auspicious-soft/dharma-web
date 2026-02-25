@@ -13,8 +13,8 @@ import {
   GreenTickIcon,
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const flashCard = {
   cards: [
@@ -57,7 +57,7 @@ const SampleFlashCard = [
   {
     title: "Front Side",
     description:
-      "A question or key PMP® concept prompts you to think and respond before revealing the answer—training your exam mindset.",
+      "A question or key PMI-PMOCP™ concept prompts you to think and respond before revealing the answer—training your exam mindset.",
   },
   {
     title: "Back Side",
@@ -78,9 +78,8 @@ const WhatIncluded = [
   "Formulas & key calculations",
   "Acronyms & glossary terms",
   "Exam tips & confusion busters",
-  "High-impact PMP® screenshots and visuals",
+  "High-impact PMI-PMOCP™ screenshots and visuals",
 ];
-
 const allFaqs = [
   {
     question: "Are these flash cards aligned with the latest exam?",
@@ -122,7 +121,7 @@ const allFaqs = [
       "Yes. Content is periodically reviewed and updated to reflect evolving exam requirements.",
   },
 ];
-const PMPFlashCards = () => {
+const PMOCPFlashCard = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const displayedFaqs = allFaqs;
 
@@ -130,9 +129,9 @@ const PMPFlashCards = () => {
   return (
     <>
       <NavHeroSection
-        title="Flashcards That Make PMP® Concepts Stick"
-        description="Master key PMP® concepts quickly and effectively. Designed for focused revision and rapid knowledge reinforcement, these flash cards help you strengthen retention, recall critical formulas, and reinforce core project management principles aligned with the latest PMI Exam Content Outline."
-        descriptionsecond="Whether you're in the early stages of preparation or doing final-week revision, our flash cards help you review smarter and retain more."
+        title="PMO Flashcards for PMI-PMOCP™ Success"
+        description="Master essential PMI-PMOCP™ concepts with structured, high-impact flash cards designed for PMO leaders and strategic professionals. Reinforce key principles across PMO strategy, governance, value delivery, performance measurement, organizational alignment, and continuous improvement—aligned with the latest PMI-PMOCP™ framework and exam guidelines."
+        descriptionsecond=""
         sideImage={InnerPage}
       />
 
@@ -140,7 +139,7 @@ const PMPFlashCards = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-center items-center mb-6 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Why Use PMP® Flash Cards?
+              Why Use PMI-PMOCP™ Flash Cards?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
@@ -169,19 +168,13 @@ const PMPFlashCards = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-start items-start gap-2 text-left">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              To Flashcards Designed for PMP® Success
+              Flashcards Designed for PMOCP™ Success
             </h2>
             <p className="text-paragraph text-sm font-normal leading-[26px]">
-              PMP® flashcards are an effective and convenient tool to support
-              your preparation for the Project Management Professional
-              certification. Designed for focused learning, they present
-              essential concepts and terminology in a concise, easy-to-remember
-              format. PMP® exam flash cards are two-sided study cards designed
-              to improve recall and exam readiness. One side presents a PMP®
-              concept, term, formula, or question, while the other provides a
-              clear explanation or answer. They’re ideal for quick
-              revision—during commutes, short breaks, or last-minute exam
-              preparation.
+              Whether you’re building foundational knowledge or refining your
+              readiness before exam day, these flash cards help improve recall,
+              reinforce critical concepts, and build confidence for
+              certification success.
             </p>
           </div>
         </div>
@@ -313,6 +306,7 @@ const PMPFlashCards = () => {
           </div>
         </div>
       </section>
+
       <TopFooterSection
         content={{
           title: (
@@ -321,14 +315,14 @@ const PMPFlashCards = () => {
             </>
           ),
           description:
-            " Reinforce critical PMP® concepts with structured, category-based flash cards designed for focused revision and lasting retention.",
+            " Reinforce critical PMI-PMOCP™ concepts with structured, category-based flash cards designed for focused revision and lasting retention.",
           points: [
             "Quick review, anytime access",
             "Key formulas and definitions included",
             "Target high-impact exam topics",
             "Designed to support smarter preparation",
           ],
-          buttonText: "Explore PMP® Flashcards",
+          buttonText: "Explore all Flashcards",
           buttonLink: "#",
         }}
       />
@@ -336,4 +330,4 @@ const PMPFlashCards = () => {
   );
 };
 
-export default PMPFlashCards;
+export default PMOCPFlashCard;

@@ -218,7 +218,7 @@ const courseCard = {
   ],
 };
 
-const PMPExamPrepCourse = () => {
+const PMIACPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
@@ -355,4 +355,4 @@ const PMPExamPrepCourse = () => {
   );
 };
 
-export default PMPExamPrepCourse;
+export default PMIACPExamPrepCourse;

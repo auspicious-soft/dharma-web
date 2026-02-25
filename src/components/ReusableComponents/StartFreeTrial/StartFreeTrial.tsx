@@ -14,10 +14,10 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
   headings = "Start Your Free Trial",
   description = "Test-drive our exam simulators, practice exams, and study bundles before you buy.",
   features = [
-    "Instant access after signup",
-    "Real exam timer, flag, and review features",
+    "Explore exam prep tools, self-paced resources, and practice tests",
+    "Real exam-style simulation with performance insights",
     "Detailed explanations and domain-wise analytics",
-    "Cancel anytime during trial—no charges",
+    "No credit card required for trial access",
   ],
   buttonText = "Start a Free Trial",
 }) => {

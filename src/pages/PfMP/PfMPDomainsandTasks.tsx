@@ -31,13 +31,13 @@ const DomainsOverview = {
 
   ],
 };
-const PMPDomainsandTasks = () => {
+const PfMPDomainsandTasks = () => {
   return (
     <>
       <NavHeroSection
         title="PMP® Domains and Tasks"
         description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
-       descriptionsecond=""
+        descriptionsecond=""
         sideImage={InnerPage}
       />
       <section className="py-10 md:py-14 lg:py-20">
@@ -122,4 +122,4 @@ const PMPDomainsandTasks = () => {
   );
 };
 
-export default PMPDomainsandTasks;
+export default PfMPDomainsandTasks;

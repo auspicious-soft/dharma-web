@@ -19,30 +19,74 @@ const menuItems: MenuItem[] = [
       { label: "PMP Exam Prep Course ", href: "/pmp/pmp-exam-prep-course" },
       { label: "PMP On Demand Course", href: "/pmp/pmp-on-demand-course" },
       { label: "PMP Exam Simulator", href: "/pmp/pmp-exam-simulator" },
-      { label: "PMP Flash Cards", href: "/pmp/pmp-flash-cards" },
       { label: "PMP Real Practice Exam", href: "/pmp/pmp-real-practice-exam" },
       { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
       {
         label: "PMP Application Support",
         href: "/pmp/pmp-application-support",
       },
+      { label: "PMP Flashcards", href: "/pmp/pmp-flash-cards" },
     ],
   },
   {
     label: "PgMP",
-    dropdown: [{ label: "PgMP Exam Prep Course ", href: "#" }],
+    dropdown: [
+       { label: "PgMP Exam Prep Course ", href: "/pgmp/pgmp-exam-prep-course" },
+      { label: "PgMP On Demand Course", href: "/pgmp/pgmp-on-demand-course" },
+      { label: "PgMP Exam Simulator", href: "/pgmp/pgmp-exam-simulator" },
+      { label: "PgMP Real Practice Exam", href: "/pgmp/pgmp-real-practice-exam" },
+      { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
+      {
+        label: "PgMP Application Support",
+        href: "/pgmp/pgmp-application-support",
+      },
+      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" }
+    ],
   },
   {
     label: "PfMP",
-    dropdown: [{ label: "PfMP Exam Prep Course ", href: "#" }],
+    dropdown: [
+      { label: "PfMP Exam Prep Course ", href: "/pfmp/pfmp-exam-prep-course" },
+      { label: "PfMP On Demand Course", href: "/pfmp/pfmp-on-demand-course" },
+      { label: "PfMP Exam Simulator", href: "/pfmp/pfmp-exam-simulator" },
+      { label: "PfMP Real Practice Exam", href: "/pfmp/pfmp-real-practice-exam" },
+      { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
+      {
+        label: "PfMP Application Support",
+        href: "/pfmp/pfmp-application-support",
+      },
+      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" }
+    ],
   },
   {
     label: "PMOCP",
-    dropdown: [{ label: "PMOCP Exam Prep Course ", href: "#" }],
+    dropdown: [
+      { label: "PMOCP Exam Prep Course ", href: "/pmocp/pmocp-exam-prep-course" },
+      { label: "PMOCP On Demand Course", href: "/pmocp/pmocp-on-demand-course" },
+      { label: "PMOCP Exam Simulator", href: "/pmocp/pmocp-exam-simulator" },
+      { label: "PMOCP Real Practice Exam", href: "/pmocp/pmocp-real-practice-exam" },
+      { label: "PMOCP Domains and Tasks", href: "/pmocp/pmocp-domains-and-tasks" },
+      {
+        label: "PMOCP Application Support",
+        href: "/pmocp/pmocp-application-support",
+      },
+      { label: "PMOCP Flashcards ", href: "/pmocp/pmocp-flash-cards" },
+    ],
   },
   {
     label: "PMI-ACP",
-    dropdown: [{ label: "PMI-ACP Exam Prep Course ", href: "#" }],
+    dropdown: [
+      { label: "PMI-ACP Exam Prep Course ", href: "/pmi-acp/pmi-acp-exam-prep-course" },
+      { label: "PMI-ACP On Demand Course", href: "/pmi-acp/pmi-acp-on-demand-course" },
+      { label: "PMI-ACP Exam Simulator", href: "/pmi-acp/pmi-acp-exam-simulator" },
+      { label: "PMI-ACP Real Practice Exam", href: "/pmi-acp/pmi-acp-real-practice-exam" },
+      { label: "PMI-ACP Domains and Tasks", href: "/pmi-acp/pmi-acp-domains-and-tasks" },
+      {
+        label: "PMI-ACP Application Support",
+        href: "/pmi-acp/pmi-acp-application-support",
+      },
+      { label: "PMI-ACP Flashcards ", href: "/pmi-acp/pmi-acp-flash-cards" },
+    ],
   },
   {
     label: "Exam Simulators",
@@ -92,7 +136,7 @@ const Navigation: React.FC<NavigationProps> = ({
                 className="flex items-center justify-between px-6 py-3 text-paragraph text-sm hover:text-primary_heading transition-colors group"
                 onClick={onItemClick}
               >
-                <span>{item.label}</span> 
+                <span>{item.label}</span>
               </Link>
             )}
 
@@ -112,7 +156,7 @@ const Navigation: React.FC<NavigationProps> = ({
                   />
                 </button>
 
-                {/* Dropdown Content */} 
+                {/* Dropdown Content */}
                 <div
                   className={`overflow-hidden transition-all duration-300 bg-light-blue ${
                     openDropdown === item.label

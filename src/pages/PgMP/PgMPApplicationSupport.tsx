@@ -6,13 +6,13 @@ import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlid
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 
-const PMPApplicationSupport = () => {
+const PgMPApplicationSupport = () => {
   return (
     <>
       <NavHeroSection
         title="PMP Application Support"
         description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
-        descriptionsecond=""
+       descriptionsecond=""
         sideImage={InnerPage}
       />
       <section className="py-10 md:py-14 lg:py-20">
@@ -78,4 +78,4 @@ const PMPApplicationSupport = () => {
   );
 };
 
-export default PMPApplicationSupport;
+export default PgMPApplicationSupport;

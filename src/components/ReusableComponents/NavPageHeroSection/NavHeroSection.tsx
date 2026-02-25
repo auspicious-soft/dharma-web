@@ -4,12 +4,14 @@ import InnerBg from "@/assets/inner-bg.jpg";
 interface NavHeroSectionProps {
   title: string;
   description: string;
+  descriptionsecond: string;
   sideImage: string;
 }
 
 const NavHeroSection = ({ 
   title,
   description,
+  descriptionsecond,
   sideImage,
 }: NavHeroSectionProps) => {
   return (
@@ -27,6 +29,9 @@ const NavHeroSection = ({
 
             <p className="text-white text-sm font-normal leading-[26px] max-w-[470px] w-full">
               {description}
+            </p>
+             <p className="text-white text-sm font-normal leading-[26px] max-w-[470px] w-full">
+              {descriptionsecond}
             </p>
           </div>
 

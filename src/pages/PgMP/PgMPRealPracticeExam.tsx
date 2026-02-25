@@ -166,13 +166,13 @@ const slides = [
   },
 ];
 
-const PMPRealPracticeExam = () => {
+const PgMPRealPracticeExam = () => {
   return (
     <>
       <NavHeroSection
         title="Project Management Professional (PMP®) Practice Exam"
         description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
-      descriptionsecond=""
+        descriptionsecond=""
         sideImage={InnerPage}
       />
       <AuthorizedTrainingPartner
@@ -214,4 +214,4 @@ const PMPRealPracticeExam = () => {
   );
 };
 
-export default PMPRealPracticeExam;
+export default PgMPRealPracticeExam;

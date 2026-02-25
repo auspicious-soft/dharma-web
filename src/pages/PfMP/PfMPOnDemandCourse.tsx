@@ -69,7 +69,7 @@ const LearningResources = [
   },
 ];
 
-const PMPOnDemandCourse = () => {
+const PfMPOnDemandCourse = () => {
   return (
     <>
       <NavHeroSection
@@ -204,4 +204,4 @@ const PMPOnDemandCourse = () => {
   );
 };
 
-export default PMPOnDemandCourse;
+export default PfMPOnDemandCourse;

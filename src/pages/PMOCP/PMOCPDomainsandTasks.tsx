@@ -31,7 +31,7 @@ const DomainsOverview = {
 
   ],
 };
-const PMPDomainsandTasks = () => {
+const PMOCPDomainsandTasks = () => {
   return (
     <>
       <NavHeroSection
@@ -122,4 +122,4 @@ const PMPDomainsandTasks = () => {
   );
 };
 
-export default PMPDomainsandTasks;
+export default PMOCPDomainsandTasks;

@@ -70,12 +70,19 @@ export const PremiumPacks = ({
                   onValueChange={(value) => setSelectedCourse(value)}
                 >
                   <SelectTrigger className="border-primary_blue text-primary_blue focus:ring-0 rounded-full min-w-32 md:min-w-80">
-                    <SelectValue placeholder="PgMP" />
+                    <SelectValue placeholder="PMP" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectItem value="PgMP">PgMP</SelectItem>
-                      <SelectItem value="PMP">PMP</SelectItem>
+                      <SelectItem value="PMP">Project Management Professional (PMP)</SelectItem>
+                      <SelectItem value="PgMP">Program Management Professional (PgMP)</SelectItem>
+                      <SelectItem value="PfMP">Portfolio Management Professional (PfMP)</SelectItem>
+                      <SelectItem value="CAPM">Certified Associate in Project Management (CAPM)</SelectItem>
+                      <SelectItem value="PMI-ACP">Agile Certified Practitioner (PMI-ACP)</SelectItem>
+                      <SelectItem value="PMI-PMOCP">PMO Certified Professional (PMI-PMOCP)</SelectItem>
+                      <SelectItem value="PMI-RMP">Risk Management Professional (PMI-RMP)</SelectItem>
+                      <SelectItem value="PMI-SP">Scheduling Professional (PMI-SP)</SelectItem>
+                      <SelectItem value="PMI-PBA">PMI Professional in Business Analysis (PMI-PBA)</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>

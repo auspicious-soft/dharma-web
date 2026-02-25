@@ -129,7 +129,7 @@ const AdvancedSimulatorTools = [
   },
 ];
 
-const PMPExamSimulator = () => {
+const PMOCPExamSimulator = () => {
   return (
     <>
       <NavHeroSection
@@ -306,4 +306,4 @@ const PMPExamSimulator = () => {
   );
 };
 
-export default PMPExamSimulator;
+export default PMOCPExamSimulator;

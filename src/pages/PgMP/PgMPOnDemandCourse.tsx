@@ -69,13 +69,13 @@ const LearningResources = [
   },
 ];
 
-const PMPOnDemandCourse = () => {
+const PgMPOnDemandCourse = () => {
   return (
     <>
       <NavHeroSection
         title="PMP On Demand Course"
         description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
-        descriptionsecond=""
+       descriptionsecond=""
         sideImage={InnerPage}
       />
 
@@ -204,4 +204,4 @@ const PMPOnDemandCourse = () => {
   );
 };
 
-export default PMPOnDemandCourse;
+export default PgMPOnDemandCourse;

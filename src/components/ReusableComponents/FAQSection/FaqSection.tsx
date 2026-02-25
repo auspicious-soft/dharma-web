@@ -9,32 +9,42 @@ interface FaqProps {
 
 const faqs = [
   {
-    question: "What Project Management Certifications Do You Offer?",
+    question: "Are these flash cards aligned with the latest exam?",
     answer:
-      "We offer comprehensive training and mentoring programs for globally recognized PMI® certifications, including Project Management Professional (PMP®), Certified Associate in Project Management (CAPM®), Program Management Professional (PgMP®), Portfolio Management Professional (PfMP®), PMI Agile Certified Practitioner (PMI-ACP®), PMI Risk Management Professional (PMI-RMP®), PMI Scheduling Professional (PMI-SP®), PMI Professional in Business Analysis (PMI-PBA®), PMI PMO Certified Professional (PMI-PMOCP™), Disciplined Agile Foundations (DAF), and Disciplined Agile Senior Scrum Master (DASSM). All programs are delivered by PMI Authorized Trainers and include expert mentoring, practical insights, and hands-on learning to help you succeed on exam day and in your professional practice.",
+      "Yes. The content is aligned with the current Exam Content Outline and reflects updated industry practices.",
   },
   {
-    question: "Are Classes Conducted Online Or In-Person?",
+    question: "How many flash cards are included?",
     answer:
-      "Classes are available both online and in-person depending on your location and schedule preferences.",
+      "You receive access to a comprehensive collection of structured flash cards across all exam domains, with content continuously updated.",
   },
   {
-    question: "What Support Will I Receive During The Course?",
+    question: "Can I access the flash cards on mobile?",
     answer:
-      "You will receive instructor mentoring, study materials, mock exams...",
+      "Yes. The flash cards are fully mobile-friendly for convenient revision on the go.",
   },
   {
-    question: "How Do I Enroll In A Class, And What Is The Process?",
-    answer: "You can enroll through our website by selecting a course...",
+    question: "Are formulas and key definitions included?",
+    answer: "Yes. Important formulas, definitions, frameworks, and core concepts are included for quick recall and reinforcement.",
   },
   {
-    question: "Are There Any Discounts Or Special Offers Available?",
-    answer: "Yes, we regularly offer seasonal discounts...",
+    question: "Are these enough to pass the certification exam?",
+    answer: "Flash cards are an excellent revision tool. For full preparation, they work best alongside structured training and mock exams.",
   },
   {
-    question: "How can I provide feedback about the course?",
+    question: "How long do I get access?",
     answer:
-      "You can provide feedback through our online portal or by contacting our support team directly.",
+      "Access details depend on your purchase plan.",
+  },
+    {
+    question: "Are the flash cards suitable for last-minute revision?",
+    answer:
+      "Absolutely. They are ideal for quick review sessions, helping reinforce high-impact concepts before exam day.",
+  },
+    {
+    question: "Are the flash cards updated regularly?",
+    answer:
+      "Yes. Content is periodically reviewed and updated to reflect evolving exam requirements.",
   },
 ];
 

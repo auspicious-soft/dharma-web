@@ -30,7 +30,7 @@ import {
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
-  text: "The vCare PMP® Exam Prep Course is a comprehensive, self-paced program designed to help project management professionals confidently pass the PMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning, real-world scenarios, and exam-level practice to ensure complete readiness. Learners gain access to full-length mock exams, domain-based practice tests, detailed explanations, and smart performance analytics to track progress effectively. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PMP concepts, strengthening exam strategies, and achieving certification success on their first attempt.",
+  text: "Build confidence with realistic PgMP® practice tests created to reflect the latest exam style and evolving question patterns. Our domain-wise practice tests support focused preparation aligned with current PgMP® exam expectations. Master each domain one at a time, strengthen your understanding step by step, and enhance overall performance for your certification exam.",
 };
 // Tab 2 What You’ll Access
 const access = {
@@ -39,23 +39,23 @@ const access = {
     {
       id: 1,
       icon: ExamsIcon,
-      title: "Full-length PMP® mock exams",
+      title: "Full-length PgMP® mock exams",
       description:
-        "Simulate real PMP exam conditions with timed, full-length practice tests.",
+        "Simulate real PgMP exam conditions with timed, full-length practice tests.",
     },
     {
       id: 2,
       icon: ComIcon,
       title: "Mini practice tests by domain",
       description:
-        "Practice individual PMP domains to strengthen weak knowledge areas effectively.",
+        "Practice individual PgMP domains to strengthen weak knowledge areas effectively.",
     },
     {
       id: 3,
       icon: ExamsIcon,
-      title: "2,000+ PMP-style practice questions",
+      title: "1800+ PgMP-style practice questions",
       description:
-        "Large question bank aligned with real PMP exam difficulty and structure.",
+        "Large question bank aligned with real PgMP exam difficulty and structure.",
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const access = {
     {
       id: 6,
       icon: HatIcon,
-      title: "Structured PMP study plan",
+      title: "Structured PgMP study plan",
       description:
         "Follow a guided study roadmap designed for busy working professionals.",
     },
@@ -83,21 +83,21 @@ const access = {
       icon: MovieIcon,
       title: "Video lessons & concept breakdowns",
       description:
-        "Learn complex PMP concepts through concise, instructor-led video lessons.",
+        "Learn complex PgMP concepts through concise, instructor-led video lessons.",
     },
     {
       id: 8,
       icon: PhoneIcon,
       title: "Downloadable study resources",
       description:
-        "Access printable notes and guides for offline PMP exam preparation.",
+        "Access printable notes and guides for offline PgMP exam preparation.",
     },
     {
       id: 9,
       icon: FlashCardIcon,
       title: "Flashcards and revision tools",
       description:
-        "Quickly revise key formulas, processes, and PMP terminology.",
+        "Quickly revise key formulas, processes, and PgMP terminology.",
     },
   ],
 };
@@ -110,7 +110,7 @@ const work = {
       id: 1,
       icon: ClockIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PMP bundle that fits your goal",
+      description: "Choose the PgMP bundle that fits your goal",
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ const work = {
     {
       id: 5,
       icon: PhoneIcon,
-      title: "Clear the PMP® Exam",
+      title: "Clear the PgMP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
@@ -143,51 +143,52 @@ const slides = [
   {
     id: 1,
     image: InnerImage, // Replace with actual image
-    title: "PMP® Full-Length Exam Simulator",
+    title: "PgMP® Full-Length Exam Simulator",
     description:
-      "Experience real PMP exam conditions with timed, scenario-based full mock tests.",
+      "Experience real PgMP exam conditions with timed, scenario-based full mock tests.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PMP® Practice Question Bank",
+    title: "PgMP® Practice Question Bank",
     description:
-      "Strengthen your concepts with a large collection of PMP-aligned practice questions.",
+      "Strengthen your concepts with a large collection of PgMP-aligned practice questions.",
   },
   {
     id: 3,
     image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
+    title: "PgMP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
+      buttonText: "Book appointment",
   },
   {
     id: 4,
     image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
+    title: "PgMP® Exam Strategy Workshops",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
   },
 ];
 
 const PrepCourse = [
-  "Meets PMP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PMP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PMP mock tests",
+  "Meets PgMP® training hour requirements for certification eligibility",
+  "Fully aligned with the latest PMI® PgMP Exam Content Outline (ECO)",
+  "Real exam-style questions and full-length PgMP mock tests",
   "Structured study plan designed for working professionals",
 ];
 const courseCard = {
-  heading: "Why Choose Our PMP® Exam Prep Course?",
+  heading: "Why Choose Our PgMP® Exam Prep Course?",
   card: [
     {
       id: 1,
       title: "Beginner-friendly video lessons",
       description:
-        "Easy-to-follow videos simplify complex PMP concepts for all experience levels.",
+        "Easy-to-follow videos simplify complex PgMP concepts for all experience levels.",
     },
     {
       id: 2,
-      title: "PMI®-aligned PMP simulators",
+      title: "PMI®-aligned PgMP simulators",
       description:
         "Practice with simulators designed to match the latest PMI® exam format.",
     },
@@ -211,26 +212,69 @@ const courseCard = {
     },
     {
       id: 6,
-      title: "Trusted by PMP aspirants worldwide",
+      title: "Trusted by PgMP aspirants worldwide",
       description:
-        "Join thousands of professionals who rely on vCare for PMP exam success.",
+        "Join thousands of professionals who rely on vCare for PgMP exam success.",
     },
   ],
 };
+
+const pgmpPracticeTestFaqs = [
+  {
+    question: "Are the Practice Tests aligned to the latest exam outline?",
+    answer:
+      "Yes. Our Practice Tests are designed to reflect the current exam content outline, domains, and question style for each certification.",
+  },
+  {
+    question: "Do PMP® Practice Tests include agile and hybrid questions?",
+    answer:
+      "Yes. PMP® Practice Tests include predictive, agile, and hybrid scenarios aligned with current exam expectations.",
+  },
+  {
+    question: "Does the PMI-ACP® Practice Tests focus on agile methods?",
+    answer:
+      "They cover agile principles, frameworks, tools, team collaboration, and adaptive delivery approaches.",
+  },
+  {
+    question: "Does the PMI-RMP® Practice Tests include risk scenarios?",
+    answer:
+      "Yes. They focus on risk identification, analysis, response planning, monitoring, and real-world risk scenarios.",
+  },
+  {
+    question: "Does the PgMP® Practice Tests cover strategic topics?",
+    answer:
+      "Yes. They include governance, benefits management, stakeholder alignment, portfolio strategy, and leadership-focused questions.",
+  },
+  {
+    question: "Does the PfMP® Practice Tests cover strategic topics?",
+    answer:
+      "Yes. They include governance, benefits management, stakeholder alignment, portfolio strategy, and leadership-focused questions.",
+  },
+  {
+    question: "Does the PMOCP™ Practice Tests reflect PMO concepts?",
+    answer:
+      "Yes. They cover PMO design, governance, value delivery, performance, and organisational alignment topics.",
+  },
+  {
+    question: "Can I choose tests based on weak areas?",
+    answer:
+      "Yes. You can focus on specific domains or topics to improve weaker areas first.",
+  },
+];
 
 const PgMPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Prepare for the PMP® Exam With Real-World Practice"
-        description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
+        title="Program Management Professional (PgMP®) Practice Exam"
+        description="Our PgMP® Practice Exam is aligned with the latest PMI® PgMP Exam Content Outline and key principles from The Standard for Program Management – 5th Edition. Designed for certification success, it delivers focused domain-wise practice through realistic PgMP®-style questions that strengthen knowledge, reinforce strategy alignment, benefits management, stakeholder engagement, governance, and lifecycle management, while building confidence for advanced situational questions on exam day."
         descriptionsecond=""
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMP® Exam Simulator"
-        subtitle="Prepare like top scorers by practicing realistic, PMP®-style mock exams that mirror the actual exam’s difficulty, timing, and mindset. The PMP® Test Simulator helps sharpen situational judgment, identify weak domains quickly, build exam stamina, and walk into exam day knowing exactly what to expect."
+        title="PgMP® Exam Simulator"
+        subtitle="The PgMP® Practice Exam is built to help professionals prepare for real PgMP® exam conditions before exam day. Practice with high-quality PgMP®-style scenario questions, become familiar with exam patterns, and measure your readiness through detailed performance insights. Build confidence, identify knowledge gaps, and approach the exam fully prepared."
         bullets={[
           {
             text: "Step-by-Step Training Aligned with the Latest Exam Standards",
@@ -240,26 +284,26 @@ const PgMPExamPrepCourse = () => {
           { text: "PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
-        descriptionTop="Prepare with Confidence. Get PMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionTop="Prepare with Confidence. Get PgMP® Certified."
+        descriptionBottom="Designed to help you prepare with confidence and pass the PgMP® exam The PgMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
         image={TrainingImage}
       />
 
       <ContentTabs
-        id="pmp"
+        id="PgMP"
         overview={overview}
         access={access}
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PMP Learning Resources",
+          subheading: "Related PgMP Learning Resources",
           slides: slides,
         }}
       />
 
       <PremiumPacks
         showCourseSelect={false}
-        heading="Choose the PMP Exam Prep Plan That Fits You"
+        heading="Choose the PgMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -268,12 +312,12 @@ const PgMPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PMP Exam Prep Course – Enroll Today
+                PgMP Exam Prep Course – Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
-                The vCare PMP Exam Prep Course helps you build real-world
+                The vCare PgMP Exam Prep Course helps you build real-world
                 project management skills while preparing you to confidently
-                clear the PMP® certification exam on your first attempt.
+                clear the PgMP® certification exam on your first attempt.
               </p>
               <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
                 Key Value Bullets
@@ -341,16 +385,16 @@ const PgMPExamPrepCourse = () => {
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
           title={
             <>
-              Check out the <br /> PMP Exam Simulator in action.
+              Check out the <br /> PgMP Exam Simulator in action.
             </>
           }
           description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."
         />
       </div>
 
-      <Faq limit={5} />
+      <Faq faqs={pgmpPracticeTestFaqs} />
 
-      <TopFooterSection />
+      {/* <TopFooterSection /> */}
     </>
   );
 };

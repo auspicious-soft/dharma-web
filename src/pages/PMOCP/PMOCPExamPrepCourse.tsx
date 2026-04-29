@@ -30,7 +30,7 @@ import {
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
-  text: "The vCare PMP® Exam Prep Course is a comprehensive, self-paced program designed to help project management professionals confidently pass the PMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning, real-world scenarios, and exam-level practice to ensure complete readiness. Learners gain access to full-length mock exams, domain-based practice tests, detailed explanations, and smart performance analytics to track progress effectively. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PMP concepts, strengthening exam strategies, and achieving certification success on their first attempt.",
+  text: "Prepare with realistic PMI-PMOCP™ practice tests designed to reflect the latest exam style and question patterns. Our domain-wise practice tests help build confidence through focused preparation aligned with current PMI-PMOCP™ exam expectations. Focus on each domain individually, strengthen your knowledge step by step, and enhance overall readiness for your for your certification exam.",
 };
 // Tab 2 What You’ll Access
 const access = {
@@ -39,23 +39,23 @@ const access = {
     {
       id: 1,
       icon: ExamsIcon,
-      title: "Full-length PMP® mock exams",
+      title: "Full-length PMI-PMOCP® mock exams",
       description:
-        "Simulate real PMP exam conditions with timed, full-length practice tests.",
+        "Simulate real PMI-PMOCP exam conditions with timed, full-length practice tests.",
     },
     {
       id: 2,
       icon: ComIcon,
       title: "Mini practice tests by domain",
       description:
-        "Practice individual PMP domains to strengthen weak knowledge areas effectively.",
+        "Practice individual PMI-PMOCP domains to strengthen weak knowledge areas effectively.",
     },
     {
       id: 3,
       icon: ExamsIcon,
-      title: "2,000+ PMP-style practice questions",
+      title: "2,000+ PMI-PMOCP-style practice questions",
       description:
-        "Large question bank aligned with real PMP exam difficulty and structure.",
+        "Large question bank aligned with real PMI-PMOCP exam difficulty and structure.",
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const access = {
     {
       id: 6,
       icon: HatIcon,
-      title: "Structured PMP study plan",
+      title: "Structured PMI-PMOCP study plan",
       description:
         "Follow a guided study roadmap designed for busy working professionals.",
     },
@@ -83,21 +83,21 @@ const access = {
       icon: MovieIcon,
       title: "Video lessons & concept breakdowns",
       description:
-        "Learn complex PMP concepts through concise, instructor-led video lessons.",
+        "Learn complex PMI-PMOCP concepts through concise, instructor-led video lessons.",
     },
     {
       id: 8,
       icon: PhoneIcon,
       title: "Downloadable study resources",
       description:
-        "Access printable notes and guides for offline PMP exam preparation.",
+        "Access printable notes and guides for offline PMI-PMOCP exam preparation.",
     },
     {
       id: 9,
       icon: FlashCardIcon,
       title: "Flashcards and revision tools",
       description:
-        "Quickly revise key formulas, processes, and PMP terminology.",
+        "Quickly revise key formulas, processes, and PMI-PMOCP terminology.",
     },
   ],
 };
@@ -110,7 +110,7 @@ const work = {
       id: 1,
       icon: ClockIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PMP bundle that fits your goal",
+      description: "Choose the PMI-PMOCP bundle that fits your goal",
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ const work = {
     {
       id: 5,
       icon: PhoneIcon,
-      title: "Clear the PMP® Exam",
+      title: "Clear the PMI-PMOCP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
@@ -143,51 +143,51 @@ const slides = [
   {
     id: 1,
     image: InnerImage, // Replace with actual image
-    title: "PMP® Full-Length Exam Simulator",
+    title: "PMI-PMOCP® Full-Length Exam Simulator",
     description:
-      "Experience real PMP exam conditions with timed, scenario-based full mock tests.",
+      "Experience real PMI-PMOCP exam conditions with timed, scenario-based full mock tests.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PMP® Practice Question Bank",
+    title: "PMI-PMOCP® Practice Question Bank",
     description:
-      "Strengthen your concepts with a large collection of PMP-aligned practice questions.",
+      "Strengthen your concepts with a large collection of PMI-PMOCP-aligned practice questions.",
   },
   {
     id: 3,
     image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
+    title: "PMI-PMOCP® Exam Strategy Workshops",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
   },
   {
     id: 4,
     image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
+    title: "PMI-PMOCP® Exam Strategy Workshops",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
   },
 ];
 
 const PrepCourse = [
-  "Meets PMP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PMP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PMP mock tests",
+  "Meets PMI-PMOCP® training hour requirements for certification eligibility",
+  "Fully aligned with the latest PMI® PMI-PMOCP Exam Content Outline (ECO)",
+  "Real exam-style questions and full-length PMI-PMOCP mock tests",
   "Structured study plan designed for working professionals",
 ];
 const courseCard = {
-  heading: "Why Choose Our PMP® Exam Prep Course?",
+  heading: "Why Choose Our PMI-PMOCP® Exam Prep Course?",
   card: [
     {
       id: 1,
       title: "Beginner-friendly video lessons",
       description:
-        "Easy-to-follow videos simplify complex PMP concepts for all experience levels.",
+        "Easy-to-follow videos simplify complex PMI-PMOCP concepts for all experience levels.",
     },
     {
       id: 2,
-      title: "PMI®-aligned PMP simulators",
+      title: "PMI®-aligned PMI-PMOCP simulators",
       description:
         "Practice with simulators designed to match the latest PMI® exam format.",
     },
@@ -211,9 +211,9 @@ const courseCard = {
     },
     {
       id: 6,
-      title: "Trusted by PMP aspirants worldwide",
+      title: "Trusted by PMI-PMOCP aspirants worldwide",
       description:
-        "Join thousands of professionals who rely on vCare for PMP exam success.",
+        "Join thousands of professionals who rely on vCare for PMI-PMOCP exam success.",
     },
   ],
 };
@@ -222,15 +222,15 @@ const PMOCPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Prepare for the PMP® Exam With Real-World Practice"
-        description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
+        title="PMI-PMOCP™ Practice Exam"
+        description="Our PMI-PMOCP™ Practice Exam is aligned with the latest PMI® PMOCP Exam Content Outline and the current PMOCP Practice Guide. Designed for certification success, it delivers focused domain-wise practice through realistic PMI-PMOCP™ scenario questions that strengthen knowledge using the PMO Value Ring® framework, while building confidence for exam day."
        descriptionsecond=""
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMP® Exam Simulator"
-        subtitle="Prepare like top scorers by practicing realistic, PMP®-style mock exams that mirror the actual exam’s difficulty, timing, and mindset. The PMP® Test Simulator helps sharpen situational judgment, identify weak domains quickly, build exam stamina, and walk into exam day knowing exactly what to expect."
+        title="PMI-PMOCP® Exam Simulator"
+        subtitle="The PMI-PMOCP™ Practice Exam helps professionals simulate real PMI-PMOCP™ exam conditions before test day. Work through high-quality PMI-PMOCP™-style questions, understand exam trends, and track your readiness with detailed performance feedback. Improve confidence, uncover weak areas, and enter the exam better prepared."
         bullets={[
           {
             text: "Step-by-Step Training Aligned with the Latest Exam Standards",
@@ -240,26 +240,26 @@ const PMOCPExamPrepCourse = () => {
           { text: "PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
-        descriptionTop="Prepare with Confidence. Get PMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionTop="Prepare with Confidence. Get PMI-PMOCP® Certified."
+        descriptionBottom="Designed to help you prepare with confidence and pass the PMI-PMOCP® exam The PMI-PMOCP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
         image={TrainingImage}
       />
 
       <ContentTabs
-        id="pmp"
+        id="PMI-PMOCP"
         overview={overview}
         access={access}
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PMP Learning Resources",
+          subheading: "Related PMI-PMOCP Learning Resources",
           slides: slides,
         }}
       />
 
       <PremiumPacks
         showCourseSelect={false}
-        heading="Choose the PMP Exam Prep Plan That Fits You"
+        heading="Choose the PMI-PMOCP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -268,12 +268,12 @@ const PMOCPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PMP Exam Prep Course – Enroll Today
+                PMI-PMOCP Exam Prep Course – Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
-                The vCare PMP Exam Prep Course helps you build real-world
+                The vCare PMI-PMOCP Exam Prep Course helps you build real-world
                 project management skills while preparing you to confidently
-                clear the PMP® certification exam on your first attempt.
+                clear the PMI-PMOCP® certification exam on your first attempt.
               </p>
               <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
                 Key Value Bullets
@@ -341,7 +341,7 @@ const PMOCPExamPrepCourse = () => {
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
           title={
             <>
-              Check out the <br /> PMP Exam Simulator in action.
+              Check out the <br /> PMI-PMOCP Exam Simulator in action.
             </>
           }
           description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."

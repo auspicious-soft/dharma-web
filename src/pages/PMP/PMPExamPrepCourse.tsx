@@ -30,7 +30,7 @@ import {
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
-  text: "The vCare PMP® Exam Prep Course is a comprehensive, self-paced program designed to help project management professionals confidently pass the PMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning, real-world scenarios, and exam-level practice to ensure complete readiness. Learners gain access to full-length mock exams, domain-based practice tests, detailed explanations, and smart performance analytics to track progress effectively. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PMP concepts, strengthening exam strategies, and achieving certification success on their first attempt.",
+  text: "Prepare with realistic PMP® practice tests designed to reflect the latest exam style and evolving question patterns. Our domain-wise practice tests help you build confidence through focused preparation aligned with current PMP® exam expectations.Target each exam domain individually, improve knowledge step by step, and build stronger overall performance for your certification exam.",
 };
 // Tab 2 What You’ll Access
 const access = {
@@ -39,9 +39,9 @@ const access = {
     {
       id: 1,
       icon: ExamsIcon,
-      title: "Full-length PMP® mock exams",
+      title: "Exam Simulations",
       description:
-        "Simulate real PMP exam conditions with timed, full-length practice tests.",
+        "Simulate real PMP® exam-style questions with timed simulations designed to build confidence and improve readiness.",
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ const access = {
     {
       id: 3,
       icon: ExamsIcon,
-      title: "2,000+ PMP-style practice questions",
+      title: "1800+ PMP-style practice questions",
       description:
         "Large question bank aligned with real PMP exam difficulty and structure.",
     },
@@ -79,18 +79,11 @@ const access = {
         "Follow a guided study roadmap designed for busy working professionals.",
     },
     {
-      id: 7,
-      icon: MovieIcon,
-      title: "Video lessons & concept breakdowns",
-      description:
-        "Learn complex PMP concepts through concise, instructor-led video lessons.",
-    },
-    {
       id: 8,
       icon: PhoneIcon,
-      title: "Downloadable study resources",
+      title: "Targeted Practice Sets",
       description:
-        "Access printable notes and guides for offline PMP exam preparation.",
+        "Focused practice for Agile, Hybrid, and Predictive topics.",
     },
     {
       id: 9,
@@ -104,7 +97,7 @@ const access = {
 // Tab 3 How It Works
 const work = {
   heading: "How It Works",
-  dis: "Boost your confidence and exam readiness with vCare Exam Simulators—your success partner for PMI certifications.",
+  dis: "Boost your confidence and exam readiness with realistic practice tests designed to support success in PMI® certifications.",
   cards: [
     {
       id: 1,
@@ -157,16 +150,10 @@ const slides = [
   {
     id: 3,
     image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
+    title: "PMP® Exam Prep Training",
     description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-  },
-  {
-    id: 4,
-    image: InnerImage,
-    title: "PMP® Exam Strategy Workshops",
-    description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
+      "Choose from onine or in-person courses and get exam ready with a premier Authorized Training Partner",
+    buttonText: "Book appointment",
   },
 ];
 
@@ -218,30 +205,83 @@ const courseCard = {
   ],
 };
 
+const pmpPracticeTestFaqs = [
+  {
+    question: "What are Practice Tests?",
+    answer:
+      "Practice Tests are short focused tests designed to help you build knowledge, reinforce concepts, and improve exam confidence in manageable study sessions.",
+  },
+  {
+    question: "How are Practice Tests different from Mock Exams?",
+    answer:
+      "Practice Tests focus on specific domains or topics in shorter formats, while Mock Exams replicate full exam length, timing, and pressure.",
+  },
+  {
+    question: "Are the Practice Tests organised by domain?",
+    answer:
+      "Yes. Many tests are structured by exam domains, tasks, or key knowledge areas for focused improvement.",
+  },
+  {
+    question: "Why should I use mini practice tests?",
+    answer:
+      "Mini tests help you study efficiently, fit preparation into a busy schedule, and improve weak areas step by step.",
+  },
+  {
+    question: "How long does each Practice Test take?",
+    answer:
+      "Most are designed to be completed quickly, making them ideal for daily revision or short study breaks.",
+  },
+  {
+    question: "Do I receive explanations for answers?",
+    answer:
+      "Yes. Detailed explanations help you understand the logic behind each answer and strengthen learning.",
+  },
+  {
+    question: "When should I use Practice Tests?",
+    answer:
+      "Use them throughout your preparation to reinforce learning, track progress, and build confidence before full mock exams.",
+  },
+  {
+    question: "Can I retake tests multiple times?",
+    answer:
+      "Yes. Reattempting tests is a great way to improve scores and retain knowledge.",
+  },
+  {
+    question: "Are Practice Tests good for last-minute revision?",
+    answer:
+      "Absolutely. They are ideal for quick refreshers close to exam day.",
+  },
+  {
+    question: "Can I access them on mobile devices?",
+    answer:
+      "Yes. Practice Tests are available on phone and desktop for anytime, anywhere learning.",
+  },
+];
+
 const PMPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Prepare for the PMP® Exam With Real-World Practice"
-        description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
+        title="Project Management Professional (PMP®) Practice Exam"
+        description="Our PMP® Practice Exam is aligned with the latest PMI® PMP Exam Content Outline (ECO) and key principles from the PMBOK® Guide – 8th Edition. Designed for certification success, it delivers focused domain-wise practice through realistic PMP-style questions that strengthen knowledge, reinforce predictive, agile, and hybrid approaches, and build confidence in handling situational questions just as they appear on exam day."
         descriptionsecond=""
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMP® Exam Simulator"
-        subtitle="Prepare like top scorers by practicing realistic, PMP®-style mock exams that mirror the actual exam’s difficulty, timing, and mindset. The PMP® Test Simulator helps sharpen situational judgment, identify weak domains quickly, build exam stamina, and walk into exam day knowing exactly what to expect."
+        title="Test Your Readiness. Build Confidence. Get Exam-Day Ready."
+        subtitle="The PMP® Practice Exam is designed to help candidates experience real PMP® exam conditions before test day. Practice with high-quality PMP®-style questions, understand exam patterns, and evaluate your readiness with detailed performance insights. Strengthen your confidence, identify improvement areas, and approach the exam fully prepared."
         bullets={[
           {
-            text: "Step-by-Step Training Aligned with the Latest Exam Standards",
+            text: "Based on the latest PMP® Exam Content Outline (ECO)",
           },
-          { text: "Expert Instructors with Real-World Project Experience" },
-          { text: "100% Online, Flexible Learning" },
-          { text: "PMI®-Approved PDUs" },
+          { text: "Domain-wise targeted practice" },
+          { text: "Realistic exam-style questions" },
+          { text: "Detailed answer explanations" },
           { text: "Instant access to course materials" },
         ]}
-        descriptionTop="Prepare with Confidence. Get PMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        // descriptionTop="Prepare with Confidence. Get PMP® Certified."
+        // descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
         image={TrainingImage}
       />
 
@@ -252,7 +292,7 @@ const PMPExamPrepCourse = () => {
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PMP Learning Resources",
+          subheading: "A suite of flexible learning options designed to help you prepare on your terms. Choose in-person, live online, or self-paced formats and study on a schedule that suits you.",
           slides: slides,
         }}
       />
@@ -276,7 +316,7 @@ const PMPExamPrepCourse = () => {
                 clear the PMP® certification exam on your first attempt.
               </p>
               <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
-                Key Value Bullets
+                Key Features
               </h4>
               <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
                 {PrepCourse.map((text, index) => (
@@ -348,9 +388,9 @@ const PMPExamPrepCourse = () => {
         />
       </div>
 
-      <Faq limit={5} />
+      <Faq faqs={pmpPracticeTestFaqs} />
 
-      <TopFooterSection />
+      {/* <TopFooterSection /> */}
     </>
   );
 };

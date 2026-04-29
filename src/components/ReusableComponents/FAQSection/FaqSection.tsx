@@ -5,9 +5,15 @@ import { useNavigate } from "react-router-dom";
 interface FaqProps {
   limit?: number;
   hideButton?: boolean;
+  faqs?: FaqItem[];
 }
 
-const faqs = [
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const defaultFaqs: FaqItem[] = [
   {
     question: "Are these flash cards aligned with the latest exam?",
     answer:
@@ -48,10 +54,11 @@ const faqs = [
   },
 ];
 
-export default function FaqSection({ limit, hideButton }: FaqProps) {
+export default function FaqSection({ limit, hideButton, faqs }: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const displayedFaqs = limit ? faqs.slice(0, limit) : faqs;
+  const faqItems = faqs ?? defaultFaqs;
+  const displayedFaqs = limit ? faqItems.slice(0, limit) : faqItems;
   const navigate = useNavigate();
 
   return (

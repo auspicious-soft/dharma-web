@@ -39,6 +39,7 @@ interface SlideItem {
   image: string;
   title: string;
   description: string;
+  buttonText?: string;
 }
 
 interface ContentTabsProps {
@@ -230,7 +231,7 @@ export default function ContentTabs({
                         </p>
 
                         <Button variant="outline" className="w-full">
-                          View Details
+                          {slide.buttonText ?? "View Details"}
                         </Button>
                       </div>
                     </div>

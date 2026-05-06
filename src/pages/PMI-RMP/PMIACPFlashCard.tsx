@@ -57,7 +57,7 @@ const SampleFlashCard = [
   {
     title: "Front Side",
     description:
-      "A question or key PMI-ACP® concept prompts you to think and respond before revealing the answer—training your exam mindset.",
+      "A question or key PMI-RMP® concept prompts you to think and respond before revealing the answer—training your exam mindset.",
   },
   {
     title: "Back Side",
@@ -78,7 +78,7 @@ const WhatIncluded = [
   "Formulas & key calculations",
   "Acronyms & glossary terms",
   "Exam tips & confusion busters",
-  "High-impact PMI-ACP® screenshots and visuals",
+  "High-impact PMI-RMP® screenshots and visuals",
 ];
 const allFaqs = [
   {
@@ -129,8 +129,8 @@ const PMIACPFlashCard = () => {
   return (
     <>
       <NavHeroSection
-        title="Build Agile Mastery with PMI-ACP® Flashcards"
-        description="Master essential PMI-ACP® principles with structured, high-impact flash cards designed for agile professionals. Reinforce key concepts across Scrum, Kanban, Lean, XP, Crystal, and hybrid approaches—aligned with the latest PMI-ACP® Exam Content Outline."
+        title="Build Agile Mastery with PMI-RMP® Flashcards"
+        description="Master essential PMI-RMP® principles with structured, high-impact flash cards designed for agile professionals. Reinforce key concepts across Scrum, Kanban, Lean, XP, Crystal, and hybrid approaches—aligned with the latest PMI-RMP® Exam Content Outline."
         descriptionsecond=""
         sideImage={InnerPage}
       />
@@ -139,7 +139,7 @@ const PMIACPFlashCard = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-center items-center mb-6 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Why Use PMI-ACP® Flash Cards?
+              Why Use PMI-RMP® Flash Cards?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
@@ -168,7 +168,7 @@ const PMIACPFlashCard = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-start items-start gap-2 text-left">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Flashcards Designed for PMI-ACP® Success
+              Flashcards Designed for PMI-RMP® Success
             </h2>
             <p className="text-paragraph text-sm font-normal leading-[26px]">
               Strengthen your understanding of agile mindset, adaptive planning,
@@ -317,7 +317,7 @@ const PMIACPFlashCard = () => {
             </>
           ),
           description:
-            " Reinforce critical PMI-ACP® concepts with structured, category-based flash cards designed for focused revision and lasting retention.",
+            " Reinforce critical PMI-RMP® concepts with structured, category-based flash cards designed for focused revision and lasting retention.",
           points: [
             "Quick review, anytime access",
             "Key formulas and definitions included",

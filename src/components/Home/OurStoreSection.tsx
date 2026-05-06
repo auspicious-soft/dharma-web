@@ -12,52 +12,110 @@ import { Button } from "../ui/button";
 const storeData = [
   {
     id: 1,
-    title: "PMI-PMOCP",
+    title: "PMP®",
+    url: " https://www.vcareprojectmanagement.com/collections/pmp-certification-training",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Live, online, mentor-led sessions",
+      "Flexibility to reschedule",
+      "Training by PMI Authorized instructors.",
+      "Access to Digital Materials from PMI",
+      "Non-stop Support Until You Pass",
     ],
   },
   {
     id: 2,
-    title: "PMI-RMP",
+    title: "PMI-RMP®",
+    url: "https://www.vcareprojectmanagement.com/collections/pmi-rmp-certification-training",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Live, online, mentor-led sessions",
+      "Flexibility to reschedule",
+      "Training by PMI Authorized instructors.",
+      "Access to Digital Materials from PMI",
+      "Non-stop Support Until You Pass",
     ],
   },
   {
     id: 3,
-    title: "PMI-ACP",
+    title: "PMI-RMP®",
+    url: "https://www.vcareprojectmanagement.com/collections/PMI-RMP-certification-training",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Live, online, mentor-led sessions",
+      "Flexibility to reschedule",
+      "Training by PMI Authorized instructors.",
+      "Access to Digital Materials from PMI",
+      "Non-stop Support Until You Pass",
     ],
   },
   {
     id: 4,
-    title: "PFMP",
+    title: "PMOCP",
+    url: "https://www.vcareprojectmanagement.com/collections/pmocp-certification-training",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Live, online, mentor-led sessions",
+      "Flexibility to reschedule",
+      "Training by PMI Authorized instructors.",
+      "Access to Digital Materials from PMI",
+      "Non-stop Support Until You Pass",
     ],
   },
   {
     id: 5,
-    title: "PFMP",
+    title: "PgMP®",
+    url: "https://www.vcareprojectmanagement.com/collections/pgmp-certification-training",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Live, online, mentor-led sessions",
+      "Training by PMI Certified Experts",
+      "Complimentary On-Demand Course",
+      "PMI Application and Audit Assistance",
+      "Full length exam simulation",
+    ],
+  },
+  {
+    id: 6,
+    title: "PfMP®",
+    url: "https://www.vcareprojectmanagement.com/collections/pfmp-certification-training",
+    points: [
+      "Live, online, mentor-led sessions",
+      "Training by PMI Certified Experts",
+      "Complimentary On-Demand Course",
+      "Free PMI Application and Audit Assistance",
+      "Full length exam simulation",
+    ],
+  },
+  {
+    id: 7,
+    title: "PMI-SP®",
+    url: "https://www.vcareprojectmanagement.com/collections/pmi-sp-certification-training",
+    points: [
+      "Live instructor led sessions",
+      "Training by PMI Certified Experts",
+      "Flexible Pricing Options",
+      "Practice tests for self-assessment",
+      "Application and Audit Assistance",
+    ],
+  },
+  {
+    id: 8,
+    title: "CAPM®",
+    url: "https://www.vcareprojectmanagement.com/collections/capm-certification-training",
+    points: [
+      "Live instructor sessions",
+      "Training by PMI Certified Experts",
+      "Flexible Pricing Options",
+      "Application and Audit Assistance",
+      "Practice tests for self-assessment",
+    ],
+  },
+  {
+    id: 9,
+    title: "PMI-PBA®",
+    url: "https://www.vcareprojectmanagement.com/collections/pmi-pba-certification-training",
+    points: [
+      "Live, online, mentor-led sessions",
+      "Training by PMI Certified Experts",
+      "Flexible Pricing Options",
+      "Application and Audit Assistance",
+      "Practice tests for self-assessment",
     ],
   },
 ];
@@ -140,7 +198,11 @@ export default function StoreSliderSection({ id }: StoreSliderSectionProps) {
                 </div>
 
                 {/* BUTTON */}
-                <Button className="mt-6 md:mt-10 w-full ">Enroll Now</Button>
+                <Button className="mt-6 md:mt-10 w-full " asChild>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    Enroll Now
+                  </a>
+                </Button>
               </div>
             </SwiperSlide>
           ))}

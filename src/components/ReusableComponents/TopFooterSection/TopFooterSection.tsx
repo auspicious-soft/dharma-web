@@ -3,7 +3,9 @@ import React from "react";
 
 interface FooterContent {
   title: React.ReactNode;
-  description: string;
+  description: React.ReactNode;
+  pointsIntro?: string;
+  pointsHeading?: React.ReactNode;
   points: string[];
   buttonText: string;
   buttonLink?: string; // optional
@@ -52,6 +54,16 @@ const TopFooterSection: React.FC<TopFooterSectionProps> = ({
           </div>
 
           <div>
+            {sectionContent.pointsIntro && (
+              <p className="text-paragraph text-sm font-normal leading-[26px] mb-2">
+                {sectionContent.pointsIntro}
+              </p>
+            )}
+            {sectionContent.pointsHeading && (
+              <h4 className="text-Black_light text-base md:text-lg font-bold mb-2">
+                {sectionContent.pointsHeading}
+              </h4>
+            )}
             <ul className="space-y-1 text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
               {sectionContent.points.map(
                 (point: string, index: number) => (

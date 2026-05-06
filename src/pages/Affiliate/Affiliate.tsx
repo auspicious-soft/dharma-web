@@ -17,7 +17,7 @@ const BecomeAffiliateCard = {
       id: 2,
       title: "Add Value to Your Training",
       description:
-        "Enhance your offerings with PMP®, PgMP®, PfMP®, CAPM®, PMI-ACP®, and PDU programs without creating new content.",
+        "Enhance your offerings with PMP®, PgMP®, PfMP®, CAPM®, PMI-RMP®, and PDU programs without creating new content.",
     },
     {
       id: 3,

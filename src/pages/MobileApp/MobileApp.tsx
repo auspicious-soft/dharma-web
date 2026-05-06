@@ -101,7 +101,7 @@ const MobileApp = () => {
                   </div>
                   <div className="self-stretch justify-start text-[#556378] text-sm md:text-base font-normal leading-[26px] md:leading-[30px]">
                     Prepare smarter for PMP®, PgMP®, PfMP®, PMOCP®, PMI-RMP®,
-                    PMI-ACP®, and more — anytime, anywhere.
+                    PMI-RMP®, and more — anytime, anywhere.
                   </div>
                 </div>
                 <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm md:text-base font-normal leading-[26px] md:leading-[30px] ml-1">

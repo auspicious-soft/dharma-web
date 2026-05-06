@@ -12,14 +12,14 @@ interface StartFreeTrialProps {
 
 const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
   headings = "Start Your Free Trial",
-  description = "Test-drive our exam simulators, practice exams, and study bundles before you buy.",
+  description = "Test-drive our Exam Simulators, Practice Exams, and study bundles before you buy.",
   features = [
     "Explore exam prep tools, self-paced resources, and practice tests",
     "Real exam-style simulation with performance insights",
     "Detailed explanations and domain-wise analytics",
     "No credit card required for trial access",
   ],
-  buttonText = "Start a Free Trial",
+  buttonText = "Try for Free",
 }) => {
   return (
     <section className="overflow-hidden py-10 md:py-14 lg:py-20">

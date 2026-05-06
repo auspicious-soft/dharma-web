@@ -31,16 +31,19 @@ const menuItems: MenuItem[] = [
   {
     label: "PgMP",
     dropdown: [
-       { label: "PgMP Exam Prep Course ", href: "/pgmp/pgmp-exam-prep-course" },
+      { label: "PgMP Exam Prep Course ", href: "/pgmp/pgmp-exam-prep-course" },
       { label: "PgMP On Demand Course", href: "/pgmp/pgmp-on-demand-course" },
       { label: "PgMP Exam Simulator", href: "/pgmp/pgmp-exam-simulator" },
-      { label: "PgMP Real Practice Exam", href: "/pgmp/pgmp-real-practice-exam" },
+      {
+        label: "PgMP Real Practice Exam",
+        href: "/pgmp/pgmp-real-practice-exam",
+      },
       { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
       {
         label: "PgMP Application Support",
         href: "/pgmp/pgmp-application-support",
       },
-      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" }
+      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" },
     ],
   },
   {
@@ -49,23 +52,38 @@ const menuItems: MenuItem[] = [
       { label: "PfMP Exam Prep Course ", href: "/pfmp/pfmp-exam-prep-course" },
       { label: "PfMP On Demand Course", href: "/pfmp/pfmp-on-demand-course" },
       { label: "PfMP Exam Simulator", href: "/pfmp/pfmp-exam-simulator" },
-      { label: "PfMP Real Practice Exam", href: "/pfmp/pfmp-real-practice-exam" },
+      {
+        label: "PfMP Real Practice Exam",
+        href: "/pfmp/pfmp-real-practice-exam",
+      },
       { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
       {
         label: "PfMP Application Support",
         href: "/pfmp/pfmp-application-support",
       },
-      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" }
+      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" },
     ],
   },
   {
     label: "PMOCP",
     dropdown: [
-      { label: "PMOCP Exam Prep Course ", href: "/pmocp/pmocp-exam-prep-course" },
-      { label: "PMOCP On Demand Course", href: "/pmocp/pmocp-on-demand-course" },
+      {
+        label: "PMOCP Exam Prep Course ",
+        href: "/pmocp/pmocp-exam-prep-course",
+      },
+      {
+        label: "PMOCP On Demand Course",
+        href: "/pmocp/pmocp-on-demand-course",
+      },
       { label: "PMOCP Exam Simulator", href: "/pmocp/pmocp-exam-simulator" },
-      { label: "PMOCP Real Practice Exam", href: "/pmocp/pmocp-real-practice-exam" },
-      { label: "PMOCP Domains and Tasks", href: "/pmocp/pmocp-domains-and-tasks" },
+      {
+        label: "PMOCP Real Practice Exam",
+        href: "/pmocp/pmocp-real-practice-exam",
+      },
+      {
+        label: "PMOCP Domains and Tasks",
+        href: "/pmocp/pmocp-domains-and-tasks",
+      },
       {
         label: "PMOCP Application Support",
         href: "/pmocp/pmocp-application-support",
@@ -74,18 +92,33 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    label: "PMI-ACP",
+    label: "PMI-RMP",
     dropdown: [
-      { label: "PMI-ACP Exam Prep Course ", href: "/pmi-acp/pmi-acp-exam-prep-course" },
-      { label: "PMI-ACP On Demand Course", href: "/pmi-acp/pmi-acp-on-demand-course" },
-      { label: "PMI-ACP Exam Simulator", href: "/pmi-acp/pmi-acp-exam-simulator" },
-      { label: "PMI-ACP Real Practice Exam", href: "/pmi-acp/pmi-acp-real-practice-exam" },
-      { label: "PMI-ACP Domains and Tasks", href: "/pmi-acp/pmi-acp-domains-and-tasks" },
       {
-        label: "PMI-ACP Application Support",
-        href: "/pmi-acp/pmi-acp-application-support",
+        label: "PMI-RMP Exam Prep Course ",
+        href: "/pmi-rmp/pmi-rmp-exam-prep-course",
       },
-      { label: "PMI-ACP Flashcards ", href: "/pmi-acp/pmi-acp-flash-cards" },
+      {
+        label: "PMI-RMP On Demand Course",
+        href: "/pmi-rmp/pmi-rmp-on-demand-course",
+      },
+      {
+        label: "PMI-RMP Exam Simulator",
+        href: "/pmi-rmp/pmi-rmp-exam-simulator",
+      },
+      {
+        label: "PMI-RMP Real Practice Exam",
+        href: "/pmi-rmp/pmi-rmp-real-practice-exam",
+      },
+      {
+        label: "PMI-RMP Domains and Tasks",
+        href: "/pmi-rmp/pmi-rmp-domains-and-tasks",
+      },
+      {
+        label: "PMI-RMP Application Support",
+        href: "/pmi-rmp/pmi-rmp-application-support",
+      },
+      { label: "PMI-RMP Flashcards ", href: "/pmi-rmp/pmi-rmp-flash-cards" },
     ],
   },
   {

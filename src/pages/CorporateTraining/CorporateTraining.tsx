@@ -33,7 +33,7 @@ const learningData = [
 ];
 
 const PrepCourse = [
-  "Access to industry-leading practice exam systems for PMP®, PgMP®, PfMP®, PMOCP®, CAPM®, and PMI-ACP®",
+  "Access to industry-leading practice exam systems for PMP®, PgMP®, PfMP®, PMOCP®, CAPM®, and PMI-RMP®",
   "Fully accredited On-Demand certification courses",
   "Pay only for the courseware you use",
   "Instructor tools to monitor performance and create custom tests",

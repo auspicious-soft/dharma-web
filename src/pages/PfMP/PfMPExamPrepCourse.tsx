@@ -157,17 +157,12 @@ const slides = [
   {
     id: 3,
     image: InnerImage,
-    title: "PfMP® Exam Strategy Workshops",
+    title: "PfMP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-  },
-  {
-    id: 4,
-    image: InnerImage,
-    title: "PfMP® Exam Strategy Workshops",
-    description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-  },
+      buttonText: "Book appointment",
+    },
+
 ];
 
 const PrepCourse = [

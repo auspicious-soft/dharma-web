@@ -160,14 +160,7 @@ const slides = [
     title: "PgMP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-      buttonText: "Book appointment",
-  },
-  {
-    id: 4,
-    image: InnerImage,
-    title: "PgMP® Exam Strategy Workshops",
-    description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
+    buttonText: "Book appointment",
   },
 ];
 
@@ -231,7 +224,7 @@ const pgmpPracticeTestFaqs = [
       "Yes. PMP® Practice Tests include predictive, agile, and hybrid scenarios aligned with current exam expectations.",
   },
   {
-    question: "Does the PMI-ACP® Practice Tests focus on agile methods?",
+    question: "Does the PMI-RMP® Practice Tests focus on agile methods?",
     answer:
       "They cover agile principles, frameworks, tools, team collaboration, and adaptive delivery approaches.",
   },

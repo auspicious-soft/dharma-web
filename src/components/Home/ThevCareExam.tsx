@@ -16,10 +16,11 @@ const ThevCareExam = () => {
           <h1 className="text-white text-3xl md:text-[40px] font-bold leading-[45px] md:leading-[65px]">
             Simulator Advantage
           </h1>
+          <h3 className="text-white text-2xl md:text-3xl font-bold leading-[42px] md:leading-[62px]">
+            Anytime, Anywhere Access
+          </h3>
           <p className="text-white text-sm md:text-base font-normal  leading-[26px] md:leading-[30px] mt-3">
-            Experience exam prep that feels real. Our up‑to‑date simulators,
-            detailed explanations, and analytics help you practice smarter,
-            close knowledge gaps, and walk into the test with confidence.
+            Use the simulator whenever it suits you and continue your preparation from any location. Study on your laptop or smartphone with the flexibility to learn at your own pace.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-5 mt-7 md:mt-[70px]">

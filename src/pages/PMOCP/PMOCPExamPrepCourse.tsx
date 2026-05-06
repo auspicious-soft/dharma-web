@@ -157,16 +157,10 @@ const slides = [
   {
     id: 3,
     image: InnerImage,
-    title: "PMI-PMOCP® Exam Strategy Workshops",
+    title: "PMI-PMOCP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-  },
-  {
-    id: 4,
-    image: InnerImage,
-    title: "PMI-PMOCP® Exam Strategy Workshops",
-    description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
+      buttonText: "Book appointment",
   },
 ];
 

@@ -17,13 +17,11 @@ import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/T
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
 const examFeatures = [
+  "Based on the latest PMI-RMP® Practice Guide and Exam Content Outline (ECO)",
   "Realistic exam prep questions",
-  "Detailed explanations for most answers",
+  "Detailed Explanations for every question",
   "Simulated exam environment",
-  "Exam Mode, Timed Mode, and Learning Mode",
-  "Mark for Review functionality",
-  "Retake exams as many times as you like",
-  "Fully updated to the latest PMI® policies",
+  "Personalized reports, exam dashboard and RMP exam tips included",
 ];
 
 const accessCard = {
@@ -60,25 +58,25 @@ const accessCard = {
     {
       id: 5,
       icon: ChartIcon,
-      title: "Targeted Practice Sets",
+      title: "Smart Value Prep Practice Sets",
       description:
-        "Create focused quizzes for Agile, Hybrid, and Predictive topics.",
+        "An on-demand, cost-effective way to prepare for your exam.",
     },
     {
       id: 6,
       icon: HatIcon,
-      title: "Access Across Devices (6 Months)",
+      title: "Access Across Devices",
       description: "Practice seamlessly on desktop, tablet, or mobile.",
     },
   ],
 };
 
 const InsideSimulator = [
-  "Meets PMP® training hour requirements for certification eligibility",
   "Full-length mock exams under real exam pressure",
-  "Instant answer explanations focused on PMI® mindset",
-  "Performance breakdown by topic and domain",
-  "6-month access across all devices",
+  "Instant feedback and analysis",
+  "Performance breakdown by domain",
+  "Measure Your Performance",
+  "Retake exams as many times you like",
 ];
 
 const AdvancedSimulatorTools = [
@@ -89,8 +87,7 @@ const AdvancedSimulatorTools = [
   },
   {
     title: "Review Grid",
-    description:
-      "Mark and revisit questions instantly during exams.",
+    description: "Mark and revisit questions instantly during exams.",
   },
   {
     title: "Unanswered Mode",
@@ -99,33 +96,51 @@ const AdvancedSimulatorTools = [
   },
   {
     title: "Save & Resume Session",
-    description:
-      "Pause exams and continue anytime across devices.",
+    description: "Pause exams and continue anytime across devices.",
   },
   {
     title: "Auto-Save Exam",
-    description:
-      "Progress saved automatically everyfew minutes.",
+    description: "Progress saved automatically everyfew minutes.",
   },
   {
     title: "Comprehensive Score Report",
     description:
       "Detailed performance reports by process group and PMBOK® topics.",
   },
-    {
-    title: "Exam History",
-    description:
-      "Access past exams, scores, and performance trends.",
-  },
   {
-    title: "Email Report & History",
-    description:
-      "Receive detailed exam reports via email.",
+    title: "Measure Your Knowledge",
+    description: "Reports to review your performance by Exam Domain, scoring trends over time.",
   },
   {
     title: "Student Feedback System",
-    description:
-      "Submit feedback to help improve questions and content.",
+    description: "Submit feedback to help improve questions and content.",
+  },
+];
+const pmiacpExamSimulatorFaqs = [
+  {
+    question: "What is the PMI-RMP® Exam Simulator?",
+    answer:
+      "Our PMI-RMP® Exam Simulator is a comprehensive online exam preparation tool designed to replicate the real RMP® exam experience. It provides full-length practice exams with realistic, scenario-based questions aligned with the latest Exam Content Outline. The simulator helps you understand question patterns, exam structure, and timing before exam day.",
+  },
+  {
+    question: "What are the benefits of using the PMI-RMP® Exam Simulator?",
+    answer:
+      "Practicing with a realistic exam simulator is essential for exam success. It allows you to experience the actual test format, question style, and time constraints in a controlled environment.Our simulator includes detailed explanations for both correct and incorrect answers, helping you understand the reasoning behind each option. Domain-wise performance analytics and progress tracking enable you to identify strengths, close knowledge gaps, and improve strategically before the real exam.",
+  },
+  {
+    question: "How will I know when I’m ready to take the PMI-RMP® exam?",
+    answer:
+      "You’ll know you’re ready when you consistently achieve strong scores across domains and feel confident navigating scenario-based questions under timed conditions. Many candidates aim to score 75% or higher in multiple full-length simulations before scheduling their exam.",
+  },
+  {
+    question: "How often should I use the PMI-RMP® Exam Simulator?",
+    answer:
+      "You can use the simulator as often as needed during your access period. Taking multiple practice exams allows you to track progress, strengthen weak areas, and refine your exam strategy over time.",
+  },
+  {
+    question: "What if I have questions about the PMI-RMP® Exam Simulator?",
+    answer:
+      "If you have any questions or need assistance, our support team is ready to help. Simply reach out via our contact page or email us at team@vcareprojectmanagement.com.",
   },
 ];
 
@@ -133,33 +148,35 @@ const PMIACPExamSimulator = () => {
   return (
     <>
       <NavHeroSection
-        title="PMP Exam Simulator"
-        description="Our PMP® Exam Prep Course is aligned with the latest PMI® PMP Exam Content Outline (ECO) and designed for professionals preparing for certification success. The course combines structured learning, realistic exam simulations, and in-depth explanations to help you understand concepts, apply best practices, and confidently handle situational PMP-style questions—exactly as they appear on exam day."
+        title="PMI-RMP® Exam Simulator"
+        description="Our PMI-RMP® Exam Simulator is aligned with the latest Examination Content Outline and RMP Practice Guide. These questions are designed for professionals preparing to achieve certification success. It includes realistic full-length mock exams, scenario-based questions, domain-focused practice, and detailed explanations to help you master risk management concepts, apply proven practices, and confidently answer situational PMI-RMP® exam questions."
         descriptionsecond=""
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMP® Exam Simulator"
-        subtitle="Get Certified for PMP®; world's most trusted Project Management Certification"
+        title="PMI-RMP® Exam Simulator"
+        subtitle="Earn the PMI-RMP®, the globally recognized certification for project risk management professionals.Realistic, full-length simulation exams designed to measure your readiness, strengthen your knowledge, and help you prepare confidently for the certification exam."
         bullets={[
           {
-            text: "Step-by-Step Training Aligned with the Latest Exam Standards",
+            text: "Instant access from any web browser",
           },
-          { text: "Expert Instructors with Real-World Project Experience" },
-          { text: "100% Online, Flexible Learning" },
-          { text: "PMI®-Approved PDUs" },
-          { text: "Instant access to course materials" },
+          { text: "Aligned with the latest Exam Content Outline" },
+          { text: "Full-length RMP exam simulations" },
+          { text: "850+ realistic practice questions" },
+          { text: "Detailed answer explanations" },
+          { text: "Domain-wise performance analytics" },
+          { text: "PMI® Approved PDUs" },
         ]}
-        descriptionTop="Prepare with Confidence. Get PMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionTop="Prepare with Confidence. Get PMI-RMP® Certified."
+        descriptionBottom="Designed to help you prepare with confidence and pass the PMI-RMP® exam. The PMI-RMP® certification is not just another credential—it is the global benchmark for risk management professionals seeking recognition, credibility, and career growth in identifying, assessing, and managing project risks effectively."
         image={TrainingImage}
       />
 
       <div className="md:lg:pt-10 lg:pt-20">
         <PremiumPacks
           showCourseSelect={false}
-          heading="Choose your plans"
+          heading="Choose your plan"
           description="Three flexible plans designed for different learning needs and timelines."
         />
       </div>
@@ -172,21 +189,20 @@ const PMIACPExamSimulator = () => {
                 Thorough Features for Maximum Value
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 w-full leading-[26px]">
-                The PMP® Exam Simulator is designed to help candidates practice
-                under real exam conditions before test day. It offers realistic,
-                PMP®-style mock exams aligned with the latest PMI® Exam Content
-                Outline, including People, Process, and Business Environment
-                domains. With timed exams, detailed explanations, and
-                performance analytics, learners can identify weak areas, build
-                exam stamina, and develop the PMI® mindset required to succeed.
-                This simulator ensures confident, focused preparation for
-                passing the PMP® exam on the first attempt.
+                The PMI-RMP® Exam Simulator is designed to help candidates
+                practice under real exam conditions before test day. It offers
+                realistic, PMI-RMP®-style mock exams aligned with the latest
+                Examination Content Outline. With timed exams, detailed
+                explanations, and performance analytics, learners can identify
+                weak areas, build exam stamina, and develop the mindset required
+                to succeed. This simulator supports confident, focused
+                preparation to maximize success on exam day.
               </p>
             </div>
             <div>
-              <h4 className="text-Black_light  text-xl font-bold mb-4 md:mb-6">
+              {/* <h4 className="text-Black_light  text-xl font-bold mb-4 md:mb-6">
                 Key Value Bullets
-              </h4>
+              </h4> */}
               <ul className="space-y-3 md:space-y-4 lg:space-y-6  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
                 {examFeatures.map((text, index) => (
                   <li
@@ -209,7 +225,7 @@ const PMIACPExamSimulator = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-center items-center mb-6 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Why Choose Our PMP® Exam Simulator?
+              Why Choose Our PMI-RMP® Exam Simulator?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">
@@ -233,8 +249,8 @@ const PMIACPExamSimulator = () => {
           </div>
         </div>
       </section>
-      
-            <section className="bg-light-blue py-10 md:py-14 lg:py-20">
+
+      <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
@@ -295,13 +311,36 @@ const PMIACPExamSimulator = () => {
         </div>
       </section>
 
-      <Testimonials id="two" /> 
+      <Testimonials id="two" />
       <StartFreeTrial />
-        <div className="-mt-10 md:-mt-20 relative">
-      <Faq limit={5} />
+      <div className="-mt-10 md:-mt-20 relative">
+        <Faq faqs={pmiacpExamSimulatorFaqs} />
       </div>
-      <TopFooterSection />
-
+      <TopFooterSection
+        content={{
+          title: "Advance Your Risk Management Career",
+          description: (
+            <>
+             Global demand for professionals who can identify risks, improve decision-making, and protect project outcomes continues to grow. Organizations need leaders who can build effective risk frameworks and strengthen delivery confidence.
+              <br />
+              <br />
+              The PMI-RMP® certification is designed for project professionals and risk practitioners responsible for managing risks aligned with business objectives. Earning this credential helps you stand out and grow into higher-value opportunities.
+            </>
+          ),
+          pointsIntro:
+            "Build advanced risk management capability while preparing for the PMI-RMP® certification.",
+          pointsHeading: "Achieving your PMI-RMP® strengthens your professional profile:",
+          points: [
+            "Stronger influence in risk-based decision-making",
+            "Recognition as a trusted risk management professional",
+            "Enhanced credibility in project governance and controls",
+            "Greater opportunities to lead complex, high-risk initiatives",
+            "Globally recognized professional credibility",
+          ],
+          buttonText: "Start PMI-RMP® Preparation Today",
+          buttonLink: "/pmi-rmp/pmi-rmp-exam-prep-course",
+        }}
+      />
     </>
   );
 };

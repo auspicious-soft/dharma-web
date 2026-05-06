@@ -33,8 +33,8 @@ export default function FooterMenu() {
     { title: "PMP", href: "#" },
     { title: "PgMP", href: "#" },
     { title: "PfMP", href: "#" },
-    { title: "PMOCP", href: "#" },
-    { title: "PMI-ACP", href: "#" },
+    { title: "PMI-PMOCP", href: "#" },
+    { title: "PMI-RMP", href: "#" },
   ];
 
   return (

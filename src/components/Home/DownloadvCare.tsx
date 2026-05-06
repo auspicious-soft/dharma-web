@@ -20,28 +20,31 @@ const DownloadvCare = () => {
             <div className="flex flex-col gap-2 max-w-[500px] w-full">
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
                 Take your exam preparation to the next level with the vCare PM
-                Exam Mentor app. Access full-length mock exams, targeted
-                practice tests, and interactive flash cards—all designed by
-                project management experts to boost your confidence and help you
+                Exam Mentor app. Access expert learning resources, full-length
+                mock exams, targeted practice tests, and interactive flash
+                cards—all designed by project management experts, with PMP, PgMP
+                and PfMP certificates, to boost your confidence and help you
                 succeed. Whether you’re at home or on the go, prep smarter with
                 our easy-to-use mobile app.
               </p>
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
-                1&nbsp;&nbsp; Mock Exams
+                1&nbsp;&nbsp; On Demand Courses
               </p>
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
-                2&nbsp;&nbsp; Practice Tests
+                2&nbsp;&nbsp; Mock Exams
               </p>
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
-                3&nbsp;&nbsp; Flash Cards
+                3&nbsp;&nbsp; Practice Tests
               </p>
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
-                4&nbsp;&nbsp; Available on iOS and Android
+                4&nbsp;&nbsp; Flash Cards
+              </p>
+              <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
+                5&nbsp;&nbsp; Available on iOS and Android
               </p>
             </div>
             <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] mt-2 md:mt-4 max-w-[500px] w-full">
-              Download vCare PM Exam Mentor today and get one step closer to
-              your certification—anytime, anywhere!
+              Download vCare PM Exam Mentor today and get one step closer to your certification—anytime, anywhere!
             </p>
             <div className="flex flex-row gap-3 mt-4 md:mt-7">
               <img
@@ -59,10 +62,10 @@ const DownloadvCare = () => {
 
           <div className="flex flex-col gap-3">
             <img
-                src={ScreenImage}
-                alt="Screen Image"
-                className="max-w-[490px] w-full"
-              />
+              src={ScreenImage}
+              alt="Screen Image"
+              className="max-w-[490px] w-full"
+            />
           </div>
         </div>
       </div>

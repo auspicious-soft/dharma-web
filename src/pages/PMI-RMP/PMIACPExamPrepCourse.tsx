@@ -30,7 +30,7 @@ import {
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
-  text: "Prepare with realistic PMI-ACP® practice tests designed to reflect agile style and current question patterns. Our domain-wise practice tests help you focus on agile principles, practices, tools, and techniques while building confidence step by step. Strengthen each domain individually and improve your readiness for the exam day.",
+  text: "Prepare with realistic PMI-RMP® practice tests designed to reflect agile style and current question patterns. Our domain-wise practice tests help you focus on agile principles, practices, tools, and techniques while building confidence step by step. Strengthen each domain individually and improve your readiness for the exam day.",
 };
 // Tab 2 What You’ll Access
 const access = {
@@ -39,23 +39,23 @@ const access = {
     {
       id: 1,
       icon: ExamsIcon,
-      title: "Full-length PMI-ACP® mock exams",
+      title: "Full-length PMI-RMP® mock exams",
       description:
-        "Simulate real PMI-ACP exam conditions with timed, full-length practice tests.",
+        "Simulate real PMI-RMP exam conditions with timed, full-length practice tests.",
     },
     {
       id: 2,
       icon: ComIcon,
       title: "Mini practice tests by domain",
       description:
-        "Practice individual PMI-ACP domains to strengthen weak knowledge areas effectively.",
+        "Practice individual PMI-RMP domains to strengthen weak knowledge areas effectively.",
     },
     {
       id: 3,
       icon: ExamsIcon,
-      title: "2,000+ PMI-ACP-style practice questions",
+      title: "2,000+ PMI-RMP-style practice questions",
       description:
-        "Large question bank aligned with real PMI-ACP exam difficulty and structure.",
+        "Large question bank aligned with real PMI-RMP exam difficulty and structure.",
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const access = {
     {
       id: 6,
       icon: HatIcon,
-      title: "Structured PMI-ACP study plan",
+      title: "Structured PMI-RMP study plan",
       description:
         "Follow a guided study roadmap designed for busy working professionals.",
     },
@@ -83,21 +83,21 @@ const access = {
       icon: MovieIcon,
       title: "Video lessons & concept breakdowns",
       description:
-        "Learn complex PMI-ACP concepts through concise, instructor-led video lessons.",
+        "Learn complex PMI-RMP concepts through concise, instructor-led video lessons.",
     },
     {
       id: 8,
       icon: PhoneIcon,
       title: "Downloadable study resources",
       description:
-        "Access printable notes and guides for offline PMI-ACP exam preparation.",
+        "Access printable notes and guides for offline PMI-RMP exam preparation.",
     },
     {
       id: 9,
       icon: FlashCardIcon,
       title: "Flashcards and revision tools",
       description:
-        "Quickly revise key formulas, processes, and PMI-ACP terminology.",
+        "Quickly revise key formulas, processes, and PMI-RMP terminology.",
     },
   ],
 };
@@ -110,7 +110,7 @@ const work = {
       id: 1,
       icon: ClockIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PMI-ACP bundle that fits your goal",
+      description: "Choose the PMI-RMP bundle that fits your goal",
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ const work = {
     {
       id: 5,
       icon: PhoneIcon,
-      title: "Clear the PMI-ACP® Exam",
+      title: "Clear the PMI-RMP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
@@ -143,51 +143,45 @@ const slides = [
   {
     id: 1,
     image: InnerImage, // Replace with actual image
-    title: "PMI-ACP® Full-Length Exam Simulator",
+    title: "PMI-RMP® Full-Length Exam Simulator",
     description:
-      "Experience real PMI-ACP exam conditions with timed, scenario-based full mock tests.",
+      "Experience real PMI-RMP exam conditions with timed, scenario-based full mock tests.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PMI-ACP® Practice Question Bank",
+    title: "PMI-RMP® Practice Question Bank",
     description:
-      "Strengthen your concepts with a large collection of PMI-ACP-aligned practice questions.",
+      "Strengthen your concepts with a large collection of PMI-RMP-aligned practice questions.",
   },
   {
     id: 3,
     image: InnerImage,
-    title: "PMI-ACP® Exam Strategy Workshops",
+    title: "PMI-RMP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-  },
-  {
-    id: 4,
-    image: InnerImage,
-    title: "PMI-ACP® Exam Strategy Workshops",
-    description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
+    buttonText: "Book appointment",
   },
 ];
 
 const PrepCourse = [
-  "Meets PMI-ACP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PMI-ACP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PMI-ACP mock tests",
+  "Meets PMI-RMP® training hour requirements for certification eligibility",
+  "Fully aligned with the latest PMI® PMI-RMP Exam Content Outline (ECO)",
+  "Real exam-style questions and full-length PMI-RMP mock tests",
   "Structured study plan designed for working professionals",
 ];
 const courseCard = {
-  heading: "Why Choose Our PMI-ACP® Exam Prep Course?",
+  heading: "Why Choose Our PMI-RMP® Exam Prep Course?",
   card: [
     {
       id: 1,
       title: "Beginner-friendly video lessons",
       description:
-        "Easy-to-follow videos simplify complex PMI-ACP concepts for all experience levels.",
+        "Easy-to-follow videos simplify complex PMI-RMP concepts for all experience levels.",
     },
     {
       id: 2,
-      title: "PMI®-aligned PMI-ACP simulators",
+      title: "PMI®-aligned PMI-RMP simulators",
       description:
         "Practice with simulators designed to match the latest PMI® exam format.",
     },
@@ -211,9 +205,9 @@ const courseCard = {
     },
     {
       id: 6,
-      title: "Trusted by PMI-ACP aspirants worldwide",
+      title: "Trusted by PMI-RMP aspirants worldwide",
       description:
-        "Join thousands of professionals who rely on vCare for PMI-ACP exam success.",
+        "Join thousands of professionals who rely on vCare for PMI-RMP exam success.",
     },
   ],
 };
@@ -222,15 +216,15 @@ const PMIACPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="PMI Agile Certified Practitioner (PMI-ACP®) Practice Exam"
-        description="Our PMI-ACP® Practice Exam is aligned with the latest PMI® ACP Exam Content Outline and current Agile Practice Guide principles. Designed for certification success, it delivers focused domain-wise practice through realistic PMI-ACP® scenario questions that strengthen knowledge of agile mindset, value delivery, stakeholder engagement, team performance, adaptive planning, and problem solving, while building confidence for exam day."
+        title="PMI Agile Certified Practitioner (PMI-RMP®) Practice Exam"
+        description="Our PMI-RMP® Practice Exam is aligned with the latest PMI® ACP Exam Content Outline and current Agile Practice Guide principles. Designed for certification success, it delivers focused domain-wise practice through realistic PMI-RMP® scenario questions that strengthen knowledge of agile mindset, value delivery, stakeholder engagement, team performance, adaptive planning, and problem solving, while building confidence for exam day."
         descriptionsecond=""
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMI-ACP® Exam Simulator"
-        subtitle="The PMI-ACP® Practice Exam helps professionals simulate real PMI-ACP® exam conditions before test day. Work through high-quality PMI-ACP®-style questions, understand exam trends, and track your readiness with detailed performance feedback. Improve confidence, uncover weak areas, and enter the exam better prepared."
+        title="PMI-RMP® Exam Simulator"
+        subtitle="The PMI-RMP® Practice Exam helps professionals simulate real PMI-RMP® exam conditions before test day. Work through high-quality PMI-RMP®-style questions, understand exam trends, and track your readiness with detailed performance feedback. Improve confidence, uncover weak areas, and enter the exam better prepared."
         bullets={[
           {
             text: "Step-by-Step Training Aligned with the Latest Exam Standards",
@@ -240,26 +234,26 @@ const PMIACPExamPrepCourse = () => {
           { text: "PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
-        descriptionTop="Prepare with Confidence. Get PMI-ACP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMI-ACP® exam The PMI-ACP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionTop="Prepare with Confidence. Get PMI-RMP® Certified."
+        descriptionBottom="Designed to help you prepare with confidence and pass the PMI-RMP® exam The PMI-RMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
         image={TrainingImage}
       />
 
       <ContentTabs
-        id="PMI-ACP"
+        id="PMI-RMP"
         overview={overview}
         access={access}
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PMI-ACP Learning Resources",
+          subheading: "Related PMI-RMP Learning Resources",
           slides: slides,
         }}
       />
 
       <PremiumPacks
         showCourseSelect={false}
-        heading="Choose the PMI-ACP Exam Prep Plan That Fits You"
+        heading="Choose the PMI-RMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -268,12 +262,12 @@ const PMIACPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PMI-ACP Exam Prep Course – Enroll Today
+                PMI-RMP Exam Prep Course – Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
-                The vCare PMI-ACP Exam Prep Course helps you build real-world
+                The vCare PMI-RMP Exam Prep Course helps you build real-world
                 project management skills while preparing you to confidently
-                clear the PMI-ACP® certification exam on your first attempt.
+                clear the PMI-RMP® certification exam on your first attempt.
               </p>
               <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
                 Key Value Bullets
@@ -341,7 +335,7 @@ const PMIACPExamPrepCourse = () => {
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
           title={
             <>
-              Check out the <br /> PMI-ACP Exam Simulator in action.
+              Check out the <br /> PMI-RMP Exam Simulator in action.
             </>
           }
           description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."

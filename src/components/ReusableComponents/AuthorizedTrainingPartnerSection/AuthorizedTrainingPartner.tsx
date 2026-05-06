@@ -40,7 +40,7 @@ const AuthorizedTrainingPartner: React.FC<AuthorizedTrainingPartnerProps> = ({
 
             {/* BULLETS */}
             <h4 className="text-Black_light  text-xl font-bold mt-6 mb-5">
-              Key Value Bullets
+              Key Features:
             </h4>
             <div className="mt-3 space-y-3">
               {bullets.map((item, index) => (
@@ -83,7 +83,7 @@ const AuthorizedTrainingPartner: React.FC<AuthorizedTrainingPartnerProps> = ({
               />
               <div className="-ml-8 pl-[50px] pr-[30px] py-2.5 bg-[#f0f8ff] rounded-[30px] inline-flex justify-center items-center gap-2.5">
                 <div className="text-center justify-center text-[#0a4ba8] text-sm font-medium leading-[26px]">
-                  Authorized Training Partner
+                 Premier Authorized Training Partner (ATP) of Project Management Institute
                 </div>
               </div>
           

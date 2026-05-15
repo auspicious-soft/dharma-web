@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import AnnouncementBar from "./AnnouncementBar";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "@/assets/logo.png";
 import Search from "./Search";
 import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
 
+const LOGIN_REDIRECT_URL = "https://dharam-user-portal.vercel.app/login";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
+
+  const handleLoginRedirect = () => {
+    window.location.href = LOGIN_REDIRECT_URL;
+  };
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -52,7 +57,7 @@ const Header = () => {
             </Link>
             <Button
               className="!py-2 !px-5 hidden lg:block"
-              onClick={() => navigate("/login")}
+              onClick={handleLoginRedirect}
             >
               Login
             </Button>
@@ -127,7 +132,7 @@ const Header = () => {
               className="!py-3 !px-5 w-full mt-3"
               onClick={() => {
                 setIsMenuOpen(false);
-                navigate("/login");
+                handleLoginRedirect();
               }}
             >
               Login

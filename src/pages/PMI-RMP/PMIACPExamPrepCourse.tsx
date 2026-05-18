@@ -253,6 +253,7 @@ const PMIACPExamPrepCourse = () => {
 
       <PremiumPacks
         showCourseSelect={false}
+        courseKey="PMI-RMP"
         heading="Choose the PMI-RMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />

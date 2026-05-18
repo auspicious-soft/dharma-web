@@ -253,6 +253,7 @@ const PMOCPExamPrepCourse = () => {
 
       <PremiumPacks
         showCourseSelect={false}
+        courseKey="PMOCP"
         heading="Choose the PMI-PMOCP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />

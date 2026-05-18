@@ -22,98 +22,105 @@ const storeData = [
     id: 1,
     title: "60 PDUs Package",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Earn up to 60 PMI-approved PDUs for certification renewal.",
+      "Flexible self-paced and instructor-led learning options.",
+      "Includes completion certificate and PMI CCRS claim guidance.",
+      "Courses aligned with the PMI Talent Triangle and current industry practices.",
     ],
   },
   {
     id: 2,
     title: "30 PDUs Package",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Earn up to 30 PMI-approved PDUs for certification renewal.",
+      "Flexible self-paced and instructor-led learning options.",
+      "Includes completion certificate and PMI CCRS claim guidance.",
+      "Courses aligned with the PMI Talent Triangle and current industry practices.",
     ],
   },
   {
     id: 3,
-    title: "15 PDUs Package ",
+    title: "15 PDUs Package",
     points: [
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
-      "Live, online, mentor-led sessions.",
+      "Earn up to 15 PMI-approved PDUs for certification renewal.",
+      "Flexible self-paced and instructor-led learning options.",
+      "Includes completion certificate and PMI CCRS claim guidance.",
+      "Courses aligned with the PMI Talent Triangle and current industry practices.",
     ],
   },
 ];
+
 const expertsChoose = [
   {
     id: 1,
-    title: "Why Experts Choose This Bundle",
+    title: "Why Professionals Choose This Bundle",
     points: [
-      "Earn PMI-approved PDUs without attending live classes",
-      "No assessments or exams after lessons",
-      "Learn at your own pace, anytime, anywhere",
-      "Ideal for certification renewal and continuous learning",
+      "Earn PMI®-approved PDUs without attending live classes",
+      "No quizzes, assessments, or exams required after completion",
+      "Learn at your own pace - anytime, anywhere",
+      "Flexible and convenient for busy professionals",
+      "Ideal for PMI certification renewal and continuous professional development",
+      "Access practical, industry-relevant learning from experienced instructors",
     ],
   },
   {
     id: 2,
     title: "What These Courses Cover",
     points: [
-      "The concepts aligned with PMI Talent Triangle",
-      "Emerging practices and real-world applications",
-      "Professional development and leadership topics",
-      "Practical insights to stay current as a PMI credential holder",
+      "Concepts aligned with the PMI Talent Triangle®",
+      "Emerging practices, trends, and real-world applications",
+      "Professional development, leadership, and strategic thinking topics",
+      "Practical insights to help you stay current as a PMI credential holder",
+      "Industry-relevant knowledge designed to support continuous learning and career growth",
     ],
   },
 ];
+
 const onDemand = [
   {
     id: 1,
     img: OnDemandImage1,
     title: "Project Management Foundations",
-    count: "25 PDUs",
+    count: "24 PDUs",
     points: [
-      "Learn how to manage real-world projects across industries",
-      "Understand essential tools, processes, and frameworks used by PMs",
-      "Apply structured project management techniques by practical scenarios",
+      "Learn how to manage real-world projects across various industries",
+      "Build a strong foundation in planning, execution, monitoring, and delivery",
+      "Understand project management fundamentals, methodologies, and core terminology",
+      "Apply practical skills to plan, organize, execute, and deliver projects effectively",
+      "Strengthen collaboration, problem-solving, and execution in real-world project environments",
     ],
   },
   {
     id: 2,
     img: OnDemandImage2,
-    title: "SCRUM Immersion for the Agile PM",
-    count: "14 PDUs",
+    title: "Agile Project Management",
+    count: "30 PDUs",
     points: [
-      "Learn Agile principles and SCRUM practices used in modern teams",
-      "Identify real-world business needs and Agile use cases",
-      "Implement SCRUM effectively within your projects and organizations",
+      "Understand Agile principles, frameworks, and ways of working",
+      "Apply Agile approaches, frameworks, and Scrum practices for effective delivery",
+      "Lead and collaborate effectively within Agile teams",
     ],
   },
   {
     id: 3,
     img: OnDemandImage3,
-    title: "Modern Leadership Techniques",
-    count: "14 PDUs",
+    title: "Artificial Intelligence for Project Management Professionals",
+    count: "60 PDUs",
     points: [
-      "Different leadership styles and how to apply them in practice",
-      "Benefits of transformational, transactional, and ethical leadership",
-      "Identify and address leadership challenges and dysfunctions",
+      "Build foundational knowledge of AI and its evolving role in modern organizations",
+      "Learn strategies to integrate AI into project management practices",
+      "Acquire tools, techniques, and best practices for applying AI in project environments",
     ],
   },
   {
     id: 4,
     img: OnDemandImage4,
-    title: "How to Measure Project Performance",
-    count: "7 PDUs",
+    title: "Performance Measurement for Projects",
+    count: "15 PDUs",
     points: [
-      "Use Earned Value Management (EVM) to measure project performance",
-      "Identify cost overruns and schedule delays early",
-      "Apply forecasting, charting, and reporting techniques effectively",
+      "Understand key project performance metrics and KPIs",
+      "Learn Earned Value Management and analysis techniques",
+      "Monitor project cost, schedule, forecasting, and overall performance",
     ],
   },
 ];
@@ -125,49 +132,80 @@ const keyBenefits = {
       id: 1,
       title: "Earn PDUs Online",
       description:
-        "Complete courses on your schedule and earn PMI-approved PDUs effortlessly.",
+        "Complete courses at your convenience and earn PMI®-approved PDUs with ease.",
     },
     {
       id: 2,
       title: "Completion Certificate",
       description:
-        "Receive a certificate and PDU claim code after each course.",
+        "Receive a certificate of completion and PDU claim details after each course.",
     },
     {
       id: 3,
-      title: "PMI Talent Triangle Aligned",
+      title: "PMI Talent Triangle® Aligned",
       description:
-        "Courses mapped to Education, Giving Back, and Professional Development.",
+        "Courses aligned with PMI Talent Triangle® skill areas and professional development requirements.",
     },
     {
       id: 4,
       title: "Flexible Learning",
-      description: "Pause, resume, and rewatch lessons anytime across devices.",
+      description: "Pause, resume, and revisit lessons anytime across multiple devices.",
     },
     {
       id: 5,
       title: "Easy PDU Submission",
-      description: "Simple CCRS self-submission with instant PMI approval.",
+      description: "Simple CCRS submission process with fast PMI approval support.",
     },
   ],
 };
+
+const pduFaqs = [
+  {
+    question: "How do I earn PDUs through these programs?",
+    answer:
+      "You can earn PMI® Professional Development Units (PDUs) by completing our approved on-demand or instructor-led learning programs. Once completed, you can claim eligible PDUs through the PMI CCRS system.",
+  },
+  {
+    question: "Are these PDU courses PMI approved?",
+    answer:
+      "Yes. vCare Project Management is a PMI Premier Authorized Training Partner (ATP #3998), and the programs are aligned with PMI standards and requirements.",
+  },
+  {
+    question: "Do I need to attend live classes to earn PDUs?",
+    answer:
+      "No. Many of our PDU programs are fully self-paced and on-demand, allowing you to learn anytime and from anywhere without attending live sessions.",
+  },
+  {
+    question: "Are there any exams or assessments required?",
+    answer:
+      "No. Most PDU programs do not require formal exams or assessments after completing the lessons, making the learning process simple and convenient.",
+  },
+  {
+    question: "Can these PDUs be used to renew PMI certifications?",
+    answer:
+      "Yes. The PDUs earned through eligible programs can be used toward renewing PMI certifications such as PMP®, PgMP®, PfMP®, PMI-ACP®, PMI-RMP®, PMI-SP®, PMI-PBA®, and PMOCP™.",
+  },
+];
 
 const PDUs = () => {
   return (
     <>
       <FooterPageHeroSection
-        title="PDUs"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        title="Earn PDUs"
+        description="Advance your career while earning PDUs through flexible and practical learning programs designed to help you maintain PMI certifications and strengthen real-world leadership capabilities."
       />
       <AuthorizedTrainingPartner
-        title="Claim PDUs in just a few clicks with Instant PMI Approval"
-        subtitle="Maintain your PMI® certification without stress. Earn PMI-approved PDUs through on-demand, instructor-led courses designed for busy professionals. No exams. No delays. Just simple, compliant PDU earning."
+        title="Claim PDUs in Just a Few Clicks with Instant PMI Approval"
+        subtitle="Maintain your PMI certification with confidence and ease. Earn PMI-approved PDUs through flexible on-demand and instructor-led learning programs designed for busy professionals. No complicated process, no unnecessary delays - just a simple and compliant way to earn your PDUs."
         bullets={[
           {
             text: "PMI Premier Authorized Training Partner (ATP #3998)",
           },
-          { text: "Pre-approved by PMI®" },
-          { text: "Instant approval via CCRS" },
+          { text: "PMI-approved learning programs" },
+          { text: "Instant PDU claim support through PMI CCRS" },
+          { text: "Flexible on-demand and live instructor-led options" },
+          { text: "High-quality learning from globally recognized experts" },
+          { text: "Fast, simple, and hassle-free certification maintenance" },
         ]}
         descriptionTop=""
         descriptionBottom=""
@@ -180,11 +218,10 @@ const PDUs = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {expertsChoose.map((item) => (
-             
-              <div 
-               key={item.id}
-              className="rounded-2xl px-3 md:px-7 py-4 md:py-7 bg-light-blue h-full flex flex-col justify-between gap-4 md:gap-7">
-                {/* TOP */}
+              <div
+                key={item.id}
+                className="rounded-2xl px-3 md:px-7 py-4 md:py-7 bg-light-blue h-full flex flex-col justify-between gap-4 md:gap-7"
+              >
                 <div>
                   <h3 className="text-Black_light text-xl md:text-3xl font-bold mb-4 md:mb-7">
                     {item.title}
@@ -217,16 +254,17 @@ const PDUs = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {onDemand.map((item) => (
-              <div 
-              key={item.id}
-              className="p-4 md:p-5 bg-white rounded-[20px] flex flex-col justify-between gap-4 md:gap-7">
+              <div
+                key={item.id}
+                className="p-4 md:p-5 bg-white rounded-[20px] flex flex-col justify-between gap-4 md:gap-7"
+              >
                 <div>
-                  <img src={item.img} alt={item.img} className="rounded-2xl" />
+                  <img src={item.img} alt={item.title} className="rounded-2xl" />
                   <h3 className="text-primary_heading text-base md:text-xl font-bold mt-4 mb-2">
                     {item.title}
                   </h3>
                   <h5 className="self-stretch justify-start text-Black_light text-base md:text-xl font-bold">
-                    25 PDUs
+                    {item.count}
                   </h5>
                   <ul className="space-y-2 md:space-y-3 mt-5">
                     {item.points.map((point, idx) => (
@@ -258,7 +296,7 @@ const PDUs = () => {
               {keyBenefits.card.map((card) => (
                 <div
                   key={card.id}
-                  className="p-5 bg-light-blue rounded-[20px] text-left  transition"
+                  className="p-5 bg-light-blue rounded-[20px] text-left transition"
                 >
                   <div className="w-[60px] h-[60px] text-xl font-bold text-primary_heading flex items-center justify-center relative bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
                     {String(card.id).padStart(2, "0")}
@@ -281,21 +319,26 @@ const PDUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Receive Your PDU Certificate & Claim Code
+                Receive Your PDU Certificate & Claim Code
               </h2>
               <p className="text-paragraph text-sm font-normal">
-                Earn a personalized Contact Hours certificate from a trusted
-                training provider—required for PMP® application submission.
+                Earn a personalized Contact Hours certificate from a trusted PMI
+                Premier Authorized Training Partner (ATP #3998).
               </p>
               <p className="text-paragraph text-sm font-normal">
-                This certificate validates your formal project management
-                education and supports your PMP® exam application with PMI®.
+                These certificates can be used to support PMI® certification
+                applications, including PMP, PMP®, PMI-RMP®, PMI-ACP®, PMI-PBA®, CAPM®, and
+                other eligible PMI certifications requiring formal education hours.
+              </p>
+              <p className="text-paragraph text-sm font-normal">
+                Receive your completion certificate and claim details after
+                successfully completing each course.
               </p>
             </div>
-            <div className="w-full ">
+            <div className="w-full">
               <img
                 src={CertificateImage}
-                alt="Certificate Image"
+                alt="Certificate"
                 className="rounded-sm"
               />
             </div>
@@ -305,26 +348,28 @@ const PDUs = () => {
 
       <VideoSection
         videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
-        title={
-          <>
-            Preview How You’ll Learn
-          </>
-        }
-        description="Explore how our on-demand PDU courses fit seamlessly into your workday."
+        title={<>Preview How You'll Learn</>}
+        description="Discover how our flexible on-demand PDU courses fit seamlessly into your professional schedule and support continuous learning anytime, anywhere."
       />
 
       <Testimonials id="pdus-testimonials" />
       <section className="overflow-hidden py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <h2 className="text-Black_light text-center text-2xl md:text-3xl font-bold md:leading-[46px] mb-4 md:mb-6 ">
+          <h2 className="text-Black_light text-center text-2xl md:text-3xl font-bold md:leading-[46px] mb-4 md:mb-6">
             Choose Your PDU Package
           </h2>
+          <p className="text-center text-paragraph text-sm md:text-base max-w-[900px] mx-auto mb-6 md:mb-10">
+            Earn up to 60 PMI®-approved PDUs for certification renewal. Flexible
+            self-paced and instructor-led learning options. Includes completion
+            certificate and PMI CCRS claim guidance. Courses aligned with the PMI
+            Talent Triangle® and current industry practices.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {storeData.map((item) => (
-              <div 
-               key={item.id}
-              className="border border-primary_blue  rounded-2xl px-3 md:px-5 py-6 md:py-10 bg-light-blue h-full flex flex-col justify-between">
-                {/* TOP */}
+              <div
+                key={item.id}
+                className="border border-primary_blue rounded-2xl px-3 md:px-5 py-6 md:py-10 bg-light-blue h-full flex flex-col justify-between"
+              >
                 <div>
                   <h3 className="text-primary_heading font-semibold text-lg mb-3">
                     {item.title}
@@ -349,7 +394,7 @@ const PDUs = () => {
                   <div className="border-t border-[#cde2ff] mt-6" />
                 </div>
 
-                <Button className="mt-6 md:mt-10 w-full ">Enroll Now</Button>
+                <Button className="mt-6 md:mt-10 w-full">Enroll Now</Button>
               </div>
             ))}
           </div>
@@ -358,10 +403,18 @@ const PDUs = () => {
 
       <div className="bg-light-blue">
         <StartFreeTrial
-        buttonText="Get Started with PDU Learning"
+          headings="Start Your Free Trial"
+          description="Explore our on-demand PDU courses, learning resources, and professional development programs before enrolling."
+          features={[
+            "Access flexible self-paced learning designed for busy professionals",
+            "Explore PMI Talent Triangle® aligned professional development topics",
+            "Learn through practical, real-world insights and industry best practices",
+            "No credit card required to start your free trial",
+          ]}
+          buttonText="Get Started with PDU Learning"
         />
       </div>
-      <Faq limit={5} />
+      <Faq faqs={pduFaqs} />
       <TopFooterSection />
     </>
   );

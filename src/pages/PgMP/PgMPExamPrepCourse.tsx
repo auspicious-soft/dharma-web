@@ -296,6 +296,7 @@ const PgMPExamPrepCourse = () => {
 
       <PremiumPacks
         showCourseSelect={false}
+        courseKey="PgMP"
         heading="Choose the PgMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />

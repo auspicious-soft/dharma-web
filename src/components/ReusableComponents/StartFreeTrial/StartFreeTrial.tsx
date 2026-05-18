@@ -12,7 +12,8 @@ interface StartFreeTrialProps {
 
 const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
   headings = "Start Your Free Trial",
-  description = "Test-drive our Exam Simulators, Practice Exams, and study bundles before you buy.",
+  description =
+    "Test-drive our Exam Simulators, Practice Exams, and study bundles before you buy.",
   features = [
     "Explore exam prep tools, self-paced resources, and practice tests",
     "Real exam-style simulation with performance insights",
@@ -34,9 +35,7 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
           className="py-5 p-4 lg:px-10 lg:py-5 rounded-[20px] text-white flex flex-wrap gap-5 justify-between items-center"
         >
           <div className="flex flex-col gap-5 items-start">
-            <h2 className="text-white text-2xl font-bold">
-              {headings}
-            </h2>
+            <h2 className="text-white text-2xl font-bold">{headings}</h2>
 
             <p className="text-white text-sm md:text-base font-normal max-w-md w-full">
               {description}
@@ -48,7 +47,7 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
                   key={index}
                   className="flex items-start gap-2 text-white text-sm font-normal leading-6"
                 >
-                  <span className="text-[8px]">•</span>
+                  <span className="text-[8px]">&bull;</span>
                   <span>{item}</span>
                 </li>
               ))}

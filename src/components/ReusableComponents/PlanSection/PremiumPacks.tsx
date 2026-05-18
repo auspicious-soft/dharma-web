@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PlanCard from "./PlanCard";
-import { oneMonthPlans, threeMonthPlans, Plan } from "./plans";
+import { getPlansForCourse, Plan, CourseKey } from "./plans";
 import {
   Select,
   SelectContent,
@@ -15,19 +15,24 @@ type Duration = "1" | "3";
 
 interface PremiumPacksProps {
   showCourseSelect?: boolean;
+  courseKey?: CourseKey;
   heading?: string;
   description?: string;
 }
 
 export const PremiumPacks = ({
   showCourseSelect = false,
+  courseKey,
   heading = "Choose the PMP Exam Prep Plan That Fits You",
   description = "Three flexible plans designed for different learning needs and timelines.",
 }: PremiumPacksProps) => {
   const [duration, setDuration] = useState<Duration>("1");
-  const [selectedCourse, setSelectedCourse] = useState<string>("PgMP");
+  const [selectedCourse, setSelectedCourse] = useState<CourseKey>(
+    courseKey ?? "PMP"
+  );
 
-  const plansToShow = duration === "1" ? oneMonthPlans : threeMonthPlans;
+  const activeCourse = showCourseSelect ? selectedCourse : courseKey ?? "PMP";
+  const plansToShow = getPlansForCourse(activeCourse, duration);
 
   const handlePlanSelect = (plan: Plan) => {
     console.log("Selected Plan:", plan);
@@ -67,7 +72,9 @@ export const PremiumPacks = ({
                 <Label>Select Course</Label>
                 <Select
                   value={selectedCourse}
-                  onValueChange={(value) => setSelectedCourse(value)}
+                  onValueChange={(value) =>
+                    setSelectedCourse(value as CourseKey)
+                  }
                 >
                   <SelectTrigger className="border-primary_blue text-primary_blue focus:ring-0 rounded-full min-w-32 md:min-w-80">
                     <SelectValue placeholder="PMP" />
@@ -83,23 +90,11 @@ export const PremiumPacks = ({
                       <SelectItem value="PfMP">
                         Portfolio Management Professional (PfMP)
                       </SelectItem>
-                      <SelectItem value="CAPM">
-                        Certified Associate in Project Management (CAPM)
-                      </SelectItem>
-                      <SelectItem value="PMI-RMP">
-                        Agile Certified Practitioner (PMI-RMP)
-                      </SelectItem>
-                      <SelectItem value="PMI-PMOCP">
+                      <SelectItem value="PMOCP">
                         PMO Certified Professional (PMI-PMOCP)
                       </SelectItem>
                       <SelectItem value="PMI-RMP">
                         Risk Management Professional (PMI-RMP)
-                      </SelectItem>
-                      <SelectItem value="PMI-SP">
-                        Scheduling Professional (PMI-SP)
-                      </SelectItem>
-                      <SelectItem value="PMI-PBA">
-                        PMI Professional in Business Analysis (PMI-PBA)
                       </SelectItem>
                     </SelectGroup>
                   </SelectContent>

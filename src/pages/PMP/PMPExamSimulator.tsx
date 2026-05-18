@@ -179,6 +179,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
       <div className="md:lg:pt-10 lg:pt-20">
         <PremiumPacks
           showCourseSelect={false}
+          courseKey="PMP"
           heading="Choose your plan"
           description="Three flexible plans designed for different learning needs and timelines."
         />

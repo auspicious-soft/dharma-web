@@ -178,6 +178,7 @@ const PfMPExamSimulator = () => {
       <div className="md:lg:pt-10 lg:pt-20">
         <PremiumPacks
           showCourseSelect={false}
+          courseKey="PfMP"
           heading="Choose your plan"
           description="Three flexible plans designed for different learning needs and timelines."
         />

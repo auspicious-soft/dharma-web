@@ -178,6 +178,7 @@ const PMOCPExamSimulator = () => {
       <div className="md:lg:pt-10 lg:pt-20">
         <PremiumPacks
           showCourseSelect={false}
+          courseKey="PMOCP"
           heading="Choose your plan"
           description="Three flexible plans designed for different learning needs and timelines."
         />

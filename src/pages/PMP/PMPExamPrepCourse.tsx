@@ -299,6 +299,7 @@ const PMPExamPrepCourse = () => {
 
       <PremiumPacks
         showCourseSelect={false}
+        courseKey="PMP"
         heading="Choose the PMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />

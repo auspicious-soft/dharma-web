@@ -254,6 +254,7 @@ const PfMPExamPrepCourse = () => {
 
       <PremiumPacks
         showCourseSelect={false}
+        courseKey="PfMP"
         heading="Choose the PfMP Exam Prep Plan That Fits You"
         description="Three flexible plans designed for different learning needs and timelines."
       />

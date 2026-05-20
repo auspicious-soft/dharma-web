@@ -9,12 +9,11 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
-import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
 import {
-  ExamsIcon,
+  CircleArrowIcon,
   ClockIcon,
   LineCahrtIcon,
   SimulatorsIcon,
@@ -22,26 +21,25 @@ import {
   ComIcon,
   DetailIcon,
   ChartIcon,
-  HatIcon,
   MovieIcon,
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
-// Tab 1 (Overview Content)
+
 const overview = {
   heading: "Overview",
-  text: "Prepare with realistic PMP® practice tests designed to reflect the latest exam style and evolving question patterns. Our domain-wise practice tests help you build confidence through focused preparation aligned with current PMP® exam expectations.Target each exam domain individually, improve knowledge step by step, and build stronger overall performance for your certification exam.",
+  text: "The PMP® Exam Prep Course is a comprehensive, self-paced program designed to help project management professionals confidently pass the PMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning and guided lessons to ensure complete readiness. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PMP concepts, strengthening exam strategies, and achieving certification success on their first attempt and satisfy the 35 training hours required to apply.",
 };
-// Tab 2 What You’ll Access
+
 const access = {
   heading: "What You’ll Access",
   cards: [
     {
       id: 1,
-      icon: ExamsIcon,
-      title: "Exam Simulations",
+      icon: MovieIcon,
+      title: "Video lessons & concept breakdowns",
       description:
-        "Simulate real PMP® exam-style questions with timed simulations designed to build confidence and improve readiness.",
+        "Learn complex PMP concepts through clear, instructor-led videos and practical concept walkthroughs.",
     },
     {
       id: 2,
@@ -52,58 +50,71 @@ const access = {
     },
     {
       id: 3,
-      icon: ExamsIcon,
-      title: "1800+ PMP-style practice questions",
+      icon: LineCahrtIcon,
+      title: "Structured PMP study plan",
       description:
-        "Large question bank aligned with real PMP exam difficulty and structure.",
+        "Follow a guided, step-by-step roadmap tailored for working professionals preparing for PMP certification.",
     },
     {
       id: 4,
-      icon: DetailIcon,
-      title: "Detailed answer explanations",
+      icon: FlashCardIcon,
+      title: "Flashcards and revision tools",
       description:
-        "Understand correct answers with clear logic, references, and concept explanations.",
+        "Quickly revise key formulas, terminology, and high-impact PMP topics before exam day.",
     },
     {
       id: 5,
-      icon: ChartIcon,
-      title: "Smart performance analytics",
+      icon: DetailIcon,
+      title: "Latest Curriculum",
       description:
-        "Track progress, accuracy, and improvement areas with detailed performance insights.",
+        "Fully updated curriculum aligned with the latest exam content guideline and PMBOK standards.",
     },
     {
       id: 6,
-      icon: HatIcon,
-      title: "Structured PMP study plan",
+      icon: ClockIcon,
+      title: "Expert Instructor Support",
       description:
-        "Follow a guided study roadmap designed for busy working professionals.",
+        "Personalized feedback and quick answers from our PMI-certified instructors.",
+    },
+    {
+      id: 7,
+      icon: ImproveIcon,
+      title: "Interactive Learning Experience",
+      description:
+        "Engaging, real-world examples and practical scenarios for effective and enjoyable learning.",
     },
     {
       id: 8,
       icon: PhoneIcon,
-      title: "Targeted Practice Sets",
+      title: "Learn Anytime, Anywhere",
       description:
-        "Focused practice for Agile, Hybrid, and Predictive topics.",
+        "Self-paced, mobile-friendly modules let you study on your commute, at the gym, or during quiet work hours.",
     },
     {
       id: 9,
-      icon: FlashCardIcon,
-      title: "Flashcards and revision tools",
+      icon: SimulatorsIcon,
+      title: "Unlimited Access",
+      description: "Unlimited access for the full access period.",
+    },
+    {
+      id: 10,
+      icon: ChartIcon,
+      title: "Proven Results",
       description:
-        "Quickly revise key formulas, processes, and PMP terminology.",
+        "Our students achieve a high success rate, backed by thousands of successful certifications worldwide.",
     },
   ],
 };
-// Tab 3 How It Works
+
 const work = {
   heading: "How It Works",
-  dis: "Boost your confidence and exam readiness with realistic practice tests designed to support success in PMI® certifications.",
+  dis: "Boost your confidence and exam readiness with vCare Project Management - your success partner for PMI certifications.",
   cards: [
     {
       id: 1,
-      icon: ClockIcon,
+      icon: DetailIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PMP bundle that fits your goal",
+      description: "Choose the Exam Prep bundle that fits your goal",
     },
     {
       id: 2,
@@ -119,50 +130,72 @@ const work = {
     },
     {
       id: 4,
-      icon: ImproveIcon,
+      icon: ChartIcon,
       title: "Analyze & Improve",
       description: "Review results and strengthen weak areas",
     },
     {
       id: 5,
-      icon: PhoneIcon,
+      icon: CircleArrowIcon,
       title: "Clear the PMP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
 };
-// Tab 4 You May Also Like
+
 const slides = [
   {
     id: 1,
-    image: InnerImage, // Replace with actual image
-    title: "PMP® Full-Length Exam Simulator",
+    image: InnerImage,
+    title: "PMP® Exam Simulator",
     description:
-      "Experience real PMP exam conditions with timed, scenario-based full mock tests.",
+      "Test your readiness with realistic mock exams, timed practice, and detailed answer explanations.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PMP® Practice Question Bank",
+    title: "PMP® Application Support",
     description:
-      "Strengthen your concepts with a large collection of PMP-aligned practice questions.",
+      "Get expert help to complete your application correctly and avoid delays or rework.",
   },
   {
     id: 3,
     image: InnerImage,
+    title: "PMP® On-Demand Course",
+    description:
+      "Study anytime and anywhere with guided lessons, structured modules, and flexible self-paced learning.",
+  },
+  {
+    id: 4,
+    image: InnerImage,
     title: "PMP® Exam Prep Training",
     description:
-      "Choose from onine or in-person courses and get exam ready with a premier Authorized Training Partner",
-    buttonText: "Book appointment",
+      "Join expert-led online or in-person classes designed to build knowledge, confidence, and exam readiness.",
+  },
+  {
+    id: 5,
+    image: InnerImage,
+    title: "Free PMP® Consultation",
+    description:
+      "Speak with an expert to discuss eligibility, study plans, and the best pathway to success.",
+  },
+  {
+    id: 6,
+    image: InnerImage,
+    title: "PMP® Exam Voucher Bundle",
+    description: "Get Official PMI® Exam Vouchers and Save on Your Exam Fees.",
+    buttonText: "Buy Now",
   },
 ];
 
 const PrepCourse = [
-  "Meets PMP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PMP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PMP mock tests",
-  "Structured study plan designed for working professionals",
+  "Aligned to the Latest Exam Standards & PMBOK® 8th Edition",
+  "Structured PMI ATP study materials, video learning, practice tests, and case studies.",
+  "Created by expert instructors with real-world project experience",
+  "100% online, flexible learning",
+  "Earn 35 PMI®-Approved PDUs",
 ];
+
 const courseCard = {
   heading: "Why Choose Our PMP® Exam Prep Course?",
   card: [
@@ -248,8 +281,7 @@ const pmpPracticeTestFaqs = [
   },
   {
     question: "Are Practice Tests good for last-minute revision?",
-    answer:
-      "Absolutely. They are ideal for quick refreshers close to exam day.",
+    answer: "Absolutely. They are ideal for quick refreshers close to exam day.",
   },
   {
     question: "Can I access them on mobile devices?",
@@ -262,26 +294,28 @@ const PMPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Project Management Professional (PMP®) Practice Exam"
-        description="Our PMP® Practice Exam is aligned with the latest PMI® PMP Exam Content Outline (ECO) and key principles from the PMBOK® Guide – 8th Edition. Designed for certification success, it delivers focused domain-wise practice through realistic PMP-style questions that strengthen knowledge, reinforce predictive, agile, and hybrid approaches, and build confidence in handling situational questions just as they appear on exam day."
-        descriptionsecond=""
+        title="Project Management Professional (PMP)® Exam Prep Course"
+        description="Designed for professionals pursuing certification success, our PMP® Exam Prep Course is a complete all-in-one study solution that combines structured learning based on professionally created study materials, video learning, practice tests, case studies and powerful study tools in one comprehensive package."
+        descriptionsecond="Prepare for the PMP® exam with content designed to help you understand key concepts, apply proven best practices, and build the skills, confidence, and exam readiness needed to succeed in modern project management and perform at your best on exam day."
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="Test Your Readiness. Build Confidence. Get Exam-Day Ready."
-        subtitle="The PMP® Practice Exam is designed to help candidates experience real PMP® exam conditions before test day. Practice with high-quality PMP®-style questions, understand exam patterns, and evaluate your readiness with detailed performance insights. Strengthen your confidence, identify improvement areas, and approach the exam fully prepared."
+        title="Everything You Need for PMP® Exam Success."
+        subtitle="The PMP® Exam Prep Course is built to help professionals prepare for real PMP® exam conditions before exam day. Learn through structured lessons, guided study paths, practice questions, and full-length mock exams. Become familiar with exam patterns, measure your readiness through detailed performance insights, build confidence, identify knowledge gaps, and approach the exam fully prepared."
         bullets={[
           {
-            text: "Based on the latest PMP® Exam Content Outline (ECO)",
+            text: "Aligned to the Latest Exam Standards & PMBOK® 8th Edition",
           },
-          { text: "Domain-wise targeted practice" },
-          { text: "Realistic exam-style questions" },
-          { text: "Detailed answer explanations" },
-          { text: "Instant access to course materials" },
+          {
+            text: "Structured PMI ATP study materials, video learning, practice tests, and case studies.",
+          },
+          { text: "Created by expert instructors with real-world project experience" },
+          { text: "100% online, flexible learning" },
+          { text: "Earn 35 PMI®-Approved PDUs" },
         ]}
-        // descriptionTop="Prepare with Confidence. Get PMP® Certified."
-        // descriptionBottom="Designed to help you prepare with confidence and pass the PMP® exam The PMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionTop="Prepare with Confidence. Get PMP® Certified."
+        descriptionBottom="Our suite of flexible online learning is designed to help you prepare for the PMP® exam on your terms and stay motivated throughout your certification journey. Study on your schedule with our PMP® Exam Prep Course."
         image={TrainingImage}
       />
 
@@ -292,7 +326,8 @@ const PMPExamPrepCourse = () => {
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "A suite of flexible learning options designed to help you prepare on your terms. Choose in-person, live online, or self-paced formats and study on a schedule that suits you.",
+          subheading:
+            "Explore multiple study aids designed to get you exam-day ready.",
           slides: slides,
         }}
       />
@@ -300,7 +335,7 @@ const PMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PMP"
-        heading="Choose the PMP Exam Prep Plan That Fits You"
+        heading="Exam Prep Table"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -309,7 +344,7 @@ const PMPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PMP Exam Prep Course – Enroll Today
+                PMP Exam Prep Course - Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
                 The vCare PMP Exam Prep Course helps you build real-world
@@ -334,7 +369,6 @@ const PMPExamPrepCourse = () => {
               </Button>
             </div>
             <div>
-              {" "}
               <img
                 src={InnerImage}
                 alt="InnerImage"
@@ -390,8 +424,6 @@ const PMPExamPrepCourse = () => {
       </div>
 
       <Faq faqs={pmpPracticeTestFaqs} />
-
-      {/* <TopFooterSection /> */}
     </>
   );
 };

@@ -74,17 +74,24 @@ const rows: FeatureRow[] = [
   },
 ];
 
-const PricingComparison: React.FC = () => {
+interface PricingComparisonProps {
+  heading?: string;
+  description?: string;
+}
+
+const PricingComparison: React.FC<PricingComparisonProps> = ({
+  heading = "Upgrade Your PMP Preparation",
+  description = "Already enrolled? Go all-in by adding practice exams and simulators to your learning.",
+}) => {
   return (
     <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
         <div className=" flex flex-col justify-center items-center mb-6 md:mb-10 text-center">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-            Upgrade Your PMP Preparation
+            {heading}
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1">
-            Already enrolled? Go all-in by adding practice exams and simulators
-            to your learning.
+            {description}
           </p>
         </div>
         <div className="overflow-hidden rounded-xl border border-[#d5dddd] bg-white shadow-sm">

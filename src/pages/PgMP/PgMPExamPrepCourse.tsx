@@ -9,12 +9,11 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
-import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
 import {
-  ExamsIcon,
+  CircleArrowIcon,
   ClockIcon,
   LineCahrtIcon,
   SimulatorsIcon,
@@ -22,26 +21,25 @@ import {
   ComIcon,
   DetailIcon,
   ChartIcon,
-  HatIcon,
   MovieIcon,
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
-// Tab 1 (Overview Content)
+
 const overview = {
   heading: "Overview",
-  text: "Build confidence with realistic PgMP® practice tests created to reflect the latest exam style and evolving question patterns. Our domain-wise practice tests support focused preparation aligned with current PgMP® exam expectations. Master each domain one at a time, strengthen your understanding step by step, and enhance overall performance for your certification exam.",
+  text: "The PgMP® Exam Prep Course is a comprehensive, self-paced program designed to help professionals confidently pass the PgMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning and guided lessons to ensure complete readiness. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PgMP concepts, strengthening exam strategies, and achieving certification success on their first attempt and satisfy the 35 training hours required to apply.",
 };
-// Tab 2 What You’ll Access
+
 const access = {
   heading: "What You’ll Access",
   cards: [
     {
       id: 1,
-      icon: ExamsIcon,
-      title: "Full-length PgMP® mock exams",
+      icon: MovieIcon,
+      title: "Video lessons & concept breakdowns",
       description:
-        "Simulate real PgMP exam conditions with timed, full-length practice tests.",
+        "Learn complex PgMP concepts through clear, instructor-led videos and practical concept walkthroughs.",
     },
     {
       id: 2,
@@ -52,65 +50,71 @@ const access = {
     },
     {
       id: 3,
-      icon: ExamsIcon,
-      title: "1800+ PgMP-style practice questions",
+      icon: LineCahrtIcon,
+      title: "Structured PgMP study plan",
       description:
-        "Large question bank aligned with real PgMP exam difficulty and structure.",
+        "Follow a guided, step-by-step roadmap tailored for working professionals preparing for PgMP certification.",
     },
     {
       id: 4,
-      icon: DetailIcon,
-      title: "Detailed answer explanations",
+      icon: FlashCardIcon,
+      title: "Flashcards and revision tools",
       description:
-        "Understand correct answers with clear logic, references, and concept explanations.",
+        "Quickly revise key formulas, terminology, and high-impact PgMP topics before exam day.",
     },
     {
       id: 5,
-      icon: ChartIcon,
-      title: "Smart performance analytics",
+      icon: DetailIcon,
+      title: "Latest Curriculum",
       description:
-        "Track progress, accuracy, and improvement areas with detailed performance insights.",
+        "Fully updated curriculum aligned with the latest exam content guideline and PMBOK standards.",
     },
     {
       id: 6,
-      icon: HatIcon,
-      title: "Structured PgMP study plan",
+      icon: ClockIcon,
+      title: "Expert Instructor Support",
       description:
-        "Follow a guided study roadmap designed for busy working professionals.",
+        "Personalized feedback and quick answers from our PMI-certified instructors.",
     },
     {
       id: 7,
-      icon: MovieIcon,
-      title: "Video lessons & concept breakdowns",
+      icon: ImproveIcon,
+      title: "Interactive Learning Experience",
       description:
-        "Learn complex PgMP concepts through concise, instructor-led video lessons.",
+        "Engaging, real-world examples and practical scenarios for effective and enjoyable learning.",
     },
     {
       id: 8,
       icon: PhoneIcon,
-      title: "Downloadable study resources",
+      title: "Learn Anytime, Anywhere",
       description:
-        "Access printable notes and guides for offline PgMP exam preparation.",
+        "Self-paced, mobile-friendly modules let you study on your commute, at the gym, or during quiet work hours.",
     },
     {
       id: 9,
-      icon: FlashCardIcon,
-      title: "Flashcards and revision tools",
+      icon: SimulatorsIcon,
+      title: "Unlimited Access",
+      description: "Unlimited access for the full access period.",
+    },
+    {
+      id: 10,
+      icon: ChartIcon,
+      title: "Proven Results",
       description:
-        "Quickly revise key formulas, processes, and PgMP terminology.",
+        "Our students achieve a high success rate, backed by thousands of successful certifications worldwide.",
     },
   ],
 };
-// Tab 3 How It Works
+
 const work = {
   heading: "How It Works",
-  dis: "Boost your confidence and exam readiness with vCare Exam Simulators—your success partner for PMI certifications.",
+  dis: "Boost your confidence and exam readiness with vCare Project Management - your success partner for PMI certifications.",
   cards: [
     {
       id: 1,
-      icon: ClockIcon,
+      icon: DetailIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PgMP bundle that fits your goal",
+      description: "Choose the Exam Prep bundle that fits your goal",
     },
     {
       id: 2,
@@ -126,50 +130,79 @@ const work = {
     },
     {
       id: 4,
-      icon: ImproveIcon,
+      icon: ChartIcon,
       title: "Analyze & Improve",
       description: "Review results and strengthen weak areas",
     },
     {
       id: 5,
-      icon: PhoneIcon,
+      icon: CircleArrowIcon,
       title: "Clear the PgMP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
 };
-// Tab 4 You May Also Like
+
 const slides = [
   {
     id: 1,
-    image: InnerImage, // Replace with actual image
-    title: "PgMP® Full-Length Exam Simulator",
+    image: InnerImage,
+    title: "PgMP® Exam Prep Training",
     description:
-      "Experience real PgMP exam conditions with timed, scenario-based full mock tests.",
+      "Join expert-led online or in-person classes designed to build knowledge, confidence, and exam readiness.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PgMP® Practice Question Bank",
+    title: "PgMP® Exam Simulator",
     description:
-      "Strengthen your concepts with a large collection of PgMP-aligned practice questions.",
+      "Test your readiness with realistic mock exams, scenario-based practice, and detailed answer explanations.",
   },
   {
     id: 3,
     image: InnerImage,
-    title: "PgMP® Exam Prep Training",
+    title: "PgMP® Online Exam Prep Course",
     description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-    buttonText: "Book appointment",
+      "Prepare for the PgMP® exam with our all-in-one Exam Prep bundle with access to Online Course, Practice Exams and tools that build confidence.",
+  },
+  {
+    id: 4,
+    image: InnerImage,
+    title: "Free PgMP® Consultation",
+    description:
+      "Speak with an expert to discuss eligibility, application strategy, study plans, and the best pathway to success.",
+  },
+  {
+    id: 5,
+    image: InnerImage,
+    title: "PgMP® On-Demand Course",
+    description:
+      "Study anytime with guided lessons, structured modules, and flexible self-paced learning aligned to the PgMP® exam.",
+  },
+  {
+    id: 6,
+    image: InnerImage,
+    title: "PgMP® Application Support",
+    description:
+      "Get expert help to complete your PgMP® application correctly, including audit guidance and full Panel Review support.",
+  },
+  {
+    id: 7,
+    image: InnerImage,
+    title: "PgMP® Exam Voucher",
+    description: "Get Official PgMP® Exam Vouchers and Save on Your Exam Fees.",
+    buttonText: "Buy Now",
   },
 ];
 
 const PrepCourse = [
-  "Meets PgMP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PgMP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PgMP mock tests",
-  "Structured study plan designed for working professionals",
+  "Aligned to the Latest Exam Standards",
+  "Expert Instructors with Real-World Program Experience",
+  "100% Online, Flexible Learning",
+  "Earn 35 PMI®-Approved PDUs",
+  "Instant access to course materials",
 ];
+
 const courseCard = {
   heading: "Why Choose Our PgMP® Exam Prep Course?",
   card: [
@@ -259,26 +292,26 @@ const PgMPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Program Management Professional (PgMP®) Practice Exam"
-        description="Our PgMP® Practice Exam is aligned with the latest PMI® PgMP Exam Content Outline and key principles from The Standard for Program Management – 5th Edition. Designed for certification success, it delivers focused domain-wise practice through realistic PgMP®-style questions that strengthen knowledge, reinforce strategy alignment, benefits management, stakeholder engagement, governance, and lifecycle management, while building confidence for advanced situational questions on exam day."
-        descriptionsecond=""
+        title="Program Management Professional (PgMP)® Exam Prep Course"
+        description="Designed for professionals preparing for certification success, our PgMP® Exam Prep Course is your all-in-one study solution, combining structured learning, guided lessons, practice exams, full-length mock exams, and powerful study tools in one complete package."
+        descriptionsecond="Prepare for the PgMP® exam with content that helps you understand key concepts, apply best practices, and build the skills and confidence needed to succeed in modern program management and excel on exam day."
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PgMP® Exam Simulator"
-        subtitle="The PgMP® Practice Exam is built to help professionals prepare for real PgMP® exam conditions before exam day. Practice with high-quality PgMP®-style scenario questions, become familiar with exam patterns, and measure your readiness through detailed performance insights. Build confidence, identify knowledge gaps, and approach the exam fully prepared."
+        title="Everything You Need for PgMP® Exam Success."
+        subtitle="The PgMP® Exam Prep Course is built to help professionals prepare for real PgMP® exam conditions before exam day. Learn through structured lessons, guided study paths, practice questions, and full-length mock exams. Become familiar with exam patterns, measure your readiness through detailed performance insights, build confidence, identify knowledge gaps, and approach the exam fully prepared."
         bullets={[
           {
-            text: "Step-by-Step Training Aligned with the Latest Exam Standards",
+            text: "Aligned to the Latest Exam Standards",
           },
-          { text: "Expert Instructors with Real-World Project Experience" },
+          { text: "Expert Instructors with Real-World Program Experience" },
           { text: "100% Online, Flexible Learning" },
-          { text: "PMI®-Approved PDUs" },
+          { text: "Earn 35 PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
         descriptionTop="Prepare with Confidence. Get PgMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PgMP® exam The PgMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionBottom="Our suite of flexible online learning is designed to help you prepare for the PgMP® exam on your terms and stay motivated throughout your certification journey. Study on your schedule with our PgMP® Exam Prep Course."
         image={TrainingImage}
       />
 
@@ -289,7 +322,8 @@ const PgMPExamPrepCourse = () => {
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PgMP Learning Resources",
+          subheading:
+            "Explore multiple study aids designed to get you exam-day ready.",
           slides: slides,
         }}
       />
@@ -297,7 +331,7 @@ const PgMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PgMP"
-        heading="Choose the PgMP Exam Prep Plan That Fits You"
+        heading="Exam Prep Table"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -306,17 +340,17 @@ const PgMPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PgMP Exam Prep Course – Enroll Today
+                PgMP Exam Prep Course - Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
                 The vCare PgMP Exam Prep Course helps you build real-world
                 project management skills while preparing you to confidently
                 clear the PgMP® certification exam on your first attempt.
               </p>
-              <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
-                Key Value Bullets
+              <h4 className="text-Black_light text-xl font-bold mt-5 mb-4">
+                Key Features
               </h4>
-              <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+              <ul className="space-y-1 self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
                 {PrepCourse.map((text, index) => (
                   <li
                     key={index}
@@ -331,7 +365,6 @@ const PgMPExamPrepCourse = () => {
               </Button>
             </div>
             <div>
-              {" "}
               <img
                 src={InnerImage}
                 alt="InnerImage"
@@ -387,8 +420,6 @@ const PgMPExamPrepCourse = () => {
       </div>
 
       <Faq faqs={pgmpPracticeTestFaqs} />
-
-      {/* <TopFooterSection /> */}
     </>
   );
 };

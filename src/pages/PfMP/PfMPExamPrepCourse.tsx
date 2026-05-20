@@ -14,7 +14,7 @@ import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/N
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 
 import {
-  ExamsIcon,
+  CircleArrowIcon,
   ClockIcon,
   LineCahrtIcon,
   SimulatorsIcon,
@@ -22,26 +22,25 @@ import {
   ComIcon,
   DetailIcon,
   ChartIcon,
-  HatIcon,
   MovieIcon,
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
-// Tab 1 (Overview Content)
+
 const overview = {
   heading: "Overview",
-  text: "Prepare with realistic PfMP® practice tests designed to match the latest exam style and question patterns. Our domain-wise practice tests build confidence through focused preparation aligned with current PfMP® exam expectations. Target each domain individually, strengthen your knowledge step by step, and enhance overall performance for your certification exam.",
+  text: "The PfMP® Exam Prep Course is a comprehensive, self-paced program designed to help professionals confidently pass the PfMP® certification exam. Built in alignment with the latest PMI® Exam Content Outline, the course combines structured learning and guided lessons to ensure complete readiness. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PfMP concepts, strengthening exam strategies, and achieving certification success on their first attempt and satisfy the 35 training hours required to apply.",
 };
-// Tab 2 What You’ll Access
+
 const access = {
   heading: "What You’ll Access",
   cards: [
     {
       id: 1,
-      icon: ExamsIcon,
-      title: "Full-length PfMP® mock exams",
+      icon: MovieIcon,
+      title: "Video lessons & concept breakdowns",
       description:
-        "Simulate real PfMP exam conditions with timed, full-length practice tests.",
+        "Learn complex PfMP concepts through clear, instructor-led videos and practical concept walkthroughs.",
     },
     {
       id: 2,
@@ -52,65 +51,71 @@ const access = {
     },
     {
       id: 3,
-      icon: ExamsIcon,
-      title: "2,000+ PfMP-style practice questions",
+      icon: LineCahrtIcon,
+      title: "Structured PfMP study plan",
       description:
-        "Large question bank aligned with real PfMP exam difficulty and structure.",
+        "Follow a guided, step-by-step roadmap tailored for working professionals preparing for PfMP certification.",
     },
     {
       id: 4,
-      icon: DetailIcon,
-      title: "Detailed answer explanations",
+      icon: FlashCardIcon,
+      title: "Flashcards and revision tools",
       description:
-        "Understand correct answers with clear logic, references, and concept explanations.",
+        "Quickly revise key formulas, terminology, and high-impact PfMP topics before exam day.",
     },
     {
       id: 5,
-      icon: ChartIcon,
-      title: "Smart performance analytics",
+      icon: DetailIcon,
+      title: "Latest Curriculum",
       description:
-        "Track progress, accuracy, and improvement areas with detailed performance insights.",
+        "Fully updated curriculum aligned with the latest exam content guideline and PMBOK standards.",
     },
     {
       id: 6,
-      icon: HatIcon,
-      title: "Structured PfMP study plan",
+      icon: ClockIcon,
+      title: "Expert Instructor Support",
       description:
-        "Follow a guided study roadmap designed for busy working professionals.",
+        "Personalized feedback and quick answers from our PMI-certified instructors.",
     },
     {
       id: 7,
-      icon: MovieIcon,
-      title: "Video lessons & concept breakdowns",
+      icon: ImproveIcon,
+      title: "Interactive Learning Experience",
       description:
-        "Learn complex PfMP concepts through concise, instructor-led video lessons.",
+        "Engaging, real-world examples and practical scenarios for effective and enjoyable learning.",
     },
     {
       id: 8,
       icon: PhoneIcon,
-      title: "Downloadable study resources",
+      title: "Learn Anytime, Anywhere",
       description:
-        "Access printable notes and guides for offline PfMP exam preparation.",
+        "Self-paced, mobile-friendly modules let you study on your commute, at the gym, or during quiet work hours.",
     },
     {
       id: 9,
-      icon: FlashCardIcon,
-      title: "Flashcards and revision tools",
+      icon: SimulatorsIcon,
+      title: "Unlimited Access",
+      description: "Unlimited access for the full access period.",
+    },
+    {
+      id: 10,
+      icon: ChartIcon,
+      title: "Proven Results",
       description:
-        "Quickly revise key formulas, processes, and PfMP terminology.",
+        "Our students achieve a high success rate, backed by thousands of successful certifications worldwide.",
     },
   ],
 };
-// Tab 3 How It Works
+
 const work = {
   heading: "How It Works",
-  dis: "Boost your confidence and exam readiness with vCare Exam Simulators—your success partner for PMI certifications.",
+  dis: "Boost your confidence and exam readiness with vCare Project Management - your success partner for PMI certifications.",
   cards: [
     {
       id: 1,
-      icon: ClockIcon,
+      icon: DetailIcon,
       title: "Enroll in a Plan",
-      description: "Choose the PfMP bundle that fits your goal",
+      description: "Choose the Exam Prep bundle that fits your goal",
     },
     {
       id: 2,
@@ -126,51 +131,79 @@ const work = {
     },
     {
       id: 4,
-      icon: ImproveIcon,
+      icon: ChartIcon,
       title: "Analyze & Improve",
       description: "Review results and strengthen weak areas",
     },
     {
       id: 5,
-      icon: PhoneIcon,
+      icon: CircleArrowIcon,
       title: "Clear the PfMP® Exam",
       description: "Walk into the exam with confidence",
     },
   ],
 };
-// Tab 4 You May Also Like
+
 const slides = [
   {
     id: 1,
-    image: InnerImage, // Replace with actual image
-    title: "PfMP® Full-Length Exam Simulator",
+    image: InnerImage,
+    title: "PfMP® Exam Prep Training",
     description:
-      "Experience real PfMP exam conditions with timed, scenario-based full mock tests.",
+      "Join expert-led online or in-person classes designed to build knowledge, confidence, and exam readiness.",
   },
   {
     id: 2,
     image: InnerImage,
-    title: "PfMP® Practice Question Bank",
+    title: "PfMP® Exam Simulator",
     description:
-      "Strengthen your concepts with a large collection of PfMP-aligned practice questions.",
+      "Test your readiness with realistic mock exams, scenario-based practice, and detailed answer explanations.",
   },
   {
     id: 3,
     image: InnerImage,
-    title: "PfMP® Exam Prep Training",
+    title: "PfMP® Online Exam Prep Course",
     description:
-      "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-      buttonText: "Book appointment",
-    },
-
+      "Prepare for the PfMP® exam with our all-in-one Exam Prep bundle with access to Online Course, Practice Exams and tools that build confidence.",
+  },
+  {
+    id: 4,
+    image: InnerImage,
+    title: "Free PfMP® Consultation",
+    description:
+      "Speak with an expert to discuss eligibility, application strategy, study plans, and the best pathway to success.",
+  },
+  {
+    id: 5,
+    image: InnerImage,
+    title: "PfMP® Application Support",
+    description:
+      "Get expert help to complete your application correctly, including audit guidance and full Panel Review support.",
+  },
+  {
+    id: 6,
+    image: InnerImage,
+    title: "PfMP® On-Demand Course",
+    description:
+      "Study anytime with guided lessons, structured modules, and flexible self-paced learning aligned to the PfMP® exam.",
+  },
+  {
+    id: 7,
+    image: InnerImage,
+    title: "PfMP® Exam Voucher",
+    description: "Get Official PfMP® Exam Vouchers and Save on Your Exam Fees.",
+    buttonText: "Buy Now",
+  },
 ];
 
 const PrepCourse = [
-  "Meets PfMP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PfMP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PfMP mock tests",
-  "Structured study plan designed for working professionals",
+  "Aligned to the Latest Exam Standards",
+  "Expert Instructors with Real-World Portfolio Experience",
+  "100% Online, Flexible Learning",
+  "Earn 35 PMI®-Approved PDUs",
+  "Instant access to course materials",
 ];
+
 const courseCard = {
   heading: "Why Choose Our PfMP® Exam Prep Course?",
   card: [
@@ -217,26 +250,26 @@ const PfMPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="Portfolio Management Professional (PfMP®) Practice Exam"
-        description="Our PfMP® Practice Exam is aligned with the latest PMI® PfMP Exam Content Outline and key principles from The Standard for Portfolio Management. Designed for certification success, it delivers focused domain-wise practice through realistic PfMP®-style questions that strengthen knowledge, reinforce strategic alignment, governance, performance, risk management, capacity planning, and value optimization, while building confidence for executive-level situational questions on exam day."
-        descriptionsecond=""
+        title="Portfolio Management Professional (PfMP)® Exam Prep Course"
+        description="Designed for professionals preparing for certification success, our PfMP® Exam Prep Course is your all-in-one study solution, combining structured learning, guided lessons, practice exams, full-length mock exams, and powerful study tools in one complete package."
+        descriptionsecond="Prepare for the PfMP® exam with content that helps you understand key concepts, apply best practices, and build the skills and confidence needed to succeed in modern portfolio management and excel on exam day."
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PfMP® Exam Simulator"
-        subtitle="The PfMP® Practice Exam helps experienced professionals simulate real PfMP® exam conditions before test day. Work through high-quality PfMP®-style questions, understand exam trends, and track your readiness with detailed performance feedback. Improve confidence, uncover weak areas, and enter the exam better prepared."
+        title="Everything You Need for PfMP® Exam Success."
+        subtitle="The PfMP® Exam Prep Course is built to help professionals prepare for real PfMP® exam conditions before exam day. Learn through structured lessons, guided study paths, practice questions, and full-length mock exams. Become familiar with exam patterns, measure your readiness through detailed performance insights, build confidence, identify knowledge gaps, and approach the exam fully prepared."
         bullets={[
           {
-            text: "Step-by-Step Training Aligned with the Latest Exam Standards",
+            text: "Aligned to the Latest Exam Standards",
           },
-          { text: "Expert Instructors with Real-World Project Experience" },
+          { text: "Expert Instructors with Real-World Portfolio Experience" },
           { text: "100% Online, Flexible Learning" },
-          { text: "PMI®-Approved PDUs" },
+          { text: "Earn 35 PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
         descriptionTop="Prepare with Confidence. Get PfMP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PfMP® exam The PfMP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionBottom="Our suite of flexible online learning is designed to help you prepare for the PfMP® exam on your terms and stay motivated throughout your certification journey. Study on your schedule with our PfMP® Exam Prep Course."
         image={TrainingImage}
       />
 
@@ -247,7 +280,8 @@ const PfMPExamPrepCourse = () => {
         work={work}
         alsoLike={{
           heading: "You May Also Like",
-          subheading: "Related PfMP Learning Resources",
+          subheading:
+            "Explore multiple study aids designed to get you exam-day ready.",
           slides: slides,
         }}
       />
@@ -255,7 +289,7 @@ const PfMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PfMP"
-        heading="Choose the PfMP Exam Prep Plan That Fits You"
+        heading="Exam Prep Table"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -264,17 +298,17 @@ const PfMPExamPrepCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PfMP Exam Prep Course – Enroll Today
+                PfMP Exam Prep Course - Enroll Today
               </h2>
               <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
                 The vCare PfMP Exam Prep Course helps you build real-world
                 project management skills while preparing you to confidently
                 clear the PfMP® certification exam on your first attempt.
               </p>
-              <h4 className="text-Black_light  text-xl font-bold mt-5 mb-4">
-                Key Value Bullets
+              <h4 className="text-Black_light text-xl font-bold mt-5 mb-4">
+                Key Features
               </h4>
-              <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+              <ul className="space-y-1 self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
                 {PrepCourse.map((text, index) => (
                   <li
                     key={index}
@@ -289,7 +323,6 @@ const PfMPExamPrepCourse = () => {
               </Button>
             </div>
             <div>
-              {" "}
               <img
                 src={InnerImage}
                 alt="InnerImage"

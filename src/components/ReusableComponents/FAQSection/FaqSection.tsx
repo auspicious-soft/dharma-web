@@ -6,6 +6,8 @@ interface FaqProps {
   limit?: number;
   hideButton?: boolean;
   faqs?: FaqItem[];
+  heading?: string;
+  subheading?: string;
 }
 
 interface FaqItem {
@@ -54,7 +56,13 @@ const defaultFaqs: FaqItem[] = [
   },
 ];
 
-export default function FaqSection({ limit, hideButton, faqs }: FaqProps) {
+export default function FaqSection({
+  limit,
+  hideButton,
+  faqs,
+  heading = "Frequently Asked Questions",
+  subheading,
+}: FaqProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqItems = faqs ?? defaultFaqs;
@@ -64,8 +72,11 @@ export default function FaqSection({ limit, hideButton, faqs }: FaqProps) {
   return (
     <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
+        {subheading && (
+          <p className="text-paragraph text-sm font-medium mb-1">{subheading}</p>
+        )}
         <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] mb-7">
-          Frequently Asked Questions
+          {heading}
         </h2>
 
         <div className="border-b border-gray-200 divide-y divide-gray-200">

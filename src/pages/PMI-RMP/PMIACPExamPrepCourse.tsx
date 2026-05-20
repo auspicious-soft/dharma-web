@@ -310,13 +310,13 @@ const PMIACPExamPrepCourse = () => {
               <h4 className="text-Black_light text-xl font-bold mt-5 mb-4">
                 Key Features
               </h4>
-              <ul className="space-y-1 self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+              <ul className="space-y-1 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
                 {PrepCourse.map((text, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2 self-stretch justify-start"
+                    className="gap-2 self-stretch"
                   >
-                    <span className="text-[8px]">•</span> <span>{text}</span>
+                     <span>{text}</span>
                   </li>
                 ))}
               </ul>

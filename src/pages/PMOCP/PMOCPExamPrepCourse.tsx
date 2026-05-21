@@ -30,7 +30,7 @@ import {
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
-  text: "Prepare with realistic PMI-PMOCP™ practice tests designed to reflect the latest exam style and question patterns. Our domain-wise practice tests help build confidence through focused preparation aligned with current PMI-PMOCP™ exam expectations. Focus on each domain individually, strengthen your knowledge step by step, and enhance overall readiness for your for your certification exam.",
+  text: "The PMI-PMOCP™ Exam Prep Course is a comprehensive, self-paced program designed to help professionals confidently pass the PMI-PMOCP™ certification exam. Built in alignment with the latest PMI-PMOCP Exam Content Outline, the course combines structured learning and guided lessons to ensure complete readiness. With flexible, 100% online access and expert-curated content, the course supports busy professionals in mastering PMOCP concepts, strengthening exam strategies, and achieving certification success on their first attempt and satisfy the 10 training hours required to apply.",
 };
 // Tab 2 What You’ll Access
 const access = {
@@ -38,10 +38,10 @@ const access = {
   cards: [
     {
       id: 1,
-      icon: ExamsIcon,
-      title: "Full-length PMI-PMOCP® mock exams",
+      icon: MovieIcon,
+      title: "Video lessons & concept breakdowns",
       description:
-        "Simulate real PMI-PMOCP exam conditions with timed, full-length practice tests.",
+        "Learn complex PMI-PMOCP concepts through concise, instructor-led video lessons.",
     },
     {
       id: 2,
@@ -52,89 +52,84 @@ const access = {
     },
     {
       id: 3,
-      icon: ExamsIcon,
-      title: "2,000+ PMI-PMOCP-style practice questions",
-      description:
-        "Large question bank aligned with real PMI-PMOCP exam difficulty and structure.",
-    },
-    {
-      id: 4,
-      icon: DetailIcon,
-      title: "Detailed answer explanations",
-      description:
-        "Understand correct answers with clear logic, references, and concept explanations.",
-    },
-    {
-      id: 5,
-      icon: ChartIcon,
-      title: "Smart performance analytics",
-      description:
-        "Track progress, accuracy, and improvement areas with detailed performance insights.",
-    },
-    {
-      id: 6,
       icon: HatIcon,
-      title: "Structured PMI-PMOCP study plan",
+      title: "Structured study plan",
       description:
         "Follow a guided study roadmap designed for busy working professionals.",
     },
     {
-      id: 7,
-      icon: MovieIcon,
-      title: "Video lessons & concept breakdowns",
-      description:
-        "Learn complex PMI-PMOCP concepts through concise, instructor-led video lessons.",
-    },
-    {
-      id: 8,
-      icon: PhoneIcon,
-      title: "Downloadable study resources",
-      description:
-        "Access printable notes and guides for offline PMI-PMOCP exam preparation.",
-    },
-    {
-      id: 9,
+      id: 4,
       icon: FlashCardIcon,
       title: "Flashcards and revision tools",
       description:
         "Quickly revise key formulas, processes, and PMI-PMOCP terminology.",
+    },
+    {
+      id: 5,
+      icon: ExamsIcon,
+      title: "Latest Curriculum",
+      description:
+        "Fully updated curriculum aligned with the latest exam content guideline and PMBOK standards.",
+    },
+    {
+      id: 6,
+      icon: DetailIcon,
+      title: "Expert Instructor Support",
+      description:
+        "Personalized feedback and quick answers from our PMI-certified instructors.",
+    },
+    {
+      id: 7,
+      icon: ChartIcon,
+      title: "Interactive Learning Experience",
+      description:
+        "Engaging, real-world examples and practical scenarios for effective and enjoyable learning.",
+    },
+    {
+      id: 8,
+      icon: PhoneIcon,
+      title: "Learn Anytime, Anywhere",
+      description:
+        "Self-paced, mobile-friendly modules let you study on your commute, at the gym, or during quiet work hours.",
+    },
+    {
+      id: 9,
+      icon: ExamsIcon,
+      title: "Unlimited Access",
+      description: "Unlimited Access for the full access period.",
+    },
+    {
+      id: 10,
+      icon: DetailIcon,
+      title: "Proven Results",
+      description:
+        "Our students achieve a high success rate, backed by thousands of successful certifications worldwide.",
     },
   ],
 };
 // Tab 3 How It Works
 const work = {
   heading: "How It Works",
-  dis: "Boost your confidence and exam readiness with vCare Exam Simulators—your success partner for PMI certifications.",
+  dis: "Boost your confidence and exam readiness with vCare Project Management —your success partner for PMI certifications.",
   cards: [
     {
       id: 1,
       icon: ClockIcon,
-      title: "Enroll in a Plan",
-      description: "Choose the PMI-PMOCP bundle that fits your goal",
+      title: "Choose the Exam Prep bundle",
+      description: "Choose the Exam Prep bundle that fits your goal",
     },
     {
       id: 2,
       icon: LineCahrtIcon,
-      title: "Follow the Study Plan",
-      description: "Learn domain-wise with guided lessons",
+      title: "Clear the PMI-PMOCP™ Exam",
+      description: "Clear the PMI-PMOCP™ Exam",
     },
     {
       id: 3,
       icon: SimulatorsIcon,
-      title: "Practice with Simulators",
-      description: "Attempt real exam-style mock tests",
-    },
-    {
-      id: 4,
-      icon: ImproveIcon,
-      title: "Analyze & Improve",
-      description: "Review results and strengthen weak areas",
-    },
-    {
-      id: 5,
-      icon: PhoneIcon,
-      title: "Clear the PMI-PMOCP® Exam",
-      description: "Walk into the exam with confidence",
+      title: "Boost your confidence",
+      description:
+        "Boost your confidence and exam readiness with vCare Project Management —your success partner for PMI certifications.",
     },
   ],
 };
@@ -160,15 +155,15 @@ const slides = [
     title: "PMI-PMOCP® Exam Prep Training",
     description:
       "Learn proven exam strategies, time management, and question-solving techniques from experts.",
-      buttonText: "Book appointment",
+    buttonText: "Book appointment",
   },
 ];
 
 const PrepCourse = [
-  "Meets PMI-PMOCP® training hour requirements for certification eligibility",
-  "Fully aligned with the latest PMI® PMI-PMOCP Exam Content Outline (ECO)",
-  "Real exam-style questions and full-length PMI-PMOCP mock tests",
-  "Structured study plan designed for working professionals",
+  "Aligned to the Latest Exam Standards",
+  "Prepared by expert Instructors with Real-World PMO Experience",
+  "100% Online, Flexible Learning",
+  "Earn 20 PMI®-Approved PDUs",
 ];
 const courseCard = {
   heading: "Why Choose Our PMI-PMOCP® Exam Prep Course?",
@@ -216,26 +211,28 @@ const PMOCPExamPrepCourse = () => {
   return (
     <>
       <NavHeroSection
-        title="PMI-PMOCP™ Practice Exam"
-        description="Our PMI-PMOCP™ Practice Exam is aligned with the latest PMI® PMOCP Exam Content Outline and the current PMOCP Practice Guide. Designed for certification success, it delivers focused domain-wise practice through realistic PMI-PMOCP™ scenario questions that strengthen knowledge using the PMO Value Ring® framework, while building confidence for exam day."
-       descriptionsecond=""
+        title="Everything You Need for PMI-PMOCP™ Exam Success."
+        description="Designed for professionals preparing for certification success, our PMI-PMOCP™ Exam Prep Course is your all-in-one study solution, combining structured learning, guided lessons, case studies, practice exams, full-length mock exams, and powerful study tools in one complete package."
+        descriptionsecond="Prepare for the PMI-PMOCP™ exam with content that helps you understand key concepts, apply best practices, and build the skills and confidence needed to succeed in risk management and excel on exam day."
         sideImage={InnerPage}
       />
 
       <AuthorizedTrainingPartner
-        title="PMI-PMOCP® Exam Simulator"
-        subtitle="The PMI-PMOCP™ Practice Exam helps professionals simulate real PMI-PMOCP™ exam conditions before test day. Work through high-quality PMI-PMOCP™-style questions, understand exam trends, and track your readiness with detailed performance feedback. Improve confidence, uncover weak areas, and enter the exam better prepared."
+        title="Premier Authorized Training Partner"
+        subtitle="The PMI-PMOCP™ Exam Prep Course is built to help professionals prepare for real PMI-PMOCP™ exam conditions before exam day. Learn through structured lessons, guided study paths, practice questions, and full-length mock exams. Become familiar with exam patterns, measure your readiness through detailed performance insights, build confidence, identify knowledge gaps, and approach the exam fully prepared."
         bullets={[
           {
-            text: "Step-by-Step Training Aligned with the Latest Exam Standards",
+            text: "Key Features",
           },
-          { text: "Expert Instructors with Real-World Project Experience" },
+          { text: "Aligned to the Latest Exam Standards" },
+          {
+            text: "Prepared by expert Instructors with Real-World PMO Experience",
+          },
           { text: "100% Online, Flexible Learning" },
-          { text: "PMI®-Approved PDUs" },
-          { text: "Instant access to course materials" },
+          { text: "Earn 20 PMI®-Approved PDUs" },
         ]}
         descriptionTop="Prepare with Confidence. Get PMI-PMOCP® Certified."
-        descriptionBottom="Designed to help you prepare with confidence and pass the PMI-PMOCP® exam The PMI-PMOCP® certification isn't just another credential—it's the global gold standard for project management professionals seeking recognition, credibility, and career growth."
+        descriptionBottom="Our suite of flexible online learning is designed to help you prepare for the PMI-PMOCP™ exam on your terms and stay motivated throughout your certification journey. Study on your schedule with our PMI-PMOCP® Exam Prep Course,"
         image={TrainingImage}
       />
 
@@ -342,6 +339,178 @@ const PMOCPExamPrepCourse = () => {
           description="Our exam simulator provides the most authentic training experience in the industry. When the time comes for the actual test, you'll feel more confident and ready because you'll know exactly what to expect. We have over 1,700+ questions and answers that reflect the real-life testing environment, so you can be sure that the prep material is reliable."
         />
       </div>
+
+      <section className="bg-white pb-10 lg:pt-5 lg:pb-16">
+        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
+          <div className="text-left">
+            <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] mb-5">
+              PMI-PMOCP Exam Prep Course Plans
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-light-blue">
+                    <th className="border border-gray-300 px-4 py-3 text-left font-bold">
+                      Features
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-bold">
+                      Basic
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-bold">
+                      Premium
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-bold">
+                      Complete
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3">
+                      Video lessons & concept breakdowns
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">
+                      Mini practice tests by domain
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3">
+                      Structured study plan
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">
+                      Flashcards and revision tools
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3">
+                      Latest Curriculum
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">
+                      Expert Instructor Support
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      -
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3">
+                      Interactive Learning Experience
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      -
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">
+                      Learn Anytime, Anywhere
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3">
+                      Unlimited Access
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      -
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">
+                      Proven Results
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      -
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">
+                      ✓
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Faq limit={5} />
 

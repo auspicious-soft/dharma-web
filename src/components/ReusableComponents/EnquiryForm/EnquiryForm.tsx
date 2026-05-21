@@ -28,11 +28,29 @@ type EnquiryFormProps = {
 };
 
 const defaultSubjectOptions: SubjectOption[] = [
+  {
+    value: "interested-private-training",
+    label: "Interested in Private Training",
+  },
+  {
+    value: "interested-corporate-training",
+    label: "Interested in Corporate Training",
+  },
+  {
+    value: "upcoming-bootcamps",
+    label: "Upcoming Bootcamps & Mentoring Programs",
+  },
   { value: "request-a-quote", label: "Request a Quote" },
-  { value: "general", label: "General Inquiry" },
-  { value: "training", label: "Training" },
-  { value: "consulting", label: "Consulting" },
-  { value: "support", label: "Support" },
+  { value: "application-support", label: "Application Support" },
+  { value: "general-feedback", label: "General Feedback or Questions" },
+  { value: "refer-a-friend", label: "Refer a Friend" },
+  {
+    value: "collaboration-partnership",
+    label: "Collaboration / Partnership Opportunities",
+  },
+  { value: "join-team", label: "Interested to Join Our Team" },
+  { value: "speaking-webinar", label: "Speaking / Webinar Engagement Request" },
+  { value: "other", label: "Other" },
 ];
 
 const EnquiryForm: React.FC<EnquiryFormProps> = ({
@@ -47,8 +65,10 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
     [subjectOptions],
   );
 
-  const initialSubject = options.some((option) => option.value === defaultSubject)
-    ? defaultSubject ?? ""
+  const initialSubject = options.some(
+    (option) => option.value === defaultSubject,
+  )
+    ? (defaultSubject ?? "")
     : "";
 
   const [selectedSubject, setSelectedSubject] = useState(initialSubject);
@@ -130,13 +150,18 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
           <div className="flex flex-col gap-6">
             <h3 className="text-[#4c8dea] text-xl font-bold">{formTitle}</h3>
             {formDescription && (
-              <p className="text-paragraph text-sm leading-[26px]">{formDescription}</p>
+              <p className="text-paragraph text-sm leading-[26px]">
+                {formDescription}
+              </p>
             )}
 
             <div className="space-y-3">
               <div>
                 <Label>Subject</Label>
-                <Select value={selectedSubject} onValueChange={setSelectedSubject}>
+                <Select
+                  value={selectedSubject}
+                  onValueChange={setSelectedSubject}
+                >
                   <SelectTrigger className="mt-1 h-12 md:h-14 w-full border border-input shadow-none border-[#e4e4e4] p-3 md:p-4 bg-white/80 rounded-full text-[#7a7a7a] text-xs">
                     <SelectValue placeholder="Select a subject" />
                   </SelectTrigger>
@@ -151,7 +176,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               </div>
 
               <div>
-                <Label>Name *</Label>
+                <Label>Full Name *</Label>
                 <Input
                   type="text"
                   placeholder="Enter your name"
@@ -173,7 +198,9 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
                   </div>
 
                   <div>
-                    <Label>Number of Team Members to Be Trained (optional)</Label>
+                    <Label>
+                      Number of Team Members to Be Trained (optional)
+                    </Label>
                     <Input
                       type="number"
                       min={1}

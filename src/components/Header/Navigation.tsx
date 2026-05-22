@@ -14,131 +14,115 @@ const menuItems: MenuItem[] = [
     href: "/",
   },
   {
-    label: "PMP",
+    label: "Exam Prep Courses",
     dropdown: [
-      { label: "PMP Exam Prep Course ", href: "/pmp/pmp-exam-prep-course" },
-      { label: "PMP On Demand Course", href: "/pmp/pmp-on-demand-course" },
+      { label: "PMP Exam Prep Course", href: "/pmp/pmp-exam-prep-course" },
+      { label: "PgMP Exam Prep Course", href: "/pgmp/pgmp-exam-prep-course" },
+      { label: "PfMP Exam Prep Course", href: "/pfmp/pfmp-exam-prep-course" },
+      {
+        label: "PMOCP Exam Prep Course",
+        href: "/pmocp/pmocp-exam-prep-course",
+      },
+      {
+        label: "PMI-RMP Exam Prep Course",
+        href: "/pmi-rmp/pmi-rmp-exam-prep-course",
+      },
+    ],
+  },
+  {
+    label: "On-Demand Courses",
+    dropdown: [
+      { label: "PMP On-Demand Course", href: "/pmp/pmp-on-demand-course" },
+      { label: "PgMP On-Demand Course", href: "/pgmp/pgmp-on-demand-course" },
+      { label: "PfMP On-Demand Course", href: "/pfmp/pfmp-on-demand-course" },
+      {
+        label: "PMOCP On-Demand Course",
+        href: "/pmocp/pmocp-on-demand-course",
+      },
+      {
+        label: "PMI-RMP On-Demand Course",
+        href: "/pmi-rmp/pmi-rmp-on-demand-course",
+      },
+      { label: "Other Certifications", href: "" },
+    ],
+  },
+  {
+    label: "Exam Simulator",
+    dropdown: [
       { label: "PMP Exam Simulator", href: "/pmp/pmp-exam-simulator" },
-      { label: "PMP Real Practice Exam", href: "/pmp/pmp-real-practice-exam" },
-      { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
+      { label: "PgMP Exam Simulator", href: "/pgmp/pgmp-exam-simulator" },
+      { label: "PfMP Exam Simulator", href: "/pfmp/pfmp-exam-simulator" },
+      { label: "PMOCP Exam Simulator", href: "/pmocp/pmocp-exam-simulator" },
+      {
+        label: "PMI-RMP Exam Simulator",
+        href: "/pmi-rmp/pmi-rmp-exam-simulator",
+      },
+    ],
+  },
+  {
+    label: "Application Support",
+    dropdown: [
       {
         label: "PMP Application Support",
         href: "/pmp/pmp-application-support",
       },
-      { label: "PMP Flashcards", href: "/pmp/pmp-flash-cards" },
-    ],
-  },
-  {
-    label: "PgMP",
-    dropdown: [
-      { label: "PgMP Exam Prep Course ", href: "/pgmp/pgmp-exam-prep-course" },
-      { label: "PgMP On Demand Course", href: "/pgmp/pgmp-on-demand-course" },
-      { label: "PgMP Exam Simulator", href: "/pgmp/pgmp-exam-simulator" },
-      {
-        label: "PgMP Real Practice Exam",
-        href: "/pgmp/pgmp-real-practice-exam",
-      },
-      { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
       {
         label: "PgMP Application Support",
         href: "/pgmp/pgmp-application-support",
       },
-      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" },
-    ],
-  },
-  {
-    label: "PfMP",
-    dropdown: [
-      { label: "PfMP Exam Prep Course ", href: "/pfmp/pfmp-exam-prep-course" },
-      { label: "PfMP On Demand Course", href: "/pfmp/pfmp-on-demand-course" },
-      { label: "PfMP Exam Simulator", href: "/pfmp/pfmp-exam-simulator" },
-      {
-        label: "PfMP Real Practice Exam",
-        href: "/pfmp/pfmp-real-practice-exam",
-      },
-      { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
       {
         label: "PfMP Application Support",
         href: "/pfmp/pfmp-application-support",
-      },
-      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" },
-    ],
-  },
-  {
-    label: "PMOCP",
-    dropdown: [
-      {
-        label: "PMOCP Exam Prep Course ",
-        href: "/pmocp/pmocp-exam-prep-course",
-      },
-      {
-        label: "PMOCP On Demand Course",
-        href: "/pmocp/pmocp-on-demand-course",
-      },
-      { label: "PMOCP Exam Simulator", href: "/pmocp/pmocp-exam-simulator" },
-      {
-        label: "PMOCP Real Practice Exam",
-        href: "/pmocp/pmocp-real-practice-exam",
-      },
-      {
-        label: "PMOCP Domains and Tasks",
-        href: "/pmocp/pmocp-domains-and-tasks",
       },
       {
         label: "PMOCP Application Support",
         href: "/pmocp/pmocp-application-support",
       },
-      { label: "PMOCP Flashcards ", href: "/pmocp/pmocp-flash-cards" },
+      {
+        label: "PMI-RMP Application Support",
+        href: "/pmi-rmp/pmi-rmp-application-support",
+      },
     ],
   },
   {
-    label: "PMI-RMP",
+    label: "Resources",
     dropdown: [
+      { label: "PMP Practice Exams", href: "/pmp/pmp-real-practice-exam" },
+      { label: "PgMP Practice Exams", href: "/pgmp/pgmp-real-practice-exam" },
+      { label: "PfMP Practice Exams", href: "/pfmp/pfmp-real-practice-exam" },
       {
-        label: "PMI-RMP Exam Prep Course ",
-        href: "/pmi-rmp/pmi-rmp-exam-prep-course",
+        label: "PMOCP Practice Exams",
+        href: "/pmocp/pmocp-real-practice-exam",
       },
       {
-        label: "PMI-RMP On Demand Course",
-        href: "/pmi-rmp/pmi-rmp-on-demand-course",
-      },
-      {
-        label: "PMI-RMP Exam Simulator",
-        href: "/pmi-rmp/pmi-rmp-exam-simulator",
-      },
-      {
-        label: "PMI-RMP Real Practice Exam",
+        label: "PMI-RMP Practice Exams",
         href: "/pmi-rmp/pmi-rmp-real-practice-exam",
+      },
+      { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
+      { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
+      { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
+      {
+        label: "PMOCP Domains and Tasks",
+        href: "/pmocp/pmocp-domains-and-tasks",
       },
       {
         label: "PMI-RMP Domains and Tasks",
         href: "/pmi-rmp/pmi-rmp-domains-and-tasks",
       },
-      {
-        label: "PMI-RMP Application Support",
-        href: "/pmi-rmp/pmi-rmp-application-support",
-      },
-      { label: "PMI-RMP Flashcards ", href: "/pmi-rmp/pmi-rmp-flash-cards" },
+      { label: "PMP Flashcards", href: "/pmp/pmp-flash-cards" },
+      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" },
+      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" },
+      { label: "PMOCP Flashcards", href: "/pmocp/pmocp-flash-cards" },
+      { label: "PMI-RMP Flashcards", href: "/pmi-rmp/pmi-rmp-flash-cards" },
     ],
   },
   {
-    label: "Exam Simulators",
-    href: "/exam-simulators",
-  },
-  {
-    label: "PDUs",
-    href: "/pdus",
-  },
-  {
-    label: "Other Certification",
+    label: "More",
     dropdown: [
-      { label: "Other Certification", href: "" },
-      { label: "Yearly", href: "#" },
+      { label: "PDUs", href: "/pdus" },
+      { label: "Corporate Training", href: "/corporate-training" },
+      { label: "Other Certifications", href: "" },
     ],
-  },
-  {
-    label: "Corporate Training",
-    href: "/corporate-training",
   },
 ];
 

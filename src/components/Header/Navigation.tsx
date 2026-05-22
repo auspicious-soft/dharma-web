@@ -43,7 +43,6 @@ const menuItems: MenuItem[] = [
         label: "PMI-RMP On-Demand Course",
         href: "/pmi-rmp/pmi-rmp-on-demand-course",
       },
-      { label: "Other Certifications", href: "" },
     ],
   },
   {

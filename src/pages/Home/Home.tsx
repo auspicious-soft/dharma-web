@@ -159,8 +159,8 @@ const Home = () => {
       <div id="premium-packs-scroll" className="pt-5 md:pt-7 lg:pt-10">
         <PremiumPacks
           showCourseSelect={true}
-          heading="Premium Packs"
-          description="Update Money Back Guarantee copy"
+          heading="Find the Right Plan for Your Success"
+          description="Choose the plan that matches your learning style, study schedule, and certification goals."
         />
       </div>
       <ThevCareExam />

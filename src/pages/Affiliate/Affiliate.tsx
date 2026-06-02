@@ -1,50 +1,62 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import PMPLogo from "@/assets/pmp-logo.png";
 import AffiiateImage from "@/assets/affiliate.jpg";
 import AffiiateWork from "@/assets/inner-page.jpg";
 import { Button } from "@/components/ui/button";
 import AffiliateFaq from "@/components/Affiliate/AffiliateFaq";
+
+const affiliateSubject = "pmi-authorized-training-partner";
+
 const BecomeAffiliateCard = {
   card: [
     {
       id: 1,
+      title: "Grow Your Profitability",
+      description:
+        "Receive commissions for every successful referral that enrolls in eligible vCare programs and services.",
+    },
+    {
+      id: 2,
       title: "Bridge Training Gaps",
       description:
         "Offer your audience reliable certification prep and PDU solutions that complement your existing content or training services.",
     },
     {
-      id: 2,
-      title: "Add Value to Your Training",
-      description:
-        "Enhance your offerings with PMP®, PgMP®, PfMP®, CAPM®, PMI-RMP®, and PDU programs without creating new content.",
-    },
-    {
       id: 3,
-      title: "Grow Your Profitability",
+      title: "Promote Trusted Programs",
       description:
-        "Earn commissions by simply referring professionals to vCare’s eLearning and certification platforms.",
+        "Recommend training solutions delivered by a PMI Authorized Training Partner with a strong reputation for professional development and certification success.",
     },
     {
       id: 4,
+      title: "Add Value to Your Training",
+      description:
+        "Enhance your offerings with our wide range of programs, and PDUs without creating new content.",
+    },
+    {
+      id: 5,
       title: "We Make It Easy",
       description:
-        "Track clicks, enrollments, and commissions through a simple, transparent affiliate process.",
+        "We handle sales, enrollment, training delivery, learner support and certification preparation. You focus on making referrals.",
     },
   ],
 };
+
 const AffiliateProgramFeatures = [
   "Apply to become a vCare Affiliate",
   "Receive your unique affiliate tracking link",
   "Promote vCare programs to your audience",
   "Earn commissions for every successful enrollment",
 ];
+
 const JoinAffiliateProgram = [
   {
     title: "Project, program, portfolio, and PMO professionals",
   },
   {
-    title: "PMI® credential holders and Trainers",
+    title: "Existing vCare Alumni and Students",
   },
   {
     title: "Coaches, mentors, and Consultants",
@@ -53,12 +65,13 @@ const JoinAffiliateProgram = [
     title: "Content creators, bloggers, and educators",
   },
   {
-    title: "PMI chapter leaders and volunteers (where permitted)",
+    title: "Professional Associations and Business Communities",
   },
   {
     title: "Training partners and professional service firms",
   },
 ];
+
 const Affiliate = () => {
   return (
     <>
@@ -66,48 +79,56 @@ const Affiliate = () => {
       <section className="py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="grid grid-cols-1 md:grid-cols-[1.45fr_1fr] gap-5 lg:gap-10 items-start">
-            {/* LEFT CONTENT */}
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Sign Up for the vCare Affiliate Program Today
+                Earn Rewards by Referring Professionals to vCare Project
+                Management
               </h2>
-              <p className="text-paragraph text-sm  md:text-base font-normal mt-2 md:leading-[30px]">
-                The vCare Affiliate Program offers a wide range of PMI
-                Certification Exam Prep and PDU Earning online training
-                materials. If you have an established website that is catering
+              <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
+                Do you have a network of project managers, program managers,
+                portfolio managers, PMO leaders, agile practitioners, business
+                analysts, or organizations seeking professional development and
+                certification training?
+              </p>
+              <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
+                Join the vCare Affiliate Program and earn commissions by
+                referring individuals and organizations to our globally
+                recognized training programs, certification preparation courses,
+                mentoring services, exam simulators, and corporate learning
+                solutions. If you have an established website that is catering
                 to project, program and portfolio managers, then convert your
                 traffic into income by promoting our products to your website
                 visitors.
               </p>
-
-              <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:mt-2 md:leading-[30px]">
-                Earn commissions by referring professionals to trusted project,
-                program, portfolio, and PMO training solutions
+              <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
+                Whether you're a trainer, consultant, coach, influencer,
+                recruiter, or industry professional, our affiliate program
+                provides a simple way to create additional income while helping
+                professionals advance their careers.
               </p>
-
-              <p className="text-paragraph text-sm  md:text-base font-normal mt-2 md:mt-2 md:leading-[30px]">
-                The vCare Affiliate Program enables partners to earn commissions
-                by referring professionals and organizations to vCare’s globally
-                delivered training, mentoring, and certification preparation
-                programs. As a PMI Premier Authorized Training Partner (ATP
-                #3998), vCare offers high-quality, PMI-aligned programs that are
-                trusted by professionals worldwide.
-              </p>
-              <Button className=" mt-4 md:mt-6">Join Now</Button>
+              <Button asChild className="mt-4 md:mt-6">
+                <Link to={`/contact-us?subject=${affiliateSubject}`}>
+                  Join Now
+                </Link>
+              </Button>
             </div>
 
-            {/* RIGHT IMAGE */}
-            <div className="relative ">
+            <div className="relative">
               <img
                 src={AffiiateImage}
-                alt="Affiiate Image"
+                alt="Affiliate program"
                 className="rounded-3xl w-full object-cover"
               />
               <div className="flex justify-center items-center mt-4 md:mt-7">
-                <img className="w-[70px] h-[70px] relative" src={PMPLogo} />
+                <img
+                  className="w-[70px] h-[70px] relative"
+                  src={PMPLogo}
+                  alt="PMI logo"
+                />
                 <div className="-ml-8 pl-[50px] pr-[30px] py-2.5 bg-[#f0f8ff] rounded-[30px] inline-flex justify-center items-center gap-2.5">
                   <div className="text-center justify-center text-[#0a4ba8] text-sm font-medium leading-[26px]">
-                    Authorized Training Partner
+                    Premier Authorized Training Partner (ATP) of the Project
+                    Management Institute
                   </div>
                 </div>
               </div>
@@ -115,6 +136,7 @@ const Affiliate = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="flex flex-col mb-5 md:mb-7 text-center">
@@ -122,7 +144,7 @@ const Affiliate = () => {
               Why Become a vCare Affiliate?
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-3 md:gap-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-5 gap-y-3 md:gap-y-5">
             {BecomeAffiliateCard.card.map((card) => (
               <div
                 key={card.id}
@@ -142,13 +164,14 @@ const Affiliate = () => {
           </div>
         </div>
       </section>
+
       <section className="py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 lg:gap-20 items-center">
-            <div className="w-full ">
+            <div className="w-full">
               <img
                 src={AffiiateWork}
-                alt="Affiiate Work"
+                alt="Affiliate work"
                 className="rounded-3xl w-full object-cover"
               />
             </div>
@@ -156,13 +179,13 @@ const Affiliate = () => {
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
                 How the Affiliate Program Works
               </h2>
-              <ul className="space-y-1  self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
+              <ul className="space-y-1 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
                 {AffiliateProgramFeatures.map((text, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2 self-stretch justify-start"
+                    className="gap-2 self-stretch"
                   >
-                    <span className="text-[8px]">•</span> <span>{text}</span>
+                    <span>{text}</span>
                   </li>
                 ))}
               </ul>
@@ -170,9 +193,10 @@ const Affiliate = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className=" flex flex-col justify-center items-center mb-6 text-center">
+          <div className="flex flex-col justify-center items-center mb-6 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] text-center">
               Who Can Join the Affiliate Program?
             </h2>
@@ -194,7 +218,36 @@ const Affiliate = () => {
           </div>
         </div>
       </section>
+
       <AffiliateFaq />
+
+      <section className="bg-light-blue py-10 md:py-14 lg:py-20">
+        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto text-center">
+          <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
+            Start Earning Today
+          </h2>
+          <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px] max-w-[850px] mx-auto">
+            Partner with vCare Project Management and help professionals achieve
+            their certification and career goals while creating an additional
+            income stream for yourself.
+          </p>
+          <h3 className="text-primary_heading text-xl md:text-2xl font-bold mt-5">
+            Become a vCare Affiliate
+          </h3>
+          <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
+            Apply Today and Start Referring with Confidence.
+          </p>
+          <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
+            Contact us to learn more about affiliate opportunities and
+            commission structures.
+          </p>
+          <Button asChild className="mt-5 md:mt-7">
+            <Link to={`/contact-us?subject=${affiliateSubject}`}>
+              Become a vCare Affiliate
+            </Link>
+          </Button>
+        </div>
+      </section>
     </>
   );
 };

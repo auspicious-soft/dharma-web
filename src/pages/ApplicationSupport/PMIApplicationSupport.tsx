@@ -1,8 +1,8 @@
 import ApplicationSupportPage from "@/components/ApplicationSupport/ApplicationSupportPage";
 import { applicationSupportContent } from "@/data/applicationSupport";
 
-const PMIACPApplicationSupport = () => {
-  return <ApplicationSupportPage content={applicationSupportContent.pmiRmp} />;
+const PMIApplicationSupport = () => {
+  return <ApplicationSupportPage content={applicationSupportContent.other} />;
 };
 
-export default PMIACPApplicationSupport;
+export default PMIApplicationSupport;

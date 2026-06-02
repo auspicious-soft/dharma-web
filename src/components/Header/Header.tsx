@@ -36,7 +36,7 @@ const Header = () => {
           <NavLink to="/" className="flex gap-[10px] items-center">
             <img src={Logo} alt="Logo" className="max-w-[58px]" />
             <div className="text-[#0a4ba8] text-sm font-bold leading-5 max-w-24 md:max-w-max">
-              vCareProject Management
+              vCare Project Management
             </div>
           </NavLink>
           <p className="text-paragraph text-sm font-normal hidden xl:block">

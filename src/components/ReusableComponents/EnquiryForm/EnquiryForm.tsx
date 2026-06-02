@@ -48,6 +48,10 @@ const defaultSubjectOptions: SubjectOption[] = [
     value: "collaboration-partnership",
     label: "Collaboration / Partnership Opportunities",
   },
+  {
+    value: "pmi-authorized-training-partner",
+    label: "Premier Authorized Training Partner (ATP) of the Project Management Institute",
+  },
   { value: "join-team", label: "Interested to Join Our Team" },
   { value: "speaking-webinar", label: "Speaking / Webinar Engagement Request" },
   { value: "other", label: "Other" },

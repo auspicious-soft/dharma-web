@@ -8,16 +8,16 @@ interface FooterContent {
   pointsHeading?: React.ReactNode;
   points: string[];
   buttonText: string;
-  buttonLink?: string; // optional
+  buttonLink?: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
 }
 
 interface TopFooterSectionProps {
   content?: FooterContent;
 }
 
-const TopFooterSection: React.FC<TopFooterSectionProps> = ({
-  content,
-}) => {
+const TopFooterSection: React.FC<TopFooterSectionProps> = ({ content }) => {
   const defaultContent: FooterContent = {
     title: (
       <>
@@ -64,34 +64,43 @@ const TopFooterSection: React.FC<TopFooterSectionProps> = ({
                 {sectionContent.pointsHeading}
               </h4>
             )}
-            <ul className="space-y-1 text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
-              {sectionContent.points.map(
-                (point: string, index: number) => (
+            {sectionContent.points.length > 0 && (
+              <ul className="space-y-1 text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+                {sectionContent.points.map((point: string, index: number) => (
                   <li key={index} className="flex items-start gap-2">
-                    <span className="text-[8px]">•</span>
+                    <span className="text-[8px]">&bull;</span>
                     <span>{point}</span>
                   </li>
-                )
-              )}
-            </ul>
+                ))}
+              </ul>
+            )}
 
-            {sectionContent.buttonLink ? (
-              <a href={sectionContent.buttonLink}>
-                <Button
-                  variant="outline"
-                  className="max-w-[280px] w-full"
-                >
+            <div className="flex flex-col sm:flex-row gap-3">
+              {sectionContent.buttonLink ? (
+                <a href={sectionContent.buttonLink}>
+                  <Button variant="outline" className="max-w-[280px] w-full">
+                    {sectionContent.buttonText}
+                  </Button>
+                </a>
+              ) : (
+                <Button variant="outline" className="max-w-[280px] w-full">
                   {sectionContent.buttonText}
                 </Button>
-              </a>
-            ) : (
-              <Button
-                variant="outline"
-                className="max-w-[280px] w-full"
-              >
-                {sectionContent.buttonText}
-              </Button>
-            )}
+              )}
+
+              {sectionContent.secondaryButtonText &&
+                (sectionContent.secondaryButtonLink ? (
+                  <a href={sectionContent.secondaryButtonLink}>
+                    <Button className="max-w-[280px] w-full">
+                      {sectionContent.secondaryButtonText}
+                    </Button>
+                  </a>
+                ) : (
+                  <Button className="max-w-[280px] w-full">
+                    {sectionContent.secondaryButtonText}
+                  </Button>
+                ))}
+            </div>
           </div>
         </div>
       </div>

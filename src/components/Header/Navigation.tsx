@@ -81,6 +81,10 @@ const menuItems: MenuItem[] = [
         label: "PMI-RMP Application Support",
         href: "/pmi-rmp/pmi-rmp-application-support",
       },
+      {
+        label: "All Other Certifications",
+        href: "/application-support",
+      },
     ],
   },
   {

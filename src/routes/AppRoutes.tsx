@@ -56,6 +56,7 @@ import PMIACPDomainsandTasks from "@/pages/PMI-RMP/PMIACPDomainsandTasks";
 import PMIACPApplicationSupport from "@/pages/PMI-RMP/PMIACPApplicationSupport";
 import FlashCards from "@/pages/FlashCards/FlashCards";
 import PracticeExams from "@/pages/PracticeExams/PracticeExams";
+import PMIApplicationSupport from "@/pages/ApplicationSupport/PMIApplicationSupport";
 
 const AppRoutes = () => {
   return (
@@ -201,6 +202,8 @@ const AppRoutes = () => {
 
         {/* Exam Simulators Page */}
         <Route path="/exam-simulators" element={<ExamSimulators />} />
+        {/* PMI Application Support Page */}
+        <Route path="/application-support" element={<PMIApplicationSupport />} />
         {/* Practice Exams Page */}
         <Route path="/real-practice-exam" element={<PracticeExams />} />
         {/* Flashcards Page */}

@@ -44,6 +44,76 @@ const portalFeatures = [
   "Scalable solution designed for teams, departments, and enterprise-wide learning initiatives",
 ];
 
+const corporateTrainingFaqs = [
+  {
+    question:
+      "Why do organizations choose vCare Project Management for corporate training?",
+    answer:
+      "vCare Project Management delivers practical, results-focused learning solutions designed to build capability, improve performance, and support business objectives. Our programs combine expert-led instruction, real-world case studies, hands-on exercises, and flexible delivery options to ensure knowledge is immediately applicable in the workplace.",
+  },
+  {
+    question: "How does corporate training benefit my organization?",
+    answer:
+      "Effective training helps organizations strengthen workforce capabilities, improve productivity, enhance project and operational outcomes, support digital transformation initiatives, and develop future leaders. It also helps organizations close skill gaps and remain competitive in rapidly changing business environments.",
+  },
+  {
+    question: "Who delivers the training programs?",
+    answer:
+      "Our programs are facilitated by highly experienced practitioners, consultants, and PMI authorized instructors with extensive industry expertise across project management, program management, portfolio management, PMO leadership, agile delivery, risk management, business analysis, leadership, and digital transformation.",
+  },
+  {
+    question:
+      "Can training programs be tailored to our organization's requirements?",
+    answer:
+      "Yes. We can customize course content, case studies, workshops, assessments, learning paths, and delivery formats to align with your organization's strategic goals, industry challenges, competency frameworks, and workforce development needs.",
+  },
+  {
+    question: "What delivery formats are available?",
+    answer:
+      "We offer multiple delivery options, including:\n\nInstructor-led virtual training\nIn-person classroom workshops\nHybrid learning solutions\nSelf-paced online learning\nMentoring and coaching programs\nEnterprise learning portal subscriptions\n\nOrganizations can choose the format that best suits their workforce and operational requirements.",
+  },
+  {
+    question: "Do employees need prior experience to attend?",
+    answer:
+      "Prerequisites vary by program. Many courses are suitable for both beginners and experienced professionals, while advanced certifications and specialized programs may require relevant work experience or foundational knowledge. We can recommend the most appropriate learning pathway based on participant profiles.",
+  },
+  {
+    question: "What is the ideal class size for corporate training?",
+    answer:
+      "Class sizes can be adjusted based on learning objectives and delivery style. Small groups encourage interaction and coaching, while larger cohorts can be accommodated for enterprise-wide capability development initiatives.",
+  },
+  {
+    question: "How interactive are the training sessions?",
+    answer:
+      "Our training programs emphasize active participation through discussions, case studies, simulations, practical exercises, group activities, assessments, and real-world scenarios. This approach helps participants apply concepts immediately and retain knowledge more effectively.",
+  },
+  {
+    question: "Can you support certification preparation programs?",
+    answer:
+      "Yes. We offer training and exam preparation solutions for globally recognized certifications, including PMP®, PgMP®, PfMP®, PMI-PMOCP™, PMI-RMP®, PMI-SP®, PMI-ACP®, PMI-PBA®, CAPM®, Lean Six Sigma (all belts), and other professional credentials.",
+  },
+  {
+    question: "Do you provide learning progress tracking and reporting?",
+    answer:
+      "Yes. Our learning platform provides visibility into learner participation, course completion, assessment results, and overall training progress, helping organizations measure engagement and monitor workforce development initiatives.",
+  },
+  {
+    question: "Is there an on-demand learning option available?",
+    answer:
+      "Yes. Organizations can provide employees with access to our digital learning platform, which includes self-paced courses, recorded sessions, practice assessments, study resources, certification preparation tools, and ongoing learning content accessible anytime, anywhere.",
+  },
+  {
+    question: "Can training be delivered globally?",
+    answer:
+      "Yes. vCare Project Management delivers programs for organizations across North America, Europe, the Middle East, Asia-Pacific, and other regions through virtual, hybrid, and in-person delivery models.",
+  },
+  {
+    question: "How do we get started?",
+    answer:
+      "Simply contact our team to discuss your learning objectives, target audience, preferred delivery model, and desired outcomes. We will work with you to design a customized training solution that aligns with your organizational goals and budget.",
+  },
+];
+
 const CorporateTraining = () => {
   return (
     <>
@@ -135,7 +205,11 @@ const CorporateTraining = () => {
         </div>
       </section>
 
-      <Faq limit={5} />
+      <Faq
+        heading="Frequently Asked Questions (FAQs)"
+        faqs={corporateTrainingFaqs}
+        hideButton
+      />
 
       <div
         id="enquiry-form-scroll"

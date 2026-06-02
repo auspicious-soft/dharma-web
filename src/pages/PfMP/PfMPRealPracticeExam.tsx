@@ -20,8 +20,6 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
-import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
-import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 // Tab 1 (Overview Content)
 const overview = {
@@ -203,12 +201,6 @@ const PfMPRealPracticeExam = () => {
           slides: slides,
         }}
       />
-      <div className="-mt-10 md:-mt-20 relative">
-        <ScreenshortsSlider id="exam-screenshorts" />
-      </div>
-      <div className="-mt-10 md:-mt-20 relative">
-        <Faq limit={5} />
-      </div>
       <TopFooterSection />
     </>
   );

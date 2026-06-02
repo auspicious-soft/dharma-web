@@ -86,17 +86,7 @@ const menuItems: MenuItem[] = [
   {
     label: "Resources",
     dropdown: [
-      { label: "PMP Practice Exams", href: "/pmp/pmp-real-practice-exam" },
-      { label: "PgMP Practice Exams", href: "/pgmp/pgmp-real-practice-exam" },
-      { label: "PfMP Practice Exams", href: "/pfmp/pfmp-real-practice-exam" },
-      {
-        label: "PMOCP Practice Exams",
-        href: "/pmocp/pmocp-real-practice-exam",
-      },
-      {
-        label: "PMI-RMP Practice Exams",
-        href: "/pmi-rmp/pmi-rmp-real-practice-exam",
-      },
+      { label: "Practice Exams", href: "/real-practice-exam" },
       { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
       { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
       { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
@@ -108,18 +98,17 @@ const menuItems: MenuItem[] = [
         label: "PMI-RMP Domains and Tasks",
         href: "/pmi-rmp/pmi-rmp-domains-and-tasks",
       },
-      { label: "PMP Flashcards", href: "/pmp/pmp-flash-cards" },
-      { label: "PgMP Flashcards", href: "/pgmp/pgmp-flash-cards" },
-      { label: "PfMP Flashcards", href: "/pfmp/pfmp-flash-cards" },
-      { label: "PMOCP Flashcards", href: "/pmocp/pmocp-flash-cards" },
-      { label: "PMI-RMP Flashcards", href: "/pmi-rmp/pmi-rmp-flash-cards" },
+      { label: "Flashcards", href: "/flash-cards" },
     ],
+  },
+  {
+    label: "Corporate Training",
+    href: "/corporate-training",
   },
   {
     label: "More",
     dropdown: [
       { label: "PDUs", href: "/pdus" },
-      { label: "Corporate Training", href: "/corporate-training" },
       { label: "Other Certifications", href: "" },
     ],
   },

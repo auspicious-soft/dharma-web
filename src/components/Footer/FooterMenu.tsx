@@ -8,6 +8,7 @@ export default function FooterMenu() {
     { title: "About Us", href: "/about-us" },
     { title: "Contact Us", href: "/contact-us" },
     { title: "Corporate Trainings", href: "/corporate-training" },
+    { title: "Partner with us", href: "/affiliate" },
     { title: "Company", href: "#" },  
   ];
 

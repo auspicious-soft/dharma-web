@@ -46,8 +46,11 @@ const Header = () => {
         <div className="flex gap-2 lg:gap-6 items-center">
           <Search />
           <div className="flex gap-3 lg:gap-6 items-center">
-            <Link to="#" className="text-paragraph text-sm hidden lg:block">
-              Partner with us
+            <Link
+              to="/corporate-training"
+              className="text-paragraph text-sm hidden lg:block"
+            >
+              Corporate Training
             </Link>
             <Link
               to="/contact-us"
@@ -115,11 +118,11 @@ const Header = () => {
           {/* Bottom Actions */}
           <div className="bg-[#CEE2FF] py-4 px-3">
             <Link
-              to="#"
+              to="/corporate-training"
               className="block text-center text-paragraph text-sm py-2 px-4 hover:bg-gray-100 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Partner with us
+              Corporate Training
             </Link>
             <Link
               to="/contact-us"

@@ -57,6 +57,10 @@ import PMIACPApplicationSupport from "@/pages/PMI-RMP/PMIACPApplicationSupport";
 import FlashCards from "@/pages/FlashCards/FlashCards";
 import PracticeExams from "@/pages/PracticeExams/PracticeExams";
 import PMIApplicationSupport from "@/pages/ApplicationSupport/PMIApplicationSupport";
+import PartnerWithUs from "@/pages/PartnerWithUs/PartnerWithUs";
+import OffersAndBenefits from "@/pages/OffersAndBenefits/OffersAndBenefits";
+import Webinars from "@/pages/Webinars/Webinars";
+import Podcasts from "@/pages/Podcasts/Podcasts";
 
 const AppRoutes = () => {
   return (
@@ -220,6 +224,14 @@ const AppRoutes = () => {
         <Route path="/book-an-appointment" element={<BookAppointment />} />
         {/*Book Affiliate */}
         <Route path="/affiliate" element={<Affiliate />} />
+        {/*Partner With Us */}
+        <Route path="/partner-with-us" element={<PartnerWithUs />} />
+        {/*Offers and Benefits */}
+        <Route path="/offers-and-benefits" element={<OffersAndBenefits />} />
+        {/*Webinars */}
+        <Route path="/webinars" element={<Webinars />} />
+        {/*Podcasts */}
+        <Route path="/podcasts" element={<Podcasts />} />
         {/*FAQ */}
         <Route path="/faq" element={<Faq />} />
         {/*Mobile App */}

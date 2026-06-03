@@ -8,14 +8,14 @@ export default function FooterMenu() {
     { title: "About Us", href: "/about-us" },
     { title: "Contact Us", href: "/contact-us" },
     { title: "Corporate Trainings", href: "/corporate-training" },
-    { title: "Partner with us", href: "/affiliate" },
+    { title: "Partner with us", href: "/partner-with-us" },
     { title: "Company", href: "#" },  
   ];
 
   const links = [
     { title: "Book appointment", href: "/book-an-appointment" },
     { title: "FAQs", href: "/faq" },
-    { title: "Our Current Promotions", href: "#" },
+    { title: "Offers and Benefits", href: "/offers-and-benefits" },
     { title: "Refer & Earn", href: "#" },
     { title: "Terms of Service", href: "/terms-of-service" },
     { title: "Privacy Policy", href: "/privacy-policy" },
@@ -24,8 +24,8 @@ export default function FooterMenu() {
 
   const resources = [
     { title: "Blogs", href: "#" },
-    { title: "Podcasts", href: "#" },
-    { title: "Webinars", href: "#" },
+    { title: "Podcasts", href: "/podcasts" },
+    { title: "Webinars", href: "/webinars" },
     { title: "Mobile App", href: "/mobile-app" },
     { title: "Affiliates", href: "/affiliate" },
   ];

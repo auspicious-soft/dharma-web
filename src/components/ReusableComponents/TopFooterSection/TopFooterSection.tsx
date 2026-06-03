@@ -65,10 +65,9 @@ const TopFooterSection: React.FC<TopFooterSectionProps> = ({ content }) => {
               </h4>
             )}
             {sectionContent.points.length > 0 && (
-              <ul className="space-y-1 text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
+              <ul className="space-y-1 list-disc text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
                 {sectionContent.points.map((point: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="text-[8px]">&bull;</span>
+                  <li key={index} className=" gap-2">
                     <span>{point}</span>
                   </li>
                 ))}

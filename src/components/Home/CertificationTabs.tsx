@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import TabImage from "@/assets/tab-image.jpg";
 
@@ -415,11 +415,11 @@ export default function CertificationTabs() {
         </div> 
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
-          {tabCourses[activeTab].map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 items-stretch">
+  {tabCourses[activeTab].map((course) => (
+    <CourseCard key={course.id} course={course} />
+  ))}
+</div>
       </div>
     </section>
   );
@@ -427,29 +427,38 @@ export default function CertificationTabs() {
 
 function CourseCard({ course }: { course: Course }) {
   return (
-    <div className="overflow-hidden">
+    <div className="flex flex-col h-full overflow-hidden">
       <img
         src={course.image}
         alt={course.title}
         className="w-full aspect-[1/0.82] object-cover rounded-[20px]"
       />
 
-      <div className="flex flex-col mt-2.5 gap-2">
-        <h3 className="text-center justify-start font-semibold text-Black_light text-lg md:text-[22px]">{course.title}</h3>
+      <div className="flex flex-col flex-1 mt-2.5 gap-2">
+        {/* Fixed area for title + subheading */}
+        <div className="min-h-[50px] flex flex-col">
+          <h3 className="text-center font-semibold text-Black_light text-lg md:text-[22px]">
+            {course.title}
+          </h3>
 
-        {course.subheading && (
-          <p className="text-center text-Black_light text-sm md:text-base font-medium">
-            {course.subheading}
-          </p>
-        )}
+          {course.subheading && (
+            <p className="text-center text-Black_light text-sm md:text-base font-medium mt-1">
+              {course.subheading}
+            </p>
+          )}
+        </div>
 
-        <p className="text-center justify-start text-paragraph text-sm md:text-base leading-[26px] md:leading-[30px]">
+        {/* Fixed 2-line description */}
+        <p className="text-center text-paragraph text-sm md:text-base leading-[26px] md:leading-[30px] line-clamp-2 min-h-[60px]">
           {course.description}
         </p>
 
-        <Button>
-          {course.button ? course.button:"Find Out More"}
-        </Button>
+        {/* Button always aligned at bottom */}
+        <div className="mt-auto">
+          <Button className="w-full">
+            {course.button || "Find Out More"}
+          </Button>
+        </div>
       </div>
     </div>
   );

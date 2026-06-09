@@ -364,10 +364,6 @@ const Podcasts = () => {
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
               Podcast Library
             </h2>
-            <p className="text-paragraph text-sm font-normal mt-1 leading-[26px]">
-              Show all podcast playlists from the Dharam YouTube channel, sorted
-              by latest date first.
-            </p>
           </div>
 
           {loading && (

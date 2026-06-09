@@ -200,7 +200,7 @@ const PMIACPFlashCard = () => {
           </div>
         </div>
       </section>
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PMI-RMP" />
       <TopFooterSection
         content={{
           title: (

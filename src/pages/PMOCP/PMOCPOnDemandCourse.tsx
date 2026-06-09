@@ -196,7 +196,7 @@ const PMOCPOnDemandCourse = () => {
         </div>
       </section>
 
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PMOCP" />
       <Testimonials id="two" />
       <Faq limit={5} />
       <TopFooterSection />

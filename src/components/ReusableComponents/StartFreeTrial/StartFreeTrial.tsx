@@ -2,12 +2,15 @@ import React from "react";
 import FreeTralBg from "@/assets/free-trail-bg.jpg";
 import FreeTrailImage from "@/assets/free-trail-img.jpg";
 import { Button } from "../../ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
+import type { CourseKey } from "../PlanSection/plans";
 
 interface StartFreeTrialProps {
   headings?: string;
   description?: string;
   features?: string[];
   buttonText?: string;
+  courseKey?: CourseKey;
 }
 
 const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
@@ -21,6 +24,7 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
     "No credit card required for trial access",
   ],
   buttonText = "Try for Free",
+  courseKey = "PMP",
 }) => {
   return (
     <section className="overflow-hidden py-10 md:py-14 lg:py-20">
@@ -53,8 +57,8 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
               ))}
             </ul>
 
-            <Button className="max-h-[44px] !bg-white !text-primary_blue">
-              {buttonText}
+            <Button className="max-h-[44px] !bg-white !text-primary_blue" asChild>
+              <a href={getSubscriptionUrl(courseKey)}>{buttonText}</a>
             </Button>
           </div>
 

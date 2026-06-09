@@ -204,7 +204,7 @@ const PfMPFlashCard = () => {
           </div>
         </div>
       </section>
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PfMP" />
       <TopFooterSection
         content={{
           title: (

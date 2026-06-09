@@ -1,6 +1,7 @@
 import EnquiryForm from "@/components/ReusableComponents/EnquiryForm/EnquiryForm";
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import { CALENDLY_CONSULTATION_URL } from "@/utils/links";
 import { Button } from "@/components/ui/button";
 import { CircleArrowIcon } from "@/utils/svgicons";
 import {
@@ -292,7 +293,7 @@ const OffersAndBenefits = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-5">
                 <Button onClick={scrollToForm}>Contact Us Today</Button>
-                <a href="/book-an-appointment">
+                <a href={CALENDLY_CONSULTATION_URL}>
                   <Button variant="outline" className="w-full sm:w-auto">
                     Schedule a Free Consultation
                   </Button>
@@ -325,7 +326,7 @@ const OffersAndBenefits = () => {
           buttonText: "Request a Quote",
           buttonLink: `/contact-us?subject=${quoteSubject}`,
           secondaryButtonText: "Book a Consultation",
-          secondaryButtonLink: "/book-an-appointment",
+          secondaryButtonLink: CALENDLY_CONSULTATION_URL,
         }}
       />
     </>

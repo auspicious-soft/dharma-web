@@ -1,7 +1,11 @@
-import React from "react";
 import FooterLogo from "@/assets/footer-logo.png";
 import SocialIcons from "./SocialIcons";
 import { NavLink } from "react-router-dom";
+import {
+  CALENDLY_CONSULTATION_URL,
+  isExternalUrl,
+  SHOPIFY_TRAINING_LINKS,
+} from "@/utils/links";
 
 export default function FooterMenu() {
   const companyLinks = [
@@ -9,14 +13,13 @@ export default function FooterMenu() {
     { title: "Contact Us", href: "/contact-us" },
     { title: "Corporate Trainings", href: "/corporate-training" },
     { title: "Partner with us", href: "/partner-with-us" },
-    { title: "Company", href: "#" },  
   ];
 
   const links = [
-    { title: "Book appointment", href: "/book-an-appointment" },
+    { title: "Book appointment", href: CALENDLY_CONSULTATION_URL },
     { title: "FAQs", href: "/faq" },
     { title: "Offers and Benefits", href: "/offers-and-benefits" },
-    { title: "Refer & Earn", href: "#" },
+    { title: "Refer & Earn", href: "/refer-and-earn" },
     { title: "Terms of Service", href: "/terms-of-service" },
     { title: "Privacy Policy", href: "/privacy-policy" },
     { title: "Refund Policy", href: "/refund-policy" },
@@ -31,12 +34,29 @@ export default function FooterMenu() {
   ];
 
   const examPrep = [
-    { title: "PMP", href: "#" },
-    { title: "PgMP", href: "#" },
-    { title: "PfMP", href: "#" },
-    { title: "PMI-PMOCP", href: "#" },
-    { title: "PMI-RMP", href: "#" },
+    { title: "PMP", href: SHOPIFY_TRAINING_LINKS.PMP },
+    { title: "PgMP", href: SHOPIFY_TRAINING_LINKS.PgMP },
+    { title: "PfMP", href: SHOPIFY_TRAINING_LINKS.PfMP },
+    { title: "PMI-PMOCP", href: SHOPIFY_TRAINING_LINKS.PMOCP },
+    { title: "PMI-RMP", href: SHOPIFY_TRAINING_LINKS["PMI-RMP"] },
   ];
+
+  const renderFooterLink = (link: { title: string; href: string }) =>
+    isExternalUrl(link.href) ? (
+      <a
+        href={link.href}
+        className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
+      >
+        {link.title}
+      </a>
+    ) : (
+      <NavLink
+        to={link.href}
+        className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
+      >
+        {link.title}
+      </NavLink>
+    );
 
   return (
   
@@ -78,12 +98,7 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.href}
-                    className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
-                  >
-                    {link.title}
-                  </NavLink>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
@@ -95,12 +110,7 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {links.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.href}
-                     className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
-                  >
-                    {link.title}
-                  </NavLink>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
@@ -112,12 +122,7 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {resources.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.href}
-                      className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
-                  >
-                    {link.title}
-                  </NavLink>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>
@@ -129,12 +134,7 @@ export default function FooterMenu() {
             <ul className="flex flex-col gap-3">
               {examPrep.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.href}
-                     className=" text-light-blue text-xs font-light hover:text-primary_heading transition-colors no-underline"
-                  >
-                    {link.title}
-                  </NavLink>
+                  {renderFooterLink(link)}
                 </li>
               ))}
             </ul>

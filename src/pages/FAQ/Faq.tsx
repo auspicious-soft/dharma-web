@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import { CALENDLY_CONSULTATION_URL } from "@/utils/links";
 import { Button } from "@/components/ui/button";
 import { faqCategories } from "@/data/faqs";
 
@@ -168,7 +169,7 @@ const Faq = () => {
             "Plan your next step with confidence",
           ],
           buttonText: "Book a free Consultation",
-          buttonLink: "/book-an-appointment",
+          buttonLink: CALENDLY_CONSULTATION_URL,
         }}
       />
     </>

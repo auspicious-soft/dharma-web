@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
@@ -17,6 +17,7 @@ import {
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const flashCard = {
   cards: [
@@ -91,13 +92,13 @@ const WhatIncluded = [
 ];
 
 const flashcardLinks = [
-  { title: "Explore PMP® Flashcards", href: "/pmp/pmp-flash-cards" },
-  { title: "Explore PgMP® Flashcards", href: "/pgmp/pgmp-flash-cards" },
-  { title: "Explore PfMP® Flashcards", href: "/pfmp/pfmp-flash-cards" },
-  { title: "Explore PMOCP Flashcards", href: "/pmocp/pmocp-flash-cards" },
+  { title: "Explore PMP® Flashcards", href: getSubscriptionUrl("PMP") },
+  { title: "Explore PgMP® Flashcards", href: getSubscriptionUrl("PgMP") },
+  { title: "Explore PfMP® Flashcards", href: getSubscriptionUrl("PfMP") },
+  { title: "Explore PMOCP Flashcards", href: getSubscriptionUrl("PMOCP") },
   {
     title: "Explore PMI-RMP® Flashcards",
-    href: "/pmi-rmp/pmi-rmp-flash-cards",
+    href: getSubscriptionUrl("PMI-RMP"),
   },
 ];
 
@@ -290,13 +291,13 @@ const FlashCards = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {flashcardLinks.map((item) => (
-              <Link
+              <a
                 key={item.href}
-                to={item.href}
+                href={item.href}
                 className="min-h-28 p-5 bg-light-blue rounded-[20px] flex items-center justify-center text-center text-primary_heading text-base font-bold hover:shadow-md transition"
               >
                 {item.title}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -374,7 +375,7 @@ const FlashCards = () => {
             "Designed to support smarter preparation",
           ],
           buttonText: "Start Learning",
-          buttonLink: "#",
+          buttonLink: getSubscriptionUrl("PMP"),
         }}
       />
     </>

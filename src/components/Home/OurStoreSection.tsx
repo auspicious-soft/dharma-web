@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { CircleArrowIcon } from "@/utils/svgicons";
 import { Button } from "../ui/button";
+import { SHOPIFY_TRAINING_LINKS } from "@/utils/links";
 
 // --------------------
 // DATA (same style)
@@ -13,7 +14,7 @@ const storeData = [
   {
     id: 1,
     title: "PMP®",
-    url: " https://www.vcareprojectmanagement.com/collections/pmp-certification-training",
+    url: SHOPIFY_TRAINING_LINKS.PMP,
     points: [
       "Live, online, mentor-led sessions",
       "Flexibility to reschedule",
@@ -25,7 +26,7 @@ const storeData = [
   {
     id: 2,
     title: "PMI-RMP®",
-    url: "https://www.vcareprojectmanagement.com/collections/pmi-rmp-certification-training",
+    url: SHOPIFY_TRAINING_LINKS["PMI-RMP"],
     points: [
       "Live, online, mentor-led sessions",
       "Flexibility to reschedule",
@@ -37,7 +38,7 @@ const storeData = [
   {
     id: 3,
     title: "PMI-RMP®",
-    url: "https://www.vcareprojectmanagement.com/collections/PMI-RMP-certification-training",
+    url: SHOPIFY_TRAINING_LINKS.PgMP,
     points: [
       "Live, online, mentor-led sessions",
       "Flexibility to reschedule",
@@ -49,7 +50,7 @@ const storeData = [
   {
     id: 4,
     title: "PMOCP",
-    url: "https://www.vcareprojectmanagement.com/collections/pmocp-certification-training",
+    url: SHOPIFY_TRAINING_LINKS.PMOCP,
     points: [
       "Live, online, mentor-led sessions",
       "Flexibility to reschedule",
@@ -61,7 +62,7 @@ const storeData = [
   {
     id: 5,
     title: "PgMP®",
-    url: "https://www.vcareprojectmanagement.com/collections/pgmp-certification-training",
+    url: SHOPIFY_TRAINING_LINKS.PgMP,
     points: [
       "Live, online, mentor-led sessions",
       "Training by PMI Certified Experts",
@@ -73,7 +74,7 @@ const storeData = [
   {
     id: 6,
     title: "PfMP®",
-    url: "https://www.vcareprojectmanagement.com/collections/pfmp-certification-training",
+    url: SHOPIFY_TRAINING_LINKS.PfMP,
     points: [
       "Live, online, mentor-led sessions",
       "Training by PMI Certified Experts",

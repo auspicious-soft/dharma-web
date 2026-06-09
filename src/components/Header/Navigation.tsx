@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import {
+  getCoursePagePath,
+  getMockExamUrl,
+  isExternalUrl,
+} from "@/utils/links";
 
 type MenuItem = {
   label: string;
@@ -16,45 +21,46 @@ const menuItems: MenuItem[] = [
   {
     label: "Exam Prep Courses",
     dropdown: [
-      { label: "PMP Exam Prep Course", href: "/pmp/pmp-exam-prep-course" },
-      { label: "PgMP Exam Prep Course", href: "/pgmp/pgmp-exam-prep-course" },
-      { label: "PfMP Exam Prep Course", href: "/pfmp/pfmp-exam-prep-course" },
+      { label: "PMP Exam Prep Course", href: getCoursePagePath("PMP", "exam-prep") },
+      { label: "PgMP Exam Prep Course", href: getCoursePagePath("PgMP", "exam-prep") },
+      { label: "PfMP Exam Prep Course", href: getCoursePagePath("PfMP", "exam-prep") },
       {
         label: "PMOCP Exam Prep Course",
-        href: "/pmocp/pmocp-exam-prep-course",
+        href: getCoursePagePath("PMOCP", "exam-prep"),
       },
       {
         label: "PMI-RMP Exam Prep Course",
-        href: "/pmi-rmp/pmi-rmp-exam-prep-course",
+        href: getCoursePagePath("PMI-RMP", "exam-prep"),
       },
     ],
   },
   {
     label: "On-Demand Courses",
     dropdown: [
-      { label: "PMP On-Demand Course", href: "/pmp/pmp-on-demand-course" },
-      { label: "PgMP On-Demand Course", href: "/pgmp/pgmp-on-demand-course" },
-      { label: "PfMP On-Demand Course", href: "/pfmp/pfmp-on-demand-course" },
+      { label: "PMP On-Demand Course", href: getCoursePagePath("PMP", "on-demand-course") },
+      { label: "PgMP On-Demand Course", href: getCoursePagePath("PgMP", "on-demand-course") },
+      { label: "PfMP On-Demand Course", href: getCoursePagePath("PfMP", "on-demand-course") },
       {
         label: "PMOCP On-Demand Course",
-        href: "/pmocp/pmocp-on-demand-course",
+        href: getCoursePagePath("PMOCP", "on-demand-course"),
       },
       {
         label: "PMI-RMP On-Demand Course",
-        href: "/pmi-rmp/pmi-rmp-on-demand-course",
+        href: getCoursePagePath("PMI-RMP", "on-demand-course"),
       },
     ],
   },
   {
     label: "Exam Simulator",
+    href: "/exam-simulators",
     dropdown: [
-      { label: "PMP Exam Simulator", href: "/pmp/pmp-exam-simulator" },
-      { label: "PgMP Exam Simulator", href: "/pgmp/pgmp-exam-simulator" },
-      { label: "PfMP Exam Simulator", href: "/pfmp/pfmp-exam-simulator" },
-      { label: "PMOCP Exam Simulator", href: "/pmocp/pmocp-exam-simulator" },
+      { label: "PMP Exam Simulator", href: getMockExamUrl("PMP") },
+      { label: "PgMP Exam Simulator", href: getMockExamUrl("PgMP") },
+      { label: "PfMP Exam Simulator", href: getMockExamUrl("PfMP") },
+      { label: "PMOCP Exam Simulator", href: getMockExamUrl("PMOCP") },
       {
         label: "PMI-RMP Exam Simulator",
-        href: "/pmi-rmp/pmi-rmp-exam-simulator",
+        href: getMockExamUrl("PMI-RMP"),
       },
     ],
   },
@@ -63,27 +69,23 @@ const menuItems: MenuItem[] = [
     dropdown: [
       {
         label: "PMP Application Support",
-        href: "/pmp/pmp-application-support",
+        href: getCoursePagePath("PMP", "application-support"),
       },
       {
         label: "PgMP Application Support",
-        href: "/pgmp/pgmp-application-support",
+        href: getCoursePagePath("PgMP", "application-support"),
       },
       {
         label: "PfMP Application Support",
-        href: "/pfmp/pfmp-application-support",
+        href: getCoursePagePath("PfMP", "application-support"),
       },
       {
         label: "PMOCP Application Support",
-        href: "/pmocp/pmocp-application-support",
+        href: getCoursePagePath("PMOCP", "application-support"),
       },
       {
         label: "PMI-RMP Application Support",
-        href: "/pmi-rmp/pmi-rmp-application-support",
-      },
-      {
-        label: "All Other Certifications",
-        href: "/application-support",
+        href: getCoursePagePath("PMI-RMP", "application-support"),
       },
     ],
   },
@@ -123,6 +125,27 @@ interface NavigationProps {
   onItemClick?: () => void;
 }
 
+const LinkOrAnchor = ({
+  href,
+  className,
+  onClick,
+  children,
+}: {
+  href: string;
+  className: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) =>
+  isExternalUrl(href) ? (
+    <a href={href} className={className} onClick={onClick}>
+      {children}
+    </a>
+  ) : (
+    <Link to={href} className={className} onClick={onClick}>
+      {children}
+    </Link>
+  );
+
 const Navigation: React.FC<NavigationProps> = ({
   isMobile = false,
   onItemClick,
@@ -140,30 +163,43 @@ const Navigation: React.FC<NavigationProps> = ({
           <div key={item.label}>
             {/* Menu WITHOUT dropdown */}
             {!item.dropdown && item.href && (
-              <Link
-                to={item.href}
+              <LinkOrAnchor
+                href={item.href}
                 className="flex items-center justify-between px-6 py-3 text-paragraph text-sm hover:text-primary_heading transition-colors group"
                 onClick={onItemClick}
               >
                 <span>{item.label}</span>
-              </Link>
+              </LinkOrAnchor>
             )}
 
             {/* Menu WITH dropdown */}
             {item.dropdown && (
               <div>
-                <button
-                  className="w-full flex items-center justify-between px-6 py-3 text-paragraph text-sm hover:text-primary_heading transition-colors"
-                  onClick={() => toggleDropdown(item.label)}
-                >
-                  <span>{item.label}</span>
+                <div className="w-full flex items-center justify-between px-6 py-3 text-paragraph text-sm hover:text-primary_heading transition-colors">
+                  {item.href ? (
+                    <LinkOrAnchor
+                      href={item.href}
+                      className="flex-1"
+                      onClick={onItemClick}
+                    >
+                      {item.label}
+                    </LinkOrAnchor>
+                  ) : (
+                    <span>{item.label}</span>
+                  )}
+                  <button
+                    type="button"
+                    aria-label={`Toggle ${item.label} menu`}
+                    onClick={() => toggleDropdown(item.label)}
+                  >
                   <ChevronDown
                     size={18}
                     className={`transition-transform duration-200 ${
                       openDropdown === item.label ? "rotate-180" : ""
                     }`}
                   />
-                </button>
+                  </button>
+                </div>
 
                 {/* Dropdown Content */}
                 <div
@@ -175,14 +211,14 @@ const Navigation: React.FC<NavigationProps> = ({
                 >
                   <div className="py-2">
                     {item.dropdown.map((sub) => (
-                      <Link
+                      <LinkOrAnchor
                         key={sub.label}
-                        to={sub.href}
+                        href={sub.href}
                         className="block px-8 py-2 text-paragraph text-xs hover:text-primary_heading transition-colors"
                         onClick={onItemClick}
                       >
                         {sub.label}
-                      </Link>
+                      </LinkOrAnchor>
                     ))}
                   </div>
                 </div>
@@ -207,13 +243,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {!item.dropdown && item.href && (
             <NavLink
               to={item.href}
-              className={({ isActive }) =>
-                `px-1 py-4 text-sm transition-colors inline-block ${
-                  isActive
-                    ? "text-paragraph hover:text-primary_heading"
-                    : "text-paragraph hover:text-primary_heading"
-                }`
-              }
+              className="px-1 py-4 text-sm transition-colors inline-block text-paragraph hover:text-primary_heading"
             >
               {item.label}
             </NavLink>
@@ -221,27 +251,41 @@ const Navigation: React.FC<NavigationProps> = ({
 
           {item.dropdown && (
             <div className="relative">
-              <button className="px-1 py-4 text-paragraph text-sm hover:text-primary_heading flex items-center gap-1 transition-colors">
-                {item.label}
-                <ChevronDown size={16} />
-              </button>
+              {item.href ? (
+                <NavLink
+                  to={item.href}
+                  className="px-1 py-4 text-paragraph text-sm hover:text-primary_heading flex items-center gap-1 transition-colors"
+                >
+                  {item.label}
+                  <ChevronDown size={16} />
+                </NavLink>
+              ) : (
+                <button className="px-1 py-4 text-paragraph text-sm hover:text-primary_heading flex items-center gap-1 transition-colors">
+                  {item.label}
+                  <ChevronDown size={16} />
+                </button>
+              )}
 
               <div className="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px] z-50">
-                {item.dropdown.map((sub) => (
-                  <NavLink
-                    key={sub.label}
-                    to={sub.href}
-                    className={({ isActive }) =>
-                      `block px-4 py-2 text-sm transition-colors ${
-                        isActive
-                          ? "text-paragraph hover:text-primary_heading"
-                          : "text-paragraph hover:text-primary_heading"
-                      }`
-                    }
-                  >
-                    {sub.label}
-                  </NavLink>
-                ))}
+                {item.dropdown.map((sub) =>
+                  isExternalUrl(sub.href) ? (
+                    <a
+                      key={sub.label}
+                      href={sub.href}
+                      className="block px-4 py-2 text-sm transition-colors text-paragraph hover:text-primary_heading"
+                    >
+                      {sub.label}
+                    </a>
+                  ) : (
+                    <NavLink
+                      key={sub.label}
+                      to={sub.href}
+                      className="block px-4 py-2 text-sm transition-colors text-paragraph hover:text-primary_heading"
+                    >
+                      {sub.label}
+                    </NavLink>
+                  )
+                )}
               </div>
             </div>
           )}

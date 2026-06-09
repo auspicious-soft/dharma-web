@@ -109,7 +109,7 @@ const Home = () => {
                 <ul className="px-4 lg:px-6  py-[13px] bg-white rounded-xl shadow-[0px_4px_14px_0px_rgba(0,0,0,0.05)]  inline-flex items-center flex-wrap gap-y-1 gap-x-3 lg:gap-x-5">
                   <li className="flex items-start gap-2 self-stretch justify-start text-paragraph text-xs md:text-sm font-medium leading-[30px]">
                     <span className="text-[8px]">•</span>{" "}
-                    <a href="/pmp/pmp-exam-prep-course" className="underline">
+                    <a href="/pmp/exam-prep" className="underline">
                       Exam Prep Courses
                     </a>
                   </li>

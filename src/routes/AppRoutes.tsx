@@ -61,6 +61,7 @@ import PartnerWithUs from "@/pages/PartnerWithUs/PartnerWithUs";
 import OffersAndBenefits from "@/pages/OffersAndBenefits/OffersAndBenefits";
 import Webinars from "@/pages/Webinars/Webinars";
 import Podcasts from "@/pages/Podcasts/Podcasts";
+import ReferAndEarn from "@/pages/ReferAndEarn/ReferAndEarn";
 
 const AppRoutes = () => {
   return (
@@ -79,18 +80,25 @@ const AppRoutes = () => {
 
         {/* PMP Pages */}
         <Route path="pmp">
+          <Route path="exam-prep" element={<PMPExamPrepCourse />} />
           <Route path="pmp-exam-prep-course" element={<PMPExamPrepCourse />} />
+          <Route path="on-demand-course" element={<PMPOnDemandCourse />} />
           <Route path="pmp-on-demand-course" element={<PMPOnDemandCourse />} />
+          <Route path="exam-simulator" element={<PMPExamSimulator />} />
           <Route path="pmp-exam-simulator" element={<PMPExamSimulator />} />
+          <Route path="flash-cards" element={<PMPFlashCards />} />
           <Route path="pmp-flash-cards" element={<PMPFlashCards />} />
+          <Route path="practice-exam" element={<PMPRealPracticeExam />} />
           <Route
             path="pmp-real-practice-exam"
             element={<PMPRealPracticeExam />}
           />
+          <Route path="domains-and-tasks" element={<PMPDomainsandTasks />} />
           <Route
             path="pmp-domains-and-tasks"
             element={<PMPDomainsandTasks />}
           />
+          <Route path="application-support" element={<PMPApplicationSupport />} />
           <Route
             path="pmp-application-support"
             element={<PMPApplicationSupport />}
@@ -99,108 +107,136 @@ const AppRoutes = () => {
 
         {/* PgMP Pages */}
         <Route path="pgmp">
+          <Route path="exam-prep" element={<PgMPExamPrepCourse />} />
           <Route
             path="pgmp-exam-prep-course"
             element={<PgMPExamPrepCourse />}
           />
+          <Route path="on-demand-course" element={<PgMPOnDemandCourse />} />
           <Route
             path="pgmp-on-demand-course"
             element={<PgMPOnDemandCourse />}
           />
+          <Route path="exam-simulator" element={<PgMPExamSimulator />} />
           <Route path="pgmp-exam-simulator" element={<PgMPExamSimulator />} />
+          <Route path="practice-exam" element={<PgMPRealPracticeExam />} />
           <Route
             path="pgmp-real-practice-exam"
             element={<PgMPRealPracticeExam />}
           />
+          <Route path="domains-and-tasks" element={<PgMPDomainsandTasks />} />
           <Route
             path="pgmp-domains-and-tasks"
             element={<PgMPDomainsandTasks />}
           />
+          <Route path="application-support" element={<PgMPApplicationSupport />} />
           <Route
             path="pgmp-application-support"
             element={<PgMPApplicationSupport />}
           />
+          <Route path="flash-cards" element={<PgMPFlashCard />} />
           <Route path="pgmp-flash-cards" element={<PgMPFlashCard />} />
         </Route>
 
         {/* PfMP Pages */}
         <Route path="pfmp">
+          <Route path="exam-prep" element={<PfMPExamPrepCourse />} />
           <Route
             path="pfmp-exam-prep-course"
             element={<PfMPExamPrepCourse />}
           />
+          <Route path="on-demand-course" element={<PfMPOnDemandCourse />} />
           <Route
             path="pfmp-on-demand-course"
             element={<PfMPOnDemandCourse />}
           />
+          <Route path="exam-simulator" element={<PfMPExamSimulator />} />
           <Route path="pfmp-exam-simulator" element={<PfMPExamSimulator />} />
+          <Route path="practice-exam" element={<PfMPRealPracticeExam />} />
           <Route
             path="pfmp-real-practice-exam"
             element={<PfMPRealPracticeExam />}
           />
+          <Route path="domains-and-tasks" element={<PfMPDomainsandTasks />} />
           <Route
             path="pfmp-domains-and-tasks"
             element={<PfMPDomainsandTasks />}
           />
+          <Route path="application-support" element={<PfMPApplicationSupport />} />
           <Route
             path="pfmp-application-support"
             element={<PfMPApplicationSupport />}
           />
+          <Route path="flash-cards" element={<PfMPFlashCard />} />
           <Route path="pfmp-flash-cards" element={<PfMPFlashCard />} />
         </Route>
 
         {/* PMOCP Pages */}
         <Route path="pmocp">
+          <Route path="exam-prep" element={<PMOCPExamPrepCourse />} />
           <Route
             path="pmocp-exam-prep-course"
             element={<PMOCPExamPrepCourse />}
           />
+          <Route path="on-demand-course" element={<PMOCPOnDemandCourse />} />
           <Route
             path="pmocp-on-demand-course"
             element={<PMOCPOnDemandCourse />}
           />
+          <Route path="exam-simulator" element={<PMOCPExamSimulator />} />
           <Route path="pmocp-exam-simulator" element={<PMOCPExamSimulator />} />
+          <Route path="practice-exam" element={<PMOCPRealPracticeExam />} />
           <Route
             path="pmocp-real-practice-exam"
             element={<PMOCPRealPracticeExam />}
           />
+          <Route path="domains-and-tasks" element={<PMOCPDomainsandTasks />} />
           <Route
             path="pmocp-domains-and-tasks"
             element={<PMOCPDomainsandTasks />}
           />
+          <Route path="application-support" element={<PMOCPApplicationSupport />} />
           <Route
             path="pmocp-application-support"
             element={<PMOCPApplicationSupport />}
           />
+          <Route path="flash-cards" element={<PMOCPFlashCard />} />
           <Route path="pmocp-flash-cards" element={<PMOCPFlashCard />} />
         </Route>
 
         {/* PMI-RMP Pages */}
-        <Route path="PMI-RMP">
+        <Route path="pmi-rmp">
+          <Route path="exam-prep" element={<PMIACPExamPrepCourse />} />
           <Route
             path="PMI-RMP-exam-prep-course"
             element={<PMIACPExamPrepCourse />}
           />
+          <Route path="on-demand-course" element={<PMIACPOnDemandCourse />} />
           <Route
             path="PMI-RMP-on-demand-course"
             element={<PMIACPOnDemandCourse />}
           />
+          <Route path="exam-simulator" element={<PMIACPExamSimulator />} />
           <Route
             path="PMI-RMP-exam-simulator"
             element={<PMIACPExamSimulator />}
           />
+          <Route path="practice-exam" element={<PMIACPRealPracticeExam />} />
           <Route
             path="PMI-RMP-real-practice-exam"
             element={<PMIACPRealPracticeExam />}
           />
+          <Route path="domains-and-tasks" element={<PMIACPDomainsandTasks />} />
           <Route
             path="PMI-RMP-domains-and-tasks"
             element={<PMIACPDomainsandTasks />}
           />
+          <Route path="application-support" element={<PMIACPApplicationSupport />} />
           <Route
             path="PMI-RMP-application-support"
             element={<PMIACPApplicationSupport />}
           />
+          <Route path="flash-cards" element={<PMIACPFlashCard />} />
           <Route path="PMI-RMP-flash-cards" element={<PMIACPFlashCard />} />
         </Route>
 
@@ -232,6 +268,8 @@ const AppRoutes = () => {
         <Route path="/webinars" element={<Webinars />} />
         {/*Podcasts */}
         <Route path="/podcasts" element={<Podcasts />} />
+        {/*Refer and Earn */}
+        <Route path="/refer-and-earn" element={<ReferAndEarn />} />
         {/*FAQ */}
         <Route path="/faq" element={<Faq />} />
         {/*Mobile App */}

@@ -6,8 +6,9 @@ import Logo from "@/assets/logo.png";
 import Search from "./Search";
 import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
+import { PORTAL_BASE_URL } from "@/utils/links";
 
-const LOGIN_REDIRECT_URL = "https://dharam-user-portal.vercel.app/login";
+const LOGIN_REDIRECT_URL = `${PORTAL_BASE_URL}/login`;
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

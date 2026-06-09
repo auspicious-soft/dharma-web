@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import { ChartIcon, ComIcon, DetailIcon } from "@/utils/svgicons";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import { Button } from "@/components/ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const domainsOverview = {
   cards: [
@@ -42,8 +42,6 @@ const whyThisHelps = [
 ];
 
 const PMPDomainsandTasks = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <NavHeroSection
@@ -190,11 +188,8 @@ const PMPDomainsandTasks = () => {
                 knowledge, and maximize exam readiness.
               </p>
 
-              <Button
-                className="w-fit mt-1"
-                onClick={() => navigate("/pmp/pmp-exam-prep-course")}
-              >
-                Get Started
+              <Button className="w-fit mt-1" asChild>
+                <a href={getSubscriptionUrl("PMP")}>Get Started</a>
               </Button>
             </div>
           </div>

@@ -15,6 +15,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const examFeatures = [
   "Based on the latest PMP® Exam Content Outline (ECO)",
@@ -343,7 +344,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
             "Globally recognized executive credibility",
           ],
           buttonText: "Start PMP Preparation Today",
-          buttonLink: "/pgmp/pgmp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PMP"),
         }}
       />
     </>

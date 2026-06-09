@@ -15,6 +15,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const examFeatures = [
   "Based on latest PgMP® ECO & Progarm Management Standard (5th Edition)",
@@ -316,7 +317,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
       </section>
 
       <Testimonials id="two" />
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PgMP" />
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={pgmpExamSimulatorFaqs} />
       </div>
@@ -344,7 +345,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
             "Globally recognized strategic credibility",
           ],
           buttonText: "Start PgMP Preparation Today",
-          buttonLink: "/pgmp/pgmp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PgMP"),
         }}
       />
     </>

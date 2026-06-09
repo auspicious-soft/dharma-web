@@ -431,6 +431,7 @@ const PgMPOnDemandCourse = () => {
       </section>
 
       <StartFreeTrial
+        courseKey="PgMP"
         headings="Start Your Free Trial"
         description="Test-drive our exam simulators, practice exams, study bundles, and self-paced learning resources before you buy."
         features={[

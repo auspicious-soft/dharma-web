@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
+import { getSubscriptionUrl } from "@/utils/links";
 
 interface FooterContent {
   title: React.ReactNode;
@@ -35,7 +36,7 @@ const TopFooterSection: React.FC<TopFooterSectionProps> = ({ content }) => {
       "Prove your project management expertise globally",
     ],
     buttonText: "Start PMP Preparation Today",
-    buttonLink: "/pmp-course",
+    buttonLink: getSubscriptionUrl("PMP"),
   };
 
   const sectionContent = content || defaultContent;

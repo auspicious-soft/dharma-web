@@ -15,6 +15,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const examFeatures = [
   "Based on latest PfMP® Exam Content Outline and Standard for Porfolio Management ",
@@ -316,7 +317,7 @@ const PfMPExamSimulator = () => {
       </section>
 
       <Testimonials id="two" />
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PfMP" />
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={pfmpExamSimulatorFaqs} />
       </div>
@@ -350,7 +351,7 @@ const PfMPExamSimulator = () => {
             "Globally recognized strategic credibility",
           ],
           buttonText: "Start PfMP Preparation Today",
-          buttonLink: "/pfmp/pfmp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PfMP"),
         }}
       />
     </>

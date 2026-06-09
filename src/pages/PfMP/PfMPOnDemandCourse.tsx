@@ -417,6 +417,7 @@ const PfMPOnDemandCourse = () => {
       </section>
 
       <StartFreeTrial
+        courseKey="PfMP"
         headings="Start Your Free Trial"
         description="Test-drive our exam simulators, practice exams, study bundles, and self-paced learning resources before you buy."
         features={[

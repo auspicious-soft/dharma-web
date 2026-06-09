@@ -1,6 +1,7 @@
 import React from "react";
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import { CALENDLY_CONSULTATION_URL, getSubscriptionUrl } from "@/utils/links";
 
 const expertiseAreas = [
   {
@@ -287,9 +288,9 @@ const AboutUs = () => {
             "Join thousands of professionals working towards their certification and gain the knowledge, strategy, and support to pass. Don't wait - your next career move starts here.",
           points: [],
           buttonText: "Enroll Now",
-          buttonLink: "/pmp/pmp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PMP"),
           secondaryButtonText: "Book a Free Consultation",
-          secondaryButtonLink: "/book-an-appointment",
+          secondaryButtonLink: CALENDLY_CONSULTATION_URL,
         }}
       />
     </>

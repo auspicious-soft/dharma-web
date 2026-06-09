@@ -1,7 +1,7 @@
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import React from "react";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const ExamSimulators = () => {
   return (
@@ -30,7 +30,7 @@ const ExamSimulators = () => {
             "Track domain-wise performance analytics",
           ],
           buttonText: "Test Your Readiness Now",
-          buttonLink: "#",
+          buttonLink: getSubscriptionUrl("PMP"),
         }}
       />
     </>

@@ -198,7 +198,7 @@ const PMOCPFlashCard = () => {
           </div>
         </div>
       </section>
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PMOCP" />
       <TopFooterSection
         content={{
           title: (

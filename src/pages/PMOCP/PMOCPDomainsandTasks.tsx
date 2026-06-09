@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import {
@@ -13,6 +12,7 @@ import {
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import { Button } from "@/components/ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const domainsOverview = {
   cards: [
@@ -70,8 +70,6 @@ const whyThisHelps = [
 ];
 
 const PMOCPDomainsandTasks = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <NavHeroSection
@@ -196,11 +194,8 @@ const PMOCPDomainsandTasks = () => {
                 strengthen core knowledge, and maximize exam readiness.
               </p>
 
-              <Button
-                className="w-fit mt-1"
-                onClick={() => navigate("/pmocp/pmocp-exam-prep-course")}
-              >
-                Get Started
+              <Button className="w-fit mt-1" asChild>
+                <a href={getSubscriptionUrl("PMOCP")}>Get Started</a>
               </Button>
             </div>
           </div>

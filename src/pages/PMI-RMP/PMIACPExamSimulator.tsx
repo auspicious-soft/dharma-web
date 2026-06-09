@@ -15,6 +15,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const examFeatures = [
   "Based on the latest PMI-RMP® Practice Guide and Exam Content Outline (ECO)",
@@ -313,7 +314,7 @@ const PMIACPExamSimulator = () => {
       </section>
 
       <Testimonials id="two" />
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PMI-RMP" />
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={pmiacpExamSimulatorFaqs} />
       </div>
@@ -339,7 +340,7 @@ const PMIACPExamSimulator = () => {
             "Globally recognized professional credibility",
           ],
           buttonText: "Start PMI-RMP® Preparation Today",
-          buttonLink: "/pmi-rmp/pmi-rmp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PMI-RMP"),
         }}
       />
     </>

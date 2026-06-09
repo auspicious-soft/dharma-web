@@ -15,6 +15,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const examFeatures = [
   "Based on the latest PMI-PMOCP™ Practoce Guide and Exam Content Outline",
@@ -315,7 +316,7 @@ const PMOCPExamSimulator = () => {
       </section>
 
       <Testimonials id="two" />
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PMOCP" />
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={pmocpExamSimulatorFaqs} />
       </div>
@@ -341,7 +342,7 @@ const PMOCPExamSimulator = () => {
             "Globally recognized professional credibility",
           ],
           buttonText: "Start PMI-PMOCP™ Preparation Today",
-          buttonLink: "/pmocp/pmocp-exam-prep-course",
+          buttonLink: getSubscriptionUrl("PMOCP"),
         }}
       />
     </>

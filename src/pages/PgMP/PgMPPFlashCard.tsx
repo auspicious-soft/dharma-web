@@ -204,7 +204,7 @@ const PgMPFlashCard = () => {
           </div>
         </div>
       </section>
-      <StartFreeTrial />
+      <StartFreeTrial courseKey="PgMP" />
       <TopFooterSection
         content={{
           title: (

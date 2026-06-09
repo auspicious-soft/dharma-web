@@ -6,12 +6,25 @@ import { Button } from "@/components/ui/button";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/training-image.png";
 import type { ApplicationSupportContent } from "@/data/applicationSupport";
+import { getSubscriptionUrl } from "@/utils/links";
+import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
 
 type ApplicationSupportPageProps = {
   content: ApplicationSupportContent;
 };
 
 const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
+  const title = content.title.toLowerCase();
+  const courseKey: CourseKey = title.includes("pmi-rmp")
+    ? "PMI-RMP"
+    : title.includes("pmocp")
+      ? "PMOCP"
+      : title.includes("pgmp")
+        ? "PgMP"
+        : title.includes("pfmp")
+          ? "PfMP"
+          : "PMP";
+
   return (
     <>
       <NavHeroSection
@@ -57,7 +70,9 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
                 <div className="text-primary_heading text-3xl md:text-4xl font-bold mt-2">
                   {content.price}
                 </div>
-                <Button className="mt-5 w-full">Enroll Now</Button>
+                <Button className="mt-5 w-full" asChild>
+                  <a href={getSubscriptionUrl(courseKey)}>Enroll Now</a>
+                </Button>
               </div>
             </div>
           </div>

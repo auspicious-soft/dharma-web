@@ -1,5 +1,6 @@
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import { CALENDLY_CONSULTATION_URL } from "@/utils/links";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, ListVideo, Play, RefreshCcw } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
@@ -483,7 +484,7 @@ const Webinars = () => {
           buttonText: "Visit YouTube Channel",
           buttonLink: youtubeChannelUrl,
           secondaryButtonText: "Book a Consultation",
-          secondaryButtonLink: "/book-an-appointment",
+          secondaryButtonLink: CALENDLY_CONSULTATION_URL,
         }}
       />
     </>

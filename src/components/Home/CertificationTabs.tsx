@@ -1,6 +1,15 @@
-﻿import { useEffect, useRef, useState } from "react";
+﻿import { useState } from "react";
 import { Button } from "../ui/button";
 import TabImage from "@/assets/tab-image.jpg";
+import {
+  CALENDLY_CONSULTATION_URL,
+  getCoursePagePath,
+  getDashboardUrl,
+  getMockExamUrl,
+  getSubscriptionUrl,
+  SHOPIFY_TRAINING_LINKS,
+} from "@/utils/links";
+import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
 
 type Tab =
   | "PMP"
@@ -17,9 +26,38 @@ interface Course {
   description: string;
   image: string;
   button:string;
+  href?: string;
 }
 
 const tabs: Tab[] = ["PMP", "PgMP", "PfMP","PMI-PMOCP", "PMI-RMP", "CAPM"];
+
+function getCourseCtaHref(course: Course) {
+  const title = course.title.toLowerCase();
+  const courseKey: CourseKey | undefined = title.includes("pmi-rmp")
+    ? "PMI-RMP"
+    : title.includes("pmocp")
+      ? "PMOCP"
+      : title.includes("pgmp")
+        ? "PgMP"
+        : title.includes("pfmp")
+          ? "PfMP"
+          : title.includes("pmp")
+            ? "PMP"
+            : undefined;
+
+  if (title.includes("consultation")) return CALENDLY_CONSULTATION_URL;
+  if (!courseKey) return getDashboardUrl();
+  if (title.includes("exam prep training")) return SHOPIFY_TRAINING_LINKS[courseKey];
+  if (title.includes("exam simulator")) return getMockExamUrl(courseKey);
+  if (title.includes("application support")) {
+    return getCoursePagePath(courseKey, "application-support");
+  }
+  if (title.includes("on-demand") || title.includes("online exam prep")) {
+    return getSubscriptionUrl(courseKey);
+  }
+
+  return getDashboardUrl();
+}
 
 /* ðŸ”µ Data per tab */
 const tabCourses: Record<Tab, Course[]> = {
@@ -426,6 +464,8 @@ export default function CertificationTabs() {
 }
 
 function CourseCard({ course }: { course: Course }) {
+  const href = course.href ?? getCourseCtaHref(course);
+
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <img
@@ -455,8 +495,8 @@ function CourseCard({ course }: { course: Course }) {
 
         {/* Button always aligned at bottom */}
         <div className="mt-auto">
-          <Button className="w-full">
-            {course.button || "Find Out More"}
+          <Button className="w-full" asChild>
+            <a href={href}>{course.button || "Find Out More"}</a>
           </Button>
         </div>
       </div>

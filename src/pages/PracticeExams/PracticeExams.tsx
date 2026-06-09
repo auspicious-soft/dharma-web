@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/training-image.png";
@@ -10,6 +9,7 @@ import {
   GreenTickIcon,
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import { getSubscriptionUrl } from "@/utils/links";
 
 const keyValues = [
   {
@@ -47,22 +47,22 @@ const overviewPoints = [
 ];
 
 const practiceExamLinks = [
-  { title: "Explore PMP® Practice Exams", href: "/pmp/pmp-real-practice-exam" },
+  { title: "Explore PMP® Practice Exams", href: getSubscriptionUrl("PMP") },
   {
     title: "Explore PgMP® Practice Exams",
-    href: "/pgmp/pgmp-real-practice-exam",
+    href: getSubscriptionUrl("PgMP"),
   },
   {
     title: "Explore PfMP® Practice Exams",
-    href: "/pfmp/pfmp-real-practice-exam",
+    href: getSubscriptionUrl("PfMP"),
   },
   {
     title: "Explore PMOCP Practice Exams",
-    href: "/pmocp/pmocp-real-practice-exam",
+    href: getSubscriptionUrl("PMOCP"),
   },
   {
     title: "Explore PMI-RMP® Practice Exams",
-    href: "/pmi-rmp/pmi-rmp-real-practice-exam",
+    href: getSubscriptionUrl("PMI-RMP"),
   },
 ];
 
@@ -157,13 +157,13 @@ const PracticeExams = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {practiceExamLinks.map((item) => (
-              <Link
+              <a
                 key={item.href}
-                to={item.href}
+                href={item.href}
                 className="min-h-28 p-5 bg-light-blue rounded-[20px] flex items-center justify-center text-center text-primary_heading text-base font-bold hover:shadow-md transition"
               >
                 {item.title}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -181,7 +181,7 @@ const PracticeExams = () => {
             "Choose the practice exam for your certification",
           ],
           buttonText: "Start Practicing",
-          buttonLink: "#",
+          buttonLink: getSubscriptionUrl("PMP"),
         }}
       />
     </>

@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { getSubscriptionUrl } from "@/utils/links";
 
 type Duration = "1" | "3";
 
@@ -36,6 +37,7 @@ export const PremiumPacks = ({
 
   const handlePlanSelect = (plan: Plan) => {
     console.log("Selected Plan:", plan);
+    window.location.href = getSubscriptionUrl(activeCourse);
   };
 
   return (

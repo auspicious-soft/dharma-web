@@ -4,7 +4,6 @@ import TrainingImage from "@/assets/training-image.png";
 import ContentTabs from "@/components/NavPages/ContentTabs";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import InnerImage from "@/assets/inner-page.jpg";
-import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
@@ -12,6 +11,7 @@ import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
+import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
 
 import {
   CircleArrowIcon,
@@ -196,13 +196,6 @@ const slides = [
   },
 ];
 
-const PrepCourse = [
-  "Aligned to the Latest Exam Standards",
-  "Structured study materials, practice tests, and case studies.",
-  "Prepared by expert instructors with real-world project experience",
-  "100% online, flexible learning",
-  "Earn 30 PMI®-Approved PDUs",
-];
 
 const courseCard = {
   heading: "Why Choose Our PMI-RMP® Exam Prep Course?",
@@ -297,41 +290,26 @@ const PMIACPExamPrepCourse = () => {
 
       <section className="bg-white pb-10 lg:pt-0 lg:pb-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1.38fr_1fr] gap-5 lg:gap-10 items-start">
-            <div>
-              <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                PMI-RMP Exam Prep Course - Enroll Today
-              </h2>
-              <p className="text-paragraph text-sm font-normal mt-1 max-w-[520px] w-full leading-[26px]">
-                The vCare PMI-RMP Exam Prep Course helps you build real-world
-                project management skills while preparing you to confidently
-                clear the PMI-RMP® certification exam on your first attempt.
-              </p>
-              <h4 className="text-Black_light text-xl font-bold mt-5 mb-4">
-                Key Features
-              </h4>
-              <ul className="space-y-1 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1 mb-5">
-                {PrepCourse.map((text, index) => (
-                  <li
-                    key={index}
-                    className="gap-2 self-stretch"
-                  >
-                     <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="max-w-[280px] w-full">
-                Learn More
-              </Button>
-            </div>
-            <div>
-              <img
-                src={InnerImage}
-                alt="InnerImage"
-                className="w-full aspect-[1/0.72] object-cover rounded-[20px]"
-              />
-            </div>
-          </div>
+          <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
+            PMI-RMP Exam Prep Course - Enroll Today
+          </h2>
+          <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
+            Our PMI-RMP Exam Prep Course equips learners with the essential knowledge and skills to master risk management practices and excel in the PMI-RMP® certification exam.
+          </p>
+          <ExamPrepTrainingOptions
+            courseKey="PMI-RMP"
+            bootcampDays="3-day"
+                bootcampAuthorized
+            bootcampResource="Access to exclusive digital learning resources"
+            classroomFeatures={[
+                  "In-person training at selected locations",
+                  "Access to Digital Materials from PMI",
+                  "1:1 mentoring and application support",
+                  "Full-length mock exams and practice questions",
+                  "Post-training support",
+            ]}
+            corporateMaterial="Get digital materials"
+          />
         </div>
       </section>
 

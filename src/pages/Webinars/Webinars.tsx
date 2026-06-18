@@ -7,9 +7,11 @@ import { useEffect, useMemo, useState } from "react";
 
 const youtubeChannelId = "UCWg9sBRmPCcpVy2KY5AtjQQ";
 const youtubeChannelUrl = "https://bit.ly/vCareYT";
-const youtubeApiKey = import.meta.env.VITE_YOUTUBE_API_KEY as
+const youtubeApiKey = import.meta.env.VITE_WEBINAR_YOUTUBE_API_KEY as
   | string
   | undefined;
+const webinarPlaylistLimit = 6;
+const webinarVideosPerPlaylistLimit = 6;
 
 type YouTubePlaylist = {
   id: string;
@@ -73,6 +75,22 @@ type PlaylistItemsResponse = {
   }>;
 };
 
+type YouTubeErrorResponse = {
+  error?: {
+    code?: number;
+    message?: string;
+    errors?: Array<{
+      reason?: string;
+    }>;
+    details?: Array<{
+      reason?: string;
+      metadata?: {
+        httpReferrer?: string;
+      };
+    }>;
+  };
+};
+
 const getThumbnail = (snippet: YouTubeSnippet) =>
   snippet.thumbnails?.maxres?.url ??
   snippet.thumbnails?.high?.url ??
@@ -89,6 +107,7 @@ const formatDate = (date: string) =>
 
 const fetchYouTubePages = async <T extends { nextPageToken?: string }>(
   baseUrl: string,
+  maxPages = 1,
 ): Promise<T[]> => {
   const pages: T[] = [];
   let pageToken = "";
@@ -103,13 +122,41 @@ const fetchYouTubePages = async <T extends { nextPageToken?: string }>(
     const response = await fetch(url.toString());
 
     if (!response.ok) {
-      throw new Error("Unable to load YouTube content.");
+      const errorData = (await response.json().catch(() => null)) as
+        | YouTubeErrorResponse
+        | null;
+      const reason =
+        errorData?.error?.details?.find(
+          (detail) => detail.reason === "API_KEY_HTTP_REFERRER_BLOCKED",
+        )?.reason ?? errorData?.error?.errors?.[0]?.reason;
+
+      if (response.status === 403 && reason === "API_KEY_HTTP_REFERRER_BLOCKED") {
+        const referrer = errorData?.error?.details?.find(
+          (detail) => detail.metadata?.httpReferrer,
+        )?.metadata?.httpReferrer;
+
+        throw new Error(
+          `The webinar YouTube API key is blocking requests from ${
+            referrer ?? "this site"
+          }. Add this origin to the key's HTTP referrer restrictions in Google Cloud, or use a key that allows this site.`,
+        );
+      }
+
+      if (response.status === 403 && reason === "quotaExceeded") {
+        throw new Error(
+          "The webinar YouTube API key has exceeded its daily quota. Try again after the quota resets or use a key from a project with available YouTube Data API quota.",
+        );
+      }
+
+      throw new Error(
+        errorData?.error?.message ?? "Unable to load YouTube content.",
+      );
     }
 
     const data = (await response.json()) as T;
     pages.push(data);
     pageToken = data.nextPageToken ?? "";
-  } while (pageToken);
+  } while (pageToken && pages.length < maxPages);
 
   return pages;
 };
@@ -120,7 +167,9 @@ const Webinars = () => {
   const [selectedPlaylist, setSelectedPlaylist] = useState("all");
   const [loading, setLoading] = useState(Boolean(youtubeApiKey));
   const [error, setError] = useState<string | null>(
-    youtubeApiKey ? null : "Add VITE_YOUTUBE_API_KEY to load live webinar videos.",
+    youtubeApiKey
+      ? null
+      : "Add VITE_WEBINAR_YOUTUBE_API_KEY to load live webinar videos.",
   );
 
   useEffect(() => {
@@ -138,7 +187,7 @@ const Webinars = () => {
         );
         playlistsUrl.searchParams.set("part", "snippet,contentDetails");
         playlistsUrl.searchParams.set("channelId", youtubeChannelId);
-        playlistsUrl.searchParams.set("maxResults", "50");
+        playlistsUrl.searchParams.set("maxResults", String(webinarPlaylistLimit));
         playlistsUrl.searchParams.set("key", youtubeApiKey);
 
         const playlistPages =
@@ -172,7 +221,10 @@ const Webinars = () => {
               "snippet,contentDetails",
             );
             playlistItemsUrl.searchParams.set("playlistId", playlist.id);
-            playlistItemsUrl.searchParams.set("maxResults", "50");
+            playlistItemsUrl.searchParams.set(
+              "maxResults",
+              String(webinarVideosPerPlaylistLimit),
+            );
             playlistItemsUrl.searchParams.set("key", youtubeApiKey);
 
             const playlistItemPages =

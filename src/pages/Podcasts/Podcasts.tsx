@@ -6,12 +6,14 @@ import { CalendarDays, Headphones, ListVideo, Play, RefreshCcw } from "lucide-re
 import { useEffect, useMemo, useState } from "react";
 
 const podcastChannelUrl = "https://bit.ly/DharamYT";
-const youtubeApiKey = import.meta.env.VITE_YOUTUBE_API_KEY as
+const youtubeApiKey = import.meta.env.VITE_PODCAST_YOUTUBE_API_KEY as
   | string
   | undefined;
 const podcastChannelId = import.meta.env.VITE_PODCAST_YOUTUBE_CHANNEL_ID as
   | string
   | undefined;
+const podcastPlaylistFetchLimit = 1;
+const podcastVideosPerPlaylistLimit = 1;
 
 type YouTubeThumbnail = {
   url: string;
@@ -74,6 +76,16 @@ type PlaylistItemsResponse = {
   }>;
 };
 
+type YouTubeErrorResponse = {
+  error?: {
+    code?: number;
+    message?: string;
+    errors?: Array<{
+      reason?: string;
+    }>;
+  };
+};
+
 const getThumbnail = (snippet: YouTubeSnippet) =>
   snippet.thumbnails?.maxres?.url ??
   snippet.thumbnails?.high?.url ??
@@ -90,6 +102,7 @@ const formatDate = (date: string) =>
 
 const fetchYouTubePages = async <T extends { nextPageToken?: string }>(
   baseUrl: string,
+  maxPages = Number.POSITIVE_INFINITY,
 ): Promise<T[]> => {
   const pages: T[] = [];
   let pageToken = "";
@@ -104,13 +117,26 @@ const fetchYouTubePages = async <T extends { nextPageToken?: string }>(
     const response = await fetch(url.toString());
 
     if (!response.ok) {
-      throw new Error("Unable to load YouTube content.");
+      const errorData = (await response.json().catch(() => null)) as
+        | YouTubeErrorResponse
+        | null;
+      const reason = errorData?.error?.errors?.[0]?.reason;
+
+      if (response.status === 403 && reason === "quotaExceeded") {
+        throw new Error(
+          "The podcast YouTube API key has exceeded its daily quota. Try again after the quota resets or use a key from a project with available YouTube Data API quota.",
+        );
+      }
+
+      throw new Error(
+        errorData?.error?.message ?? "Unable to load YouTube content.",
+      );
     }
 
     const data = (await response.json()) as T;
     pages.push(data);
     pageToken = data.nextPageToken ?? "";
-  } while (pageToken);
+  } while (pageToken && pages.length < maxPages);
 
   return pages;
 };
@@ -124,7 +150,7 @@ const Podcasts = () => {
   const [error, setError] = useState<string | null>(
     canLoadYouTube
       ? null
-      : "Add VITE_YOUTUBE_API_KEY and VITE_PODCAST_YOUTUBE_CHANNEL_ID to load live podcast videos.",
+      : "Add VITE_PODCAST_YOUTUBE_API_KEY and VITE_PODCAST_YOUTUBE_CHANNEL_ID to load live podcast videos.",
   );
 
   useEffect(() => {
@@ -142,12 +168,16 @@ const Podcasts = () => {
         );
         playlistsUrl.searchParams.set("part", "snippet,contentDetails");
         playlistsUrl.searchParams.set("channelId", podcastChannelId);
-        playlistsUrl.searchParams.set("maxResults", "50");
+        playlistsUrl.searchParams.set(
+          "maxResults",
+          String(podcastPlaylistFetchLimit),
+        );
         playlistsUrl.searchParams.set("key", youtubeApiKey);
 
         const playlistPages =
           await fetchYouTubePages<PlaylistsResponse>(
             playlistsUrl.toString(),
+            1,
           );
 
         const fetchedPlaylists = playlistPages
@@ -176,12 +206,16 @@ const Podcasts = () => {
               "snippet,contentDetails",
             );
             playlistItemsUrl.searchParams.set("playlistId", playlist.id);
-            playlistItemsUrl.searchParams.set("maxResults", "50");
+            playlistItemsUrl.searchParams.set(
+              "maxResults",
+              String(podcastVideosPerPlaylistLimit),
+            );
             playlistItemsUrl.searchParams.set("key", youtubeApiKey);
 
             const playlistItemPages =
               await fetchYouTubePages<PlaylistItemsResponse>(
                 playlistItemsUrl.toString(),
+                1,
               );
 
             return playlistItemPages

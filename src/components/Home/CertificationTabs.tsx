@@ -31,6 +31,178 @@ interface Course {
 
 const tabs: Tab[] = ["PMP", "PgMP", "PfMP","PMI-PMOCP", "PMI-RMP", "CAPM"];
 
+const certificationImages: Record<Tab, Record<string, string>> = {
+  PMP: {
+    "exam prep training": new URL(
+      "../../assets/PMPCertificationPath/ExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/PMPCertificationPath/ExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/PMPCertificationPath/ApplicationSupport.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/PMPCertificationPath/PMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/PMPCertificationPath/PMPConsultation.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/PMPCertificationPath/PMPOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    "exam voucher bundle": new URL(
+      "../../assets/PMPCertificationPath/ApplicationSupport.png",
+      import.meta.url,
+    ).href,
+  },
+  PgMP: {
+    "exam prep training": new URL(
+      "../../assets/PgMPCertificationPath/PgMPExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/PgMPCertificationPath/PgMPExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/PgMPCertificationPath/PgMPOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/PgMPCertificationPath/PgMPConsultation.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/PgMPCertificationPath/PgMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/PgMPCertificationPath/PgMPApplicationSupport.png",
+      import.meta.url,
+    ).href,
+  },
+  PfMP: {
+    "exam prep training": new URL(
+      "../../assets/PfMPCertificationPath/PfMPExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/PfMPCertificationPath/PfMPExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/PfMPCertificationPath/PfMPOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/PfMPCertificationPath/PfMPConsultation.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/PfMPCertificationPath/PfMPApplicationSupport.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/PfMPCertificationPath/PfMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+  },
+  "PMI-PMOCP": {
+    "exam prep training": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPApplicationSupport.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPConsultation.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+  },
+  CAPM: {
+    "exam prep training": new URL(
+      "../../assets/CAPMCertificationPath/CAPMExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/CAPMCertificationPath/CAPMExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/CAPMCertificationPath/CAPMOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/CAPMCertificationPath/CAPMApplicationSupport.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/CAPMCertificationPath/CAPMConsultation.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/CAPMCertificationPath/CAPMOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+  },
+  "PMI-RMP": {
+    "exam prep training": new URL(
+      "../../assets/RMPCertificationPath/RMPExamPrepTraining.png",
+      import.meta.url,
+    ).href,
+    "exam simulator": new URL(
+      "../../assets/RMPCertificationPath/RMPExamSimulator.png",
+      import.meta.url,
+    ).href,
+    "online exam prep": new URL(
+      "../../assets/RMPCertificationPath/RMPOnlineExamPrepCourse.png",
+      import.meta.url,
+    ).href,
+    "application support": new URL(
+      "../../assets/RMPCertificationPath/RMPApplicationSupport.png",
+      import.meta.url,
+    ).href,
+    consultation: new URL(
+      "../../assets/RMPCertificationPath/PMIRMPConsultation.png",
+      import.meta.url,
+    ).href,
+    "on-demand course": new URL(
+      "../../assets/RMPCertificationPath/RMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+  },
+};
+
+function getCertificationImage(tab: Tab, title: string) {
+  const normalizedTitle = title.toLowerCase();
+  const matchedKey = Object.keys(certificationImages[tab]).find((key) =>
+    normalizedTitle.includes(key),
+  );
+
+  return matchedKey ? certificationImages[tab][matchedKey] : TabImage;
+}
+
 function getCourseCtaHref(course: Course) {
   const title = course.title.toLowerCase();
   const courseKey: CourseKey | undefined = title.includes("pmi-rmp")
@@ -455,7 +627,7 @@ export default function CertificationTabs() {
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 items-stretch">
   {tabCourses[activeTab].map((course) => (
-    <CourseCard key={course.id} course={course} />
+    <CourseCard key={course.id} course={course} tab={activeTab} />
   ))}
 </div>
       </div>
@@ -463,13 +635,14 @@ export default function CertificationTabs() {
   );
 }
 
-function CourseCard({ course }: { course: Course }) {
+function CourseCard({ course, tab }: { course: Course; tab: Tab }) {
   const href = course.href ?? getCourseCtaHref(course);
+  const image = getCertificationImage(tab, course.title);
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <img
-        src={course.image}
+        src={image}
         alt={course.title}
         className="w-full aspect-[1/0.82] object-cover rounded-[20px]"
       />

@@ -2,8 +2,15 @@ import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHer
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { CALENDLY_CONSULTATION_URL } from "@/utils/links";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, ListVideo, Play, RefreshCcw } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import {
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight,
+  ListVideo,
+  Play,
+  RefreshCcw,
+} from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 const youtubeChannelId = "UCWg9sBRmPCcpVy2KY5AtjQQ";
 const youtubeChannelUrl = "https://bit.ly/vCareYT";
@@ -12,6 +19,9 @@ const youtubeApiKey = import.meta.env.VITE_WEBINAR_YOUTUBE_API_KEY as
   | undefined;
 const webinarPlaylistLimit = 6;
 const webinarVideosPerPlaylistLimit = 6;
+const webinarVideosPerPage = 6;
+const webinarCacheDurationMs = 1000 * 60 * 60 * 6;
+const webinarCacheKey = `webinars:${youtubeChannelId}:${webinarPlaylistLimit}:${webinarVideosPerPlaylistLimit}`;
 
 type YouTubePlaylist = {
   id: string;
@@ -30,6 +40,12 @@ type WebinarVideo = {
   publishedAt: string;
   playlistId: string;
   playlistTitle: string;
+};
+
+type CachedWebinars = {
+  cachedAt: number;
+  playlists: YouTubePlaylist[];
+  videos: WebinarVideo[];
 };
 
 type YouTubeThumbnail = {
@@ -105,6 +121,67 @@ const formatDate = (date: string) =>
     year: "numeric",
   }).format(new Date(date));
 
+const readCachedWebinars = () => {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  try {
+    const cachedWebinars = window.localStorage.getItem(webinarCacheKey);
+
+    if (!cachedWebinars) {
+      return null;
+    }
+
+    const parsedCache = JSON.parse(cachedWebinars) as Partial<CachedWebinars>;
+    const isValidCache =
+      typeof parsedCache.cachedAt === "number" &&
+      Date.now() - parsedCache.cachedAt < webinarCacheDurationMs &&
+      Array.isArray(parsedCache.playlists) &&
+      Array.isArray(parsedCache.videos);
+
+    if (!isValidCache) {
+      window.localStorage.removeItem(webinarCacheKey);
+      return null;
+    }
+
+    return parsedCache as CachedWebinars;
+  } catch {
+    window.localStorage.removeItem(webinarCacheKey);
+    return null;
+  }
+};
+
+const writeCachedWebinars = (
+  playlists: YouTubePlaylist[],
+  videos: WebinarVideo[],
+) => {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(
+      webinarCacheKey,
+      JSON.stringify({
+        cachedAt: Date.now(),
+        playlists,
+        videos,
+      }),
+    );
+  } catch {
+    window.localStorage.removeItem(webinarCacheKey);
+  }
+};
+
+const clearCachedWebinars = () => {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.localStorage.removeItem(webinarCacheKey);
+};
+
 const fetchYouTubePages = async <T extends { nextPageToken?: string }>(
   baseUrl: string,
   maxPages = 1,
@@ -165,6 +242,7 @@ const Webinars = () => {
   const [playlists, setPlaylists] = useState<YouTubePlaylist[]>([]);
   const [videos, setVideos] = useState<WebinarVideo[]>([]);
   const [selectedPlaylist, setSelectedPlaylist] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(Boolean(youtubeApiKey));
   const [error, setError] = useState<string | null>(
     youtubeApiKey
@@ -172,122 +250,141 @@ const Webinars = () => {
       : "Add VITE_WEBINAR_YOUTUBE_API_KEY to load live webinar videos.",
   );
 
-  useEffect(() => {
+  const loadWebinars = useCallback(async (forceRefresh = false) => {
     if (!youtubeApiKey) {
       return;
     }
 
-    const loadWebinars = async () => {
-      setLoading(true);
-      setError(null);
+    if (!forceRefresh) {
+      const cachedWebinars = readCachedWebinars();
 
-      try {
-        const playlistsUrl = new URL(
-          "https://www.googleapis.com/youtube/v3/playlists",
-        );
-        playlistsUrl.searchParams.set("part", "snippet,contentDetails");
-        playlistsUrl.searchParams.set("channelId", youtubeChannelId);
-        playlistsUrl.searchParams.set("maxResults", String(webinarPlaylistLimit));
-        playlistsUrl.searchParams.set("key", youtubeApiKey);
-
-        const playlistPages =
-          await fetchYouTubePages<PlaylistsResponse>(
-            playlistsUrl.toString(),
-          );
-
-        const fetchedPlaylists = playlistPages
-          .flatMap((page) => page.items)
-          .map((item) => ({
-            id: item.id,
-            title: item.snippet.title,
-            description: item.snippet.description ?? "",
-            thumbnail: getThumbnail(item.snippet),
-            publishedAt: item.snippet.publishedAt,
-            itemCount: item.contentDetails?.itemCount ?? 0,
-          }))
-          .sort(
-            (a, b) =>
-              new Date(b.publishedAt).getTime() -
-              new Date(a.publishedAt).getTime(),
-          );
-
-        const playlistVideos = await Promise.all(
-          fetchedPlaylists.map(async (playlist) => {
-            const playlistItemsUrl = new URL(
-              "https://www.googleapis.com/youtube/v3/playlistItems",
-            );
-            playlistItemsUrl.searchParams.set(
-              "part",
-              "snippet,contentDetails",
-            );
-            playlistItemsUrl.searchParams.set("playlistId", playlist.id);
-            playlistItemsUrl.searchParams.set(
-              "maxResults",
-              String(webinarVideosPerPlaylistLimit),
-            );
-            playlistItemsUrl.searchParams.set("key", youtubeApiKey);
-
-            const playlistItemPages =
-              await fetchYouTubePages<PlaylistItemsResponse>(
-                playlistItemsUrl.toString(),
-              );
-
-            return playlistItemPages
-              .flatMap((page) => page.items)
-              .map((item) => {
-                const id =
-                  item.contentDetails?.videoId ??
-                  item.snippet.resourceId?.videoId ??
-                  "";
-
-                if (!id || item.snippet.title === "Private video") {
-                  return null;
-                }
-
-                return {
-                  id,
-                  title: item.snippet.title,
-                  description: item.snippet.description ?? "",
-                  thumbnail: getThumbnail(item.snippet),
-                  publishedAt:
-                    item.contentDetails?.videoPublishedAt ??
-                    item.snippet.publishedAt,
-                  playlistId: playlist.id,
-                  playlistTitle: playlist.title,
-                };
-              })
-              .filter((video): video is WebinarVideo => Boolean(video));
-          }),
-        );
-
-        const uniqueVideos = Array.from(
-          new Map(
-            playlistVideos
-              .flat()
-              .sort(
-                (a, b) =>
-                  new Date(b.publishedAt).getTime() -
-                  new Date(a.publishedAt).getTime(),
-              )
-              .map((video) => [video.id, video]),
-          ).values(),
-        );
-
-        setPlaylists(fetchedPlaylists);
-        setVideos(uniqueVideos);
-      } catch (err) {
-        setError(
-          err instanceof Error
-            ? err.message
-            : "Unable to load YouTube content.",
-        );
-      } finally {
+      if (cachedWebinars) {
+        setPlaylists(cachedWebinars.playlists);
+        setVideos(cachedWebinars.videos);
         setLoading(false);
+        setError(null);
+        return;
       }
-    };
+    } else {
+      clearCachedWebinars();
+    }
 
-    loadWebinars();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const playlistsUrl = new URL(
+        "https://www.googleapis.com/youtube/v3/playlists",
+      );
+      playlistsUrl.searchParams.set("part", "snippet,contentDetails");
+      playlistsUrl.searchParams.set("channelId", youtubeChannelId);
+      playlistsUrl.searchParams.set("maxResults", String(webinarPlaylistLimit));
+      playlistsUrl.searchParams.set("key", youtubeApiKey);
+
+      const playlistPages =
+        await fetchYouTubePages<PlaylistsResponse>(
+          playlistsUrl.toString(),
+        );
+
+      const fetchedPlaylists = playlistPages
+        .flatMap((page) => page.items)
+        .map((item) => ({
+          id: item.id,
+          title: item.snippet.title,
+          description: item.snippet.description ?? "",
+          thumbnail: getThumbnail(item.snippet),
+          publishedAt: item.snippet.publishedAt,
+          itemCount: item.contentDetails?.itemCount ?? 0,
+        }))
+        .sort(
+          (a, b) =>
+            new Date(b.publishedAt).getTime() -
+            new Date(a.publishedAt).getTime(),
+        );
+
+      const playlistVideos = await Promise.all(
+        fetchedPlaylists.map(async (playlist) => {
+          const playlistItemsUrl = new URL(
+            "https://www.googleapis.com/youtube/v3/playlistItems",
+          );
+          playlistItemsUrl.searchParams.set(
+            "part",
+            "snippet,contentDetails",
+          );
+          playlistItemsUrl.searchParams.set("playlistId", playlist.id);
+          playlistItemsUrl.searchParams.set(
+            "maxResults",
+            String(webinarVideosPerPlaylistLimit),
+          );
+          playlistItemsUrl.searchParams.set("key", youtubeApiKey);
+
+          const playlistItemPages =
+            await fetchYouTubePages<PlaylistItemsResponse>(
+              playlistItemsUrl.toString(),
+            );
+
+          return playlistItemPages
+            .flatMap((page) => page.items)
+            .map((item) => {
+              const id =
+                item.contentDetails?.videoId ??
+                item.snippet.resourceId?.videoId ??
+                "";
+
+              if (!id || item.snippet.title === "Private video") {
+                return null;
+              }
+
+              return {
+                id,
+                title: item.snippet.title,
+                description: item.snippet.description ?? "",
+                thumbnail: getThumbnail(item.snippet),
+                publishedAt:
+                  item.contentDetails?.videoPublishedAt ??
+                  item.snippet.publishedAt,
+                playlistId: playlist.id,
+                playlistTitle: playlist.title,
+              };
+            })
+            .filter((video): video is WebinarVideo => Boolean(video));
+        }),
+      );
+
+      const uniqueVideos = Array.from(
+        new Map(
+          playlistVideos
+            .flat()
+            .sort(
+              (a, b) =>
+                new Date(b.publishedAt).getTime() -
+                new Date(a.publishedAt).getTime(),
+            )
+            .map((video) => [video.id, video]),
+        ).values(),
+      );
+
+      setPlaylists(fetchedPlaylists);
+      setVideos(uniqueVideos);
+      writeCachedWebinars(fetchedPlaylists, uniqueVideos);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Unable to load YouTube content.",
+      );
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    loadWebinars();
+  }, [loadWebinars]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedPlaylist]);
 
   const filteredVideos = useMemo(() => {
     if (selectedPlaylist === "all") {
@@ -296,6 +393,34 @@ const Webinars = () => {
 
     return videos.filter((video) => video.playlistId === selectedPlaylist);
   }, [selectedPlaylist, videos]);
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredVideos.length / webinarVideosPerPage),
+  );
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [currentPage, totalPages]);
+
+  const paginatedVideos = useMemo(() => {
+    const startIndex = (currentPage - 1) * webinarVideosPerPage;
+
+    return filteredVideos.slice(
+      startIndex,
+      startIndex + webinarVideosPerPage,
+    );
+  }, [currentPage, filteredVideos]);
+
+  const paginationStart = filteredVideos.length
+    ? (currentPage - 1) * webinarVideosPerPage + 1
+    : 0;
+  const paginationEnd = Math.min(
+    currentPage * webinarVideosPerPage,
+    filteredVideos.length,
+  );
 
   const featuredVideo = filteredVideos[0] ?? videos[0];
 
@@ -324,7 +449,8 @@ const Webinars = () => {
                 </a>
                 <Button
                   variant="outline"
-                  onClick={() => window.location.reload()}
+                  onClick={() => loadWebinars(true)}
+                  disabled={loading}
                   className="gap-2"
                 >
                   <RefreshCcw size={16} />
@@ -469,7 +595,7 @@ const Webinars = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
-                {filteredVideos.map((video) => (
+                {paginatedVideos.map((video) => (
                   <article
                     key={`${video.playlistId}-${video.id}`}
                     className="p-4 md:p-5 bg-light-blue rounded-[20px] flex flex-col"
@@ -510,6 +636,46 @@ const Webinars = () => {
                   </article>
                 ))}
               </div>
+
+              {filteredVideos.length > webinarVideosPerPage && (
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-paragraph text-sm leading-[26px]">
+                    Showing {paginationStart}-{paginationEnd} of{" "}
+                    {filteredVideos.length} videos
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() =>
+                        setCurrentPage((page) => Math.max(1, page - 1))
+                      }
+                      disabled={currentPage === 1}
+                      className="gap-2"
+                    >
+                      <ChevronLeft size={16} />
+                      Previous
+                    </Button>
+                    <span className="text-primary_heading text-sm font-semibold">
+                      Page {currentPage} of {totalPages}
+                    </span>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() =>
+                        setCurrentPage((page) =>
+                          Math.min(totalPages, page + 1),
+                        )
+                      }
+                      disabled={currentPage === totalPages}
+                      className="gap-2"
+                    >
+                      Next
+                      <ChevronRight size={16} />
+                    </Button>
+                  </div>
+                </div>
+              )}
 
               {filteredVideos.length === 0 && (
                 <div className="rounded-2xl bg-light-blue px-4 md:px-7 py-5 md:py-7 text-center">

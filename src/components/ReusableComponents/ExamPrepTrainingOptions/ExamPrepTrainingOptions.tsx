@@ -183,6 +183,7 @@ export default function ExamPrepTrainingOptions(props: ExamPrepTrainingOptionsPr
                 <Info size={13} />
               </div>
             )}
+            {!card.recommended && <div aria-hidden className="hidden lg:block min-h-8" />}
 
             <div className="p-5">
               <h3 className="text-Black_light text-xl font-bold mb-2">
@@ -190,10 +191,6 @@ export default function ExamPrepTrainingOptions(props: ExamPrepTrainingOptionsPr
               </h3>
               <p className="text-paragraph text-sm leading-6 min-h-[72px]">
                 {card.description}
-              </p>
-
-              <p className="text-Black_light text-2xl font-bold mt-3">
-                Coming Soon
               </p>
 
               <Button asChild className="w-full mt-4 rounded-[8px]">

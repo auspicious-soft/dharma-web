@@ -9,6 +9,14 @@ import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import PricingComparison from "@/components/ReusableComponents/PricingComparisonSection/PricingComparison";
 import { Button } from "@/components/ui/button";
+import {
+  BarChart3,
+  BookOpen,
+  HelpCircle,
+  Layers,
+  UserRoundCheck,
+  Video,
+} from "lucide-react";
 
 const includedWithPurchase = [
   "Flexible Learning - 100% self-paced access to the complete PgMP® course. Study anytime, anywhere, on any device.",
@@ -122,12 +130,36 @@ const examChallenge = [
 ];
 
 const bonusLearningResources = [
-  "Flash Cards - Quick revision anywhere",
-  "Knowledge Encyclopedia - Key concepts simplified",
-  "Confusion Buster - Clear difficult topics fast",
-  "Progress Tracker - Monitor your study journey",
-  "Mentor Access - Guidance when you need it",
-  "Webinars - Access learning webinars with PDUs",
+  {
+    icon: Layers,
+    title: "Flash Cards",
+    description: "Quick revision anywhere",
+  },
+  {
+    icon: BookOpen,
+    title: "Knowledge Encyclopedia",
+    description: "Key concepts simplified",
+  },
+  {
+    icon: HelpCircle,
+    title: "Confusion Buster",
+    description: "Clear difficult topics fast",
+  },
+  {
+    icon: BarChart3,
+    title: "Progress Tracker",
+    description: "Monitor your study journey",
+  },
+  {
+    icon: UserRoundCheck,
+    title: "Mentor Access",
+    description: "Guidance when you need it",
+  },
+  {
+    icon: Video,
+    title: "Webinars",
+    description: "Access learning webinars with PDUs",
+  },
 ];
 
 const pgmpOnDemandFaqs = [
@@ -418,14 +450,27 @@ const PgMPOnDemandCourse = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
-            {bonusLearningResources.map((item, index) => (
-              <div key={index} className="bg-white p-5 md:p-6 rounded-[12px]">
-                <p className="text-paragraph text-sm font-medium leading-6">
-                  {item}
-                </p>
-              </div>
-            ))}
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
+            {bonusLearningResources.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="bg-white p-5 md:p-6 rounded-[12px] min-h-[150px]"
+                >
+                  <div className="w-12 h-12 rounded-[10px] bg-light-blue text-primary_blue flex items-center justify-center mb-4">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="text-Black_light text-base md:text-lg font-bold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-paragraph text-sm font-medium leading-6">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

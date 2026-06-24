@@ -26,7 +26,7 @@ export default function FooterMenu() {
   ];
 
   const resources = [
-    { title: "Blogs", href: "#" },
+    { title: "Blogs", href: "https://www.vcareprojectmanagement.com/blogs/news" },
     { title: "Podcasts", href: "/podcasts" },
     { title: "Webinars", href: "/webinars" },
     { title: "Mobile App", href: "/mobile-app" },

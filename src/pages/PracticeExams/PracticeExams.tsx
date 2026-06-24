@@ -9,7 +9,7 @@ import {
   GreenTickIcon,
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import { getSubscriptionUrl } from "@/utils/links";
+import { getCoursePagePath, getSubscriptionUrl } from "@/utils/links";
 
 const keyValues = [
   {
@@ -47,22 +47,25 @@ const overviewPoints = [
 ];
 
 const practiceExamLinks = [
-  { title: "Explore PMP® Practice Exams", href: getSubscriptionUrl("PMP") },
+  {
+    title: "Explore PMP® Practice Exams",
+    href: getCoursePagePath("PMP", "practice-exam"),
+  },
   {
     title: "Explore PgMP® Practice Exams",
-    href: getSubscriptionUrl("PgMP"),
+    href: getCoursePagePath("PgMP", "practice-exam"),
   },
   {
     title: "Explore PfMP® Practice Exams",
-    href: getSubscriptionUrl("PfMP"),
+    href: getCoursePagePath("PfMP", "practice-exam"),
   },
   {
     title: "Explore PMOCP Practice Exams",
-    href: getSubscriptionUrl("PMOCP"),
+    href: getCoursePagePath("PMOCP", "practice-exam"),
   },
   {
     title: "Explore PMI-RMP® Practice Exams",
-    href: getSubscriptionUrl("PMI-RMP"),
+    href: getCoursePagePath("PMI-RMP", "practice-exam"),
   },
 ];
 

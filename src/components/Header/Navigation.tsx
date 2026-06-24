@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import {
   getCoursePagePath,
-  getMockExamUrl,
   isExternalUrl,
 } from "@/utils/links";
 
@@ -54,13 +53,13 @@ const menuItems: MenuItem[] = [
     label: "Exam Simulator",
     href: "/exam-simulators",
     dropdown: [
-      { label: "PMP Exam Simulator", href: getMockExamUrl("PMP") },
-      { label: "PgMP Exam Simulator", href: getMockExamUrl("PgMP") },
-      { label: "PfMP Exam Simulator", href: getMockExamUrl("PfMP") },
-      { label: "PMOCP Exam Simulator", href: getMockExamUrl("PMOCP") },
+      { label: "PMP Exam Simulator", href: getCoursePagePath("PMP", "exam-simulator") },
+      { label: "PgMP Exam Simulator", href: getCoursePagePath("PgMP", "exam-simulator") },
+      { label: "PfMP Exam Simulator", href: getCoursePagePath("PfMP", "exam-simulator") },
+      { label: "PMOCP Exam Simulator", href: getCoursePagePath("PMOCP", "exam-simulator") },
       {
         label: "PMI-RMP Exam Simulator",
-        href: getMockExamUrl("PMI-RMP"),
+        href: getCoursePagePath("PMI-RMP", "exam-simulator"),
       },
     ],
   },

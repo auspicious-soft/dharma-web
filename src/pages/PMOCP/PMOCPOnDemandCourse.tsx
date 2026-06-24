@@ -9,6 +9,14 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import {
+  DetailIcon,
+  ComIcon,
+  ChartIcon,
+  HourGlassIcon,
+  HatIcon,
+  EmailIcon,
+} from "@/utils/svgicons";
 
 const InsideSimulator = [
   "Meets PMP® training hour requirements for certification eligibility",
@@ -41,31 +49,37 @@ const LearningResources = [
     title: "Expert Email Course",
     description:
       "Receive proven PMP strategies, tips, and insights from certified experts.",
+    icon: EmailIcon,
   },
   {
     title: "Study Checklist",
     description:
       "Track preparation tasks, revisions, and exam readiness in one place.",
+    icon: DetailIcon,
   },
   {
     title: "Discussion Forum",
     description:
       "Ask questions, share experiences, and learn with fellow PMP aspirants.",
+    icon: ComIcon,
   },
   {
     title: "Exam Tips Newsletter",
     description:
       "Get regular PMP exam updates, tips, and preparation insights.",
+    icon: HatIcon,
   },
   {
     title: "Score Worksheet",
     description:
       "Analyze mock exam results to identify strengths and improvement areas.",
+    icon: ChartIcon,
   },
   {
     title: "Contact Hours Tracker",
     description:
       "Track completed training hours required for PMP exam eligibility.",
+    icon: HourGlassIcon,
   },
 ];
 
@@ -179,19 +193,25 @@ const PMOCPOnDemandCourse = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
-            {LearningResources.map((item, index) => (
-              <div
-                key={index}
-                className="p-5 md:p-7 bg-white text-center transition"
-              >
-                <h4 className="text-Black_light text-base md:text-xl font-bold mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-paragraph text-sm font-normal leading-6">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+            {LearningResources.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white p-5 md:p-6 rounded-[12px] min-h-[150px]"
+                >
+                  <div className="w-12 h-12 rounded-[10px] bg-light-blue text-primary_blue flex items-center justify-center mb-4">
+                    <IconComponent />
+                  </div>
+                  <h4 className="text-Black_light text-base md:text-lg font-bold mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-paragraph text-sm font-medium leading-6">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

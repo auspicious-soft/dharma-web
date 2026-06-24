@@ -335,10 +335,10 @@ const PMPExamPrepCourse = () => {
       <section className="bg-white pb-10 lg:pt-0 lg:pb-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-            PMP Exam Prep Course - Enroll Today
+            Training Options
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            The vCare PMP Exam Prep Course helps you build real-world project management skills while preparing you to confidently clear the PMP® certification exam on your first attempt.
+            Our training Programs helps you build real-world project management skills while preparing you to confidently clear the PMP® certification exam on your first attempt.
           </p>
           <ExamPrepTrainingOptions
             courseKey="PMP"

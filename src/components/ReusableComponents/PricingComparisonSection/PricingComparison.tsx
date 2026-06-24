@@ -1,20 +1,33 @@
 import React from "react";
 import { GreenTickIcon } from "@/utils/svgicons";
 
-type PlanKey = "basic" | "elite" | "elitePlus";
+type PlanKey =
+  | "basic"
+  | "elite"
+  | "elitePlus"
+  | "essentials"
+  | "advanced"
+  | "elite_tier";
+
+export interface Plan {
+  name: string;
+  price: string;
+  features: string[];
+  popular: boolean;
+}
 
 interface FeatureRow {
   label: string;
   values: Partial<Record<PlanKey, string | boolean>>;
 }
 
-const plans: { key: PlanKey; title: string }[] = [
+const defaultPlans: { key: PlanKey; title: string }[] = [
   { key: "basic", title: "Basic" },
   { key: "elite", title: "Elite" },
   { key: "elitePlus", title: "Elite Plus" },
 ];
 
-const rows: FeatureRow[] = [
+const defaultRows: FeatureRow[] = [
   {
     label: "Single PMP® Exam Voucher",
     values: {
@@ -77,12 +90,47 @@ const rows: FeatureRow[] = [
 interface PricingComparisonProps {
   heading?: string;
   description?: string;
+  plans?: Plan[];
 }
 
 const PricingComparison: React.FC<PricingComparisonProps> = ({
   heading = "Upgrade Your PMP Preparation",
   description = "Already enrolled? Go all-in by adding practice exams and simulators to your learning.",
+  plans: customPlans,
 }) => {
+  const isCustomPlans = customPlans && customPlans.length > 0;
+
+  let displayPlans: { key: PlanKey; title: string }[] = defaultPlans;
+  let rows: FeatureRow[] = defaultRows;
+
+  // If custom plans are provided, generate rows from plan features
+  if (isCustomPlans) {
+    displayPlans = customPlans.map((plan, idx) => ({
+      key:
+        (["essentials", "advanced", "elite_tier"] as PlanKey[])[idx] ||
+        (`plan_${idx}` as PlanKey),
+      title: plan.name,
+    }));
+
+    // Generate rows from unique features across all plans
+    const allFeatures = new Set<string>();
+    customPlans.forEach((plan) => {
+      plan.features.forEach((feature) => {
+        allFeatures.add(feature);
+      });
+    });
+
+    rows = Array.from(allFeatures).map((feature) => ({
+      label: feature,
+      values: Object.fromEntries(
+        customPlans.map((plan, idx) => [
+          (["essentials", "advanced", "elite_tier"] as PlanKey[])[idx] ||
+            `plan_${idx}`,
+          plan.features.includes(feature),
+        ]),
+      ),
+    }));
+  }
   return (
     <section className="py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
@@ -98,7 +146,7 @@ const PricingComparison: React.FC<PricingComparisonProps> = ({
           <div className="grid grid-cols-4 lg:grid-cols-[1.5fr_1fr_1fr_1fr] border-b border-[#d5dddd]">
             <div className="p-4 font-semibold text-gray-600" />
 
-            {plans.map((plan) => (
+            {displayPlans.map((plan) => (
               <div
                 key={plan.key}
                 className="p-2.5 text-center font-semibold text-[#4d8eea] text-sm md:text-xl"
@@ -120,7 +168,7 @@ const PricingComparison: React.FC<PricingComparisonProps> = ({
               </div>
 
               {/* Values */}
-              {plans.map((plan) => {
+              {displayPlans.map((plan) => {
                 const value = row.values[plan.key];
 
                 return (

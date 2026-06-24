@@ -7,7 +7,7 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import PricingComparison from "@/components/ReusableComponents/PricingComparisonSection/PricingComparison";
+import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
 import {
   BarChart3,
@@ -43,7 +43,8 @@ const modules = [
       "Learn eligibility criteria, experience requirements, application submission steps, panel review expectations, and common mistakes to avoid.",
   },
   {
-    title: "Module 03 - Introduction to Portfolio, Program & Project Management",
+    title:
+      "Module 03 - Introduction to Portfolio, Program & Project Management",
     description:
       "Explore how portfolios align with strategy, how programs coordinate related initiatives, and how projects deliver specific outputs.",
   },
@@ -207,7 +208,8 @@ const pfmpOnDemandFaqs = [
   },
   {
     question: "12. Do I need prior portfolio management experience?",
-    answer: "Yes, please refer to the PMI website for eligibility requirements.",
+    answer:
+      "Yes, please refer to the PMI website for eligibility requirements.",
   },
   {
     question: "13. How quickly can I complete the course?",
@@ -263,10 +265,7 @@ const PfMPOnDemandCourse = () => {
               </h2>
               <ul className="space-y-1 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
                 {includedWithPurchase.map((text, index) => (
-                  <li
-                    key={index}
-                    className=" gap-2 self-stretch justify-start"
-                  >
+                  <li key={index} className=" gap-2 self-stretch justify-start">
                     <span>{text}</span>
                   </li>
                 ))}
@@ -319,7 +318,10 @@ const PfMPOnDemandCourse = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {modules.map((module, index) => (
-              <div key={index} className="bg-light-blue rounded-[8px] p-4 md:p-5">
+              <div
+                key={index}
+                className="bg-light-blue rounded-[8px] p-4 md:p-5"
+              >
                 <h3 className="text-Black_light text-base md:text-lg font-semibold mb-2">
                   {module.title}
                 </h3>
@@ -341,7 +343,8 @@ const PfMPOnDemandCourse = () => {
               </h2>
               <p className="text-paragraph text-sm font-normal">
                 Earn a personalized certificate from a trusted PMI Premier
-                Authorized Training Provider required for PfMP® application submission.
+                Authorized Training Provider required for PfMP® application
+                submission.
               </p>
               <p className="text-paragraph text-sm font-normal">
                 This certificate validates your formal portfolio management
@@ -419,7 +422,9 @@ const PfMPOnDemandCourse = () => {
         </div>
       </section>
 
-      <PricingComparison
+      <PremiumPacks
+        showCourseSelect={false}
+        courseKey="PfMP"
         heading="Upgrade Your PfMP Preparation"
         description="Go all-in by adding practice exams and simulators to your learning."
       />
@@ -503,10 +508,7 @@ const PfMPOnDemandCourse = () => {
 
             <ul className="space-y-2 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
               {pfmpSuccessBullets.map((text, index) => (
-                <li
-                  key={index}
-                  className=" gap-2 self-stretch"
-                >
+                <li key={index} className=" gap-2 self-stretch">
                   <span>{text}</span>
                 </li>
               ))}

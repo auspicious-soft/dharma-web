@@ -288,10 +288,10 @@ const PfMPExamPrepCourse = () => {
       <section className="bg-white pb-10 lg:pt-0 lg:pb-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-            PfMP Exam Prep Course - Enroll Today
+            Training Options
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            Our PfMP Exam Prep Course equips professionals to manage portfolios
+            Our training Programs equips professionals to manage portfolios
             more effectively, drive strategic success, and excel in the PfMP®
             certification exam.
           </p>

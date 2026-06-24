@@ -7,7 +7,7 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
-import PricingComparison from "@/components/ReusableComponents/PricingComparisonSection/PricingComparison";
+import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
 import {
   BarChart3,
@@ -433,7 +433,9 @@ const PgMPOnDemandCourse = () => {
         </div>
       </section>
 
-      <PricingComparison
+      <PremiumPacks
+        showCourseSelect={false}
+        courseKey="PgMP"
         heading="Upgrade Your PgMP Preparation"
         description="Go all-in by adding practice exams and simulators to your learning."
       />

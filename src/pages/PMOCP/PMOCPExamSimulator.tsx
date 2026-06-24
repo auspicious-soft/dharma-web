@@ -229,7 +229,7 @@ const PMOCPExamSimulator = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className=" flex flex-col justify-center items-center mb-6 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              Why Choose Our PMI-PMOCP™ Exam Simulator?
+              Why Choose Our PMI PMOCP™ Exam Simulator?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3">

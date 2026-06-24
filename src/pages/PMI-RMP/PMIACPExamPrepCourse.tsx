@@ -292,10 +292,10 @@ const PMIACPExamPrepCourse = () => {
       <section className="bg-white pb-10 lg:pt-0 lg:pb-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-            PMI-RMP Exam Prep Course - Enroll Today
+            Training Options
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            Our PMI-RMP Exam Prep Course equips learners with the essential
+            Our training Programs equips learners with the essential
             knowledge and skills to master risk management practices and excel
             in the PMI-RMP® certification exam.
           </p>

@@ -26,12 +26,13 @@ const createPlan = (
   name: string,
   price: string,
   mockExamFeature: string,
-  popular = false
+  popular = false,
+  additionalFeatures: string[] = [],
 ): Plan => ({
   name,
   price,
   popular,
-  features: [mockExamFeature, ...commonFeatures],
+  features: [mockExamFeature, ...additionalFeatures, ...commonFeatures],
 });
 
 export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
@@ -46,30 +47,36 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
         "Advanced",
         "$29.99 | 30-Day Access",
         "3 Full-Length Mock Exams (540 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$99.99 | 30-Day Access",
         "11 Full-Length Mock Exams (1,980 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
     threeMonth: [
       createPlan(
         "Essentials",
         "$39.99 | 90-Day Access",
-        "1 Full-Length Mock Exam (180 Questions)"
+        "1 Full-Length Mock Exam (180 Questions)",
       ),
       createPlan(
         "Advanced",
         "$59.99 | 90-Day Access",
-        "3 Full-Length Mock Exams (540 Questions)"
+        "3 Full-Length Mock Exams (540 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$199.99 | 90-Day Access",
         "11 Full-Length Mock Exams (1,980 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
   },
@@ -78,36 +85,42 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
       createPlan(
         "Essentials",
         "$49.99 | 30-Day Access",
-        "1 Full-Length Mock Exam (170 Questions)"
+        "1 Full-Length Mock Exam (170 Questions)",
       ),
       createPlan(
         "Advanced",
         "$149.99 | 30-Day Access",
-        "5 Full-Length Mock Exams (850 Questions)"
+        "5 Full-Length Mock Exams (850 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$199.99 | 30-Day Access",
         "9 Full-Length Mock Exams (1,530 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
     threeMonth: [
       createPlan(
         "Essentials",
         "$69.99 | 90-Day Access",
-        "1 Full-Length Mock Exam (170 Questions)"
+        "1 Full-Length Mock Exam (170 Questions)",
       ),
       createPlan(
         "Advanced",
         "$199.99 | 90-Day Access",
-        "5 Full-Length Mock Exams (850 Questions)"
+        "5 Full-Length Mock Exams (850 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$299.99 | 90-Day Access",
         "9 Full-Length Mock Exams (1,530 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
   },
@@ -116,36 +129,42 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
       createPlan(
         "Essentials",
         "$49.99 | 30-Day Access",
-        "1 Full-Length Mock Exam (170 Questions)"
+        "1 Full-Length Mock Exam (170 Questions)",
       ),
       createPlan(
         "Advanced",
         "$99.99 | 30-Day Access",
-        "3 Full-Length Mock Exams (540 Questions)"
+        "3 Full-Length Mock Exams (540 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$149.99 | 30-Day Access",
         "5 Full-Length Mock Exams (850 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
     threeMonth: [
       createPlan(
         "Essentials",
         "$59.99 | 90-Day Access",
-        "1 Full-Length Mock Exam (170 Questions)"
+        "1 Full-Length Mock Exam (170 Questions)",
       ),
       createPlan(
         "Advanced",
         "$129.99 | 90-Day Access",
-        "3 Full-Length Mock Exams (540 Questions)"
+        "3 Full-Length Mock Exams (540 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$199.99 | 90-Day Access",
         "5 Full-Length Mock Exams (850 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
   },
@@ -154,36 +173,42 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
       createPlan(
         "Essentials",
         "$39.99 | 30-Day Access",
-        "1 Full-Length Mock Exam (120 Questions)"
+        "1 Full-Length Mock Exam (120 Questions)",
       ),
       createPlan(
         "Advanced",
         "$99.99 | 30-Day Access",
-        "3 Full-Length Mock Exams (360 Questions)"
+        "3 Full-Length Mock Exams (360 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$149.99 | 30-Day Access",
         "5 Full-Length Mock Exams (600 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
     threeMonth: [
       createPlan(
         "Essentials",
         "$49.99 | 90-Day Access",
-        "1 Full-Length Mock Exam (120 Questions)"
+        "1 Full-Length Mock Exam (120 Questions)",
       ),
       createPlan(
         "Advanced",
         "$129.99 | 90-Day Access",
-        "3 Full-Length Mock Exams (360 Questions)"
+        "3 Full-Length Mock Exams (360 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$199.99 | 90-Day Access",
         "5 Full-Length Mock Exams (600 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
   },
@@ -192,36 +217,42 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
       createPlan(
         "Essentials",
         "$39.99 | 30-Day Access",
-        "1 Full-Length Mock Exam (115 Questions)"
+        "1 Full-Length Mock Exam (115 Questions)",
       ),
       createPlan(
         "Advanced",
         "$99.99 | 30-Day Access",
-        "3 Full-Length Mock Exams (345 Questions)"
+        "3 Full-Length Mock Exams (345 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$149.99 | 30-Day Access",
         "5 Full-Length Mock Exams (575 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
     threeMonth: [
       createPlan(
         "Essentials",
         "$49.99 | 90-Day Access",
-        "1 Full-Length Mock Exam (115 Questions)"
+        "1 Full-Length Mock Exam (115 Questions)",
       ),
       createPlan(
         "Advanced",
         "$129.99 | 90-Day Access",
-        "3 Full-Length Mock Exams (345 Questions)"
+        "3 Full-Length Mock Exams (345 Questions)",
+        false,
+        ["Application Support"],
       ),
       createPlan(
         "Elite",
         "$199.99 | 90-Day Access",
         "5 Full-Length Mock Exams (575 Questions)",
-        true
+        true,
+        ["Video based lessons", "Exam Prep Strategy Guide"],
       ),
     ],
   },
@@ -229,8 +260,11 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
 
 export const getPlansForCourse = (
   course: CourseKey,
-  duration: PlanDuration
-): Plan[] => (duration === "1" ? coursePlans[course].oneMonth : coursePlans[course].threeMonth);
+  duration: PlanDuration,
+): Plan[] =>
+  duration === "1"
+    ? coursePlans[course].oneMonth
+    : coursePlans[course].threeMonth;
 
 // Backward-compatible default exports for pages that still expect generic plans.
 export const oneMonthPlans: Plan[] = coursePlans.PMP.oneMonth;

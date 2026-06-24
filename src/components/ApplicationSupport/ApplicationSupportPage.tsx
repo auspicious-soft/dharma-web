@@ -85,7 +85,19 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={content.faqs} hideButton />
       </div>
-      <TopFooterSection />
+      <TopFooterSection
+        content={
+          content.footerContent
+            ? {
+                title: content.footerContent.title,
+                description: content.footerContent.description,
+                points: content.footerContent.points,
+                buttonText: content.footerContent.buttonText,
+                buttonLink: getSubscriptionUrl(courseKey),
+              }
+            : undefined
+        }
+      />
     </>
   );
 };

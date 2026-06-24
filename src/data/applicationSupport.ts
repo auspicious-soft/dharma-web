@@ -8,6 +8,12 @@ export type ApplicationSupportContent = {
   paragraphs: string[];
   price: string;
   faqs: FaqItem[];
+  footerContent?: {
+    title: string;
+    description: string;
+    points: string[];
+    buttonText: string;
+  };
 };
 
 const sharedFaqs: FaqItem[] = [
@@ -68,6 +74,18 @@ export const applicationSupportContent = {
       },
       ...sharedFaqs,
     ],
+    footerContent: {
+      title: "Take the Next Step in Your Project Management Career",
+      description:
+        "Take the next step toward becoming a certified Project Management Professional. Access expert training, proven study resources, and the guidance needed to achieve your certification goals.",
+      points: [
+        "PMP-certified professionals earn higher salaries",
+        "Stand out in competitive PM roles",
+        "Qualify for senior project leadership positions",
+        "Prove your project management expertise globally",
+      ],
+      buttonText: "Start PMP Preparation Today",
+    },
   },
   pgmp: {
     title: "PgMP® Application Support",
@@ -113,6 +131,16 @@ export const applicationSupportContent = {
       },
       ...sharedFaqs,
     ],
+    footerContent: {
+      title: "Advance Your Career with PgMP Certification",
+      description:
+        "Nearly half of all surveyed PgMP certification holders reported an increase in responsibility and larger programs to manage since obtaining certification. Join our proven program built to help you pass faster with real exam practice and step-by-step support.",
+      points: [
+        "Higher earnings for program managers with the PgMP certification than non-PgMP program professionals.",
+        "PgMP holders globally reported a salary increase after becoming certified.",
+      ],
+      buttonText: "Enroll Now",
+    },
   },
   pfmp: {
     title: "PfMP® Application Support",
@@ -158,6 +186,15 @@ export const applicationSupportContent = {
       },
       ...sharedFaqs,
     ],
+    footerContent: {
+      title: "Your PfMP® Success Starts Here",
+      description:
+        "Master portfolio management practices and gain the credentials to lead enterprise-wide investment decisions.",
+      points: [
+        "Build your portfolio management expertise with structured learning, proven study materials, application guidance, Panel Review support, and exam-focused preparation designed to maximize your chances of success.",
+      ],
+      buttonText: "Enroll Now",
+    },
   },
   pmiRmp: {
     title: "PMI-RMP® Application Support",
@@ -203,6 +240,16 @@ export const applicationSupportContent = {
       },
       ...sharedFaqs,
     ],
+    footerContent: {
+      title: "Become a Recognized Risk Management Expert",
+      description:
+        "Build advanced risk management capabilities and prepare for success in the PMI-RMP® certification exam.",
+      points: [
+        "Increase in risk management investment by organizations planned within the next two years.",
+        "Earning relevant certifications can boost your salary by as much as 20%.",
+      ],
+      buttonText: "Enroll Now",
+    },
   },
   pmocp: {
     title: "PMI-PMOCP™ Application Support",
@@ -249,6 +296,15 @@ export const applicationSupportContent = {
       },
       ...sharedFaqs,
     ],
+    footerContent: {
+      title: "Start Your PMI-PMOCP™ Certification Journey Today",
+      description:
+        "Prepare with confidence for the PMI-PMOCP™ certification exam through comprehensive study resources, practice questions, and realistic mock exams.",
+      points: [
+        "Build your PMO knowledge, test your readiness with practice exams, and prepare with confidence using proven exam preparation resources and expert support.",
+      ],
+      buttonText: "Get Access Now",
+    },
   },
   other: {
     title: "PMI Application Support",

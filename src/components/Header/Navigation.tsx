@@ -114,7 +114,16 @@ const menuItems: MenuItem[] = [
     label: "More",
     dropdown: [
       { label: "PDUs", href: "/pdus" },
-      { label: "Other Certifications", href: "" },
+      {
+        label: "Lean Six Sigma Certification",
+        href: "/lean-six-sigma-certification",
+      },
+      { label: "PMI-ACP Certification", href: "/pmi-acp-certification" },
+      { label: "CAPM Certification", href: "/capm-certification" },
+      {
+        label: "AI Project Management Certification",
+        href: "/ai-project-management-certification",
+      },
     ],
   },
 ];
@@ -265,7 +274,11 @@ const Navigation: React.FC<NavigationProps> = ({
                 </button>
               )}
 
-              <div className="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px] z-50">
+              <div
+                className={`absolute top-full bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[260px] max-w-[calc(100vw-2rem)] z-50 ${
+                  item.label === "More" ? "right-0" : "left-0"
+                }`}
+              >
                 {item.dropdown.map((sub) =>
                   isExternalUrl(sub.href) ? (
                     <a

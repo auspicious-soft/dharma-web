@@ -19,7 +19,6 @@ import {
   Video,
 } from "lucide-react";
 
-
 const keyValueBullets = [
   "Fully aligned with the latest Risk Management Practice Guide",
   "Expert instructors with real-world project experience",
@@ -137,7 +136,8 @@ const pmiRmpOnDemandFaqs = [
   },
   {
     question: "3. Is the course fully online?",
-    answer: "Yes. The course is 100% online and can be accessed anytime, anywhere.",
+    answer:
+      "Yes. The course is 100% online and can be accessed anytime, anywhere.",
   },
   {
     question: "4. Can I study at my own pace?",
@@ -149,12 +149,14 @@ const pmiRmpOnDemandFaqs = [
     answer: "Access duration depends on your package or enrollment plan.",
   },
   {
-    question: "6. Does this course satisfy the training hours requirement for the PMI-RMP® exam?",
+    question:
+      "6. Does this course satisfy the training hours requirement for the PMI-RMP® exam?",
     answer:
       "Yes. The course is designed to provide the training hours required for PMI-RMP® application eligibility.",
   },
   {
-    question: "7. Is the course aligned with the latest PMI-RMP® Exam Content Outline?",
+    question:
+      "7. Is the course aligned with the latest PMI-RMP® Exam Content Outline?",
     answer:
       "Yes. The training is aligned with the latest PMI-RMP® ECO and current exam trends.",
   },
@@ -361,7 +363,7 @@ const PMIACPOnDemandCourse = () => {
             </p>
           </div>
 
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
             {bonusLearningResources.map((item) => {
               const Icon = item.icon;
 
@@ -387,7 +389,7 @@ const PMIACPOnDemandCourse = () => {
       </section>
 
       <PricingComparison
-        heading="Exam Prep Table"
+        heading="WHAT’S INCLUDED"
         description="Compare available PMI-RMP® exam preparation options with the same tick-based layout used across our exam prep pages."
       />
 

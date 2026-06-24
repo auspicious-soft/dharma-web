@@ -195,7 +195,6 @@ const slides = [
   },
 ];
 
-
 const courseCard = {
   heading: "Why Choose Our PgMP® Exam Prep Course?",
   card: [
@@ -324,7 +323,7 @@ const PgMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PgMP"
-        heading="Exam Prep Table"
+        heading="WHAT’S INCLUDED"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -334,18 +333,20 @@ const PgMPExamPrepCourse = () => {
             PgMP Exam Prep Course - Enroll Today
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            Our PgMP Exam Prep Course helps you build real-world program management skills while preparing you to confidently clear the PgMP® certification exam on your first attempt.
+            Our PgMP Exam Prep Course helps you build real-world program
+            management skills while preparing you to confidently clear the PgMP®
+            certification exam on your first attempt.
           </p>
           <ExamPrepTrainingOptions
             courseKey="PgMP"
             bootcampDays="3-day"
             bootcampResource="Access to exclusive learning resources"
             classroomFeatures={[
-                  "In-person training at selected locations",
-                  "Access to exclusive learning resources",
-                  "1:1 mentoring and application support",
-                  "Full-length mock exams and practice questions",
-                  "Post-training support",
+              "In-person training at selected locations",
+              "Access to exclusive learning resources",
+              "1:1 mentoring and application support",
+              "Full-length mock exams and practice questions",
+              "Post-training support",
             ]}
             corporateMaterial="Get study materials"
           />

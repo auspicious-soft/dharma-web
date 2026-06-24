@@ -126,7 +126,7 @@ const onDemand = [
 ];
 
 const keyBenefits = {
-  heading: "Key Benefits Grid",
+  heading: "Key Benefits",
   card: [
     {
       id: 1,
@@ -149,12 +149,14 @@ const keyBenefits = {
     {
       id: 4,
       title: "Flexible Learning",
-      description: "Pause, resume, and revisit lessons anytime across multiple devices.",
+      description:
+        "Pause, resume, and revisit lessons anytime across multiple devices.",
     },
     {
       id: 5,
       title: "Easy PDU Submission",
-      description: "Simple CCRS submission process with fast PMI approval support.",
+      description:
+        "Simple CCRS submission process with fast PMI approval support.",
     },
   ],
 };
@@ -259,7 +261,11 @@ const PDUs = () => {
                 className="p-4 md:p-5 bg-white rounded-[20px] flex flex-col justify-between gap-4 md:gap-7"
               >
                 <div>
-                  <img src={item.img} alt={item.title} className="rounded-2xl" />
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-2xl"
+                  />
                   <h3 className="text-primary_heading text-base md:text-xl font-bold mt-4 mb-2">
                     {item.title}
                   </h3>
@@ -327,8 +333,9 @@ const PDUs = () => {
               </p>
               <p className="text-paragraph text-sm font-normal">
                 These certificates can be used to support PMI® certification
-                applications, including PMP, PMP®, PMI-RMP®, PMI-ACP®, PMI-PBA®, CAPM®, and
-                other eligible PMI certifications requiring formal education hours.
+                applications, including PMP, PMP®, PMI-RMP®, PMI-ACP®, PMI-PBA®,
+                CAPM®, and other eligible PMI certifications requiring formal
+                education hours.
               </p>
               <p className="text-paragraph text-sm font-normal">
                 Receive your completion certificate and claim details after
@@ -361,8 +368,8 @@ const PDUs = () => {
           <p className="text-center text-paragraph text-sm md:text-base max-w-[900px] mx-auto mb-6 md:mb-10">
             Earn up to 60 PMI®-approved PDUs for certification renewal. Flexible
             self-paced and instructor-led learning options. Includes completion
-            certificate and PMI CCRS claim guidance. Courses aligned with the PMI
-            Talent Triangle® and current industry practices.
+            certificate and PMI CCRS claim guidance. Courses aligned with the
+            PMI Talent Triangle® and current industry practices.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {storeData.map((item) => (
@@ -394,7 +401,15 @@ const PDUs = () => {
                   <div className="border-t border-[#cde2ff] mt-6" />
                 </div>
 
-                <Button className="mt-6 md:mt-10 w-full">Enroll Now</Button>
+                <Button asChild className="mt-6 md:mt-10 w-full">
+                  <a
+                    href="https://dharam-user-portal.vercel.app/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Enroll Now
+                  </a>
+                </Button>
               </div>
             ))}
           </div>
@@ -412,6 +427,7 @@ const PDUs = () => {
             "No credit card required to start your free trial",
           ]}
           buttonText="Get Started with PDU Learning"
+          buttonLink="/dashboard"
         />
       </div>
       <Faq faqs={pduFaqs} />

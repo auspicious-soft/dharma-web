@@ -40,12 +40,12 @@ export const coursePlans: Record<CourseKey, CoursePlanByDuration> = {
       createPlan(
         "Essentials",
         "$19.99 | 30-Day Access",
-        "1 Full-Length Mock Exam (180 Questions)"
+        "1 Full-Length Mock Exam (180 Questions)",
       ),
       createPlan(
         "Advanced",
         "$29.99 | 30-Day Access",
-        "3 Full-Length Mock Exams (540 Questions)"
+        "3 Full-Length Mock Exams (540 Questions)",
       ),
       createPlan(
         "Elite",

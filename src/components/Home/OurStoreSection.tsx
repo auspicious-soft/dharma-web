@@ -37,19 +37,7 @@ const storeData = [
   },
   {
     id: 3,
-    title: "PMI-RMP®",
-    url: SHOPIFY_TRAINING_LINKS.PgMP,
-    points: [
-      "Live, online, mentor-led sessions",
-      "Flexibility to reschedule",
-      "Training by PMI Authorized instructors.",
-      "Access to Digital Materials from PMI",
-      "Non-stop Support Until You Pass",
-    ],
-  },
-  {
-    id: 4,
-    title: "PMOCP",
+    title: "PMI-PMOCP™",
     url: SHOPIFY_TRAINING_LINKS.PMOCP,
     points: [
       "Live, online, mentor-led sessions",
@@ -60,7 +48,7 @@ const storeData = [
     ],
   },
   {
-    id: 5,
+    id:4,
     title: "PgMP®",
     url: SHOPIFY_TRAINING_LINKS.PgMP,
     points: [
@@ -72,7 +60,7 @@ const storeData = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: "PfMP®",
     url: SHOPIFY_TRAINING_LINKS.PfMP,
     points: [
@@ -84,7 +72,7 @@ const storeData = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     title: "PMI-SP®",
     url: "https://www.vcareprojectmanagement.com/collections/pmi-sp-certification-training",
     points: [
@@ -96,7 +84,7 @@ const storeData = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     title: "CAPM®",
     url: "https://www.vcareprojectmanagement.com/collections/capm-certification-training",
     points: [
@@ -108,7 +96,7 @@ const storeData = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     title: "PMI-PBA®",
     url: "https://www.vcareprojectmanagement.com/collections/pmi-pba-certification-training",
     points: [

@@ -181,10 +181,7 @@ const Affiliate = () => {
               </h2>
               <ul className="space-y-1 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
                 {AffiliateProgramFeatures.map((text, index) => (
-                  <li
-                    key={index}
-                    className="gap-2 self-stretch"
-                  >
+                  <li key={index} className="gap-2 self-stretch">
                     <span>{text}</span>
                   </li>
                 ))}
@@ -205,16 +202,56 @@ const Affiliate = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
-            {JoinAffiliateProgram.map((item, index) => (
-              <div
-                key={index}
-                className="p-5 md:p-7 bg-white text-center transition flex items-center justify-center"
-              >
-                <h4 className="text-center justify-start text-[#556378] text-base font-normal capitalize leading-[30px] max-w-[270px] w-full">
-                  {item.title}
-                </h4>
-              </div>
-            ))}
+            {JoinAffiliateProgram.map((item, index) => {
+              const colors = [
+                {
+                  bg: "bg-gradient-to-br from-blue-50 to-blue-100",
+                  border: "border-l-4 border-blue-500",
+                  icon: "bg-blue-500",
+                },
+                {
+                  bg: "bg-gradient-to-br from-green-50 to-green-100",
+                  border: "border-l-4 border-green-500",
+                  icon: "bg-green-500",
+                },
+                {
+                  bg: "bg-gradient-to-br from-purple-50 to-purple-100",
+                  border: "border-l-4 border-purple-500",
+                  icon: "bg-purple-500",
+                },
+                {
+                  bg: "bg-gradient-to-br from-orange-50 to-orange-100",
+                  border: "border-l-4 border-orange-500",
+                  icon: "bg-orange-500",
+                },
+                {
+                  bg: "bg-gradient-to-br from-pink-50 to-pink-100",
+                  border: "border-l-4 border-pink-500",
+                  icon: "bg-pink-500",
+                },
+                {
+                  bg: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+                  border: "border-l-4 border-indigo-500",
+                  icon: "bg-indigo-500",
+                },
+              ];
+              const colorScheme = colors[index % colors.length];
+              return (
+                <div
+                  key={index}
+                  className={`${colorScheme.bg} ${colorScheme.border} p-5 md:p-7 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center relative overflow-hidden group`}
+                >
+                  <div className="absolute top-0 right-0 w-12 h-12 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <div
+                      className={`${colorScheme.icon} w-full h-full rounded-full`}
+                    ></div>
+                  </div>
+                  <h4 className="text-center text-gray-800 text-base font-semibold capitalize leading-[30px] max-w-[270px] w-full relative z-10">
+                    {item.title}
+                  </h4>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

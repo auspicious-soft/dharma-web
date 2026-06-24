@@ -301,7 +301,7 @@ const PMPExamPrepCourse = () => {
             text: "Aligned to the Latest Exam Standards & PMBOK® 8th Edition",
           },
           {
-            text: "Structured PMI ATP study materials, video learning, practice tests, and case studies.",
+            text: "Supplemental deep dive video lessons and practice tests",
           },
           { text: "Created by expert instructors with real-world project experience" },
           { text: "100% online, flexible learning" },
@@ -328,7 +328,7 @@ const PMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PMP"
-        heading="Exam Prep Table"
+        heading="WHAT’S INCLUDED"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 

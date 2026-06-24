@@ -61,7 +61,6 @@ const PMIAuthorizedExperts = {
   card: [
     {
       id: 1,
-      title: "Short credibility block",
       points: [
         "Developed by PMI-certified instructors",
         "PMI Premier Authorized Training Partner (ATP #3998)",
@@ -71,7 +70,6 @@ const PMIAuthorizedExperts = {
     },
     {
       id: 2,
-      title: "Short explanation",
       points: [
         "Complements Live Online Training",
         "Enhances Bootcamps & Mentoring Programs",
@@ -214,16 +212,12 @@ const MobileApp = () => {
                 className="p-5 bg-light-blue rounded-[20px] text-left transition"
               >
                 {" "}
-                <h4 className="text-primary_heading text-base md:text-xl font-bold mb-2 mt-4">
-                  {card.title}
-                </h4>
-                <ul className="space-y-0 self-stretch justify-start text-paragraph text-xs  font-normal leading-6 ml-1">
+                <ul className="space-y-0 list-disc self-stretch justify-start text-paragraph text-xs  font-normal leading-6 ml-1">
                   {card.points.map((text, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 self-stretch justify-start"
+                      className="gap-2 self-stretch"
                     >
-                      <span className="text-[8px]">•</span>
                       <span>{text}</span>
                     </li>
                   ))}

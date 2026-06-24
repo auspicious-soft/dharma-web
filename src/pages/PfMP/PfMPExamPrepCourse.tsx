@@ -196,7 +196,6 @@ const slides = [
   },
 ];
 
-
 const courseCard = {
   heading: "Why Choose Our PfMP® Exam Prep Course?",
   card: [
@@ -282,7 +281,7 @@ const PfMPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PfMP"
-        heading="Exam Prep Table"
+        heading="WHAT’S INCLUDED"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -292,18 +291,20 @@ const PfMPExamPrepCourse = () => {
             PfMP Exam Prep Course - Enroll Today
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            Our PfMP Exam Prep Course equips professionals to manage portfolios more effectively, drive strategic success, and excel in the PfMP® certification exam.
+            Our PfMP Exam Prep Course equips professionals to manage portfolios
+            more effectively, drive strategic success, and excel in the PfMP®
+            certification exam.
           </p>
           <ExamPrepTrainingOptions
             courseKey="PfMP"
             bootcampDays="3-day"
             bootcampResource="Access to exclusive digital learning resources"
             classroomFeatures={[
-                  "In-person training at selected locations",
-                  "Access to Study Materials",
-                  "1:1 mentoring and application support",
-                  "Full-length mock exams and practice questions",
-                  "Post-training support",
+              "In-person training at selected locations",
+              "Access to Study Materials",
+              "1:1 mentoring and application support",
+              "Full-length mock exams and practice questions",
+              "Post-training support",
             ]}
             corporateMaterial="Get study materials"
           />

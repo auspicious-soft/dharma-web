@@ -62,6 +62,10 @@ import OffersAndBenefits from "@/pages/OffersAndBenefits/OffersAndBenefits";
 import Webinars from "@/pages/Webinars/Webinars";
 import Podcasts from "@/pages/Podcasts/Podcasts";
 import ReferAndEarn from "@/pages/ReferAndEarn/ReferAndEarn";
+import LeanSixSigmaCertification from "@/pages/LeanSixSigma/LeanSixSigmaCertification";
+import PMIACPCertification from "@/pages/OtherCertifications/PMIACPCertification";
+import CAPMCertification from "@/pages/OtherCertifications/CAPMCertification";
+import AIProjectManagementCertification from "@/pages/OtherCertifications/AIProjectManagementCertification";
 
 const AppRoutes = () => {
   return (
@@ -270,6 +274,20 @@ const AppRoutes = () => {
         <Route path="/podcasts" element={<Podcasts />} />
         {/*Refer and Earn */}
         <Route path="/refer-and-earn" element={<ReferAndEarn />} />
+        {/*Lean Six Sigma Certification */}
+        <Route
+          path="/lean-six-sigma-certification"
+          element={<LeanSixSigmaCertification />}
+        />
+        {/*PMI-ACP Certification */}
+        <Route path="/pmi-acp-certification" element={<PMIACPCertification />} />
+        {/*CAPM Certification */}
+        <Route path="/capm-certification" element={<CAPMCertification />} />
+        {/*AI Project Management Certification */}
+        <Route
+          path="/ai-project-management-certification"
+          element={<AIProjectManagementCertification />}
+        />
         {/*FAQ */}
         <Route path="/faq" element={<Faq />} />
         {/*Mobile App */}

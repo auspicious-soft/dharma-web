@@ -196,7 +196,6 @@ const slides = [
   },
 ];
 
-
 const courseCard = {
   heading: "Why Choose Our PMI-RMP® Exam Prep Course?",
   card: [
@@ -256,7 +255,9 @@ const PMIACPExamPrepCourse = () => {
           {
             text: "Aligned to the Latest Exam Standards",
           },
-          { text: "Structured study materials, practice tests, and case studies." },
+          {
+            text: "Structured study materials, practice tests, and case studies.",
+          },
           {
             text: "Prepared by expert instructors with real-world project experience",
           },
@@ -284,7 +285,7 @@ const PMIACPExamPrepCourse = () => {
       <PremiumPacks
         showCourseSelect={false}
         courseKey="PMI-RMP"
-        heading="Exam Prep Table"
+        heading="WHAT’S INCLUDED"
         description="Three flexible plans designed for different learning needs and timelines."
       />
 
@@ -294,19 +295,21 @@ const PMIACPExamPrepCourse = () => {
             PMI-RMP Exam Prep Course - Enroll Today
           </h2>
           <p className="text-paragraph text-sm font-normal mt-1 max-w-[760px] w-full leading-[26px]">
-            Our PMI-RMP Exam Prep Course equips learners with the essential knowledge and skills to master risk management practices and excel in the PMI-RMP® certification exam.
+            Our PMI-RMP Exam Prep Course equips learners with the essential
+            knowledge and skills to master risk management practices and excel
+            in the PMI-RMP® certification exam.
           </p>
           <ExamPrepTrainingOptions
             courseKey="PMI-RMP"
             bootcampDays="3-day"
-                bootcampAuthorized
+            bootcampAuthorized
             bootcampResource="Access to exclusive digital learning resources"
             classroomFeatures={[
-                  "In-person training at selected locations",
-                  "Access to Digital Materials from PMI",
-                  "1:1 mentoring and application support",
-                  "Full-length mock exams and practice questions",
-                  "Post-training support",
+              "In-person training at selected locations",
+              "Access to Digital Materials from PMI",
+              "1:1 mentoring and application support",
+              "Full-length mock exams and practice questions",
+              "Post-training support",
             ]}
             corporateMaterial="Get digital materials"
           />

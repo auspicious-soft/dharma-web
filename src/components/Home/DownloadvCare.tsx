@@ -22,8 +22,7 @@ const DownloadvCare = () => {
                 Take your exam preparation to the next level with the vCare PM
                 Exam Mentor app. Access expert learning resources, full-length
                 mock exams, targeted practice tests, and interactive flash
-                cards—all designed by project management experts, with PMP, PgMP
-                and PfMP certificates, to boost your confidence and help you
+                cards—all designed by project management experts, to boost your confidence and help you
                 succeed. Whether you’re at home or on the go, prep smarter with
                 our easy-to-use mobile app.
               </p>

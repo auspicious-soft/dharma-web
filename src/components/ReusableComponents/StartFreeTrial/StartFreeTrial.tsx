@@ -11,12 +11,12 @@ interface StartFreeTrialProps {
   features?: string[];
   buttonText?: string;
   courseKey?: CourseKey;
+  buttonLink?: string;
 }
 
 const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
   headings = "Start Your Free Trial",
-  description =
-    "Test-drive our Exam Simulators, Practice Exams, and study bundles before you buy.",
+  description = "Test-drive our Exam Simulators, Practice Exams, and study bundles before you buy.",
   features = [
     "Explore exam prep tools, self-paced resources, and practice tests",
     "Real exam-style simulation with performance insights",
@@ -25,7 +25,9 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
   ],
   buttonText = "Try for Free",
   courseKey = "PMP",
+  buttonLink,
 }) => {
+  const linkUrl = buttonLink || getSubscriptionUrl(courseKey);
   return (
     <section className="overflow-hidden py-10 md:py-14 lg:py-20">
       <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
@@ -57,8 +59,11 @@ const StartFreeTrial: React.FC<StartFreeTrialProps> = ({
               ))}
             </ul>
 
-            <Button className="max-h-[44px] !bg-white !text-primary_blue" asChild>
-              <a href={getSubscriptionUrl(courseKey)}>{buttonText}</a>
+            <Button
+              className="max-h-[44px] !bg-white !text-primary_blue"
+              asChild
+            >
+              <a href={linkUrl}>{buttonText}</a>
             </Button>
           </div>
 

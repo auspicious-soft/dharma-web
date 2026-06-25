@@ -13,7 +13,7 @@ const ContactUs = () => {
         title="Contact Us"
         description=""
       />
-      <EnquiryForm defaultSubject={subject} />
+      <EnquiryForm formTitle="Contact Us Form" defaultSubject={subject} />
       </>
     );
 }

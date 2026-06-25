@@ -57,6 +57,13 @@ const defaultSubjectOptions: SubjectOption[] = [
   { value: "other", label: "Other" },
 ];
 
+const API_BASE_URL =
+  (import.meta.env.VITE_PUBLIC_API_BASE_URL as string | undefined) ??
+  "http://localhost:8002";
+
+const getEnquiryType = (formTitle: string) =>
+  formTitle === "Contact Us Form" ? "Contact Us" : formTitle;
+
 const EnquiryForm: React.FC<EnquiryFormProps> = ({
   formTitle = "Enquiry Form",
   formDescription,
@@ -76,6 +83,89 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
     : "";
 
   const [selectedSubject, setSelectedSubject] = useState(initialSubject);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const selectedSubjectLabel =
+    options.find((option) => option.value === selectedSubject)?.label ?? "";
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!selectedSubject) {
+      setSubmitStatus("error");
+      setStatusMessage("Please select a subject.");
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formValues = new FormData(form);
+    const enquiryType = getEnquiryType(formTitle);
+    const teamMembers = formValues.get("teamMembers");
+
+    const enquiryData: Record<string, string> = {
+      fullName: String(formValues.get("fullName") ?? "").trim(),
+      email: String(formValues.get("email") ?? "").trim(),
+      phoneNumber: String(formValues.get("phoneNumber") ?? "").trim(),
+      country: String(formValues.get("country") ?? "").trim(),
+      subject: selectedSubjectLabel,
+      certificationInterestedIn: String(
+        formValues.get("certificationInterestedIn") ?? "",
+      ).trim(),
+      message: String(formValues.get("message") ?? "").trim(),
+    };
+
+    if (showCorporateFields) {
+      enquiryData.companyName = String(
+        formValues.get("companyName") ?? "",
+      ).trim();
+
+      if (teamMembers) {
+        enquiryData.teamMembers = String(teamMembers);
+      }
+    }
+
+    const requestBody = new FormData();
+    requestBody.append("type", enquiryType);
+    requestBody.append("data", JSON.stringify(enquiryData));
+    requestBody.append("emailSubject", enquiryType);
+
+    formValues.getAll("file").forEach((file) => {
+      if (file instanceof File && file.size > 0) {
+        requestBody.append("file", file);
+      }
+    });
+
+    setSubmitStatus("submitting");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/public/enquiry`, {
+        method: "POST",
+        body: requestBody,
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to submit enquiry.");
+      }
+
+      form.reset();
+      setSelectedSubject(initialSubject);
+      setSubmitStatus("success");
+      setStatusMessage(
+        "Thank you. Your enquiry has been submitted successfully.",
+      );
+    } catch (error) {
+      setSubmitStatus("error");
+      setStatusMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
+    }
+  };
 
   return (
     <section className="py-10 md:py-14 lg:py-20">
@@ -159,7 +249,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               </p>
             )}
 
-            <div className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubmit}>
               <div>
                 <Label>Subject</Label>
                 <Select
@@ -182,6 +272,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               <div>
                 <Label>Full Name *</Label>
                 <Input
+                  name="fullName"
                   type="text"
                   placeholder="Enter your name"
                   className="mt-1"
@@ -194,6 +285,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
                   <div>
                     <Label>Company Name *</Label>
                     <Input
+                      name="companyName"
                       type="text"
                       placeholder="Enter your company name"
                       className="mt-1"
@@ -206,6 +298,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
                       Number of Team Members to Be Trained (optional)
                     </Label>
                     <Input
+                      name="teamMembers"
                       type="number"
                       min={1}
                       placeholder="Enter number of team members"
@@ -218,6 +311,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               <div>
                 <Label>Email Address *</Label>
                 <Input
+                  name="email"
                   type="email"
                   placeholder="Enter your email address"
                   className="mt-1"
@@ -228,8 +322,31 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               <div>
                 <Label>Phone Number *</Label>
                 <Input
+                  name="phoneNumber"
                   type="tel"
                   placeholder="Enter your phone number"
+                  className="mt-1"
+                  required
+                />
+              </div>
+
+              <div>
+                <Label>Country *</Label>
+                <Input
+                  name="country"
+                  type="text"
+                  placeholder="Enter your country"
+                  className="mt-1"
+                  required
+                />
+              </div>
+
+              <div>
+                <Label>Certification Interested In *</Label>
+                <Input
+                  name="certificationInterestedIn"
+                  type="text"
+                  placeholder="PMP, PgMP, PfMP, CAPM..."
                   className="mt-1"
                   required
                 />
@@ -238,20 +355,39 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
               {showCorporateFields && (
                 <div>
                   <Label>Upload RFP or Supporting Document</Label>
-                  <Input type="file" className="mt-1" />
+                  <Input name="file" type="file" className="mt-1" multiple />
                 </div>
               )}
 
               <div>
                 <Label>Your Message</Label>
                 <Textarea
+                  name="message"
                   placeholder="Write your message here..."
                   className="mt-1 w-full shadow-none border border-input border-[#e4e4e4] p-4 bg-white/80 rounded-[10px] text-[#7a7a7a] text-xs min-h-[120px]"
                 />
               </div>
 
-              <Button className="w-full !mt-5">Submit</Button>
-            </div>
+              {statusMessage && (
+                <p
+                  className={`text-sm leading-6 ${
+                    submitStatus === "success"
+                      ? "text-green-700"
+                      : "text-red-600"
+                  }`}
+                >
+                  {statusMessage}
+                </p>
+              )}
+
+              <Button
+                type="submit"
+                className="w-full !mt-5"
+                disabled={submitStatus === "submitting"}
+              >
+                {submitStatus === "submitting" ? "Submitting..." : "Submit"}
+              </Button>
+            </form>
           </div>
         </div>
       </div>

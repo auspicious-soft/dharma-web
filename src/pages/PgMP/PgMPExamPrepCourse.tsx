@@ -7,10 +7,11 @@ import InnerImage from "@/assets/inner-page.jpg";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
-import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 import {
   CircleArrowIcon,
@@ -237,48 +238,6 @@ const courseCard = {
   ],
 };
 
-const pgmpPracticeTestFaqs = [
-  {
-    question: "Are the Practice Tests aligned to the latest exam outline?",
-    answer:
-      "Yes. Our Practice Tests are designed to reflect the current exam content outline, domains, and question style for each certification.",
-  },
-  {
-    question: "Do PMP® Practice Tests include agile and hybrid questions?",
-    answer:
-      "Yes. PMP® Practice Tests include predictive, agile, and hybrid scenarios aligned with current exam expectations.",
-  },
-  {
-    question: "Does the PMI-RMP® Practice Tests focus on agile methods?",
-    answer:
-      "They cover agile principles, frameworks, tools, team collaboration, and adaptive delivery approaches.",
-  },
-  {
-    question: "Does the PMI-RMP® Practice Tests include risk scenarios?",
-    answer:
-      "Yes. They focus on risk identification, analysis, response planning, monitoring, and real-world risk scenarios.",
-  },
-  {
-    question: "Does the PgMP® Practice Tests cover strategic topics?",
-    answer:
-      "Yes. They include governance, benefits management, stakeholder alignment, portfolio strategy, and leadership-focused questions.",
-  },
-  {
-    question: "Does the PfMP® Practice Tests cover strategic topics?",
-    answer:
-      "Yes. They include governance, benefits management, stakeholder alignment, portfolio strategy, and leadership-focused questions.",
-  },
-  {
-    question: "Does the PMOCP™ Practice Tests reflect PMO concepts?",
-    answer:
-      "Yes. They cover PMO design, governance, value delivery, performance, and organisational alignment topics.",
-  },
-  {
-    question: "Can I choose tests based on weak areas?",
-    answer:
-      "Yes. You can focus on specific domains or topics to improve weaker areas first.",
-  },
-];
 
 const PgMPExamPrepCourse = () => {
   return (
@@ -397,9 +356,16 @@ const PgMPExamPrepCourse = () => {
         />
       </div>
 
-      <Faq faqs={pgmpPracticeTestFaqs} />
+      <section className="py-10 md:py-14 lg:py-20">
+        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto text-center">
+          <Button asChild>
+            <Link to="/faq#exam-prep">View all FAQs</Link>
+          </Button>
+        </div>
+      </section>
     </>
   );
 };
 
 export default PgMPExamPrepCourse;
+

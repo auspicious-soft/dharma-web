@@ -439,9 +439,9 @@ const Webinars = () => {
                 Watch, Learn & Grow
               </h2>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
-                Explore vCare Project Management webinars pulled directly from
-                our YouTube channel playlists. Sessions are sorted by date with
-                the latest webinar first.
+                Access a growing library of expert-led, on-demand webinars
+                designed to expand your knowledge and earn Professional
+                Development Units (PDUs).
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-5 md:mt-7">
                 <a href={youtubeChannelUrl} target="_blank" rel="noreferrer">
@@ -479,8 +479,9 @@ const Webinars = () => {
                 </div>
               </div>
               <p className="text-paragraph text-sm leading-[26px] mt-4">
-                Content is loaded live from the vCare YouTube channel using the
-                YouTube Data API.
+                Explore project management best practices, leadership insights,
+                emerging trends, and practical strategies to enhance your skills
+                and advance your career.
               </p>
             </div>
           </div>
@@ -502,7 +503,7 @@ const Webinars = () => {
               </div>
               <div>
                 <p className="text-primary_heading text-sm font-semibold leading-[26px]">
-                  Latest Webinar
+                  Featured Webinar
                 </p>
                 <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
                   {featuredVideo.title}
@@ -697,7 +698,7 @@ const Webinars = () => {
           points: [
             "On-demand webinars from YouTube playlists",
             "Industry insights and expert-led presentations",
-            "Latest sessions shown first",
+            "Earn PDU credits through PMI for attending",
           ],
           buttonText: "Visit YouTube Channel",
           buttonLink: youtubeChannelUrl,

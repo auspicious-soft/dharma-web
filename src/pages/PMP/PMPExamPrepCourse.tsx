@@ -233,53 +233,104 @@ const courseCard = {
 
 const pmpPracticeTestFaqs = [
   {
-    question: "What are Practice Tests?",
+    question: "Who is the PMP® Exam Prep Course designed for?",
     answer:
-      "Practice Tests are short focused tests designed to help you build knowledge, reinforce concepts, and improve exam confidence in manageable study sessions.",
+      "The course is ideal for project managers, team leaders, aspiring PMP® candidates, and professionals preparing for the PMP® certification exam who want a flexible, self-paced learning experience.",
   },
   {
-    question: "How are Practice Tests different from Mock Exams?",
+    question: "Does this course satisfy the 35 contact hours required for the PMP® application?",
     answer:
-      "Practice Tests focus on specific domains or topics in shorter formats, while Mock Exams replicate full exam length, timing, and pressure.",
+      "Yes. The complete PMP® Exam Prep Course includes the required 35 PMI®-approved training hours (PDUs/contact hours) needed to apply for the PMP® certification exam.",
   },
   {
-    question: "Are the Practice Tests organised by domain?",
+    question: "Is the course aligned with the latest PMP® exam?",
     answer:
-      "Yes. Many tests are structured by exam domains, tasks, or key knowledge areas for focused improvement.",
+      "Yes. All course content, mock exams, and study materials are aligned with the latest PMI® Exam Content Outline and PMBOK® Guide – 8th Edition.",
   },
   {
-    question: "Why should I use mini practice tests?",
+    question: "What is included in the course?",
     answer:
-      "Mini tests help you study efficiently, fit preparation into a busy schedule, and improve weak areas step by step.",
+      "Depending on your selected plan, you'll receive access to realistic mock exams, detailed answer explanations, video lessons, exam preparation guides, performance analytics, practice questions, and personalized dashboards.",
   },
   {
-    question: "How long does each Practice Test take?",
+    question: "What is the difference between the Essentials, Advanced, and Elite plans?",
     answer:
-      "Most are designed to be completed quickly, making them ideal for daily revision or short study breaks.",
+      "The plans differ primarily in the amount of learning content provided.",
   },
   {
-    question: "Do I receive explanations for answers?",
+    question: "How long will I have access to the course?",
     answer:
-      "Yes. Detailed explanations help you understand the logic behind each answer and strengthen learning.",
+      "Access duration depends on the plan you purchase. The current plans provide 30 days to 365 days of online access, with the option to select different durations where available.",
   },
   {
-    question: "When should I use Practice Tests?",
+    question: "Can I take the mock exams multiple times?",
     answer:
-      "Use them throughout your preparation to reinforce learning, track progress, and build confidence before full mock exams.",
+      "Yes. You can retake the mock exams as many times as you like during your active subscription period to improve your knowledge and exam readiness.",
   },
   {
-    question: "Can I retake tests multiple times?",
+    question: "Are the mock exams similar to the real PMP® exam?",
     answer:
-      "Yes. Reattempting tests is a great way to improve scores and retain knowledge.",
+      "Yes. The practice exams are designed to closely simulate the actual PMP® exam, including question style, difficulty level, timing, and domain distribution.",
   },
   {
-    question: "Are Practice Tests good for last-minute revision?",
-    answer: "Absolutely. They are ideal for quick refreshers close to exam day.",
+    question: "Will I receive explanations for every question?",
+    answer:
+      "Yes. Every practice question includes detailed explanations to help you understand why the correct answer is right and why the other options are less appropriate.",
   },
   {
-    question: "Can I access them on mobile devices?",
+    question: "Can I track my performance?",
     answer:
-      "Yes. Practice Tests are available on phone and desktop for anytime, anywhere learning.",
+      "Yes. The platform provides detailed dashboards and analytics that help identify strengths, knowledge gaps, domain performance, and overall exam readiness.",
+  },
+  {
+    question: "Can I study on my mobile device?",
+    answer:
+      "Yes. The course is fully online and can be accessed from desktops, laptops, tablets, and mobile devices, allowing you to study anytime and anywhere.",
+  },
+  {
+    question: "Is instructor support included?",
+    answer:
+      "The self-paced Exam Prep Course is designed for independent learning. If you prefer live instructor guidance, mentoring, or coaching, you can enroll in our Live Online Bootcamp, In-Person Training, or Personal Mentoring programs.",
+  },
+  {
+    question: "Can you help me with my PMP® application?",
+    answer:
+      "Yes. Application support is included with selected plans and is also available through our live training and mentoring programs.",
+  },
+  {
+    question: "What if I need more than self-paced learning?",
+    answer:
+      "You can upgrade to one of our instructor-led training options, including Live Online Bootcamps, In-Person Training, Corporate Training, or Personal Mentoring for additional coaching and support.",
+  },
+  {
+    question: "Who develops the course content?",
+    answer:
+      "The course is developed by experienced project management professionals and PMI Authorized Trainers, combining practical project experience with the latest PMI standards and best practices.",
+  },
+  {
+    question: "Is this course suitable for beginners?",
+    answer:
+      "Yes. The structured learning path, beginner-friendly video lessons, real-world examples, and guided study approach make the course suitable for both new and experienced project management professionals.",
+  },
+  {
+    question: "Do I receive a certificate after completing the course?",
+    answer:
+      "Yes. Upon successful completion of the training, you will receive a certificate that can be used to demonstrate completion of the required PMP® training hours, where applicable.",
+  },
+  {
+    question: "Is this the same as attending a PMP® Bootcamp?",
+    answer:
+      "No. This is a self-paced online course designed for flexible learning. If you prefer live interaction with instructors, scheduled classes, and real-time coaching, consider our Live Online or In-Person PMP® Bootcamp.",
+  },
+  {
+    question: "Can organizations purchase this course for their teams?",
+    answer:
+      "Yes. We offer corporate learning solutions with customized learning paths, enterprise reporting, dedicated support, and flexible delivery options for organizations of all sizes.",
+  },
+  {
+    question: "Why should I choose vCare Project Management?",
+    answer:
+      "As a Premier Authorized Training Partner (ATP) of PMI®, vCare Project Management provides PMI-aligned learning, experienced instructors, realistic exam simulators, comprehensive study resources, flexible learning options, and ongoing support to help professionals prepare confidently for PMP® certification.",
   },
 ];
 

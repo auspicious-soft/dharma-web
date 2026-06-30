@@ -222,7 +222,21 @@ const CorporateTraining = () => {
           defaultSubject="request-a-quote"
         />
       </div>
-      <TopFooterSection />
+      <TopFooterSection
+        content={{
+          title: "Build a High-Performing Project Workforce",
+          description:
+            "From identifying skills gaps to measuring business outcomes, our structured learning approach equips your workforce with the capabilities needed to improve performance, accelerate adoption, and achieve strategic business goals.",
+          points: [
+            "Evaluate Workforce Readiness",
+            "Develop Personalized Learning Journeys",
+            "Enable scalable learning through live workshops, on-demand courses, and blended delivery models.",
+            "Measure Learning Success through dashboards that track adoption and progress",
+          ],
+          buttonText: "Request a Quote",
+          buttonLink: "#enquiry-form-scroll",
+        }}
+      />
     </>
   );
 };

@@ -10,6 +10,8 @@ import {
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { getCoursePagePath, getSubscriptionUrl } from "@/utils/links";
+import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
+import { practiceExamFaqs } from "@/data/faqs";
 
 const keyValues = [
   {
@@ -171,6 +173,8 @@ const PracticeExams = () => {
           </div>
         </div>
       </section>
+
+      <Faq faqs={practiceExamFaqs} hideButton />
 
       <TopFooterSection
         content={{

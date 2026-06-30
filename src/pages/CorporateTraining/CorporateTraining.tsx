@@ -33,15 +33,15 @@ const learningData = [
   },
 ];
 
-const portalFeatures = [
-  "Access to practice exams and exam simulators",
-  "Expert-led on-demand certification training programs",
-  "Flexible pay-as-you-use courseware model",
-  "Administrative dashboards to monitor learner engagement, performance, and certification readiness",
-  "Continuously updated content aligned with the latest PMI exam changes and Exam Content Outlines (ECOs)",
-  "Includes premium exam simulator features with detailed analytics and reporting",
-  "Accessible anytime from any web browser, tablet, or mobile device",
-  "Scalable solution designed for teams, departments, and enterprise-wide learning initiatives",
+const trustedOrganizations = [
+  { name: "Deloitte.", className: "text-black text-xl font-bold" },
+  { name: "dimension data", className: "text-[#526170] text-sm font-bold" },
+  { name: "vodafone", className: "text-[#e60000] text-base font-bold" },
+  { name: "ZURICH", className: "text-[#376ca8] text-lg font-semibold" },
+  { name: "DELL", className: "text-[#0c75b7] text-2xl font-bold" },
+  { name: "Westpac", className: "text-[#d82332] text-lg font-bold" },
+  { name: "ZURICH", className: "text-[#376ca8] text-lg font-semibold" },
+  { name: "UnitedHealthcare", className: "text-[#345a9c] text-xs font-semibold" },
 ];
 
 const corporateTrainingFaqs = [
@@ -177,31 +177,50 @@ const CorporateTraining = () => {
         </div>
       </section>
 
-      <section className="bg-light-blue py-10 md:py-14 lg:py-20">
-        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-            A Branded Learning Portal for Your Organization
-          </h2>
-          <p className="text-paragraph text-sm font-normal mt-1 leading-[26px]">
-            Empower your teams with a fully hosted and branded learning platform powered by vCare Project Management's professional certification training content, exam preparation systems, and learning solutions.
-          </p>
-          <p className="text-paragraph text-sm font-normal mt-3 leading-[26px]">
-            Your learners can access training, practice exams, and learning resources through one secure portal, while your organization benefits from learner analytics, progress tracking, performance insights, and reporting visibility.
-          </p>
-          <h4 className="text-Black_light text-xl font-bold mt-5 mb-4">
-            Platform Features
-          </h4>
-          <ul className="space-y-1 self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">
-            {portalFeatures.map((text) => (
-              <li
-                key={text}
-                className="flex items-start gap-2 self-stretch justify-start"
+      <section className="py-10 md:py-14 lg:py-20">
+        <style>
+          {`
+            @keyframes corporate-logo-marquee {
+              from { transform: translateX(0); }
+              to { transform: translateX(-50%); }
+            }
+          `}
+        </style>
+        <div className="max-w-[1326px] w-full px-3 md:px-4 m-auto">
+          <div className="overflow-hidden rounded-[14px] bg-[#4d8ce8] py-10 md:py-12">
+            <div className="px-4 text-center">
+              <h2 className="text-white text-2xl md:text-3xl font-bold md:leading-[46px]">
+                Trusted by Global Organizations
+              </h2>
+              <p className="text-white text-sm font-semibold mt-2 md:mt-3 leading-[26px] max-w-[840px] mx-auto">
+                We've partnered with Fortune 500 companies, government agencies,
+                and global enterprises to enhance project, program, and
+                portfolio management capabilities.
+              </p>
+            </div>
+
+            <div className="mt-8 overflow-hidden">
+              <div
+                className="flex w-max gap-4 pr-4"
+                style={{
+                  animation: "corporate-logo-marquee 26s linear infinite",
+                }}
               >
-                <span className="text-[8px]">&bull;</span>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
+                {[...trustedOrganizations, ...trustedOrganizations].map(
+                  (organization, index) => (
+                    <div
+                      key={`${organization.name}-${index}`}
+                      className="h-16 w-28 md:w-32 shrink-0 rounded-[8px] bg-[#eef6ff] flex items-center justify-center px-3 shadow-sm"
+                    >
+                      <span className={organization.className}>
+                        {organization.name}
+                      </span>
+                    </div>
+                  ),
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

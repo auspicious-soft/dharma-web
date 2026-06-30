@@ -1,4 +1,8 @@
 import OtherCertificationPage from "./OtherCertificationPage";
+import { getDashboardUrl } from "@/utils/links";
+
+const CPMAI_TRAINING_URL =
+  "https://www.vcareprojectmanagement.com/collections/cpmai-certification-training";
 
 const AIProjectManagementCertification = () => (
   <OtherCertificationPage
@@ -51,6 +55,7 @@ const AIProjectManagementCertification = () => (
         title: "Self-Paced Learning",
         subtitle: "Learn Anytime, Anywhere",
         recommended: true,
+        href: getDashboardUrl(),
         features: [
           "Flexible, self-paced learning",
           "Expert-curated video lessons",
@@ -65,6 +70,7 @@ const AIProjectManagementCertification = () => (
         title: "Online Bootcamp",
         subtitle: "Interactive Live Learning",
         description: "Everything in Self-Paced Learning, plus:",
+        href: CPMAI_TRAINING_URL,
         features: [
           "Live instructor-led online training",
           "Interactive classroom discussions",
@@ -78,6 +84,7 @@ const AIProjectManagementCertification = () => (
         title: "In-Person Training",
         subtitle: "Immersive Classroom Experience",
         description: "Everything in Online Bootcamp, plus:",
+        href: CPMAI_TRAINING_URL,
         features: [
           "Instructor-led classroom training",
           "Hands-on AI workshops and labs",

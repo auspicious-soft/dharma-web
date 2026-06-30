@@ -7,6 +7,7 @@ import {
   getDashboardUrl,
   getMockExamUrl,
   getSubscriptionUrl,
+  SHOPIFY_EXAM_VOUCHER_URL,
   SHOPIFY_TRAINING_LINKS,
 } from "@/utils/links";
 import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
@@ -218,6 +219,7 @@ function getCourseCtaHref(course: Course) {
             : undefined;
 
   if (title.includes("consultation")) return CALENDLY_CONSULTATION_URL;
+  if (title.includes("exam voucher")) return SHOPIFY_EXAM_VOUCHER_URL;
   if (!courseKey) return getDashboardUrl();
   if (title.includes("exam prep training")) return SHOPIFY_TRAINING_LINKS[courseKey];
   if (title.includes("exam simulator")) return getMockExamUrl(courseKey);
@@ -285,9 +287,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "PMP® Exam Voucher Bundle",
+      title: "PMP Exam Voucher Bundle",
       description:
-        "Get Official PMIÂ® Exam Vouchers and Save on Your Exam Fees",
+        "Get Official PMI Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button:"Learn More"
     },
@@ -344,9 +346,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "PgMP® Exam Voucher",
+      title: "PgMP Exam Voucher",
       description:
-        "Get Official PgMP® Exam Vouchers and Save on Your Exam Fees",
+        "Get Official PgMP Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button: "Buy Now"
     },
@@ -403,9 +405,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "PfMP® Exam Voucher",
+      title: "PfMP Exam Voucher",
       description:
-        "Get Official PfMP® Exam Vouchers and Save on Your Exam Fees",
+        "Get Official PfMP Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button: "Buy Now"
     },
@@ -462,9 +464,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "PMI-PMI-PMOCP® Exam Voucher",
+      title: "PMI-PMOCP Exam Voucher",
       description:
-        "Get Official PMI-PMOCP® Exam Vouchers and Save on Your Exam Fees.",
+        "Get Official PMI-PMOCP Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button: "Buy Now"
     },
@@ -521,9 +523,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "CAPM® Exam Voucher",
+      title: "CAPM Exam Voucher",
       description:
-        "Get Official PMI® Exam Vouchers and Save on Your Exam Fees.",
+        "Get Official PMI Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button: "Buy Now"
     },
@@ -580,9 +582,9 @@ const tabCourses: Record<Tab, Course[]> = {
     },
     {
       id: 7,
-      title: "PMI-RMP® Exam Voucher",
+      title: "PMI-RMP Exam Voucher",
       description:
-        "Get Official PMIÂ® Exam Vouchers and Save on Your Exam Fees.",
+        "Get Official PMI Exam Vouchers and Save on Your Exam Fees.",
       image: TabImage,
       button: "Buy Now"
     },
@@ -676,8 +678,4 @@ function CourseCard({ course, tab }: { course: Course; tab: Tab }) {
     </div>
   );
 }
-
-
-
-
 

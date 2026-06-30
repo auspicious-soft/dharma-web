@@ -62,6 +62,7 @@ import OffersAndBenefits from "@/pages/OffersAndBenefits/OffersAndBenefits";
 import Webinars from "@/pages/Webinars/Webinars";
 import Podcasts from "@/pages/Podcasts/Podcasts";
 import ReferAndEarn from "@/pages/ReferAndEarn/ReferAndEarn";
+import Reviews from "@/pages/Reviews/Reviews";
 import LeanSixSigmaCertification from "@/pages/LeanSixSigma/LeanSixSigmaCertification";
 import PMIACPCertification from "@/pages/OtherCertifications/PMIACPCertification";
 import CAPMCertification from "@/pages/OtherCertifications/CAPMCertification";
@@ -274,6 +275,8 @@ const AppRoutes = () => {
         <Route path="/podcasts" element={<Podcasts />} />
         {/*Refer and Earn */}
         <Route path="/refer-and-earn" element={<ReferAndEarn />} />
+        {/*Reviews */}
+        <Route path="/reviews" element={<Reviews />} />
         {/*Lean Six Sigma Certification */}
         <Route
           path="/lean-six-sigma-certification"

@@ -120,6 +120,7 @@ const menuItems: MenuItem[] = [
       },
       { label: "PMI-ACP Certification", href: "/pmi-acp-certification" },
       { label: "CAPM Certification", href: "/capm-certification" },
+      { label: "Testimonials", href: "/reviews" },
       {
         label: "AI Project Management Certification",
         href: "/ai-project-management-certification",

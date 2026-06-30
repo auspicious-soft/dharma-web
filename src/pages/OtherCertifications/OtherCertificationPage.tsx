@@ -20,6 +20,7 @@ type TrainingOption = {
   description?: string;
   features: string[];
   recommended?: boolean;
+  href?: string;
 };
 
 type CourseOption = {
@@ -217,7 +218,7 @@ export default function OtherCertificationPage({
                       </span>
                     </p>
                   )}
-                  <Button asChild className="mt-auto rounded-[8px]">
+                  <Button asChild className="mt-4 rounded-[8px]">
                     <a href="/contact-us">
                       Enroll Now
                       <ArrowUpRight size={15} />
@@ -272,7 +273,7 @@ export default function OtherCertificationPage({
                   </div>
 
                   <Button asChild className="w-full mt-5 rounded-[8px]">
-                    <a href="/contact-us">
+                    <a href={option.href ?? "/contact-us"}>
                       Enroll now
                       <ArrowUpRight size={15} />
                     </a>

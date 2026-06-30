@@ -21,9 +21,9 @@ import {
 import {
   CALENDLY_CONSULTATION_URL,
   getCoursePagePath,
-  getDashboardUrl,
   getMockExamUrl,
   getSubscriptionUrl,
+  SHOPIFY_EXAM_VOUCHER_URL,
   SHOPIFY_TRAINING_LINKS,
 } from "@/utils/links";
 
@@ -108,7 +108,7 @@ export const pmpRelatedResources: RelatedResource[] = [
     title: "PMP® Exam Voucher Bundle",
     description: "Get Official PMI® Exam Vouchers and Save on Your Exam Fees",
     buttonText: "Learn More",
-    href: getDashboardUrl(),
+    href: SHOPIFY_EXAM_VOUCHER_URL,
   },
 ];
 
@@ -166,7 +166,7 @@ export const pgmpRelatedResources: RelatedResource[] = [
     title: "PgMP® Exam Voucher",
     description: "Get Official PgMP® Exam Vouchers and Save on Your Exam Fees",
     buttonText: "Buy Now",
-    href: getDashboardUrl(),
+    href: SHOPIFY_EXAM_VOUCHER_URL,
   },
 ];
 
@@ -224,7 +224,7 @@ export const pfmpRelatedResources: RelatedResource[] = [
     title: "PfMP® Exam Voucher",
     description: "Get Official PfMP® Exam Vouchers and Save on Your Exam Fees",
     buttonText: "Buy Now",
-    href: getDashboardUrl(),
+    href: SHOPIFY_EXAM_VOUCHER_URL,
   },
 ];
 
@@ -282,7 +282,7 @@ export const pmocpRelatedResources: RelatedResource[] = [
     title: "PMI-PMOCP® Exam Voucher",
     description: "Get Official PMI-PMOCP® Exam Vouchers and Save on Your Exam Fees.",
     buttonText: "Buy Now",
-    href: getDashboardUrl(),
+    href: SHOPIFY_EXAM_VOUCHER_URL,
   },
 ];
 
@@ -340,7 +340,7 @@ export const pmiRmpRelatedResources: RelatedResource[] = [
     title: "PMI-RMP® Exam Voucher",
     description: "Get Official PMI® Exam Vouchers and Save on Your Exam Fees.",
     buttonText: "Buy Now",
-    href: getDashboardUrl(),
+    href: SHOPIFY_EXAM_VOUCHER_URL,
   },
 ];
 

@@ -37,6 +37,9 @@ export const SHOPIFY_CLASSROOM_LINKS: Record<CourseKey, string> = {
   "PMI-RMP": "https://www.vcareprojectmanagement.com/collections/pmi-rmp-classroom",
 };
 
+export const SHOPIFY_EXAM_VOUCHER_URL =
+  "https://www.vcareprojectmanagement.com/collections/exam-voucher";
+
 export const getCoursePagePath = (
   course: CourseKey,
   page:

@@ -48,10 +48,10 @@ const Header = () => {
           <Search />
           <div className="flex gap-3 lg:gap-6 items-center">
             <Link
-              to="/corporate-training"
+              to="/partner-with-us"
               className="text-paragraph text-sm hidden lg:block"
             >
-              Corporate Training
+             Partner with Us
             </Link>
             <Link
               to="/contact-us"

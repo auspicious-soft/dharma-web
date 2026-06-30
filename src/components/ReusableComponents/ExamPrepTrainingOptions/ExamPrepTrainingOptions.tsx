@@ -265,7 +265,7 @@ export default function ExamPrepTrainingOptions(props: ExamPrepTrainingOptionsPr
 
       <section className="mt-10 md:mt-14">
         <div className="flex flex-col items-center text-center mb-6">
-          <span className="text-primary_blue text-sm font-bold">
+          <span className="text-primary_blue text-lg md:text-xl font-bold">
             Training Highlights
           </span>
           <h3 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] mt-1">

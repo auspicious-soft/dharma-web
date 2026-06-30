@@ -40,6 +40,7 @@ interface SlideItem {
   title: string;
   description: string;
   buttonText?: string;
+  href?: string;
 }
 
 interface ContentTabsProps {
@@ -230,9 +231,17 @@ export default function ContentTabs({
                           {slide.description}
                         </p>
 
-                        <Button variant="outline" className="w-full">
-                          {slide.buttonText ?? "View Details"}
-                        </Button>
+                        {slide.href ? (
+                          <Button variant="outline" className="w-full" asChild>
+                            <a href={slide.href}>
+                              {slide.buttonText ?? "View Details"}
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button variant="outline" className="w-full">
+                            {slide.buttonText ?? "View Details"}
+                          </Button>
+                        )}
                       </div>
                     </div>
                   </SwiperSlide>

@@ -333,7 +333,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
       </div>
       <TopFooterSection
         content={{
-          title: "Advance Your Program Leadership Career",
+          title: "Advance Your Career",
           description:"Global demand for project professionals continues to rise, with millions of new roles projected over the next decade. Industries such as IT, construction, manufacturing, and healthcare are expanding rapidly, while many mature economies face talent shortages.Organizations need project leaders who connect delivery to business value and long-term impact. Strengthening your credentials today positions you for tomorrow’s opportunities.",
           pointsIntro:
             "Earning your PMP® sets you apart:",

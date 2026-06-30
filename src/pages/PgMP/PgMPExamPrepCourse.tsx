@@ -357,9 +357,17 @@ const PgMPExamPrepCourse = () => {
       </div>
 
       <section className="py-10 md:py-14 lg:py-20">
-        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto text-center">
+        <div className="max-w-[760px] w-full px-3 md:px-4 m-auto text-center">
+          <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-paragraph text-sm md:text-base leading-[28px] mt-2 mb-5">
+            Have questions about our Exam Prep Courses? Browse our most commonly
+            asked questions covering course access, study materials, exam
+            preparation, pricing, and technical support.
+          </p>
           <Button asChild>
-            <Link to="/faq#exam-prep">View all FAQs</Link>
+            <Link to="/faq#exam-prep">View All FAQs &rarr;</Link>
           </Button>
         </div>
       </section>

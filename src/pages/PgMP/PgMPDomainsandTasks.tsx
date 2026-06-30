@@ -51,13 +51,6 @@ const domainsOverview = {
       description:
         "Establish effective oversight, decision-making frameworks, and controls to ensure accountability and success.",
     },
-    {
-      id: 6,
-      icon: ExamsIcon,
-      title: "Collaboration",
-      description:
-        "Foster cross-functional teamwork, communication, and partnership to enhance program performance and results.",
-    },
   ],
 };
 

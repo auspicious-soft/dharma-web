@@ -2,11 +2,12 @@ import React from "react";
 import InnerPage from "@/assets/inner-page.jpg";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import CertificateImage from "@/assets/certificate-image.png";
-import PmpLogo from "@/assets/pmp-logo.png";
+import TrainingImage from "@/assets/training-image.png";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
 import {
@@ -287,30 +288,13 @@ const PgMPOnDemandCourse = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl p-5 md:p-7 border border-[#d5dddd]">
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={PmpLogo}
-                  alt="Premier Authorized Training Partner"
-                  className="w-14 h-14"
-                />
-                <p className="text-[#0a4ba8] text-sm font-medium leading-6">
-                  Premier Authorized Training Partner
-                </p>
-              </div>
-              <h3 className="text-Black_light text-xl md:text-2xl font-bold">
-                PgMP® On-Demand Course
-              </h3>
-              <p className="text-paragraph text-sm font-normal mt-2 leading-6">
-                Self-paced PgMP® certification training designed for busy
-                professionals who want flexible, expert-led learning.
-              </p>
-              <p className="text-Black_light text-sm font-semibold mt-4">
-                Included FREE
-              </p>
-              <p className="text-paragraph text-sm font-normal">
-                When you enroll in ANY live class
-              </p>
+            <div>
+              <img
+                src={TrainingImage}
+                alt="PgMP on-demand learning"
+                className="rounded-3xl w-full object-cover"
+              />
+              <PmiAtpBadge />
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ import {
 } from "@/utils/svgicons";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";
-import { getSubscriptionUrl } from "@/utils/links";
+import { getCoursePagePath, getSubscriptionUrl } from "@/utils/links";
 
 const flashCard = {
   cards: [
@@ -92,13 +92,13 @@ const WhatIncluded = [
 ];
 
 const flashcardLinks = [
-  { title: "Explore PMP® Flashcards", href: getSubscriptionUrl("PMP") },
-  { title: "Explore PgMP® Flashcards", href: getSubscriptionUrl("PgMP") },
-  { title: "Explore PfMP® Flashcards", href: getSubscriptionUrl("PfMP") },
-  { title: "Explore PMOCP Flashcards", href: getSubscriptionUrl("PMOCP") },
+  { title: "Explore PMP® Flashcards", href: getCoursePagePath("PMP", "flash-cards") },
+  { title: "Explore PgMP® Flashcards", href: getCoursePagePath("PgMP", "flash-cards") },
+  { title: "Explore PfMP® Flashcards", href: getCoursePagePath("PfMP", "flash-cards") },
+  { title: "Explore PMOCP Flashcards", href: getCoursePagePath("PMOCP", "flash-cards") },
   {
     title: "Explore PMI-RMP® Flashcards",
-    href: getSubscriptionUrl("PMI-RMP"),
+    href: getCoursePagePath("PMI-RMP", "flash-cards"),
   },
 ];
 
@@ -383,3 +383,4 @@ const FlashCards = () => {
 };
 
 export default FlashCards;
+

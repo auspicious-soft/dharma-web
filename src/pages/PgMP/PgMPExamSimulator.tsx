@@ -323,7 +323,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
       </div>
       <TopFooterSection
         content={{
-          title: "Advance Your Program Leadership Career",
+          title: "Advance Your Career",
            description: (
             <>
              Recognised globally, the PgMP® demonstrates your ability to lead multiple related projects, manage complex programs, and deliver strategic business outcomes.

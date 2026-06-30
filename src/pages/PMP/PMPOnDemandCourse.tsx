@@ -1,10 +1,10 @@
 import InnerPage from "@/assets/inner-page.jpg";
-import PmpLogo from "@/assets/pmp-logo.png";
 import TrainingImage from "@/assets/training-image.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import { Button } from "@/components/ui/button";
 import { getSubscriptionUrl } from "@/utils/links";
@@ -262,18 +262,7 @@ const PMPOnDemandCourse = () => {
                 alt="PMP self-paced learning"
                 className="rounded-3xl w-full object-cover"
               />
-              <div className="bg-white rounded-xl p-5 md:p-7 border border-[#d5dddd] mt-5">
-                <div className="flex items-center gap-3 mb-4">
-                  <img
-                    src={PmpLogo}
-                    alt="Premier Authorized Training Partner"
-                    className="w-14 h-14"
-                  />
-                  <p className="text-[#0a4ba8] text-sm font-medium leading-6">
-                    Premier Authorized Training Partner
-                  </p>
-                </div>               
-              </div>
+              <PmiAtpBadge />
             </div>
           </div>
         </div>

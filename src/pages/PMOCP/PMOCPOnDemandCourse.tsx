@@ -9,6 +9,7 @@ import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Te
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
+import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import {
   DetailIcon,
   ComIcon,
@@ -122,6 +123,7 @@ const PMOCPOnDemandCourse = () => {
                 />
                 Your browser does not support the video tag.
               </video>
+              <PmiAtpBadge />
             </div>
           </div>
         </div>

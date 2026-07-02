@@ -67,6 +67,7 @@ import LeanSixSigmaCertification from "@/pages/LeanSixSigma/LeanSixSigmaCertific
 import PMIACPCertification from "@/pages/OtherCertifications/PMIACPCertification";
 import CAPMCertification from "@/pages/OtherCertifications/CAPMCertification";
 import AIProjectManagementCertification from "@/pages/OtherCertifications/AIProjectManagementCertification";
+import SearchResults from "@/pages/Search/SearchResults";
 
 const AppRoutes = () => {
   return (
@@ -82,6 +83,7 @@ const AppRoutes = () => {
         </Route>
 
         <Route index element={<Home />} />
+        <Route path="/search" element={<SearchResults />} />
 
         {/* PMP Pages */}
         <Route path="pmp">

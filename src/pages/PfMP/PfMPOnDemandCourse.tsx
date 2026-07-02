@@ -10,6 +10,7 @@ import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/T
 import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
 import {
   BarChart3,
   BookOpen,
@@ -487,7 +488,9 @@ const PfMPOnDemandCourse = () => {
                 question format through sample scenarios and prepare with
                 confidence.
               </p>
-              <Button className="mt-6">Get Access Now</Button>
+              <Button className="mt-6" asChild>
+                <a href={getSubscriptionUrl("PfMP")}>Get Access Now</a>
+              </Button>
             </div>
 
             <ul className="space-y-2 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">

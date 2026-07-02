@@ -258,7 +258,7 @@ const PgMPExamPrepCourse = () => {
           },
           { text: "Expert Instructors with Real-World Program Experience" },
           { text: "100% Online, Flexible Learning" },
-          { text: "Earn 35 PMI®-Approved PDUs" },
+          { text: "Earn 24 PMI®-Approved PDUs" },
           { text: "Instant access to course materials" },
         ]}
         descriptionTop="Prepare with Confidence. Get PgMP® Certified."

@@ -30,7 +30,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="flex flex-col w-full relative">
+    <header className="sticky top-0 z-50 flex flex-col w-full">
       <AnnouncementBar />
       <div className="flex  gap-4 lg:gap-6 py-4 md:py-5 px-3 md:px-4 justify-between bg-white">
         <div className="flex items-center gap-2 lg:gap-6">

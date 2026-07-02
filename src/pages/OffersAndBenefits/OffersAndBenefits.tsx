@@ -25,7 +25,7 @@ const armySteps = [
   {
     title: "Request a Training Quote",
     description:
-      "We'll provide an ArmyIgnitED-compliant quote and documentation, including exam voucher.",
+      "We'll provide an ArmyIgnitED or AFCOOL-compliant quote and documentation, including exam voucher.",
   },
   {
     title: "Start Learning",
@@ -110,7 +110,7 @@ const OffersAndBenefits = () => {
     <>
       <FooterPageHeroSection
         title="Invest in Your Future and Save on Your Certification Journey"
-        description="Explore exclusive discounts, military benefits, ArmyIgnitED opportunities, PMI Chapter offers, and special promotions designed to support your professional development journey."
+        description="Explore exclusive discounts, military benefits, ArmyIgnitED and AFCOOL opportunities, PMI Chapter offers, and special promotions designed to support your professional development journey."
       />
 
       <section className="py-10 md:py-14 lg:py-20">
@@ -184,12 +184,12 @@ const OffersAndBenefits = () => {
                 <Flag size={28} strokeWidth={2} />
               </div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px] mt-4">
-                Get Certified with ArmyIgnitED
+                Get Certified with ArmyIgnitED and AFCOOL
               </h2>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
-                Use your Army Credentialing Assistance benefits to access
-                professional certification training and career development
-                programs through vCare Project Management.
+                Use your USA Army and Air Force Credentialing Assistance
+                benefits to access professional certification training and
+                career development programs through vCare Project Management.
               </p>
               <Button onClick={scrollToForm} className="mt-5 md:mt-7">
                 Get a Quote
@@ -289,7 +289,8 @@ const OffersAndBenefits = () => {
               </h2>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
                 Contact our team to discuss available military benefits,
-                ArmyIgnitED eligibility, training options, and current offers.
+                ArmyIgnitED and AFCOOL eligibility, training options, and
+                current offers.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-5">
                 <Button onClick={scrollToForm}>Contact Us Today</Button>
@@ -307,7 +308,7 @@ const OffersAndBenefits = () => {
       <div id="offers-enquiry-form">
         <EnquiryForm
           formTitle="Request Offers and Benefits Information"
-          formDescription="Share your program interests and eligibility details with us. Our team will help you review available benefits, ArmyIgnitED options, and current offers."
+          formDescription="Share your program interests and eligibility details with us. Our team will help you review available benefits, ArmyIgnitED and AFCOOL options, and current offers."
           defaultSubject={quoteSubject}
           showCorporateFields
         />
@@ -319,7 +320,7 @@ const OffersAndBenefits = () => {
           description:
             "Explore military benefits, PMI Chapter offers, group savings, and quote options tailored to your training goals.",
           points: [
-            "ArmyIgnitED quote support",
+            "ArmyIgnitED and AFCOOL quote support",
             "Military and chapter member benefits",
             "Corporate team and multi-enrollment savings",
           ],

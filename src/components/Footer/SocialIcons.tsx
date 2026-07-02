@@ -21,7 +21,7 @@ const socials = [
     {
     id: 3,
     icon: Youtube,
-    link: "https://www.youtube.com/channel/UCWg9sBRmPCcpVy2KY5AtjQQ",
+    link: "https://bit.ly/2YF0wJl",
   },
   {
     id: 4,

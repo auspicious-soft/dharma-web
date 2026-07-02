@@ -10,6 +10,7 @@ import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/T
 import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
+import { getSubscriptionUrl } from "@/utils/links";
 import {
   BarChart3,
   BookOpen,
@@ -22,7 +23,7 @@ import {
 const includedWithPurchase = [
   "Flexible Learning - 100% self-paced access to the complete PgMP® course. Study anytime, anywhere, on any device.",
   "Aligned to PMI Standards - Built in line with the latest PgMP® Examination Content Outline (ECO) and Standard for Program Management - Fifth Edition for focused exam preparation.",
-  "35 PMI-Approved Training Hours - Meets the education requirement for PgMP® certification eligibility.",
+  "Earn 24 PMI PDUs and Maintain Your PMI Certifications.",
   "Comprehensive Coverage - In-depth lessons across all key domains.",
   "Instant access to course materials.",
 ];
@@ -252,10 +253,11 @@ const pgmpOnDemandFaqs = [
 ];
 
 const pgmpSuccessBullets = [
-  "30M+ project professionals needed globally by 2035",
+  "Deliver more successful programs through proven program management practices.",
+  "Strengthens strategic thinking at enterprise level",
+  "Builds global credibility as a strategic program leader.",
   "Higher earning potential for PgMP® holders",
-  "Valued by employers across industries",
-  "Opens doors to senior project roles",
+  "Opens doors to Senior Program manager and executive leadership roles",
   "Strengthens your professional profile",
 ];
 
@@ -487,17 +489,16 @@ const PgMPOnDemandCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-5 md:gap-8 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Where PgMP® Holders Drive Success
+                Certified Exam Ready
               </h2>
               <p className="text-paragraph text-sm font-normal mt-3 leading-[26px]">
-                Start your PgMP® journey with our Exam Prep Course and get what
-                you need to study, prepare, and succeed. PgMP® is a globally
-                respected certification in program management, recognized for
-                validating your leadership experience and ability to deliver
-                strategic outcomes across multiple projects. Learn the question
-                format through sample scenarios and prepare with confidence.
+                Start your PgMP® journey with our Exam Prep Course and gain the
+                knowledge, skills, and confidence to pass your exam. Learn
+                through realistic scenarios and prepare with confidence.
               </p>
-              <Button className="mt-6">Get Access Now</Button>
+              <Button className="mt-6" asChild>
+                <a href={getSubscriptionUrl("PgMP")}>Get Access Now</a>
+              </Button>
             </div>
 
             <ul className="space-y-2 list-disc self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] ml-1">

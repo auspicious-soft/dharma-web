@@ -81,8 +81,8 @@ const Affiliate = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.45fr_1fr] gap-5 lg:gap-10 items-start">
             <div>
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Earn Rewards by Referring Professionals to vCare Project
-                Management
+                Earn 10–20% Commission by Referring Professionals to vCare
+                Project Management
               </h2>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
                 Do you have a network of project managers, program managers,
@@ -91,14 +91,11 @@ const Affiliate = () => {
                 certification training?
               </p>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
-                Join the vCare Affiliate Program and earn commissions by
+                Join the vCare Affiliate Program and earn 10–20% commission by
                 referring individuals and organizations to our globally
                 recognized training programs, certification preparation courses,
                 mentoring services, exam simulators, and corporate learning
-                solutions. If you have an established website that is catering
-                to project, program and portfolio managers, then convert your
-                traffic into income by promoting our products to your website
-                visitors.
+                solutions.
               </p>
               <p className="text-paragraph text-sm md:text-base font-normal mt-2 md:leading-[30px]">
                 Whether you're a trainer, consultant, coach, influencer,

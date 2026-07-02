@@ -433,7 +433,7 @@ const PMIACPOnDemandCourse = () => {
       </section>
 
       <Testimonials id="two" />
-      <TopFooterSection />
+      {/* <TopFooterSection /> */}
     </>
   );
 };

@@ -43,8 +43,45 @@ type CertificationPracticeExamPageProps = {
   relatedResources: RelatedResource[];
 };
 
-const getOverviewText = (examName: string) =>
-  `The ${examName} Practice Exam is an on-demand exam simulator designed to help you prepare with confidence for the ${examName} certification exam. Practice with realistic exam-style questions, detailed explanations, and performance analytics to assess your readiness, identify knowledge gaps, and build confidence before exam day.`;
+const practiceExamContent: Record<
+  CourseKey,
+  {
+    headline: string;
+    description: string;
+    buttonText: string;
+  }
+> = {
+  PMP: {
+    headline: "Practice with Confidence. Pass with Success.",
+    description:
+      "Prepare with realistic exam-style questions, detailed explanations, and full-length practice exams designed to help you confidently achieve your PMP® certification.",
+    buttonText: "Start PMP Preparation Today",
+  },
+  PgMP: {
+    headline: "Practice with Confidence. Pass with Success.",
+    description:
+      "Challenge yourself with realistic exam-style questions, detailed explanations, and comprehensive practice exams designed to help you confidently achieve your PgMP® certification.",
+    buttonText: "Start PgMP Prepation Today",
+  },
+  PfMP: {
+    headline: "Practice with Confidence. Pass with Success.",
+    description:
+      "Validate your portfolio management knowledge with realistic practice exams, detailed explanations, and exam-style questions designed to help you confidently achieve your PfMP® certification.",
+    buttonText: "Start PfMP Prepation Today",
+  },
+  PMOCP: {
+    headline: "Practice with Confidence. Pass with Success.",
+    description:
+      "Strengthen your PMO knowledge through realistic practice exams, detailed explanations, and exam-style questions designed to help you confidently achieve your PMI-PMOCP™ certification.",
+    buttonText: "Start PMOCP Prepation Today",
+  },
+  "PMI-RMP": {
+    headline: "Practice with Confidence. Pass with Success.",
+    description:
+      "Develop your risk management expertise with realistic practice exams, detailed explanations, and exam-style questions designed to help you confidently achieve your PMI-RMP® certification.",
+    buttonText: "Start RMP Prepation Today",
+  },
+};
 
 const buildRelatedResources = (
   resources: RelatedResource[],
@@ -351,9 +388,10 @@ export default function CertificationPracticeExamPage({
   resourceLabel,
   relatedResources,
 }: CertificationPracticeExamPageProps) {
+  const pageContent = practiceExamContent[courseKey];
   const overview = {
     heading: "Overview",
-    text: getOverviewText(examName),
+    text: pageContent.description,
   };
 
   const access = {
@@ -438,13 +476,13 @@ export default function CertificationPracticeExamPage({
     <>
       <NavHeroSection
         title={heroTitle}
-        description={getOverviewText(examName)}
-        descriptionsecond=""
+        description={pageContent.headline}
+        descriptionsecond={pageContent.description}
         sideImage={InnerPage}
       />
       <AuthorizedTrainingPartner
-        title="Test Your Readiness. Build Confidence. Get Exam-Day Ready."
-        subtitle={`The ${examName} Practice Exam is designed to help candidates experience real ${examName} exam conditions before test day. Practice with high-quality, ${resourceLabel}-style questions, understand exam patterns, and evaluate your readiness with detailed performance insights.`}
+        title={pageContent.headline}
+        subtitle={pageContent.description}
         bullets={[
           {
             text: "Practice aligned with the latest exam standards",
@@ -470,7 +508,20 @@ export default function CertificationPracticeExamPage({
           slides: buildRelatedResources(relatedResources),
         }}
       />
-      <TopFooterSection />
+      <TopFooterSection
+        content={{
+          title: <>Practice Exams That Build Certification Confidence</>,
+          description: pageContent.description,
+          points: [
+            "Practice real exam-style questions",
+            "Review explanations and improve weak areas",
+            "Track readiness before exam day",
+            "Choose the practice exam for your certification",
+          ],
+          buttonText: pageContent.buttonText,
+          buttonLink: getSubscriptionUrl(courseKey),
+        }}
+      />
     </>
   );
 }

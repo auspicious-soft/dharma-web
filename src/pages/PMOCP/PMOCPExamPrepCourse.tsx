@@ -13,6 +13,7 @@ import AuthorizedTrainingPartner from "@/components/ReusableComponents/Authorize
 import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { pmocpLeadershipFooterContent } from "@/data/courseFooterContent";
 
 import {
   ExamsIcon,
@@ -506,7 +507,7 @@ const PMOCPExamPrepCourse = () => {
         </div>
       </section>
 
-      <TopFooterSection />
+      <TopFooterSection content={pmocpLeadershipFooterContent} />
     </>
   );
 };

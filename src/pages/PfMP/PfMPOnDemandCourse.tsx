@@ -6,7 +6,6 @@ import TrainingImage from "@/assets/training-image.png";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
-import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
@@ -505,7 +504,6 @@ const PfMPOnDemandCourse = () => {
       </section>
 
       <Testimonials id="two" />
-      <TopFooterSection />
     </>
   );
 };

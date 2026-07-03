@@ -11,6 +11,7 @@ import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import { Button } from "@/components/ui/button";
 import { getSubscriptionUrl } from "@/utils/links";
+import { pgmpLeadershipFooterContent } from "@/data/courseFooterContent";
 import {
   BarChart3,
   BookOpen,
@@ -516,7 +517,7 @@ const PgMPOnDemandCourse = () => {
       </section>
 
       <Testimonials id="two" />
-      <TopFooterSection />
+      <TopFooterSection content={pgmpLeadershipFooterContent} />
     </>
   );
 };

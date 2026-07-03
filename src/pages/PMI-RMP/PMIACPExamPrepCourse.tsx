@@ -13,6 +13,7 @@ import AuthorizedTrainingPartner from "@/components/ReusableComponents/Authorize
 import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { rmpRiskFooterContent } from "@/data/courseFooterContent";
 
 import {
   CircleArrowIcon,
@@ -377,7 +378,7 @@ const PMIACPExamPrepCourse = () => {
         </div>
       </section>
 
-      <TopFooterSection />
+      <TopFooterSection content={rmpRiskFooterContent} />
     </>
   );
 };

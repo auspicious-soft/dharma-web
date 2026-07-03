@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { getSubscriptionUrl } from "@/utils/links";
 
-interface FooterContent {
+export interface FooterContent {
   title: React.ReactNode;
   description: React.ReactNode;
   pointsIntro?: string;

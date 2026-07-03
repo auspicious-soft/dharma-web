@@ -10,6 +10,7 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
+import { pmocpLeadershipFooterContent } from "@/data/courseFooterContent";
 import {
   DetailIcon,
   ComIcon,
@@ -221,7 +222,7 @@ const PMOCPOnDemandCourse = () => {
       <StartFreeTrial courseKey="PMOCP" />
       <Testimonials id="two" />
       <Faq limit={5} />
-      <TopFooterSection />
+      <TopFooterSection content={pmocpLeadershipFooterContent} />
     </>
   );
 };

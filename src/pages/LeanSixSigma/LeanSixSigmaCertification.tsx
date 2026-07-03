@@ -38,6 +38,13 @@ const platformFeatures = [
 
 const leanCourses = [
   {
+    title: "Lean Six Sigma White Belt",
+    description:
+      "Build a strong foundation in Lean Six Sigma principles, terminology, and continuous improvement. Learn the basics of process improvement, waste reduction, and quality management while supporting improvement initiatives across your organization.",
+    idealFor:
+      "All Professionals, Team Members, Project Participants, Administrative Staff, and Anyone New to Lean Six Sigma.",
+  },
+  {
     title: "Lean Six Sigma Yellow Belt",
     description:
       "Build a strong foundation in Lean and Six Sigma principles. Learn how to identify waste, improve processes, solve problems, and contribute to continuous improvement initiatives within your organization.",
@@ -50,6 +57,13 @@ const leanCourses = [
       "Develop the skills to lead process improvement projects using the DMAIC methodology. Learn how to analyze data, identify root causes, implement solutions, and deliver measurable business benefits.",
     idealFor:
       "Project Managers, Team Leaders, Business Analysts, Operations Professionals, and Quality Practitioners.",
+  },
+  {
+    title: "Lean Six Sigma Black Belt",
+    description:
+      "Master advanced Lean Six Sigma tools and techniques to lead complex process improvement initiatives and drive organizational transformation. Learn to solve critical business problems using statistical analysis, leadership, and the DMAIC methodology to deliver sustainable results.",
+    idealFor:
+      "Senior Project Managers, Process Improvement Leaders, Operations Managers, Quality Managers, Continuous Improvement Professionals, and Business Excellence Leaders.",
   },
 ];
 

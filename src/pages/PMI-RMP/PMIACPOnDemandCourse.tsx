@@ -10,6 +10,7 @@ import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/T
 import PmiAtpBadge from "@/components/ReusableComponents/PmiAtpBadge/PmiAtpBadge";
 import { Button } from "@/components/ui/button";
 import { getSubscriptionUrl } from "@/utils/links";
+import { rmpRiskFooterContent } from "@/data/courseFooterContent";
 import {
   BarChart3,
   BookOpen,
@@ -433,7 +434,7 @@ const PMIACPOnDemandCourse = () => {
       </section>
 
       <Testimonials id="two" />
-      {/* <TopFooterSection /> */}
+      <TopFooterSection content={rmpRiskFooterContent} />
     </>
   );
 };

@@ -79,8 +79,8 @@ const PMIACPFlashCard = () => {
   return (
     <>
       <NavHeroSection
-        title="Build Agile Mastery with PMI-RMP® Flashcards"
-        description="Master essential PMI-RMP® principles with structured, high-impact flash cards designed for agile professionals. Reinforce key concepts across Scrum, Kanban, Lean, XP, Crystal, and hybrid approaches—aligned with the latest PMI-RMP® Exam Content Outline."
+        title="Build Risk Management Mastery with PMI-RMP® Flashcards"
+        description="Strengthen your understanding of essential PMI-RMP® concepts through concise, high-impact flashcards. Review key topics including risk strategy, identification, analysis, response, and monitoring—all aligned with the latest PMI-RMP® Examination Content Outline (ECO) to help you prepare with confidence."
         descriptionsecond=""
         sideImage={InnerPage}
       />

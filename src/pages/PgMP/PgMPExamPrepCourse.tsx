@@ -7,11 +7,13 @@ import InnerImage from "@/assets/inner-page.jpg";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";
+import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { pgmpLeadershipFooterContent } from "@/data/courseFooterContent";
 
 import {
   CircleArrowIcon,
@@ -371,6 +373,7 @@ const PgMPExamPrepCourse = () => {
           </Button>
         </div>
       </section>
+      <TopFooterSection content={pgmpLeadershipFooterContent} />
     </>
   );
 };

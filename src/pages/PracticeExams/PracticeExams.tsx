@@ -41,7 +41,7 @@ const keyValues = [
 ];
 
 const overviewPoints = [
-  "Full-length mock exams and focused practice sets",
+  "Practice real exam-style questions",
   "Questions aligned with current exam content outlines",
   "Detailed explanations for concept reinforcement",
   "Flexible practice for early preparation and final review",

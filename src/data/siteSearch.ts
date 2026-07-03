@@ -87,6 +87,13 @@ export const siteSearchEntries: SearchResult[] = [
     keywords: ["practice test", "mock exam", "questions"],
   },
   {
+    title: "Domains and Tasks",
+    description: "Browse certification domains and tasks by credential.",
+    path: "/domains-and-tasks",
+    category: "Resources",
+    keywords: ["domains", "tasks", "exam content outline", "eco"],
+  },
+  {
     title: "Flashcards",
     description: "Certification flashcards for fast review and exam readiness.",
     path: "/flash-cards",

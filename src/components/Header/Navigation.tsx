@@ -92,18 +92,11 @@ const menuItems: MenuItem[] = [
     label: "Resources",
     dropdown: [
       { label: "Practice Exams", href: "/real-practice-exam" },
-      { label: "PMP Domains and Tasks", href: "/pmp/pmp-domains-and-tasks" },
-      { label: "PgMP Domains and Tasks", href: "/pgmp/pgmp-domains-and-tasks" },
-      { label: "PfMP Domains and Tasks", href: "/pfmp/pfmp-domains-and-tasks" },
-      {
-        label: "PMOCP Domains and Tasks",
-        href: "/pmocp/pmocp-domains-and-tasks",
-      },
-      {
-        label: "PMI-RMP Domains and Tasks",
-        href: "/pmi-rmp/pmi-rmp-domains-and-tasks",
-      },
+      { label: "Domains and Tasks", href: "/domains-and-tasks" },
+      { label: "PDUs", href: "/pdus" },
+      { label: "Testimonials", href: "/reviews" },
       { label: "Flashcards", href: "/flash-cards" },
+      
     ],
   },
   {
@@ -113,14 +106,14 @@ const menuItems: MenuItem[] = [
   {
     label: "More",
     dropdown: [
-      { label: "PDUs", href: "/pdus" },
+      
       {
         label: "Lean Six Sigma Certification",
         href: "/lean-six-sigma-certification",
       },
       { label: "PMI-ACP Certification", href: "/pmi-acp-certification" },
       { label: "CAPM Certification", href: "/capm-certification" },
-      { label: "Testimonials", href: "/reviews" },
+      
       {
         label: "AI Project Management Certification",
         href: "/ai-project-management-certification",

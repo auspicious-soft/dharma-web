@@ -96,7 +96,6 @@ const menuItems: MenuItem[] = [
       { label: "PDUs", href: "/pdus" },
       { label: "Testimonials", href: "/reviews" },
       { label: "Flashcards", href: "/flash-cards" },
-      
     ],
   },
   {
@@ -106,14 +105,12 @@ const menuItems: MenuItem[] = [
   {
     label: "More",
     dropdown: [
-      
       {
         label: "Lean Six Sigma Certification",
         href: "/lean-six-sigma-certification",
       },
       { label: "PMI-ACP Certification", href: "/pmi-acp-certification" },
       { label: "CAPM Certification", href: "/capm-certification" },
-      
       {
         label: "AI Project Management Certification",
         href: "/ai-project-management-certification",

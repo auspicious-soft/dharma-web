@@ -1,6 +1,6 @@
 ﻿import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
+import TrainingImage from "@/assets/ExamSimulators/PgMPExamSimulatorPMIATP.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,

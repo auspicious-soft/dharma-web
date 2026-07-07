@@ -1,6 +1,10 @@
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/training-image.png";
-import InnerImage from "@/assets/inner-page.jpg";
+import PMPPracticeExamImage from "@/assets/PracticeExams/PMPPracticeExamPMIATP.png";
+import PgMPPracticeExamImage from "@/assets/PracticeExams/PgMPPracticeExamPMIATP.png";
+import PfMPPracticeExamImage from "@/assets/PracticeExams/PfMPPracticeExamPMIATP.png";
+import PMOCPPracticeExamImage from "@/assets/PracticeExams/PMOCPPracticeExamPMIATP.png";
+import RMPPracticeExamImage from "@/assets/PracticeExams/RMPPracticeExamPMIATP.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 import ContentTabs from "@/components/NavPages/ContentTabs";
@@ -83,12 +87,21 @@ const practiceExamContent: Record<
   },
 };
 
+const practiceExamImages: Record<CourseKey, string> = {
+  PMP: PMPPracticeExamImage,
+  PgMP: PgMPPracticeExamImage,
+  PfMP: PfMPPracticeExamImage,
+  PMOCP: PMOCPPracticeExamImage,
+  "PMI-RMP": RMPPracticeExamImage,
+};
+
 const buildRelatedResources = (
   resources: RelatedResource[],
+  courseKey: CourseKey,
 ) =>
   resources.map((resource) => ({
     ...resource,
-    image: InnerImage,
+    image: practiceExamImages[courseKey],
   }));
 
 export const pmpRelatedResources: RelatedResource[] = [
@@ -389,6 +402,7 @@ export default function CertificationPracticeExamPage({
   relatedResources,
 }: CertificationPracticeExamPageProps) {
   const pageContent = practiceExamContent[courseKey];
+  const pageImage = practiceExamImages[courseKey];
   const overview = {
     heading: "Overview",
     text: pageContent.description,
@@ -478,7 +492,7 @@ export default function CertificationPracticeExamPage({
         title={heroTitle}
         description={pageContent.headline}
         descriptionsecond={pageContent.description}
-        sideImage={InnerPage}
+        sideImage={pageImage ?? InnerPage}
       />
       <AuthorizedTrainingPartner
         title={pageContent.headline}
@@ -494,7 +508,7 @@ export default function CertificationPracticeExamPage({
         ]}
         descriptionTop=""
         descriptionBottom=""
-        image={TrainingImage}
+        image={pageImage ?? TrainingImage}
       />
 
       <ContentTabs
@@ -505,7 +519,7 @@ export default function CertificationPracticeExamPage({
         alsoLike={{
           heading: "You May Also Like",
           subheading: `Related ${resourceLabel} Learning Resources`,
-          slides: buildRelatedResources(relatedResources),
+          slides: buildRelatedResources(relatedResources, courseKey),
         }}
       />
       <TopFooterSection

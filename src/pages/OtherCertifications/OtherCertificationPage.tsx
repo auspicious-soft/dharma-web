@@ -33,6 +33,7 @@ type OtherCertificationPageProps = {
   heroTitle: string;
   heroDescription: string;
   heroDescriptionSecond: string;
+  heroImage?: string;
   introTitle: string;
   introParagraphs: string[];
   includedTitle?: string;
@@ -54,12 +55,14 @@ type OtherCertificationPageProps = {
   footerTitle: ReactNode;
   footerDescription: string;
   footerPoints: string[];
+  advisorImage?: string;
 };
 
 export default function OtherCertificationPage({
   heroTitle,
   heroDescription,
   heroDescriptionSecond,
+  heroImage = InnerPage,
   introTitle,
   introParagraphs,
   includedTitle = "What's Included",
@@ -81,6 +84,7 @@ export default function OtherCertificationPage({
   footerTitle,
   footerDescription,
   footerPoints,
+  advisorImage = TrainingImage,
 }: OtherCertificationPageProps) {
   return (
     <>
@@ -88,7 +92,7 @@ export default function OtherCertificationPage({
         title={heroTitle}
         description={heroDescription}
         descriptionsecond={heroDescriptionSecond}
-        sideImage={InnerPage}
+        sideImage={heroImage}
       />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
@@ -345,7 +349,7 @@ export default function OtherCertificationPage({
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <article className="mx-auto max-w-[620px] overflow-hidden rounded-[16px] border border-[#4f93f8] bg-white p-5 shadow-sm">
             <img
-              src={TrainingImage}
+              src={advisorImage}
               alt="Certification course advisor"
               className="w-full aspect-[2.9/1] object-cover rounded-[12px]"
             />

@@ -1,9 +1,9 @@
 import React from "react";
-import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
+import InnerPage from "@/assets/PMPExamPrep/PMPExamPrepHeroBanner.png";
+import TrainingImage from "@/assets/PMPExamPrep/PMPExamPrepPMIATP.png";
 import ContentTabs from "@/components/NavPages/ContentTabs";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
-import InnerImage from "@/assets/inner-page.jpg";
+import InnerImage from "@/assets/PMPExamPrep/PMPExamPrepHeroBanner.png";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import VideoSection from "@/components/ReusableComponents/VideoSection/VideoSection";

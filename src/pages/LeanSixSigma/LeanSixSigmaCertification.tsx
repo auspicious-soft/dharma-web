@@ -1,5 +1,5 @@
-import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
+import InnerPage from "@/assets/OtherCertifications/LeanSixSigmaHeroBanner.png";
+import TrainingImage from "@/assets/OtherCertifications/LeanSixSigmaHeroBanner.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";

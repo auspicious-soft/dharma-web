@@ -1,4 +1,5 @@
 import OtherCertificationPage from "./OtherCertificationPage";
+import AIPMHeroBanner from "@/assets/OtherCertifications/AIPMHeroBanner.png";
 import { getDashboardUrl } from "@/utils/links";
 
 const CPMAI_TRAINING_URL =
@@ -9,6 +10,7 @@ const AIProjectManagementCertification = () => (
     heroTitle="AI Project Management Professional Certification Program (AIPM)"
     heroDescription="Master AI-powered project management to improve decisions, automate routine tasks, boost team productivity, and deliver successful outcomes."
     heroDescriptionSecond="Gain practical skills and confidence to lead AI-enabled projects effectively."
+    heroImage={AIPMHeroBanner}
     introTitle="AI-Powered Project Management for Modern Delivery"
     introParagraphs={[
       "Artificial Intelligence is transforming how projects are planned, managed, and delivered.",

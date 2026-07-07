@@ -1,5 +1,5 @@
-import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
+import InnerPage from "@/assets/OnDemandCourse/PMPSelfPacedHeroBanner.png";
+import TrainingImage from "@/assets/OnDemandCourse/PMPSelfPacedPMIATP.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";

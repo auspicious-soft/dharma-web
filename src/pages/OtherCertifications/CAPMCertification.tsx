@@ -1,10 +1,12 @@
 import OtherCertificationPage from "./OtherCertificationPage";
+import CAPMHeroBanner from "@/assets/OtherCertifications/CAPMHeroBanner.png";
 
 const CAPMCertification = () => (
   <OtherCertificationPage
     heroTitle="CAPM® Certification"
     heroDescription="Start Your Project Management Career with Confidence."
     heroDescriptionSecond="Prepare for your CAPM® exam with flexible learning options, comprehensive study materials, and realistic practice exams designed to help you build confidence and succeed on exam day."
+    heroImage={CAPMHeroBanner}
     introTitle="Study Your Way. Pass with Confidence."
     introParagraphs={[
       "The Certified Associate in Project Management (CAPM®) certification from PMI is the perfect starting point for aspiring project professionals.",

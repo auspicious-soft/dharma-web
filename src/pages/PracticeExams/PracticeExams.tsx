@@ -1,6 +1,5 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
+import PracticeExamImage from "@/assets/PracticeExams/PMPPracticeExamPMIATP.png";
 import {
   ChartIcon,
   ClockIcon,
@@ -78,7 +77,7 @@ const PracticeExams = () => {
         title="Practice Exams for Confident Certification Readiness"
         description="Prepare smarter with exam-style practice tests designed to help you measure readiness, strengthen recall, and build confidence before exam day. These practice exams support focused preparation across key concepts, domains, scenarios, and exam-focused knowledge areas."
         descriptionsecond="Whether you are beginning your preparation or completing a final review, practice exams help you identify gaps, improve timing, and approach your certification exam with greater confidence."
-        sideImage={InnerPage}
+        sideImage={PracticeExamImage}
       />
 
       <section className="bg-white py-10 md:py-14 lg:py-20">
@@ -144,7 +143,7 @@ const PracticeExams = () => {
             </div>
             <div>
               <img
-                src={TrainingImage}
+                src={PracticeExamImage}
                 alt="Practice exam preparation"
                 className="rounded-3xl w-full object-cover"
               />

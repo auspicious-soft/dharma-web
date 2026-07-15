@@ -49,7 +49,7 @@ const Home = () => {
     {
       question: "Do your courses include PDUs or contact hours?",
       answer:
-        "Many of our courses provide the required contact hours for certification applications and may also help earn PDUs where applicable.",
+        "Yes. Most of our training programs include the required PMI contact hours or Professional Development Units (PDUs), depending on the course. Certification preparation courses include the required contact hours needed to meet PMI's exam eligibility requirements. Professional development and post-certification courses award PDUs, which can be claimed toward maintaining your PMI certifications. The number of contact hours or PDUs varies by course. Upon successful completion, you will receive a certificate indicating the applicable contact hours or PDUs.",
     },
     {
       question: "Can I study on mobile devices?",

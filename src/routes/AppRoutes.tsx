@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Layouts from "@/layouts";
 import PMPExamPrepCourse from "@/pages/PMP/PMPExamPrepCourse";
@@ -85,6 +85,12 @@ const AppRoutes = () => {
 
         <Route index element={<Home />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/pmi" element={<Navigate to="/search?q=pmi" replace />} />
+        <Route path="/pmp" element={<Navigate to="/search?q=pmp" replace />} />
+        <Route path="/pgmp" element={<Navigate to="/search?q=pgmp" replace />} />
+        <Route path="/pfmp" element={<Navigate to="/search?q=pfmp" replace />} />
+        <Route path="/pmocp" element={<Navigate to="/search?q=pmocp" replace />} />
+        <Route path="/pmi-rmp" element={<Navigate to="/search?q=pmi-rmp" replace />} />
 
         {/* PMP Pages */}
         <Route path="pmp">
@@ -258,6 +264,7 @@ const AppRoutes = () => {
         <Route path="/domains-and-tasks" element={<DomainsAndTasks />} />
         {/* Flashcards Page */}
         <Route path="/flash-cards" element={<FlashCards />} />
+        <Route path="/flashcards" element={<FlashCards />} />
         {/*PDUs Page */}
         <Route path="/pdus" element={<PDUs />} />
         {/*Corporate Training Page */}

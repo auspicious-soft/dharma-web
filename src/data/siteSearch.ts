@@ -96,7 +96,7 @@ export const siteSearchEntries: SearchResult[] = [
   {
     title: "Flashcards",
     description: "Certification flashcards for fast review and exam readiness.",
-    path: "/flash-cards",
+    path: "/flashcards",
     category: "Resources",
     keywords: ["flash cards", "study", "revision"],
   },

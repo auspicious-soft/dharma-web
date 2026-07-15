@@ -108,11 +108,11 @@ const advisorHeadings: Record<CourseKey, string> = {
 };
 
 const examNames: Record<CourseKey, string> = {
-  PMP: "PMPÂ®",
-  PgMP: "PgMPÂ®",
-  PfMP: "PfMPÂ®",
+  PMP: "PMP",
+  PgMP: "PgMP",
+  PfMP: "PfMP",
   PMOCP: "PMI-PMOCP",
-  "PMI-RMP": "PMI-RMPÂ®",
+  "PMI-RMP": "PMI-RMP",
 };
 
 const getTrainingHighlights = (examName: string) => [

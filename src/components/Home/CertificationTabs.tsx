@@ -250,7 +250,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "PMP® Exam Simulator",
       description:
-        "Test your readiness with realistic mock exams, timed practice, and detailed answer explanations.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button:"Learn More"
     },
@@ -258,7 +258,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "PMP® Application Support",
       description:
-        "Get expert help to complete your application correctly and avoid delays or rework.",
+        "Get expert guidance to complete your PMP® application confidently including audit support.",
       image: TabImage,
       button:"Learn More"
     },
@@ -266,7 +266,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "PMP® On-Demand",
       description:
-        "Study anytime and anywhere with guided lessons, structured modules, and flexible self-paced learning.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button:"Learn More",
       imageKey: "on-demand course"
@@ -283,7 +283,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "PMP® Exam Prep",
       description:
-        "Prepare for the PMP® exam with our all-in-one Exam Prep bundle with access to Online Course, Practice Exams and tools that build confidence",
+        "Prepare for the PMP® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button:"Learn More",
       imageKey: "online exam prep"
@@ -311,7 +311,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "PgMP® Exam Simulator",
       description:
-        "Test your readiness with realistic mock exams, scenario-based practice, and detailed answer explanations.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button: "Learn More"
     },
@@ -319,7 +319,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "PgMP® Application Support",
       description:
-        "Get expert help to complete your PgMP® application correctly, including audit guidance and full Panel Review support.",
+        "Get expert help to complete your application including audit guidance and Panel Review Support.",
       image: TabImage,
       button: "Learn More"
     },
@@ -327,7 +327,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "PgMP® On-Demand",
       description:
-        "Study anytime with guided lessons, structured modules, and flexible self-paced learning aligned to the PgMP® exam.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button: "Learn More",
       imageKey: "on-demand course"
@@ -344,7 +344,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "PgMP® Exam Prep",
       description:
-        "Prepare for the PgMP® exam with our all-in-one Exam Prep bundle with access to Online Course, Practice Exams and tools that build confidence",
+        "Prepare for the PgMP® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button: "Learn More",
       imageKey: "online exam prep"
@@ -372,7 +372,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "PfMP® Exam Simulator",
       description:
-        "Test your readiness with realistic mock exams, scenario-based practice, and detailed answer explanations.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button: "Learn More"
     },
@@ -380,7 +380,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "PfMP® Application Support",
       description:
-        "Get expert help to complete your application correctly, including audit guidance and full Panel Review support.",
+        "Get expert help to complete your application including audit guidance and Panel Review Support.",
       image: TabImage,
       button: "Learn More"
     },
@@ -388,7 +388,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "PfMP® On-Demand",
       description:
-        "Study anytime with guided lessons, structured modules, and flexible self-paced learning aligned to the PgMP® exam.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button: "Learn More",
       imageKey: "on-demand course"
@@ -405,7 +405,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "PfMP® Exam Prep",
       description:
-        "Prepare for the PfMP® exam with our all-in-one Exam Prep bundle with access to Online Course, Practice Exams and tools that build confidence",
+        "Prepare for the PfMP® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button: "Learn More",
       imageKey: "online exam prep"
@@ -433,7 +433,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "PMI-PMOCP® Exam Simulator",
       description:
-        "Test your knowledge, track your progress, and feel confident walking into the exam.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button: "Learn More"
     },
@@ -441,7 +441,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "PMI-PMOCP® Application Support",
       description:
-        "Get expert guidance to complete your PMI-PMOCP® application correctly, including audit support and eligibility assistance.",
+        "Get expert guidance to complete your PMI-PMOCP® application confidently including audit support.",
       image: TabImage,
       button: "Learn More"
     },
@@ -449,7 +449,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "PMI-PMOCP® On-Demand",
       description:
-        "Study anytime with guided lessons, structured modules, and flexible self-paced learning aligned to the PMI-PMOCP® exam.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button: "Learn More",
       imageKey: "on-demand course"
@@ -466,7 +466,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "PMI-PMOCP® Exam Prep",
       description:
-        "Get everything you need to apply and prepare for exam day with our all-in-one bundle, including online course access, practice exams, and tools that build confidence.",
+        "Prepare for the PMI-PMOCP® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button: "Learn More",
       imageKey: "online exam prep"
@@ -494,7 +494,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "CAPM® Exam Simulator",
       description:
-        "Test your knowledge, track your progress, and feel confident walking into the exam.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button: "Learn More"
     },
@@ -502,7 +502,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "CAPM® Application Support",
       description:
-        "Get expert guidance to complete your CAPM® application confidently, including audit support and eligibility assistance.",
+        "Get expert guidance to complete your CAPM® application confidently including audit support.",
       image: TabImage,
       button: "Learn More"
     },
@@ -510,7 +510,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "CAPM® On-Demand",
       description:
-        "Study anytime with guided lessons, structured modules, and flexible self-paced learning designed to advance your risk management skills and prepare you for the CAPM® exam.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button: "Learn More",
       imageKey: "on-demand course"
@@ -527,7 +527,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "CAPM® Exam Prep",
       description:
-        "Get everything you need to apply and prepare for exam day with our all-in-one bundle, including online course access, practice exams, and tools that build confidence.",
+        "Prepare for the CAPM® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button: "Learn More",
       imageKey: "online exam prep"
@@ -555,7 +555,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 2,
       title: "PMI-RMP® Exam Simulator",
       description:
-        "Test your knowledge, track your progress, and feel confident walking into the exam.",
+        "Test your readiness with realistic mock exams, scenario-based practice and answer explanations.",
       image: TabImage,
       button: "Learn More"
     },
@@ -563,7 +563,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 3,
       title: "PMI-RMP® Application Support",
       description:
-        "Get expert guidance to complete your PMI-RMP® application confidently, including audit support and eligibility assistance.",
+        "Get expert guidance to complete your PMI-RMP® application confidently including audit support.",
       image: TabImage,
       button: "Learn More"
     },
@@ -571,7 +571,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 4,
       title: "PMI-RMP® On-Demand",
       description:
-        "Study anytime with guided lessons, structured modules, and flexible self-paced learning designed to advance your risk management skills and prepare you for the PMI-RMP® exam.",
+        "Study anytime with guided lessons, structured modules, and flexible self-paced learning.",
       image: TabImage,
       button: "Learn More",
       imageKey: "on-demand course"
@@ -588,7 +588,7 @@ const tabCourses: Record<Tab, Course[]> = {
       id: 6,
       title: "PMI-RMP® Exam Prep",
       description:
-        "Get everything you need to apply and prepare for exam day with our all-in-one bundle, including online course access, practice exams, and tools that build confidence.",
+        "Prepare for the PMI-RMP® exam with our all-in-one Exam Prep bundle with access to digital learning resources.",
       image: TabImage,
       button: "Learn More",
       imageKey: "online exam prep"

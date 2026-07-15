@@ -93,9 +93,11 @@ const menuItems: MenuItem[] = [
     dropdown: [
       { label: "Practice Exams", href: "/real-practice-exam" },
       { label: "Domains and Tasks", href: "/domains-and-tasks" },
-      { label: "PDUs", href: "/pdus" },
+      { label: "Flash Card", href: "/flashcards" },
+      { label: "Earn PDUs", href: "/pdus" },
       { label: "Testimonials", href: "/reviews" },
-      { label: "Flashcards", href: "/flash-cards" },
+      { label: "Webinars", href: "/webinars" },
+      { label: "Podcasts", href: "/podcasts" },
     ],
   },
   {

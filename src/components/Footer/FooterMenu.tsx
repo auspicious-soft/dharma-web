@@ -26,11 +26,13 @@ export default function FooterMenu() {
   ];
 
   const resources = [
-    { title: "Blogs", href: "https://www.vcareprojectmanagement.com/blogs/news" },
-    { title: "Podcasts", href: "/podcasts" },
+    { title: "Practice Exams", href: "/real-practice-exam" },
+    { title: "Domains and Tasks", href: "/domains-and-tasks" },
+    { title: "Flash Card", href: "/flashcards" },
+    { title: "Earn PDUs", href: "/pdus" },
+    { title: "Testimonials", href: "/reviews" },
     { title: "Webinars", href: "/webinars" },
-    { title: "Mobile App", href: "/mobile-app" },
-    { title: "Affiliates", href: "/affiliate" },
+    { title: "Podcasts", href: "/podcasts" },
   ];
 
   const examPrep = [

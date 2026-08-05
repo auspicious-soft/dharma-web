@@ -130,7 +130,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({
     const requestBody = new FormData();
     requestBody.append("type", enquiryType);
     requestBody.append("data", JSON.stringify(enquiryData));
-    requestBody.append("emailSubject", enquiryType);
+    requestBody.append("emailSubject", selectedSubjectLabel || enquiryType);
 
     formValues.getAll("file").forEach((file) => {
       if (file instanceof File && file.size > 0) {

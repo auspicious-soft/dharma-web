@@ -108,11 +108,7 @@ const learningExperience = [
     description:
       "See how our flexible self-paced course helps you build skills and prepare for PgMP® certification anytime, anywhere.",
   },
-  {
-    title: "PgMP® On-Demand Certification Fast Track",
-    description:
-      "Discover expert-led lessons and exam-focused content designed to help you pass with confidence.",
-  },
+
 ];
 
 const examChallenge = [
@@ -335,10 +331,10 @@ const PgMPOnDemandCourse = () => {
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-16">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
+          <div className="grid grid-cols-1 gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Receive Your 24 Training Hours Certificate
+                Receive Your Training Hours Certificate
               </h2>
               <p className="text-paragraph text-sm font-normal">
                 Earn a personalized certificate from a trusted PMI Premier
@@ -352,13 +348,13 @@ const PgMPOnDemandCourse = () => {
                 building valuable skills.
               </p>
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
               <img
                 src={CertificateImage}
                 alt="Certificate Image"
                 className="rounded-sm"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -370,7 +366,7 @@ const PgMPOnDemandCourse = () => {
               See the Learning Experience in Action
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center text-center">
+          <div className="grid grid-cols-1  gap-5 md:gap-7 items-center text-center">
             {learningExperience.map((item, index) => (
               <div key={index} className="w-full">
                 <video

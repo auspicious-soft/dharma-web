@@ -1,5 +1,5 @@
 import InnerPage from "@/assets/OtherCertifications/LeanSixSigmaHeroBanner.png";
-import TrainingImage from "@/assets/OtherCertifications/LeanSixSigmaHeroBanner.png";
+import TrainingImage from "@/assets/CollaborateHelp.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";
@@ -223,9 +223,9 @@ const LeanSixSigmaCertification = () => {
                 key={course.title}
                 className="bg-white rounded-[12px] p-5 md:p-7 border border-[#d5dddd] flex flex-col"
               >
-                <div className="w-12 h-12 rounded-[10px] bg-light-blue text-primary_blue flex items-center justify-center mb-4">
+                {/* <div className="w-12 h-12 rounded-[10px] bg-light-blue text-primary_blue flex items-center justify-center mb-4">
                   <Trophy size={23} />
-                </div>
+                </div> */}
                 <h3 className="text-Black_light text-xl md:text-2xl font-bold">
                   {course.title}
                 </h3>
@@ -354,20 +354,25 @@ const LeanSixSigmaCertification = () => {
           <article className="mx-auto max-w-[620px] overflow-hidden rounded-[16px] border border-[#4f93f8] bg-white p-5 shadow-sm">
             <img
               src={TrainingImage}
-              alt="Lean Six Sigma course advisor"
-              className="w-full aspect-[2.9/1] object-cover rounded-[12px]"
+              alt="Certification course advisor"
+              className="w-full aspect-[2.902/1] object-cover rounded-[12px]"
             />
 
             <div className="mt-5 text-center">
               <h3 className="text-Black_light text-xl md:text-2xl font-bold leading-snug">
                 Not quite ready? We're here to help.
               </h3>
+
               <p className="text-paragraph text-sm leading-6 mt-2">
                 Still deciding if this course is right for you?
               </p>
             </div>
 
-            <Button asChild variant="outline" className="w-full rounded-[10px] mt-7">
+            <Button
+              asChild
+              variant="outline"
+              className="w-full rounded-[10px] mt-7"
+            >
               <a href={CALENDLY_CONSULTATION_URL}>Talk to an Advisor</a>
             </Button>
           </article>

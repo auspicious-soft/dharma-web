@@ -40,7 +40,7 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         {plan.name}
       </div>
 
-      <div className={`flex flex-col gap-5 ${plan.popular ? "lg:mb-10" : ""}`}>
+      <div className={`flex flex-col gap-5 }`}>
         {plan.price && (
           <div className="text-xl font-semibold capitalize leading-6">
             {plan.price}

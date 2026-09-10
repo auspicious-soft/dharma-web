@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import InnerPage from "@/assets/inner-page.jpg";
 import PmpLogo from "@/assets/pmp-logo.png";
-import TrainingImage from "@/assets/training-image.png";
+import TrainingImage from "@/assets/CollaborateHelp.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";

@@ -1,10 +1,16 @@
 import type { FaqItem } from "@/data/faqs";
+import PMPApplicationSupportImage from "@/assets/ApplicationSupport/PMPApplicationSupport.png";
+import PgMPApplicationSupportImage from "@/assets/ApplicationSupport/PgMPApplicationSupport.png";
+import PfMPApplicationSupportImage from "@/assets/ApplicationSupport/PfMPApplicationSupport.png";
+import RMPApplicationSupportImage from "@/assets/ApplicationSupport/RMPApplicationSupport.png";
+import PMOCPApplicationSupportImage from "@/assets/ApplicationSupport/PMOCPApplicationSupport.png";
 
 export type ApplicationSupportContent = {
   title: string;
   heroDescription: string;
   heading: string;
   introNote?: string;
+  image?: string;
   paragraphs: string[];
   price: string;
   faqs: FaqItem[];
@@ -37,6 +43,7 @@ export const applicationSupportContent = {
     heading:
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
+    image: PMPApplicationSupportImage,
     price: "$299",
     paragraphs: [
       "Completing the PMP® application can be confusing and time-consuming, especially if you are applying for the first time. Many experienced professionals struggle not with eligibility, but with clearly presenting their project experience in line with PMI's expectations. Our PMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -93,6 +100,7 @@ export const applicationSupportContent = {
       "End-to-end support for the PgMP® application process, fully aligned with PMI expectations, helping applicants submit a strong application with confidence - including full Panel Review support and a Panel Approval Guarantee.",
     heading: "Full Application Support, Panel Review Support & Pass Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
+    image: PgMPApplicationSupportImage,
     price: "$299",
     paragraphs: [
       "Completing the PgMP® application can be complex and time-consuming, especially for first-time applicants. Many highly experienced professionals meet the eligibility requirements but struggle to clearly present their program management experience in line with PMI's expectations. Our PgMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -148,6 +156,7 @@ export const applicationSupportContent = {
       "End-to-end support for the PfMP® application process, fully aligned with PMI expectations, helping applicants submit a strong application with confidence - including full Panel Review support and a Panel Approval Guarantee.",
     heading: "Full Application Support, Panel Review Support & Pass Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
+    image: PfMPApplicationSupportImage,
     price: "$199",
     paragraphs: [
       "Completing the PfMP® application can be complex and time-consuming, especially for first-time applicants. Many highly experienced professionals meet the eligibility requirements but struggle to clearly present their program management experience in line with PMI's expectations. Our PfMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -203,6 +212,7 @@ export const applicationSupportContent = {
     heading:
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
+    image: RMPApplicationSupportImage,
     price: "$199",
     paragraphs: [
       "Completing the PMI-RMP® application can be confusing and time-consuming, especially for first-time applicants. Many experienced professionals meet the eligibility requirements but struggle to clearly present their risk management experience in line with PMI's expectations. Our PMI-RMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -258,6 +268,7 @@ export const applicationSupportContent = {
     heading:
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
+    image: PMOCPApplicationSupportImage,
     price: "$199",
     paragraphs: [
       "Completing the PMOCP™ application can be confusing and time-consuming, especially for first-time applicants. Many experienced professionals meet the eligibility requirements but struggle to clearly present their PMO leadership, governance, and organizational support experience in line with PMI's expectations. Our PMOCP™ Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -312,6 +323,7 @@ export const applicationSupportContent = {
       "End-to-end support for the application process, fully aligned with PMI expectations, helping applicants submit a strong application with confidence.",
     heading:
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
+    image: PMPApplicationSupportImage,
     price: "$199",
     paragraphs: [
       "The application confirms candidates meet strict eligibility criteria, making the certification more valuable to employers. However, completing the application can be confusing and time-consuming, especially when presenting experience in line with PMI expectations.",

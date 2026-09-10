@@ -322,7 +322,8 @@ const PDUs = () => {
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-16">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
+          {/* <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center"> */}
+          <div className="grid grid-cols-1 gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
                 Receive Your PDU Certificate & Claim Code
@@ -342,22 +343,22 @@ const PDUs = () => {
                 successfully completing each course.
               </p>
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
               <img
                 src={CertificateImage}
                 alt="Certificate"
                 className="rounded-sm"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
-
+{/* 
       <VideoSection
         videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
         title={<>Preview How You'll Learn</>}
         description="Discover how our flexible on-demand PDU courses fit seamlessly into your professional schedule and support continuous learning anytime, anywhere."
-      />
+      /> */}
 
       <Testimonials id="pdus-testimonials" />
       <section className="overflow-hidden py-10 md:py-14 lg:py-20">

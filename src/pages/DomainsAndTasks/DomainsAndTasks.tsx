@@ -1,15 +1,13 @@
-import InnerPage from "@/assets/inner-page.jpg";
+import InnerPage from "@/assets/DomainsandTasks.png";
+import PmpLogo from "@/assets/Logos/PMP LOgo.png";
+import PgmpLogo from "@/assets/Logos/PgMP Logo.png";
+import PfmpLogo from "@/assets/Logos/PfMP Logo.png";
+import PmocpLogo from "@/assets/Logos/PMOCP logo.png";
+import RmpLogo from "@/assets/Logos/RMP Logo.png";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import { Button } from "@/components/ui/button";
 import { getCoursePagePath } from "@/utils/links";
-import {
-  ChartIcon,
-  DetailIcon,
-  ExamsIcon,
-  HatIcon,
-  HourGlassIcon,
-} from "@/utils/svgicons";
 
 const whyThisHelps = [
   "Simplifies the ECO, making it easier to understand and interpret",
@@ -24,31 +22,31 @@ const domainTaskLinks = [
     title: "PMP",
     description: "Explore project management domains, tasks, and enablers.",
     href: getCoursePagePath("PMP", "domains-and-tasks"),
-    icon: ExamsIcon,
+    image: PmpLogo,
   },
   {
     title: "PgMP",
     description: "Review program management domains and task expectations.",
     href: getCoursePagePath("PgMP", "domains-and-tasks"),
-    icon: DetailIcon,
+    image: PgmpLogo,
   },
   {
     title: "PfMP",
     description: "Study portfolio management domains and task structure.",
     href: getCoursePagePath("PfMP", "domains-and-tasks"),
-    icon: ChartIcon,
+    image: PfmpLogo,
   },
   {
     title: "PMOCP",
     description: "Understand PMO leadership domains and task areas.",
     href: getCoursePagePath("PMOCP", "domains-and-tasks"),
-    icon: HatIcon,
+    image: PmocpLogo,
   },
   {
     title: "PMI-RMP",
     description: "Strengthen risk management domain and task readiness.",
     href: getCoursePagePath("PMI-RMP", "domains-and-tasks"),
-    icon: HourGlassIcon,
+    image: RmpLogo,
   },
 ];
 
@@ -150,9 +148,13 @@ const DomainsAndTasks = () => {
                 href={item.href}
                 className="min-h-40 p-5 bg-light-blue rounded-[20px] flex flex-col items-center justify-center text-center hover:shadow-md transition"
               >
-                <div className="w-[60px] h-[60px] flex items-center justify-center m-auto bg-white rounded-[99px] outline outline-1 outline-offset-[-1px] outline-[#4c8dea]">
-                  <item.icon />
-                </div>
+                {/* <div className="w-[62px] h-[62px] flex items-center justify-center m-auto bg-white rounded-[99px] overflow-hidden outline outline-1 outline-offset-[-1px] outline-[#4c8dea]"> */}
+                  <img
+                    src={item.image}
+                    alt={`${item.title} logo`}
+                    className="w-[100px] h-[100px] object-contain p-2"
+                  />
+                {/* </div> */}
                 <h3 className="text-primary_heading text-base md:text-lg font-bold mt-4 mb-2">
                   {item.title}
                 </h3>
@@ -167,8 +169,9 @@ const DomainsAndTasks = () => {
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-5 md:gap-7 items-center">
-            <div className="w-full">
+          {/* <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-5 md:gap-7 items-center"> */}
+          <div className="grid grid-cols-1 gap-5 md:gap-7 items-center">
+            {/* <div className="w-full">
               <video
                 className="w-full object-cover rounded-2xl md:rounded-[28.10px]"
                 controls
@@ -179,7 +182,7 @@ const DomainsAndTasks = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-            </div>
+            </div> */}
 
             <div className="flex flex-col gap-3">
               <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">

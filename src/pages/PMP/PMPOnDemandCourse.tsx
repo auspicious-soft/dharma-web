@@ -214,6 +214,19 @@ const pmpOnDemandFaqs = [
   },
 ];
 
+const learningExperience = [
+  {
+    title: "PMP® On-Demand Learning",
+    description:
+      "See how our flexible self-paced course helps you build skills and prepare for PMP® certification anytime, anywhere.",
+  },
+  // {
+  //   title: "PfMP® On-Demand Certification Fast Track",
+  //   description:
+  //     "Discover expert-led lessons and exam-focused content designed to help you pass with confidence.",
+  // },
+];
+
 const successBullets = [
   "30M+ project professionals needed globally by 2035",
   "Higher earning potential for PMP® holders",
@@ -311,16 +324,28 @@ const PMPOnDemandCourse = () => {
               See the Learning Experience in Action
             </h2>
           </div>
-          <video
-            className="w-full max-w-[900px] mx-auto object-cover rounded-2xl md:rounded-[28px]"
-            controls
-          >
-            <source
-              src="https://www.w3schools.com/html/mov_bbb.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+           <div className="grid grid-cols-1 gap-5 md:gap-7 items-center text-center">
+            {learningExperience.map((item, index) => (
+              <div key={index} className="w-full">
+                <video
+                  className="w-full object-cover rounded-2xl md:rounded-[28.10px]"
+                  controls
+                >
+                  <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <h3 className="self-stretch justify-start text-Black_light text-xl md:text-3xl font-bold md:leading-[46px] mt-3 md:mt-5 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-paragraph text-sm font-normal leading-[26px]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -5,7 +5,6 @@ import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/T
 import { Button } from "@/components/ui/button";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/training-image.png";
-import RMPApplicationSupportImage from "@/assets/OtherCertifications/RMPApplicationSupport.png";
 import type { ApplicationSupportContent } from "@/data/applicationSupport";
 import { getSubscriptionUrl } from "@/utils/links";
 import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
@@ -25,8 +24,7 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
         : title.includes("pfmp")
           ? "PfMP"
           : "PMP";
-  const supportImage =
-    courseKey === "PMI-RMP" ? RMPApplicationSupportImage : TrainingImage;
+  const supportImage = content.image || TrainingImage;
 
   return (
     <>
@@ -34,7 +32,7 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
         title={content.title}
         description={content.heroDescription}
         descriptionsecond=""
-        sideImage={InnerPage}
+        sideImage={supportImage}
       />
 
       <section className="py-10 md:py-14 lg:py-20">

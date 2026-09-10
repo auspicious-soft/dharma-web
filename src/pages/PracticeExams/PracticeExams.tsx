@@ -1,5 +1,6 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import PracticeExamImage from "@/assets/PracticeExams/PMPPracticeExamPMIATP.png";
+import PracticeExamImage from "@/assets/PracticeExams/PracticeExamHeader.png";
+import PracticeExamConfidence from "@/assets/PracticeExams/PracticeExamConfidence.png";
 import {
   ChartIcon,
   ClockIcon,
@@ -143,7 +144,7 @@ const PracticeExams = () => {
             </div>
             <div>
               <img
-                src={PracticeExamImage}
+                src={PracticeExamConfidence}
                 alt="Practice exam preparation"
                 className="rounded-3xl w-full object-cover"
               />

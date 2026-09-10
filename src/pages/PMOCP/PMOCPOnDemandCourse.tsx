@@ -1,6 +1,6 @@
 import InnerPage from "@/assets/inner-page.jpg";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import CertificateImage from "@/assets/certificate-image.png";
+import CertificateImage from "@/assets/ExamSimulatorBanner.png";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
@@ -229,16 +229,11 @@ const PMOCPOnDemandCourse = () => {
               </ul>
             </div>
             <div className="w-full ">
-              <video
-                className="w-full object-cover rounded-2xl md:rounded-[28.10px]"
-                controls
-              >
-                <source
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <img
+                src={CertificateImage}
+                alt="Certificate Image"
+                className="rounded-sm"
+              />
               <PmiAtpBadge />
             </div>
           </div>
@@ -284,7 +279,7 @@ const PMOCPOnDemandCourse = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-                Earn Your 10 Training Hours Certificate
+                Earn Your Training Hours Certificate
               </h2>
               <p className="text-paragraph text-sm font-normal">
                 Receive a personalized certificate from a PMI Premier Authorized

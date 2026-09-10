@@ -20,7 +20,7 @@ const DownloadvCare = () => {
             <div className="flex flex-col gap-2 max-w-[500px] w-full">
               <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px]">
                 Take your exam preparation to the next level with the vCare PM
-                Exam Mentor app. Access expert learning resources, full-length
+                Study Buddy app. Access expert learning resources, full-length
                 mock exams, targeted practice tests, and interactive flash
                 cards—all designed by project management experts, to boost your confidence and help you
                 succeed. Whether you’re at home or on the go, prep smarter with
@@ -43,7 +43,7 @@ const DownloadvCare = () => {
               </p>
             </div>
             <p className="self-stretch justify-start text-paragraph text-sm font-normal leading-[26px] mt-2 md:mt-4 max-w-[500px] w-full">
-              Download vCare PM Exam Mentor today and get one step closer to your certification—anytime, anywhere!
+              Download vCare PM Study Buddy today and get one step closer to your certification—anytime, anywhere!
             </p>
             <div className="flex flex-row gap-3 mt-4 md:mt-7">
               <a

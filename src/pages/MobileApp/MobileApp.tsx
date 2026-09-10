@@ -138,7 +138,7 @@ const MobileApp = () => {
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
           <div className="flex flex-col mb-5 md:mb-7 text-center">
             <h2 className="text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
-              What’s Inside the vCare PM Exam Mentor App
+              What’s Inside the vCare PM Study Buddy App
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-3 md:gap-y-5">
@@ -234,7 +234,7 @@ const MobileApp = () => {
               Start Your Exam Preparation Today
             </h2>
             <p className="text-paragraph text-sm font-normal mt-1 w-full leading-[26px]">
-              Join professionals worldwide using vCare PM Exam Mentor to prepare
+              Join professionals worldwide using vCare PM Study Buddy to prepare
               with confidence.
             </p>
             <div className="inline-flex justify-center items-center gap-2.5 w-full mt-3">

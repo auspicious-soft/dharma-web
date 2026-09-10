@@ -60,7 +60,7 @@ const certificationImages: Record<Tab, Record<string, string>> = {
       import.meta.url,
     ).href,
     "exam voucher bundle": new URL(
-      "../../assets/PMPCertificationPath/ApplicationSupport.png",
+      "../../assets/PMPCertificationPath/PMPExamVoucherBundle.png",
       import.meta.url,
     ).href,
   },

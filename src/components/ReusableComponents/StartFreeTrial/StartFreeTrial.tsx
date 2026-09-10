@@ -1,6 +1,6 @@
 import React from "react";
 import FreeTralBg from "@/assets/free-trail-bg.jpg";
-import FreeTrailImage from "@/assets/free-trail-img.jpg";
+import FreeTrailImage from "@/assets/HomePageExamSimulatorTrial.png";
 import { Button } from "../../ui/button";
 import { getSubscriptionUrl } from "@/utils/links";
 import type { CourseKey } from "../PlanSection/plans";

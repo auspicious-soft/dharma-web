@@ -14,7 +14,7 @@ const DownloadvCare = () => {
                 Download{" "}
               </span>
               <span className="text-primary_blue text-2xl md:text-3xl  font-extrabold md:leading-[46px]">
-                vCare PM Exam Mentor
+                vCare PM Study Buddy
               </span>
             </h2>
             <div className="flex flex-col gap-2 max-w-[500px] w-full">
@@ -46,11 +46,18 @@ const DownloadvCare = () => {
               Download vCare PM Exam Mentor today and get one step closer to your certification—anytime, anywhere!
             </p>
             <div className="flex flex-row gap-3 mt-4 md:mt-7">
-              <img
-                src={GooglePlay}
-                alt="Google Play"
-                className="max-w-32 w-full"
-              />
+              <a
+                href="https://play.google.com/store/apps/details?id=com.vcarepmmentor&pcampaignid=web_share"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Download vCare PM Study Buddy on Google Play"
+              >
+                <img
+                  src={GooglePlay}
+                  alt="Google Play"
+                  className="max-w-32 w-full"
+                />
+              </a>
               <img
                 src={ApplePlay}
                 alt="Apple Play"

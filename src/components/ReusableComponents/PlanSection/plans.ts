@@ -5,7 +5,7 @@ export interface Plan {
   popular: boolean;
 }
 
-export type CourseKey = "PMP" | "PgMP" | "PfMP" | "PMOCP" | "PMI-RMP";
+export type CourseKey = "PMP" | "PgMP" | "PfMP" | "PMOCP" | "PMI-RMP" | "CPMAI";
 export type PlanDuration = "1" | "3";
 
 interface CoursePlanByDuration {

@@ -1,4 +1,4 @@
-import FooterLogo from "@/assets/footer-logo.png";
+import FooterLogo from "@/assets/Group 1261152942.png";
 import SocialIcons from "./SocialIcons";
 import { NavLink } from "react-router-dom";
 import {
@@ -40,6 +40,7 @@ export default function FooterMenu() {
     { title: "PgMP", href: SHOPIFY_TRAINING_LINKS.PgMP },
     { title: "PfMP", href: SHOPIFY_TRAINING_LINKS.PfMP },
     { title: "PMI-PMOCP", href: SHOPIFY_TRAINING_LINKS.PMOCP },
+    { title: "PMI-CPMAI™ ", href: SHOPIFY_TRAINING_LINKS.CPMAI },
     { title: "PMI-RMP", href: SHOPIFY_TRAINING_LINKS["PMI-RMP"] },
   ];
 

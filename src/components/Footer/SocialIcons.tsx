@@ -31,12 +31,12 @@ const socials = [
     {
     id: 5,
     icon: Pinterest,
-    link: "https://au.pinterest.com/vCareProjectManagement/",
+    link: "https://au.pinterest.com/vCarePMTraining",
   },
   {
     id: 6,
     icon: Linkedin,
-    link: "https://www.linkedin.com/company/vcare-project-management-pty-ltd/",
+    link: "https://www.linkedin.com/company/vcareprojectmanagement/",
   },
 
 ];

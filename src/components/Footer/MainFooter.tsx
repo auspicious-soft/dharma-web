@@ -2,7 +2,7 @@ import React from 'react'
 import Newsletter from './Newsletter'
 import Copyright from './Copyright'
 import FooterMenu from './FooterMenu'
-import PmpLogo from "@/assets/pmp-logo.png";
+import PmpLogo from "@/assets/PreimeATP.png";
  
 export default function MainFooter() {
     return (

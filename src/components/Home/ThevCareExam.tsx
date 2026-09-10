@@ -14,14 +14,17 @@ const ThevCareExam = () => {
             The vCare Exam Simulator
           </h2>
           <h1 className="text-white text-3xl md:text-[40px] font-bold leading-[45px] md:leading-[65px]">
-            Simulator Advantage
+            Advantage
           </h1>
           <h3 className="text-white text-2xl md:text-3xl font-bold leading-[42px] md:leading-[62px]">
             Anytime, Anywhere Access
           </h3>
           <p className="text-white text-sm md:text-base font-normal  leading-[26px] md:leading-[30px] mt-3">
-            Use the simulator whenever it suits you and continue your preparation from any location. We want you to feel confident in your choice, so go ahead and explore whether it’s the perfect match for you. Dive in and see how it can enhance your experience!
-            </p>
+            Use the simulator whenever it suits you and continue your
+            preparation from any location. We want you to feel confident in your
+            choice, so go ahead and explore whether it’s the perfect match for
+            you. Dive in and see how it can enhance your experience!
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-5 mt-7 md:mt-[70px]">
           <div
@@ -59,14 +62,13 @@ const ThevCareExam = () => {
             style={{ backgroundImage: `url(${BgCard})` }}
           >
             <h3 className="self-stretch justify-start text-white text-base md:text-xl font-semibold capitalize leading-6 border-b-[1px] border-white/20 pb-4 mb-4 md:mb-6">
-              Risk‑free 30‑day guarantee
+              Risk-Free Trial
             </h3>
             <p className="text-[#f0f8ff]/80 text-sm font-normal leading-[26px]">
-              Experience the simulator without any worries! If it doesn’t meet
-              your expectations, simply ask for a refund within 30 days. We want
-              you to feel confident in your choice, so go ahead and explore
-              whether it’s the perfect match for you. Dive in and see how it can
-              enhance your experience!
+              Experience the simulator without any worries! We want you to feel
+              confident in your choice, so go ahead and explore whether it’s the
+              perfect match for you. Dive in and see how it can enhance your
+              experience!
             </p>
           </div>
         </div>

@@ -89,6 +89,10 @@ const certificationImages: Record<Tab, Record<string, string>> = {
       "../../assets/PgMPCertificationPath/PgMPApplicationSupport.png",
       import.meta.url,
     ).href,
+   "exam voucher": new URL(
+      "../../assets/PgMPCertificationPath/PgMPExamVoucherBundle_new.png",
+      import.meta.url,
+    ).href,
   },
   PfMP: {
     "exam prep training": new URL(
@@ -113,6 +117,10 @@ const certificationImages: Record<Tab, Record<string, string>> = {
     ).href,
     "on-demand course": new URL(
       "../../assets/PfMPCertificationPath/PfMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+    "exam voucher": new URL(
+      "../../assets/PfMPCertificationPath/PfMPExamVoucherBundle_new.png",
       import.meta.url,
     ).href,
   },
@@ -141,6 +149,10 @@ const certificationImages: Record<Tab, Record<string, string>> = {
       "../../assets/PMOCPCertificationPath/PMOCPOnDemandCourse.png",
       import.meta.url,
     ).href,
+     "exam voucher": new URL(
+      "../../assets/PMOCPCertificationPath/PMOCPExamVoucherBundle_new.png",
+      import.meta.url,
+    ).href,
   },
   CAPM: {
     "exam prep training": new URL(
@@ -167,6 +179,10 @@ const certificationImages: Record<Tab, Record<string, string>> = {
       "../../assets/CAPMCertificationPath/CAPMOnDemandCourse.png",
       import.meta.url,
     ).href,
+    "exam voucher": new URL(
+      "../../assets/CAPMCertificationPath/CAPMExamVoucherBundle_new.png",
+      import.meta.url,
+    ).href,
   },
   "PMI-RMP": {
     "exam prep training": new URL(
@@ -191,6 +207,10 @@ const certificationImages: Record<Tab, Record<string, string>> = {
     ).href,
     "on-demand course": new URL(
       "../../assets/RMPCertificationPath/RMPOnDemandCourse.png",
+      import.meta.url,
+    ).href,
+    "exam voucher": new URL(
+      "../../assets/RMPCertificationPath/RMPExamVoucherBundle_new.png",
       import.meta.url,
     ).href,
   },

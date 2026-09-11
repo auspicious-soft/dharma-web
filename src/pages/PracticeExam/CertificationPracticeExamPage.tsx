@@ -10,6 +10,7 @@ import AuthorizedTrainingPartner from "@/components/ReusableComponents/Authorize
 import ContentTabs from "@/components/NavPages/ContentTabs";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
+import PracticeExamImage from "@/assets/PracticeExams/PracticeExamHeader.png";
 import {
   ChartIcon,
   ClockIcon,
@@ -492,7 +493,7 @@ export default function CertificationPracticeExamPage({
         title={heroTitle}
         description={pageContent.headline}
         descriptionsecond={pageContent.description}
-        sideImage={pageImage ?? InnerPage}
+        sideImage={PracticeExamImage}
       />
       <AuthorizedTrainingPartner
         title={pageContent.headline}

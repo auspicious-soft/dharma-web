@@ -316,6 +316,35 @@ const PMPOnDemandCourse = () => {
           </div>
         </div>
       </section>
+       <section className="bg-light-blue py-10 md:py-14 lg:py-16">
+        <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
+          <div className="grid grid-cols-1 gap-5 md:gap-7 items-center">
+            <div className="flex flex-col gap-3">
+              <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
+                Receive Your Training Hours Certificate
+              </h2>
+              <p className="text-paragraph text-sm font-normal">
+                Earn a personalized certificate from a trusted PMI Premier
+                Authorized Training Provider. This can be used to maintain your
+                already earned PMI certifications.
+              </p>
+              <p className="text-paragraph text-sm font-normal">
+                This certificate validates your formal program management
+                education and supports your PMP® exam application with PMI®.
+                This online course provides an opportunity to earn PDUs while
+                building valuable skills.
+              </p>
+            </div>
+            {/* <div className="w-full">
+              <img
+                src={CertificateImage}
+                alt="Certificate Image"
+                className="rounded-sm"
+              />
+            </div> */}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

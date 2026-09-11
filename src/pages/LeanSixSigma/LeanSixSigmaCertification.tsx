@@ -355,7 +355,7 @@ const LeanSixSigmaCertification = () => {
             <img
               src={TrainingImage}
               alt="Certification course advisor"
-              className="w-full aspect-[2.902/1] object-cover rounded-[12px]"
+              className="w-full aspect-[2.902/1] object-contain rounded-[12px]"
             />
 
             <div className="mt-5 text-center">

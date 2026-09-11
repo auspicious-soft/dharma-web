@@ -1,6 +1,6 @@
 import InnerPage from "@/assets/inner-page.jpg";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import CertificateImage from "@/assets/ExamSimulatorBanner.png";
+import CertificateImage from "@/assets/PMOCPOnDemand.png";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/StartFreeTrial";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
@@ -276,7 +276,7 @@ const PMOCPOnDemandCourse = () => {
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-16">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-7 items-center">
+          <div className="grid grid-cols-1 gap-5 md:gap-7 items-center">
             <div className="flex flex-col gap-3">
               <h2 className="self-stretch justify-start text-Black_light text-2xl md:text-3xl font-bold md:leading-[46px]">
                 Earn Your Training Hours Certificate
@@ -284,22 +284,22 @@ const PMOCPOnDemandCourse = () => {
               <p className="text-paragraph text-sm font-normal">
                 Receive a personalized certificate from a PMI Premier Authorized
                 Training Partner upon successful completion of the program. This
-                certificate satisfies the 10 training hours requirement for the
+                certificate satisfies the training hours requirement for the
                 PMI-PMOCP™ certification application.
               </p>
               <p className="text-paragraph text-sm font-normal">
-                You can also earn up to 10 PDUs to maintain eligible PMI
+                You can also earn PDUs to maintain eligible PMI
                 certifications while strengthening your PMO knowledge and
                 leadership skills.
               </p>
             </div>
-            <div className="w-full ">
+            {/* <div className="w-full ">
               <img
                 src={CertificateImage}
                 alt="Certificate Image"
                 className="rounded-sm"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

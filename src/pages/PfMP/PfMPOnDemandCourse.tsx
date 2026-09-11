@@ -332,7 +332,7 @@ const PfMPOnDemandCourse = () => {
               </p>
               <p className="text-paragraph text-sm font-normal">
                 This certificate validates your formal portfolio management
-                education. This online course provides an opportunity to earn 24
+                education. This online course provides an opportunity to earn
                 professional development units (PDUs) while building valuable
                 skills and may be used towards maintaining eligible PMI
                 certifications.

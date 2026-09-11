@@ -4,7 +4,6 @@ import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { Button } from "@/components/ui/button";
 import InnerPage from "@/assets/inner-page.jpg";
-import TrainingImage from "@/assets/training-image.png";
 import type { ApplicationSupportContent } from "@/data/applicationSupport";
 import { getSubscriptionUrl } from "@/utils/links";
 import type { CourseKey } from "@/components/ReusableComponents/PlanSection/plans";
@@ -24,7 +23,7 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
         : title.includes("pfmp")
           ? "PfMP"
           : "PMP";
-  const supportImage = content.image || TrainingImage;
+  const supportImage = content.image;
 
   return (
     <>
@@ -32,7 +31,7 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
         title={content.title}
         description={content.heroDescription}
         descriptionsecond=""
-        sideImage={supportImage}
+        sideImage={""}
       />
 
       <section className="py-10 md:py-14 lg:py-20">
@@ -59,11 +58,13 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
               </div>
             </div>
             <div className="space-y-5">
-              <img
-                src={supportImage}
-                alt={`${content.title} training support`}
-                className="rounded-3xl w-full object-cover"
-              />
+              {supportImage && (
+                <img
+                  src={supportImage}
+                  alt={`${content.title} training support`}
+                  className="rounded-3xl w-full object-cover"
+                />
+              )}
               <div className="bg-light-blue rounded-[20px] p-6 md:p-7 text-center">
                 <p className="text-paragraph text-sm font-medium">
                   Application Support Package

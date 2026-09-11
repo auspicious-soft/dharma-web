@@ -351,7 +351,7 @@ export default function OtherCertificationPage({
             <img
               src={advisorImage}
               alt="Certification course advisor"
-              className="w-full aspect-[2.9/1] object-cover rounded-[12px]"
+              className="w-full aspect-[2.9/1] object-contain rounded-[12px]"
             />
 
             <div className="mt-5 text-center">

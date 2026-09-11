@@ -1,7 +1,7 @@
 import React from "react";
 import GooglePlay from "@/assets/google-play.png";
 import ApplePlay from "@/assets/apple.png";
-import ScreenImage from "@/assets/image.png";
+import ScreenImage from "@/assets/Group 1261153657.png";
 
 const DownloadvCare = () => {
   return (

@@ -1,10 +1,12 @@
 import OtherCertificationPage from "./OtherCertificationPage";
+import banner from "@/assets/ACPHeader.png";
 
 const PMIACPCertification = () => (
   <OtherCertificationPage
     heroTitle="PMI-ACP® Certification"
     heroDescription="Master Agile. Deliver Value Faster."
     heroDescriptionSecond="Study your way and get exam ready. From on-demand course to an online practice exam, explore all the ways to get ready for the big day."
+    heroImage={banner}
     introTitle="Study Your Way and Get Exam Ready"
     introParagraphs={[
       "The PMI Agile Certified Practitioner (PMI-ACP®) certification validates your knowledge of Agile principles, practices, and techniques across Scrum, Kanban, Lean, XP, and hybrid approaches.",

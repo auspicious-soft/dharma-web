@@ -1,5 +1,5 @@
 ﻿import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import InnerPage from "@/assets/inner-page.jpg";
+import InnerPage from "@/assets/ExamSimulators/PgMPExamSimulatorBanner.png";
 import TrainingImage from "@/assets/ExamSimulators/PgMPExamSimulatorPMIATP.png";
 import PgMPLearning1 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning1.png";
 import PgMPLearning2 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning2.png";

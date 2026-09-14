@@ -1,5 +1,5 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import InnerPage from "@/assets/inner-page.jpg";
+import InnerPage from "@/assets/ExamSimulators/PMOCPExamSimulatorBanner.png";
 import TrainingImage from "@/assets/ExamSimulators/PMOCPExamSimulatorPMIATP.png";
 import PMOCPExamPrep1 from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep1.png";
 import PMOCPExamPrep2 from "@/assets/PMOCPExamPrepScreenshots/PMOExamPrep2.png";

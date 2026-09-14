@@ -1,5 +1,5 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import InnerPage from "@/assets/inner-page.jpg";
+import InnerPage from "@/assets/ExamSimulators/PMPExamSimulatorBANNER.png";
 import TrainingImage from "@/assets/ExamSimulators/PMPExamSimulatorPMIATP.png";
 import PMPExamPrep1 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep1.png";
 import PMPExamPrep2 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep2.png";

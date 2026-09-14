@@ -1,5 +1,5 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
-import InnerPage from "@/assets/inner-page.jpg";
+import InnerPage from "@/assets/ExamSimulators/RMPExamSimulatorBanner.png";
 import TrainingImage from "@/assets/ExamSimulators/RMPExamSimulatorPMIATP.png";
 import RMPExamPrep1 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep1.png";
 import RMPExamPrep2 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep2.png";

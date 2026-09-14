@@ -1,6 +1,6 @@
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import React from "react";
-import CorporateImage from "@/assets/tab-image.jpg";
+import CorporateImage from "@/assets/CorporateTraining.png";
 import { Button } from "@/components/ui/button";
 import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import EnquiryForm from "@/components/ReusableComponents/EnquiryForm/EnquiryForm";

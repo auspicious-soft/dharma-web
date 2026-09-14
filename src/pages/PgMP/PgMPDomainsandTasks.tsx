@@ -1,6 +1,14 @@
 import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
+import PgMPLearning1 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain1.png";
+import PgMPLearning2 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain2.png";
+import PgMPLearning3 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain3.png";
+import PgMPLearning4 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain4.png";
+import PgMPLearning5 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain5.png";
+import PgMPLearning6 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain6.png";
+import PgMPDomain7 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain7.png";
+import PgMPDomain8 from "@/assets/PgMPDomainsScreenshotsDone/PgMPDomain8.png";
 import {
   ChartIcon,
   ComIcon,
@@ -60,6 +68,17 @@ const whyThisHelps = [
   "Clarifies the responsibilities and expectations within each domain",
   "Reinforces learning through targeted practice tests with explanations",
   "Supports focused preparation and builds confidence before the exam",
+];
+
+const pgmpDomainsScreenshots = [
+  PgMPLearning1,
+  PgMPLearning2,
+  PgMPLearning3,
+  PgMPLearning4,
+  PgMPLearning5,
+  PgMPLearning6,
+  PgMPDomain7,
+  PgMPDomain8
 ];
 
 const PgMPDomainsandTasks = () => {
@@ -217,7 +236,7 @@ const PgMPDomainsandTasks = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="domain-screenshot" />
+      <ScreenshortsSlider id="domain-screenshot" images={pgmpDomainsScreenshots} />
       <Testimonials id="domain-testimonials" />
     </>
   );

@@ -82,7 +82,10 @@ const ApplicationSupportPage = ({ content }: ApplicationSupportPageProps) => {
       </section>
 
       <div className="-mt-10 md:-mt-20 relative">
-        <ScreenshortsSlider id="application-screenshot" />
+        <ScreenshortsSlider
+          id="application-screenshot"
+          images={content.screenshots ?? []}
+        />
       </div>
       <div className="-mt-10 md:-mt-20 relative">
         <Faq faqs={content.faqs} hideButton />

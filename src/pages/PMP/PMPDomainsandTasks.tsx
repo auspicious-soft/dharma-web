@@ -1,6 +1,9 @@
 import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
+import PMPExamPrep1 from "@/assets/PMPDomainsScreenshotsDone/PMPDomain1.png";
+import PMPExamPrep2 from "@/assets/PMPDomainsScreenshotsDone/PMPDomain2.png";
+import PMPExamPrep3 from "@/assets/PMPDomainsScreenshotsDone/PMPDomain3.png";
 import { ChartIcon, ComIcon, DetailIcon } from "@/utils/svgicons";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
@@ -39,6 +42,12 @@ const whyThisHelps = [
   "Clarifies the responsibilities and expectations within each domain",
   "Reinforces learning through targeted practice tests with explanations",
   "Supports focused preparation and builds confidence before the exam",
+];
+
+const pmpDomainsScreenshots = [
+  PMPExamPrep1,
+  PMPExamPrep2,
+  PMPExamPrep3,
 ];
 
 const PMPDomainsandTasks = () => {
@@ -196,7 +205,7 @@ const PMPDomainsandTasks = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="domain-screenshot" />
+      <ScreenshortsSlider id="domain-screenshot" images={pmpDomainsScreenshots} />
       <Testimonials id="domain-testimonials" />
     </>
   );

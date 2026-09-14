@@ -6,6 +6,12 @@ import StartFreeTrial from "@/components/ReusableComponents/StartFreeTrial/Start
 import Testimonials from "@/components/ReusableComponents/TestimonialsSection/Testimonials";
 import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import TraningImage from "@/assets/training-image.png";
+import ACPFlashcard6 from "@/assets/FlashCardScreenshotsDone/ACPFlashcard6.png";
+import PfMPFlashcard5 from "@/assets/FlashCardScreenshotsDone/PfMPFlashcard5.png";
+import PgMPFlashcards1 from "@/assets/FlashCardScreenshotsDone/PgMPFlashcards1.png";
+import PMOCPFlashcards3 from "@/assets/FlashCardScreenshotsDone/PMOCPFlashcards3.png";
+import PMPFlashcards2 from "@/assets/FlashCardScreenshotsDone/PMPFlashcards2.png";
+import RMPFlashcards4 from "@/assets/FlashCardScreenshotsDone/RMPFlashcards4.png";
 import {
   ChartIcon,
   ClockIcon,
@@ -75,6 +81,8 @@ const SampleFlashCard = [
       "A concise, easy-to-understand explanation helps reinforce concepts and eliminate confusion.",
   },
 ];
+
+const flashCardScreenshots = [ACPFlashcard6, PgMPFlashcards1, PMOCPFlashcards3, PMPFlashcards2, RMPFlashcards4,PfMPFlashcard5];
 
 const Knowledge = [
   "Reinforce key concepts and terminology",
@@ -303,7 +311,7 @@ const FlashCards = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="six" images={flashCardScreenshots} />
       <Testimonials id="two" />
       <StartFreeTrial />
       <section className="pb-10 md:pb-14 lg:pb-20">

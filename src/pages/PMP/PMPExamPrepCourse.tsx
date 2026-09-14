@@ -11,7 +11,6 @@ import Faq from "@/components/ReusableComponents/FAQSection/FaqSection";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import AuthorizedTrainingPartner from "@/components/ReusableComponents/AuthorizedTrainingPartnerSection/AuthorizedTrainingPartner";
 import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTrainingOptions/ExamPrepTrainingOptions";
-
 import {
   CircleArrowIcon,
   ClockIcon,
@@ -25,6 +24,12 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
+import PfMPExamSimulatorPMIATP from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep1.png";
+import PgMPExamSimulatorPMIATP from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep2.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep3.png";
+import PMPExamSimulatorPMIATP from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep4.png";
+import RMPExamSimulatorPMIATP from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep5.png";
+import PMPExamPrep6 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep6.png";
 
 const overview = {
   heading: "Overview",
@@ -333,6 +338,7 @@ const pmpPracticeTestFaqs = [
       "As a Premier Authorized Training Partner (ATP) of PMI®, vCare Project Management provides PMI-aligned learning, experienced instructors, realistic exam simulators, comprehensive study resources, flexible learning options, and ongoing support to help professionals prepare confidently for PMP® certification.",
   },
 ];
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP, RMPExamSimulatorPMIATP,PMPExamPrep6];
 
 const PMPExamPrepCourse = () => {
   return (
@@ -439,8 +445,7 @@ const PMPExamPrepCourse = () => {
 
       <Testimonials id="two" />
 
-      <ScreenshortsSlider id="four" />
-
+    <ScreenshortsSlider id="six" images={flashCardScreenshots} />
       <div className="bg-light-blue">
         <VideoSection
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"

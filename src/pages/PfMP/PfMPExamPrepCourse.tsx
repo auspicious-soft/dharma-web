@@ -14,7 +14,6 @@ import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTra
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { pfmpLeadershipFooterContent } from "@/data/courseFooterContent";
-
 import {
   CircleArrowIcon,
   ClockIcon,
@@ -28,6 +27,11 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
+import PfMPExamSimulatorPMIATP from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep1.png";
+import PgMPExamSimulatorPMIATP from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep2.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep3.png";
+import PMPExamSimulatorPMIATP from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep4.png";
+import RMPExamSimulatorPMIATP from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep5.png";
 
 const overview = {
   heading: "Overview",
@@ -239,6 +243,7 @@ const courseCard = {
     },
   ],
 };
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP, RMPExamSimulatorPMIATP];
 
 const PfMPExamPrepCourse = () => {
   return (
@@ -343,8 +348,7 @@ const PfMPExamPrepCourse = () => {
 
       <Testimonials id="two" />
 
-      <ScreenshortsSlider id="four" />
-
+     <ScreenshortsSlider id="five" images={flashCardScreenshots} />
       <div className="bg-light-blue">
         <VideoSection
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"

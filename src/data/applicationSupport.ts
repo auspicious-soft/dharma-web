@@ -4,6 +4,16 @@ import PgMPApplicationSupportImage from "@/assets/ApplicationSupport/PgMPApplica
 import PfMPApplicationSupportImage from "@/assets/ApplicationSupport/PfMPApplicationSupport.png";
 import RMPApplicationSupportImage from "@/assets/ApplicationSupport/RMPApplicationSupport.png";
 import PMOCPApplicationSupportImage from "@/assets/ApplicationSupport/PMOCPApplicationSupport.png";
+import PMPApplicationSupport1 from "@/assets/PMPApplicationSupportScreenshotsDone/PMPApplicationSupport1.png";
+import PMPApplicationSupport2 from "@/assets/PMPApplicationSupportScreenshotsDone/PMPApplicationSupport2.png";
+import PgMPApplicationSupport1 from "@/assets/PgMPApplicationSupportScreenshotsDone/PgMPApplication1.png";
+import PgMPApplicationSupport2 from "@/assets/PgMPApplicationSupportScreenshotsDone/PgMPApplication2.png";
+import PfMPApplicationSupport1 from "@/assets/PfMPApplicationSupportScreenshotsDONE/PfMPApplication1.png";
+import PfMPApplicationSupport2 from "@/assets/PfMPApplicationSupportScreenshotsDONE/PfMPApplication2.png";
+import RMPApplicationSupport1 from "@/assets/RMPApplicationSupportScreenshotsDone/RMPApplication1.png";
+import RMPApplicationSupport2 from "@/assets/RMPApplicationSupportScreenshotsDone/RMPApplication2.png";
+import PMOCPApplicationSupport1 from "@/assets/PMOCPApplicationSupportScreenshotsDone/PMOCPApplication1.png";
+import PMOCPApplicationSupport2 from "@/assets/PMOCPApplicationSupportScreenshotsDone/PMOCPApplication2.png";
 
 export type ApplicationSupportContent = {
   title: string;
@@ -11,6 +21,7 @@ export type ApplicationSupportContent = {
   heading: string;
   introNote?: string;
   image?: string;
+  screenshots?: string[];
   paragraphs: string[];
   price: string;
   faqs: FaqItem[];
@@ -44,6 +55,7 @@ export const applicationSupportContent = {
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
     image: PMPApplicationSupportImage,
+    screenshots: [PMPApplicationSupport1, PMPApplicationSupport2],
     price: "$299",
     paragraphs: [
       "Completing the PMP® application can be confusing and time-consuming, especially if you are applying for the first time. Many experienced professionals struggle not with eligibility, but with clearly presenting their project experience in line with PMI's expectations. Our PMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -101,6 +113,7 @@ export const applicationSupportContent = {
     heading: "Full Application Support, Panel Review Support & Pass Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
     image: PgMPApplicationSupportImage,
+    screenshots: [PgMPApplicationSupport1, PgMPApplicationSupport2],
     price: "$299",
     paragraphs: [
       "Completing the PgMP® application can be complex and time-consuming, especially for first-time applicants. Many highly experienced professionals meet the eligibility requirements but struggle to clearly present their program management experience in line with PMI's expectations. Our PgMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -157,6 +170,7 @@ export const applicationSupportContent = {
     heading: "Full Application Support, Panel Review Support & Pass Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
     image: PfMPApplicationSupportImage,
+    screenshots: [PfMPApplicationSupport1, PfMPApplicationSupport2],
     price: "$199",
     paragraphs: [
       "Completing the PfMP® application can be complex and time-consuming, especially for first-time applicants. Many highly experienced professionals meet the eligibility requirements but struggle to clearly present their program management experience in line with PMI's expectations. Our PfMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -213,6 +227,7 @@ export const applicationSupportContent = {
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
     image: RMPApplicationSupportImage,
+    screenshots: [RMPApplicationSupport1, RMPApplicationSupport2],
     price: "$199",
     paragraphs: [
       "Completing the PMI-RMP® application can be confusing and time-consuming, especially for first-time applicants. Many experienced professionals meet the eligibility requirements but struggle to clearly present their risk management experience in line with PMI's expectations. Our PMI-RMP® Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -269,6 +284,7 @@ export const applicationSupportContent = {
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     introNote: "Included Free with Any Live Class Enrollment.",
     image: PMOCPApplicationSupportImage,
+    screenshots: [PMOCPApplicationSupport1, PMOCPApplicationSupport2],
     price: "$199",
     paragraphs: [
       "Completing the PMOCP™ application can be confusing and time-consuming, especially for first-time applicants. Many experienced professionals meet the eligibility requirements but struggle to clearly present their PMO leadership, governance, and organizational support experience in line with PMI's expectations. Our PMOCP™ Application Support Package is designed to simplify the process and help you submit a strong, compliant application with confidence.",
@@ -324,6 +340,7 @@ export const applicationSupportContent = {
     heading:
       "Best Step-by-Step Guide with Examples, Tips, and Audit & Application Success Guarantee",
     image: PMPApplicationSupportImage,
+    screenshots: [PMPApplicationSupport1, PMPApplicationSupport2],
     price: "$199",
     paragraphs: [
       "The application confirms candidates meet strict eligibility criteria, making the certification more valuable to employers. However, completing the application can be confusing and time-consuming, especially when presenting experience in line with PMI expectations.",

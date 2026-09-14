@@ -1,6 +1,12 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/ExamSimulators/PMOCPExamSimulatorPMIATP.png";
+import PMOCPExamPrep1 from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep1.png";
+import PMOCPExamPrep2 from "@/assets/PMOCPExamPrepScreenshots/PMOExamPrep2.png";
+import PMOCPExamPrep3 from "@/assets/PMOCPExamPrepScreenshots/PMOExam3.png";
+import PMOCPExamPrep4 from "@/assets/PMOCPExamPrepScreenshots/PMOExamPrep4.png";
+import PMOCPExamPrep5 from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep5.png";
+import PMOCPExamPrep6 from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep6.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,
@@ -117,6 +123,15 @@ const AdvancedSimulatorTools = [
     description: "Submit feedback to help improve questions and content.",
   },
 ];
+const pmocpExamSimulatorScreenshots = [
+  PMOCPExamPrep1,
+  PMOCPExamPrep2,
+  PMOCPExamPrep3,
+  PMOCPExamPrep4,
+  PMOCPExamPrep5,
+  PMOCPExamPrep6,
+];
+
 const pmocpExamSimulatorFaqs = [
   {
     question: "What is the PMI-PMOCP™ Exam Simulator?",
@@ -288,7 +303,7 @@ const PMOCPExamSimulator = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={pmocpExamSimulatorScreenshots} />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

@@ -1,7 +1,15 @@
 import FooterPageHeroSection from "@/components/ReusableComponents/FooterPageHeroSection/FooterPageHeroSection";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
+import ScreenshortsSlider from "@/components/ReusableComponents/ScreenshortsSlider/ScreenshortsSlider";
 import TopFooterSection from "@/components/ReusableComponents/TopFooterSection/TopFooterSection";
 import { getSubscriptionUrl } from "@/utils/links";
+import PfMPExamSimulatorPMIATP from "@/assets/ExamSimulators/PfMPExamSimulatorPMIATP.png";
+import PgMPExamSimulatorPMIATP from "@/assets/ExamSimulators/PgMPExamSimulatorPMIATP.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/ExamSimulators/PMOCPExamSimulatorPMIATP.png";
+import PMPExamSimulatorPMIATP from "@/assets/ExamSimulators/PMPExamSimulatorPMIATP.png";
+import RMPExamSimulatorPMIATP from "@/assets/ExamSimulators/RMPExamSimulatorPMIATP.png";
+
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP, RMPExamSimulatorPMIATP];
 
 const ExamSimulators = () => {
   return (
@@ -14,6 +22,7 @@ const ExamSimulators = () => {
           description="Select from individual tests or value bundles to accelerate your exam readiness."
         />
       </div>
+      <ScreenshortsSlider id="five" images={flashCardScreenshots} />
        <TopFooterSection
         content={{
           title: (

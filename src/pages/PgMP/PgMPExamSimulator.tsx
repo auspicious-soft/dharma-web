@@ -1,6 +1,15 @@
 ﻿import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/ExamSimulators/PgMPExamSimulatorPMIATP.png";
+import PgMPLearning1 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning1.png";
+import PgMPLearning2 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning2.png";
+import PgMPLearning3 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning3.png";
+import PgMPLearning4 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning4.png";
+import PgMPLearning5 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning5.png";
+import PgMPLearning6 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning6.png";
+import PgMPLearning7 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning7.png";
+import PgMPLearning8 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning8.png";
+import PgMPLearning9 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning9.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,
@@ -117,6 +126,18 @@ const AdvancedSimulatorTools = [
     description: "Submit feedback to help improve questions and content.",
   },
 ];
+const pgmpExamSimulatorScreenshots = [
+  PgMPLearning1,
+  PgMPLearning2,
+  PgMPLearning3,
+  PgMPLearning4,
+  PgMPLearning5,
+  PgMPLearning6,
+  PgMPLearning7,
+  PgMPLearning8,
+  PgMPLearning9,
+];
+
 const pgmpExamSimulatorFaqs = [
   {
     question: "What is the PgMP® Exam Simulator?",
@@ -289,7 +310,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={pgmpExamSimulatorScreenshots} />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

@@ -14,7 +14,6 @@ import ExamPrepTrainingOptions from "@/components/ReusableComponents/ExamPrepTra
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { rmpRiskFooterContent } from "@/data/courseFooterContent";
-
 import {
   CircleArrowIcon,
   ClockIcon,
@@ -28,6 +27,10 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
+import PfMPExamSimulatorPMIATP from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep1.png";
+import PgMPExamSimulatorPMIATP from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep2.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep3.png";
+import PMPExamSimulatorPMIATP from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep4.png";
 
 const overview = {
   heading: "Overview",
@@ -239,6 +242,7 @@ const courseCard = {
     },
   ],
 };
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP];
 
 const PMIACPExamPrepCourse = () => {
   return (
@@ -348,7 +352,7 @@ const PMIACPExamPrepCourse = () => {
 
       <Testimonials id="two" />
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={flashCardScreenshots} />
 
       <div className="bg-light-blue">
         <VideoSection

@@ -1,6 +1,11 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/ExamSimulators/PfMPExamSimulatorPMIATP.png";
+import PfMPExamPrep1 from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep1.png";
+import PfMPExamPrep2 from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep2.png";
+import PfMPExamPrep3 from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep3.png";
+import PfMPExamPrep4 from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep4.png";
+import PfMPExamPrep5 from "@/assets/PfMPExamPrepScreenshotsDone/PfMPExamPrep5.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,
@@ -117,6 +122,14 @@ const AdvancedSimulatorTools = [
     description: "Submit feedback to help improve questions and content.",
   },
 ];
+const pfmpExamSimulatorScreenshots = [
+  PfMPExamPrep1,
+  PfMPExamPrep2,
+  PfMPExamPrep3,
+  PfMPExamPrep4,
+  PfMPExamPrep5,
+];
+
 const pfmpExamSimulatorFaqs = [
   {
     question: "What is the PfMP® Exam Simulator?",
@@ -289,7 +302,7 @@ const PfMPExamSimulator = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={pfmpExamSimulatorScreenshots} />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

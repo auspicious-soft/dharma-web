@@ -1,6 +1,12 @@
 import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
+import PfMPExamPrep1 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain1.png";
+import PfMPExamPrep2 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain2.png";
+import PfMPExamPrep3 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain3.png";
+import PfMPExamPrep4 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain4.png";
+import PfMPExamPrep5 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain5.png";
+import PfMPDomain6 from "@/assets/PfMPDomainsScreenshotsDone/PfMPDomain6.png";
 import {
   ChartIcon,
   ComIcon,
@@ -59,6 +65,15 @@ const whyThisHelps = [
   "Clarifies the responsibilities and expectations within each domain",
   "Reinforces learning through targeted practice tests with explanations",
   "Supports focused preparation and builds confidence before the exam",
+];
+
+const pfmpDomainsScreenshots = [
+  PfMPExamPrep1,
+  PfMPExamPrep2,
+  PfMPExamPrep3,
+  PfMPExamPrep4,
+  PfMPExamPrep5,
+  PfMPDomain6
 ];
 
 const PfMPDomainsandTasks = () => {
@@ -216,7 +231,7 @@ const PfMPDomainsandTasks = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="domain-screenshot" />
+      <ScreenshortsSlider id="domain-screenshot" images={pfmpDomainsScreenshots} />
       <Testimonials id="domain-testimonials" />
     </>
   );

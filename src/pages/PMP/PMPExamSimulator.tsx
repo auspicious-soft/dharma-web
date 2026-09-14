@@ -1,6 +1,12 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/ExamSimulators/PMPExamSimulatorPMIATP.png";
+import PMPExamPrep1 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep1.png";
+import PMPExamPrep2 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep2.png";
+import PMPExamPrep3 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep3.png";
+import PMPExamPrep4 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep4.png";
+import PMPExamPrep5 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep5.png";
+import PMPExamPrep6 from "@/assets/PMPExamPrepScreenshotsDone/PMPExamPrep6.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,
@@ -117,6 +123,15 @@ const AdvancedSimulatorTools = [
     description: "Submit feedback to help improve questions and content.",
   },
 ];
+const pmpExamSimulatorScreenshots = [
+  PMPExamPrep1,
+  PMPExamPrep2,
+  PMPExamPrep3,
+  PMPExamPrep4,
+  PMPExamPrep5,
+  PMPExamPrep6,
+];
+
 const pmpExamSimulatorFaqs = [
   {
     question: "What is the PMP® Exam Simulator?",
@@ -299,7 +314,7 @@ A realistic, full-length simulation exam designed to help you assess readiness a
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={pmpExamSimulatorScreenshots} />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

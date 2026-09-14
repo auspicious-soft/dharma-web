@@ -1,6 +1,9 @@
 import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
+import PMOCPExamPrep1 from "@/assets/PMOCPDomainsScreenshotsDone/PMOCPDomain1.png";
+import PMOCPExamPrep2 from "@/assets/PMOCPDomainsScreenshotsDone/PMOCPDomain2.png";
+import PMOCPExamPrep3 from "@/assets/PMOCPDomainsScreenshotsDone/PMOCPDomain3.png";
 import {
   ChartIcon,
   ComIcon,
@@ -67,6 +70,12 @@ const whyThisHelps = [
   "Clarifies the responsibilities and expectations within each domain",
   "Reinforces learning through targeted practice tests with explanations",
   "Supports focused preparation and builds confidence before the exam",
+];
+
+const pmocpDomainsScreenshots = [
+  PMOCPExamPrep1,
+  PMOCPExamPrep2,
+  PMOCPExamPrep3,
 ];
 
 const PMOCPDomainsandTasks = () => {
@@ -202,7 +211,7 @@ const PMOCPDomainsandTasks = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="domain-screenshot" />
+      <ScreenshortsSlider id="domain-screenshot" images={pmocpDomainsScreenshots} />
       <Testimonials id="domain-testimonials" />
     </>
   );

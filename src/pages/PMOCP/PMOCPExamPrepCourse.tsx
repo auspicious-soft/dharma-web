@@ -28,6 +28,13 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
+import PfMPExamSimulatorPMIATP from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep1.png";
+import PgMPExamSimulatorPMIATP from "@/assets/PMOCPExamPrepScreenshots/PMOExamPrep2.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/PMOCPExamPrepScreenshots/PMOExam3.png";
+import PMPExamSimulatorPMIATP from "@/assets/PMOCPExamPrepScreenshots/PMOExamPrep4.png";
+import RMPExamSimulatorPMIATP from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep5.png";
+import PMOCPExamPrep6 from "@/assets/PMOCPExamPrepScreenshots/PMOCPExamPrep6.png";
+
 // Tab 1 (Overview Content)
 const overview = {
   heading: "Overview",
@@ -201,6 +208,7 @@ const courseCard = {
     },
   ],
 };
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP, RMPExamSimulatorPMIATP,PMOCPExamPrep6];
 
 const PMOCPExamPrepCourse = () => {
   return (
@@ -305,7 +313,7 @@ const PMOCPExamPrepCourse = () => {
 
       <Testimonials id="two" />
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="six" images={flashCardScreenshots} />
 
       <div className="bg-light-blue">
         <VideoSection

@@ -1,6 +1,9 @@
 import React from "react";
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
+import RMPExamPrep1 from "@/assets/RMPDomainsScreenshotsDone/RMPDomain1.png";
+import RMPExamPrep2 from "@/assets/RMPDomainsScreenshotsDone/RMPDomain2.png";
+import RMPExamPrep3 from "@/assets/RMPDomainsScreenshotsDone/RMPDomain3.png";
 import {
   ChartIcon,
   ComIcon,
@@ -59,6 +62,12 @@ const whyThisHelps = [
   "Clarifies the responsibilities and expectations within each domain",
   "Reinforces learning through targeted practice tests with explanations",
   "Supports focused preparation and builds confidence before the exam",
+];
+
+const rmpDomainsScreenshots = [
+  RMPExamPrep1,
+  RMPExamPrep2,
+  RMPExamPrep3,
 ];
 
 const PMIACPDomainsandTasks = () => {
@@ -193,7 +202,7 @@ const PMIACPDomainsandTasks = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="domain-screenshot" />
+      <ScreenshortsSlider id="domain-screenshot" images={rmpDomainsScreenshots} />
       <Testimonials id="domain-testimonials" />
     </>
   );

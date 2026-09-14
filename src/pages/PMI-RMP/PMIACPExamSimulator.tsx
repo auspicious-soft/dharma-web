@@ -1,6 +1,10 @@
 import NavHeroSection from "@/components/ReusableComponents/NavPageHeroSection/NavHeroSection";
 import InnerPage from "@/assets/inner-page.jpg";
 import TrainingImage from "@/assets/ExamSimulators/RMPExamSimulatorPMIATP.png";
+import RMPExamPrep1 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep1.png";
+import RMPExamPrep2 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep2.png";
+import RMPExamPrep3 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep3.png";
+import RMPExamPrep4 from "@/assets/RMPExamPrepScreenshotsDone/RMPExamPrep4.png";
 import { PremiumPacks } from "@/components/ReusableComponents/PlanSection/PremiumPacks";
 import {
   ChartIcon,
@@ -117,6 +121,13 @@ const AdvancedSimulatorTools = [
     description: "Submit feedback to help improve questions and content.",
   },
 ];
+const rmpExamSimulatorScreenshots = [
+  RMPExamPrep1,
+  RMPExamPrep2,
+  RMPExamPrep3,
+  RMPExamPrep4,
+];
+
 const pmiacpExamSimulatorFaqs = [
   {
     question: "What is the PMI-RMP® Exam Simulator?",
@@ -286,7 +297,7 @@ const PMIACPExamSimulator = () => {
         </div>
       </section>
 
-      <ScreenshortsSlider id="four" />
+      <ScreenshortsSlider id="four" images={rmpExamSimulatorScreenshots} />
 
       <section className="bg-light-blue py-10 md:py-14 lg:py-20">
         <div className="max-w-[1226px] w-full px-3 md:px-4 m-auto">

@@ -28,6 +28,17 @@ import {
   PhoneIcon,
   FlashCardIcon,
 } from "@/utils/svgicons";
+import PfMPExamSimulatorPMIATP from "@/assets/PgMPExamPrepScreenshotsDone/Learning Hub 7NotUse.png";
+import PgMPExamSimulatorPMIATP from "@/assets/PgMPExamPrepScreenshotsDone/LearningHubDonotuse.png";
+import PMOCPExamSimulatorPMIATP from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning1.png";
+import PMPExamSimulatorPMIATP from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning2.png";
+import RMPExamSimulatorPMIATP from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning3.png";
+import PgMPLearning4 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning4.png";
+import PgMPLearning5 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning5.png";
+import PgMPLearning6 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning6.png";
+import PgMPLearning7 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning7.png";
+import PgMPLearning8 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning8.png";
+import PgMPLearning9 from "@/assets/PgMPExamPrepScreenshotsDone/PgMPLearning9.png";
 
 const overview = {
   heading: "Overview",
@@ -240,6 +251,7 @@ const courseCard = {
   ],
 };
 
+const flashCardScreenshots = [PfMPExamSimulatorPMIATP, PgMPExamSimulatorPMIATP, PMOCPExamSimulatorPMIATP, PMPExamSimulatorPMIATP, RMPExamSimulatorPMIATP,PgMPLearning4,PgMPLearning5,PgMPLearning6,PgMPLearning7,PgMPLearning8,PgMPLearning9];
 
 const PgMPExamPrepCourse = () => {
   return (
@@ -344,8 +356,7 @@ const PgMPExamPrepCourse = () => {
 
       <Testimonials id="two" />
 
-      <ScreenshortsSlider id="four" />
-
+      <ScreenshortsSlider id="eleven" images={flashCardScreenshots} />
       <div className="bg-light-blue">
         <VideoSection
           videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
